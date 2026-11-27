@@ -519,3 +519,7 @@ it 3530 steps  28925952 t   1396s sps  26597 eps  58 len 154 fall 0.00 lost 0.00
 it 3540 steps  29007872 t   1399s sps  27709 eps  56 len 154 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 13.31 std 0.071 lr 1.0e-04
 it 3541 steps  29016064 t   1399s sps  28833 eps  45 len 155 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 13.34 std 0.071 lr 1.0e-04 ckpt 29007872
 it 3550 steps  29089792 t   1402s sps  26090 eps  60 len 156 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 13.36 std 0.071 lr 1.0e-04
+it 3560 steps  29171712 t   1405s sps  24432 eps  48 len 154 fall 0.02 lost 0.00 metric@end 4.51 success 0.98 ret 12.88 std 0.070 lr 1.0e-04
+it 3570 steps  29253632 t   1408s sps  27750 eps  50 len 157 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 13.42 std 0.070 lr 1.0e-04
+it 3571 steps  29261824 t   1408s sps  27990 eps  50 len 157 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 13.40 std 0.070 lr 1.0e-04 ckpt 29253632
+it 3580 steps  29335552 t   1411s sps  27734 eps  43 len 154 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 13.32 std 0.070 lr 1.0e-04
