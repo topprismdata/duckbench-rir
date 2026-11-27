@@ -32,3 +32,7 @@
 {"from": "RES:sprintf80", "relation": "SUPPORTS", "to": "CLM:K24:01"}
 {"from": "CLM:T1:01", "relation": "REFUTES", "to": "HYP:T1"}
 {"from": "OBS:T1:bank", "relation": "SUPPORTS", "to": "CLM:T1:01"}
+{"from": "OBS:wheel:rim-saturation", "relation": "SUPPORTS", "to": "CLM:W1:01"}
+{"from": "CLM:W1:01", "relation": "DERIVES_FROM", "to": "HYP:W1"}
+{"from": "OBS:saucer:radius-drdt", "relation": "SUPPORTS", "to": "CLM:A2:01"}
+{"from": "CLM:A2:01", "relation": "DERIVES_FROM", "to": "HYP:A2"}

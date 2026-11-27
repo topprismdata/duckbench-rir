@@ -1,9 +1,11 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 90 · relations: 34 · types: 25
+Entities: 94 · relations: 38 · types: 25
 
 ## Claims and their evidence
 
+- **CLM:A2:01** — Saucer radius effect is weak *(EXPLORATORY)*
+  - ← OBS:saucer:radius-drdt (Observation: Saucer radius vs rpm growth)
 - **CLM:K03:01** — Steps recipe *(STRONG)*
   - ← EV:s2b:server (EvaluationRun: steps champion hidden)
   - ← ATT:steps (CompetitionAttempt: Steps champion attempt)
@@ -28,15 +30,17 @@ Entities: 90 · relations: 34 · types: 25
   - ← RES:sprintf80 (MetricResult: sprint 2.41)
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
+- **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
+  - ← OBS:wheel:rim-saturation (Observation: Wheel rim speed saturates at 0.66 m/s)
 
 ## Hypotheses
 
-- HYP:A2 [OPEN] 接触半径/力矩臂可提升 saucer rpm
+- HYP:A2 [PARTIAL] 接触半径/力矩臂可提升 saucer rpm
 - HYP:H1 [SUPPORTED] 奖励的参考节奏约束是 Hurdles 瓶颈
 - HYP:S1 [FALSIFIED] 前 2 s 加速不足是 Sprint 差距主因
 - HYP:S4 [FALSIFIED] finish 节点在前序状态分布上训练可提升组合
 - HYP:T1 [REFUTED] roll 入口状态代表性限制 turntable
-- HYP:W1 [OPEN] 轮缘切向加速度奖励可提升 wheel
+- HYP:W1 [PARTIAL] 轮缘切向加速度奖励可提升 wheel
 
 ## Exclusions (do not repeat without reopening condition)
 
@@ -47,7 +51,7 @@ Entities: 90 · relations: 34 · types: 25
 ## Types
 
 - BudgetAllocation: 2
-- Claim: 10
+- Claim: 12
 - Competition: 1
 - CompetitionAttempt: 3
 - Counterexample: 1
@@ -64,7 +68,7 @@ Entities: 90 · relations: 34 · types: 25
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 3
-- Observation: 1
+- Observation: 3
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 3
