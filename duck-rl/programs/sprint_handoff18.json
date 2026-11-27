@@ -1,0 +1,40 @@
+{
+ "format": "duck-program/2",
+ "start": "prep",
+ "nodes": {
+  "prep": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "t >= 1.8",
+     "go": "run"
+    }
+   ]
+  },
+  "run": {
+   "skill": "walk",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "prep"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "sprint handoff at 1.8 s (r21)"
+ }
+}

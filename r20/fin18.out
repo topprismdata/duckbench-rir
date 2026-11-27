@@ -1,0 +1,16 @@
+duck-rl kit 1.31.2 · standalone · budget 496.7/1200.0 min
+recording the handoff bank /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/banks/sprint-h18.json (once: programs/sprint_handoff18.json at run) ...
+bank: 128/128 seeds reached run -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/banks/sprint-h18.json
+[duck-rl] WARM_MLP submissions/r20_sprintf80/policy.mlp.json -> mv_a2a4fcdaa5dd (no alias): /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+[duck-rl] lineage: parent mv_a2a4fcdaa5dd, root stock:alpha_walking, parent cumulative {'steps': None, 'train_s': None}; the parent's submission lineage lacks cumulative steps, train_s
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 r21_fin18: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.12, 'vy': 0, 'wz': 0, 'head_pitch': 0, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights submissions/r20_sprintf80/policy.mlp.json (mv_a2a4fcdaa5dd), init stock, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 10.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 881, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r21_fin18
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:91f8304554d13252
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (mv_a2a4fcdaa5dd) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+it    0 steps      8192 t      1s sps   9776 eps 106 len 134 fall 1.00 lost 0.00 metric@end 0.86 success 0.00 ret -15.20 std 0.100 lr 1.0e-03 (warm-up: critic only)
+it   10 steps     90112 t      4s sps  32097 eps 146 len 145 fall 1.00 lost 0.00 metric@end 1.03 success 0.00 ret -14.64 std 0.100 lr 1.0e-04
+[duck-rl] TS eval of the start (mv_a2a4fcdaa5dd): best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s) (7.5 s), the same seeds and opponents as every checkpoint's
+it   20 steps    172032 t      6s sps  34942 eps 125 len 149 fall 1.00 lost 0.00 metric@end 1.07 success 0.00 ret -14.51 std 0.100 lr 1.0e-04
