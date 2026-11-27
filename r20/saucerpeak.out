@@ -1,0 +1,12 @@
+duck-rl kit 1.31.2 · standalone · budget 540.0/1200.0 min · 1 other charged command(s) running
+[duck-rl] WARM_MLP saucer-spinner@1 -> mv_b804c7e21720 (saucer-spinner@1): /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json
+[duck-rl] lineage: parent mv_b804c7e21720 (saucer-spinner@1), root stock:alpha_walking, parent cumulative {'steps': 31744000, 'train_s': 2377}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 saucer v1 r20_saucerpeak: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': -0.03, 'wz': 0.05, 'head_pitch': 0, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights saucer-spinner@1 = /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json (mv_b804c7e21720, saucer-spinner@1), init stock, terms ['alive', 'drive', 'edge', 'fall', 'peak', 'smooth', 'spin'], episode 10.0 s, 20.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 862, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r20_saucerpeak
+[duck-rl] learner: INIT_STD 0.15, LR_FIXED 0.0002, WARMUP_ITERS 30; recipe sha256:54ff4260326fa887
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 50.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (saucer-spinner@1) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json
+it    0 steps      8192 t      1s sps   6081 eps   9 len 60 fall 1.00 lost 0.00 metric@end 9.66 success 0.00 ret 7.03 std 0.150 lr 1.0e-03 (warm-up: critic only)
+[duck-rl] TS eval of the start (saucer-spinner@1): best 8 of 16 55.423 rpm (mean 55.054, worst 53.873 rpm) (5.9 s), the same seeds and opponents as every checkpoint's

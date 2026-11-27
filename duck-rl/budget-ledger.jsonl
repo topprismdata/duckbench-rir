@@ -99,3 +99,4 @@
 {"kind": "train", "label": "r20_wheelf20", "start": "2026-11-28T01:28:51", "seconds": 285.2, "run": "30754-1795800531676", "end": "exit"}
 {"kind": "train", "label": "r20_turnlive", "start": "2026-11-28T01:33:33", "seconds": 259.6, "run": "31170-1795800813305", "end": "exit"}
 {"kind": "train", "label": "r20_sprintf20", "start": "2026-11-28T01:28:50", "seconds": 1223.0, "run": "30750-1795800530670", "end": "exit"}
+{"kind": "train", "label": "r20_sprintf50", "start": "2026-11-28T01:54:36", "seconds": 1818.1, "run": "31692-1795802076762", "end": "exit"}
