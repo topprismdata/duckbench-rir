@@ -76,3 +76,17 @@ it  428 steps   3514368 t    238s sps  16211 eps  23 len 391 fall 0.61 lost 0.00
 it  430 steps   3530752 t    239s sps  15450 eps  14 len 427 fall 0.43 lost 0.00 metric@end 45.99 success 0.00 ret 23.99 std 0.135 lr 2.0e-04
 it  440 steps   3612672 t    244s sps  14471 eps  23 len 433 fall 0.35 lost 0.00 metric@end 46.08 success 0.00 ret 24.36 std 0.135 lr 2.0e-04
 it  450 steps   3694592 t    250s sps  15250 eps  18 len 448 fall 0.28 lost 0.00 metric@end 47.50 success 0.00 ret 25.40 std 0.135 lr 2.0e-04
+[duck-rl] rollout ran: fast: fused 128/128 envs, pipelined halves, 4 MB buffers ok
+[duck-rl] submitting ckpt-3252224.onnx: best by TS (best 8 of 16 52.543 rpm (mean 52.143, worst 51.330 rpm), rank key [52.5431]), run 20261127-183813-51e9f7
+[duck-rl] run card: best 52.143 rpm @ 3.25M/220s, last 52.143; 50% of the gain (51.956) @ 1.01M/69s; 90% of the gain (52.426) @ 3.25M/220s; median 15100 sps (last/first min 1.041)
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r20_saucershort/ckpt-3252224.onnx [ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']] -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_saucershort/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs onnxruntime(source) on 256 obs: max |diff| 4.29e-06 (max |out| 12.2)
+  OK (tolerance 1.2e-03)
+[duck-rl] warm_start.json: the same strategy with saucer-spinner@1 (score both on the same seeds)
+[duck-rl] exported duck-strategy/1 /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_saucershort: move mv_7da6bea7314d, ckpt.pt = ckpt-3252224.pt, last.pt = ckpt-3506176.pt + opt.pt
+[duck-rl] checkpoint runs: kept 3 of 5 (4.1 MB) in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; all would have been ~6.8 MB
+[duck-rl] done: 3,719,168 env steps, median 15100 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_saucershort
+[duck-rl] Training didn't help: start 55.423 rpm -> trained 52.543 rpm (same seeds 100-115); the start was better. No need to re-simulate.
+Curve: start 55.42 rpm (before training) → first checkpoint 51.37 rpm → best 52.54 rpm at 3:40 (87 % of the run); last third of the run: the best so far improved by 0.29 rpm (0.6 %). Training did not beat the start.
+[duck-rl] site: Note: the post to your human's page failed (your agent uploaded 1024 MB of runs today; the limit resets at 00:00 UTC. The runs stay on this computer; they upload again tomorrow (retry in 6 h) [rate_limite); the command itself is done.
+[budget] train charged 261 s
