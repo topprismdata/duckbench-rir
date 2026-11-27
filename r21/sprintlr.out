@@ -1,0 +1,16 @@
+duck-rl kit 1.31.2 · standalone · budget 486.4/1200.0 min
+[duck-rl] WARNING: this machine is busy (load 7.2 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] WARM_MLP submissions/r20_sprintf80/policy.mlp.json -> mv_a2a4fcdaa5dd (no alias): /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+[duck-rl] lineage: parent mv_a2a4fcdaa5dd, root stock:alpha_walking, parent cumulative {'steps': None, 'train_s': None}; the parent's submission lineage lacks cumulative steps, train_s
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 r21_sprintlr: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': 0, 'wz': 0, 'head_pitch': 0.6, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights submissions/r20_sprintf80/policy.mlp.json (mv_a2a4fcdaa5dd), init stock, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 10.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 891, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r21_sprintlr
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:5b5164287211d524
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (mv_a2a4fcdaa5dd) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+it    0 steps      8192 t      2s sps   5401 eps   2 len 36 fall 1.00 lost 0.00 metric@end 0.86 success 0.00 ret -14.63 std 0.100 lr 1.0e-03 (warm-up: critic only)
+it   10 steps     90112 t      5s sps  26427 eps  17 len 119 fall 0.12 lost 0.00 metric@end 4.15 success 0.88 ret 15.77 std 0.100 lr 1.0e-04
+WARNING: MLX learner failed: MLX process gone (BrokenPipeError, exit code -15). Continuing on the CPU learner (rsl_rl, serial) from the last synced weights. MLX-only knobs no longer apply: critic_epochs, value_clip.
+[duck-rl] SIGTERM before the first checkpoint: nothing to submit
+[budget] train charged 13 s
