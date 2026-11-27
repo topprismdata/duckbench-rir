@@ -1,0 +1,13 @@
+duck-rl kit 1.31.2 · standalone · budget 477.7/1200.0 min
+[duck-rl] WARNING: this machine is busy (load 10.2 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] WARM_MLP turntable-starter@1 -> mv_3a87feff3f5b (turntable-starter@1): /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_3a87feff3f5b/policy.mlp.json
+[duck-rl] --init home/runs/r19_turn20/ckpt.pt -> weights mv_43391cc2c2b5 at 24682496 steps
+[duck-rl] lineage: parent mv_43391cc2c2b5, root stock:roulade, parent cumulative {'steps': None, 'train_s': None}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 turntable v1 r21_turnscore: nodes ['roll'] ({'skill': 'stand', 'params': {'head_pitch': 0, 'head_yaw': 0, 'head_roll': 0}}), warm start roulade graph, weights turntable-starter@1 = /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_3a87feff3f5b/policy.mlp.json (mv_3a87feff3f5b, turntable-starter@1), init home/runs/r19_turn20/ckpt.pt, terms ['bell', 'live', 'out'], episode 10.0 s, 20.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 901, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r21_turnscore
+[duck-rl] learner: the kit defaults; recipe sha256:98978dd5d1bda832
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 25.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_3a87feff3f5b/policy.mlp.json
+it    0 steps      8192 t      1s sps   9380 eps 129 len 500 fall 0.00 lost 0.01 metric@end 10.65 success 0.00 ret 33.54 std 0.100 lr 1.0e-03 (warm-up: critic only)
+it   10 steps     90112 t      4s sps  26219 eps 142 len 500 fall 0.00 lost 0.04 metric@end 10.40 success 0.00 ret 32.69 std 0.100 lr 7.6e-05

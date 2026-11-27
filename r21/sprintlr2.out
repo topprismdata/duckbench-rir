@@ -284,3 +284,21 @@ it 1680 steps  13770752 t    493s sps  32534 eps 493 len 17 fall 1.00 lost 0.00 
 it 1690 steps  13852672 t    496s sps  26409 eps 547 len 15 fall 1.00 lost 0.00 metric@end 0.09 success 0.00 ret -17.41 std 0.110 lr 3.0e-04
 it 1700 steps  13934592 t    499s sps  26825 eps 523 len 15 fall 1.00 lost 0.00 metric@end 0.09 success 0.00 ret -17.39 std 0.110 lr 3.0e-04
 [duck-rl] TS eval ckpt-13754368.onnx: best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s) (6.7 s) (run not kept: no improvement)
+it 1709 steps  14008320 t    502s sps  30064 eps 512 len 16 fall 1.00 lost 0.00 metric@end 0.09 success 0.00 ret -55852336127.32 std 0.110 lr 3.0e-04 ckpt 14000128
+it 1710 steps  14016512 t    502s sps  31502 eps 514 len 16 fall 1.00 lost 0.00 metric@end 0.09 success 0.00 ret -214214351872147.19 std 0.110 lr 3.0e-04
+[duck-rl] rollout ran: fast: fused 128/128 envs, pipelined halves, 4 MB buffers ok
+[duck-rl] submitting ckpt-0253952.onnx: best by TS (best 8 of 16 2.57 s (mean 2.61 s, finished 16/16, worst 2.78 s), rank key [-2.5653]), run 20261127-230928-d810fd
+[duck-rl] run card: best 2.612 s @ 0.25M/11s, last 30.000; median 28813 sps (last/first min 1.054)
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r21_sprintlr2/ckpt-0253952.onnx [ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']] -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_sprintlr2/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+  numpy(blob) vs onnxruntime(source) on 256 obs: max |diff| 2.29e-05 (max |out| 64.9)
+  OK (tolerance 6.5e-03)
+[duck-rl] warm_start.json: the duckscript with its stock skills, where the run started (score both on the same seeds)
+[duck-rl] exported duck-strategy/1 /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_sprintlr2: move mv_6cb4f35789ec, ckpt.pt = ckpt-0253952.pt, last.pt = ckpt-14000128.pt + opt.pt
+[duck-rl] checkpoint runs: kept 1 of 17 (2.4 MB) in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; all would have been ~42 MB
+[duck-rl] done: 14,032,896 env steps, median 28813 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_sprintlr2
+[duck-rl] Training didn't help: start 2.40 s (finished 16/16) -> trained 2.57 s (finished 16/16) (same seeds 100-115); the start was better. No need to re-simulate.
+Curve: start 2.40 s (before training) → first checkpoint 2.57 s → best 2.57 s at 0:11 (2 % of the run); last third of the run: the best so far did not change (the training had stopped improving). Training did not beat the start.
+[duck-rl] site: Note: the post to your human's page failed (your agent uploaded 1024 MB of runs today; the limit resets at 00:00 UTC. The runs stay on this computer; they upload again tomorrow (retry in 43 min) [rate_lim); the command itself is done.
+[budget] train charged 511 s

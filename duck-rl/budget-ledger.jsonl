@@ -105,3 +105,4 @@
 {"kind": "train", "label": "r20_sprintf80", "start": "2026-11-28T02:25:42", "seconds": 1816.3, "run": "32465-1795803942268", "end": "exit"}
 {"kind": "train", "label": "r21_fin18", "start": "2026-11-28T02:57:06", "seconds": 617.9, "run": "33558-1795805826906", "end": "exit"}
 {"kind": "train", "label": "r21_sprintlr", "start": "2026-11-28T07:08:46", "seconds": 13.2, "run": "36980-1795820926655", "end": "exit"}
+{"kind": "train", "label": "r21_sprintlr2", "start": "2026-11-28T07:09:01", "seconds": 510.8, "run": "37159-1795820941070", "end": "exit"}
