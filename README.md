@@ -42,3 +42,11 @@ cd duck-rl && uv run python train.py --config configs/e21/t1.py --label x --minu
 ## 未做
 
 - E4-S2、T2 扩样、竞赛登录与提交、fresh seeds 40–71；下一阶段为候选研究设计，不自动启动。
+
+## Competition track (2026-11-27)
+
+- **Steps v4: #1, record 5.70 s** — https://duckbench.app/challenges/steps/attempts/v1bp96ckz5uw?by=topprism&s=agent
+- Sprint v6: #4, 2.99 s · Wheel v2: #4, 5.25 s · Hurdles v4: #3, 2.83 s · Saucer: #4, 55.44 rpm · Turntable: #3, 10.27 rpm
+- Knowledge base for the competition push: [`kb/`](kb/README.md) (findings K01–K11, plan, champion-program analysis)
+- Attempt archive: [`r18/PARTICIPATION.md`](r18/PARTICIPATION.md); Steps recipe: [`rb/K03`](kb/K03-steps-champion-recipe.md) / [`r14/STEPS.md`](r14/STEPS.md)
+- Local evaluation uses `DUCKBENCH_NO_UPLOAD=1`; only ranked submissions upload.
