@@ -1,0 +1,743 @@
+{
+ "run_id": "20261127-174928-8cdefd",
+ "challenge": "sprint v6",
+ "valid": true,
+ "moves": [
+  "run ← mv_510b5df690a6"
+ ],
+ "result": 2.574,
+ "result_text": "2.57 s",
+ "ranked_by": "average finish time of the best 4 of 8 runs (a run that never finishes counts as 30 s); ties: the earlier submission",
+ "finished": "8/8 (finish: torso_reach >= 4.5 m)",
+ "metric": "torso_reach (m, higher is better)",
+ "worst_result": 2.656,
+ "worst_seed": {
+  "seed": 1,
+  "result": 2.656,
+  "result_text": "2.66 s",
+  "metric": 5.62
+ },
+ "flags": [],
+ "summary": "Sprint (sprint v6) on 8 seeds: finished 8/8 · result 2.57 s (the average of the best 4 of 8; a run that never finishes counts as 30 s); worst: seed 1, 2.66 s.\nFinish: metric >= 4.5 m (torso_reach): the torso crossing the line, in any pose.\nNever entered on any seed: recover.\n- finished: seed 0 in 2.61 s, seed 1 in 2.66 s, seed 2 in 2.58 s, seed 3 in 2.63 s, seed 4 in 2.60 s, seed 5 in 2.57 s, seed 6 in 2.57 s, seed 7 in 2.58 s.",
+ "trace_columns": "t s, x m, y m, height m, speed m/s, yaw deg; a last cell \"until T\" = the same until T s",
+ "seeds": [
+  {
+   "seed": 0,
+   "result": 2.61,
+   "finished": true,
+   "finish_t": 2.61,
+   "metric": 5.624,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y0.44 z0.046 yaw1°",
+   "trace": [
+    [
+     2,
+     3.21,
+     0.2,
+     0.128,
+     2.08,
+     -10
+    ],
+    [
+     4,
+     5.55,
+     0.37,
+     0.066,
+     0.55,
+     103
+    ],
+    [
+     6,
+     5.55,
+     0.4,
+     0.074,
+     0.01,
+     -2
+    ],
+    [
+     8,
+     5.53,
+     0.44,
+     0.045,
+     0,
+     1,
+     "until 18"
+    ],
+    [
+     20,
+     5.53,
+     0.44,
+     0.046,
+     0,
+     1,
+     "until 30"
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 3.2,
+     "m": 0.144
+    },
+    "score_reached_t": 4.22,
+    "finish_t": 2.609773935083883
+   }
+  },
+  {
+   "seed": 1,
+   "result": 2.656,
+   "finished": true,
+   "finish_t": 2.66,
+   "metric": 5.62,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.7 finished, end x5.53 y-0.05 z0.045 yaw-4°",
+   "trace": [
+    [
+     2,
+     3.15,
+     0.03,
+     0.125,
+     2.06,
+     -7
+    ],
+    [
+     4,
+     5.54,
+     0.28,
+     0.049,
+     0.16,
+     6
+    ],
+    [
+     6,
+     5.53,
+     0.27,
+     0.044,
+     0.01,
+     2
+    ],
+    [
+     8,
+     5.53,
+     0.24,
+     0.045,
+     0.05,
+     3
+    ],
+    [
+     10,
+     5.53,
+     0.2,
+     0.045,
+     0.05,
+     1
+    ],
+    [
+     12,
+     5.53,
+     0.17,
+     0.046,
+     0.03,
+     -1
+    ],
+    [
+     14,
+     5.53,
+     0.15,
+     0.044,
+     0.02,
+     -4
+    ],
+    [
+     16,
+     5.53,
+     0.11,
+     0.043,
+     0.05,
+     -2
+    ],
+    [
+     18,
+     5.53,
+     0.08,
+     0.044,
+     0.08,
+     1
+    ],
+    [
+     20,
+     5.53,
+     0.06,
+     0.045,
+     0.04,
+     0
+    ],
+    [
+     22,
+     5.53,
+     0.05,
+     0.046,
+     0.04,
+     -2
+    ],
+    [
+     24,
+     5.53,
+     0.02,
+     0.044,
+     0.01,
+     3
+    ],
+    [
+     26,
+     5.53,
+     -0.01,
+     0.045,
+     0.02,
+     0
+    ],
+    [
+     28,
+     5.53,
+     -0.02,
+     0.044,
+     0.02,
+     1
+    ],
+    [
+     30,
+     5.53,
+     -0.05,
+     0.045,
+     0.07,
+     -4
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 3.24,
+     "m": 0.14
+    },
+    "score_reached_t": 3.28,
+    "finish_t": 2.6559404206729393
+   }
+  },
+  {
+   "seed": 2,
+   "result": 2.58,
+   "finished": true,
+   "finish_t": 2.58,
+   "metric": 5.6227,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y0.25 z0.046 yaw0°",
+   "trace": [
+    [
+     2,
+     3.27,
+     0.11,
+     0.119,
+     2.11,
+     -1
+    ],
+    [
+     4,
+     5.55,
+     0.34,
+     0.049,
+     0.11,
+     0
+    ],
+    [
+     6,
+     5.53,
+     0.3,
+     0.045,
+     0.04,
+     -4
+    ],
+    [
+     8,
+     5.53,
+     0.27,
+     0.045,
+     0.06,
+     2
+    ],
+    [
+     10,
+     5.53,
+     0.25,
+     0.046,
+     0,
+     0,
+     "until 30"
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 3.14,
+     "m": 0.143
+    },
+    "score_reached_t": 3.34,
+    "finish_t": 2.5799713790620937
+   }
+  },
+  {
+   "seed": 3,
+   "result": 2.625,
+   "finished": true,
+   "finish_t": 2.63,
+   "metric": 5.6195,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y-0.07 z0.042 yaw2°",
+   "trace": [
+    [
+     2,
+     3.17,
+     0.31,
+     0.127,
+     2.09,
+     -4
+    ],
+    [
+     4,
+     5.55,
+     0.5,
+     0.048,
+     0.06,
+     -5
+    ],
+    [
+     6,
+     5.53,
+     0.42,
+     0.044,
+     0.04,
+     -2
+    ],
+    [
+     8,
+     5.53,
+     0.38,
+     0.044,
+     0.03,
+     0
+    ],
+    [
+     10,
+     5.53,
+     0.33,
+     0.045,
+     0.02,
+     -1
+    ],
+    [
+     12,
+     5.53,
+     0.29,
+     0.042,
+     0.06,
+     -2
+    ],
+    [
+     14,
+     5.54,
+     0.25,
+     0.047,
+     0.06,
+     -2
+    ],
+    [
+     16,
+     5.53,
+     0.21,
+     0.045,
+     0.01,
+     -2
+    ],
+    [
+     18,
+     5.53,
+     0.17,
+     0.043,
+     0.04,
+     2
+    ],
+    [
+     20,
+     5.53,
+     0.13,
+     0.046,
+     0.14,
+     -2
+    ],
+    [
+     22,
+     5.53,
+     0.12,
+     0.041,
+     0.02,
+     1
+    ],
+    [
+     24,
+     5.54,
+     0.08,
+     0.039,
+     0.06,
+     3
+    ],
+    [
+     26,
+     5.53,
+     0.04,
+     0.042,
+     0.04,
+     -2
+    ],
+    [
+     28,
+     5.54,
+     -0.02,
+     0.047,
+     0.08,
+     -3
+    ],
+    [
+     30,
+     5.53,
+     -0.07,
+     0.042,
+     0.15,
+     2
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 2.6,
+     "m": 0.135
+    },
+    "score_reached_t": 3.68,
+    "finish_t": 2.6251529877425304
+   }
+  },
+  {
+   "seed": 4,
+   "result": 2.597,
+   "finished": true,
+   "finish_t": 2.6,
+   "metric": 5.6019,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y-0.03 z0.046 yaw1°",
+   "trace": [
+    [
+     2,
+     3.23,
+     0.07,
+     0.12,
+     2.05,
+     -6
+    ],
+    [
+     4,
+     5.55,
+     -0.02,
+     0.072,
+     0.09,
+     5
+    ],
+    [
+     6,
+     5.53,
+     -0.03,
+     0.045,
+     0.02,
+     0
+    ],
+    [
+     8,
+     5.53,
+     -0.03,
+     0.045,
+     0,
+     1,
+     "until 16"
+    ],
+    [
+     18,
+     5.53,
+     -0.03,
+     0.046,
+     0,
+     1,
+     "until 30"
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 2.9,
+     "m": 0.136
+    },
+    "score_reached_t": 3.16,
+    "finish_t": 2.596763211697756
+   }
+  },
+  {
+   "seed": 5,
+   "result": 2.568,
+   "finished": true,
+   "finish_t": 2.57,
+   "metric": 5.6262,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y0.01 z0.046 yaw0°",
+   "trace": [
+    [
+     2,
+     3.28,
+     0.13,
+     0.127,
+     2.13,
+     -8
+    ],
+    [
+     4,
+     5.55,
+     0.19,
+     0.068,
+     0.19,
+     11
+    ],
+    [
+     6,
+     5.54,
+     0.19,
+     0.092,
+     0.22,
+     5
+    ],
+    [
+     8,
+     5.53,
+     0.21,
+     0.044,
+     0.05,
+     0
+    ],
+    [
+     10,
+     5.55,
+     0.16,
+     0.04,
+     0.12,
+     2
+    ],
+    [
+     12,
+     5.53,
+     0.12,
+     0.041,
+     0.09,
+     0
+    ],
+    [
+     14,
+     5.53,
+     0.1,
+     0.046,
+     0.01,
+     -1
+    ],
+    [
+     16,
+     5.52,
+     0.08,
+     0.045,
+     0.04,
+     1
+    ],
+    [
+     18,
+     5.54,
+     0.08,
+     0.047,
+     0.1,
+     -5
+    ],
+    [
+     20,
+     5.53,
+     0.02,
+     0.039,
+     0.05,
+     5
+    ],
+    [
+     22,
+     5.53,
+     0.02,
+     0.044,
+     0.06,
+     1
+    ],
+    [
+     24,
+     5.53,
+     0.01,
+     0.045,
+     0.04,
+     1
+    ],
+    [
+     26,
+     5.53,
+     0.01,
+     0.045,
+     0,
+     0
+    ],
+    [
+     28,
+     5.53,
+     0.01,
+     0.046,
+     0,
+     0,
+     "until 30"
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 3.12,
+     "m": 0.133
+    },
+    "score_reached_t": 3.32,
+    "finish_t": 2.567791196784636
+   }
+  },
+  {
+   "seed": 6,
+   "result": 2.571,
+   "finished": true,
+   "finish_t": 2.57,
+   "metric": 5.6184,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y0.24 z0.046 yaw1°",
+   "trace": [
+    [
+     2,
+     3.26,
+     0.16,
+     0.125,
+     2.12,
+     -5
+    ],
+    [
+     4,
+     5.54,
+     0.26,
+     0.064,
+     0.14,
+     14
+    ],
+    [
+     6,
+     5.53,
+     0.26,
+     0.045,
+     0.03,
+     2
+    ],
+    [
+     8,
+     5.53,
+     0.24,
+     0.046,
+     0,
+     1,
+     "until 30"
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 1.42,
+     "m": 0.132
+    },
+    "score_reached_t": 3.72,
+    "finish_t": 2.5706168457610077
+   }
+  },
+  {
+   "seed": 7,
+   "result": 2.579,
+   "finished": true,
+   "finish_t": 2.58,
+   "metric": 5.6018,
+   "falls": 0,
+   "first_fall_t": null,
+   "flags": [],
+   "timeline": "0 run(walk), 2.6 finished, end x5.53 y0.13 z0.046 yaw0°",
+   "trace": [
+    [
+     2,
+     3.26,
+     0.09,
+     0.125,
+     2.1,
+     -7
+    ],
+    [
+     4,
+     5.54,
+     0.13,
+     0.043,
+     0.04,
+     1
+    ],
+    [
+     6,
+     5.53,
+     0.13,
+     0.045,
+     0,
+     0
+    ],
+    [
+     8,
+     5.53,
+     0.13,
+     0.046,
+     0,
+     0,
+     "until 30"
+    ]
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 1.14,
+     "m": 0.135
+    },
+    "score_reached_t": 3.14,
+    "finish_t": 2.5786802965895688
+   }
+  }
+ ],
+ "viewer_url": "http://127.0.0.1:5393/runs/20261127-174928-8cdefd?seed=1",
+ "on_site": "no",
+ "site_note": "uploads are off (DUCKBENCH_NO_UPLOAD=1): your human sees none of your runs on the site; unset it",
+ "viewer_hint": "The Training gym isn't running, so viewer_url won't open yet: start it once with `duckbench view`, then give your human the link.",
+ "cpu_s": 4.471,
+ "wall_s": 0.99
+}

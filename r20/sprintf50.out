@@ -1,0 +1,19 @@
+duck-rl kit 1.31.2 · standalone · budget 570.3/1200.0 min
+[duck-rl] WARM_MLP submissions/r13_o2_40min/policy.mlp.json -> mv_fa83e5b52d0f (no alias): /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r13_o2_40min/policy.mlp.json
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+[duck-rl] --init home/runs/r20_sprintf20/ckpt.pt -> weights mv_76552166b922 at 33120256 steps
+[duck-rl] lineage: parent mv_76552166b922, root stock:alpha_walking, parent cumulative {'steps': None, 'train_s': None}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 r20_sprintf50: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': 0, 'wz': 0, 'head_pitch': 0.6, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights submissions/r13_o2_40min/policy.mlp.json (mv_fa83e5b52d0f), init home/runs/r20_sprintf20/ckpt.pt, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 30.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 851, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r20_sprintf50
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:f0e8c40bd3f7cd5e
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r13_o2_40min/policy.mlp.json
+it    0 steps      8192 t      1s sps  10690 eps   6 len 56 fall 1.00 lost 0.00 metric@end 1.33 success 0.00 ret -39.00 std 0.100 lr 1.0e-03 (warm-up: critic only)
+it   10 steps     90112 t      3s sps  35512 eps  99 len 135 fall 0.06 lost 0.00 metric@end 4.46 success 0.94 ret 15.94 std 0.100 lr 1.0e-04
+it   20 steps    172032 t      5s sps  36243 eps  43 len 138 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 18.98 std 0.100 lr 1.0e-04
+it   30 steps    253952 t      8s sps  36423 eps  71 len 136 fall 0.06 lost 0.00 metric@end 4.37 success 0.94 ret 16.52 std 0.100 lr 1.0e-04
+it   31 steps    262144 t      8s sps  36108 eps  40 len 136 fall 0.05 lost 0.00 metric@end 4.40 success 0.95 ret 17.49 std 0.100 lr 1.0e-04 ckpt 253952
+it   40 steps    335872 t     10s sps  33816 eps  63 len 138 fall 0.03 lost 0.00 metric@end 4.52 success 0.97 ret 16.57 std 0.100 lr 1.0e-04
+it   50 steps    417792 t     13s sps  34516 eps  49 len 136 fall 0.08 lost 0.00 metric@end 4.39 success 0.92 ret 16.47 std 0.100 lr 1.0e-04
