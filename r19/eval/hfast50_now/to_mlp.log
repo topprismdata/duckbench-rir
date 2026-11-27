@@ -1,0 +1,5 @@
+home/runs/r19_hfast50/ckpt-21004288.pt [checkpoint 'plain' (PlainActor); normaliser sub/div] -> ../r19/eval/hfast50_now/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs torch(source) on 256 obs: max |diff| 1.91e-06 (max |out| 6.82)
+  numpy(blob) vs onnxruntime(ckpt-21004288.onnx): max |diff| 2.74e-06
+  numpy(blob) vs torch(checkpoint 'actor', eps auto): max |diff| 1.91e-06
+  OK (tolerance 6.8e-04)
