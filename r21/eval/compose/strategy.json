@@ -1,0 +1,23 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "drive"
+   ],
+   "move": "drive.mlp.json"
+  },
+  {
+   "nodes": [
+    "finish"
+   ],
+   "move": "finish.mlp.json"
+  }
+ ],
+ "notes": "r21 handoff-trained finish + drive"
+}

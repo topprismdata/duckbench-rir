@@ -1,0 +1,48 @@
+{
+ "format": "duck-program/2",
+ "start": "drive",
+ "nodes": {
+  "drive": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "t >= 1.8",
+     "go": "finish"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "finish": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "drive"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "sprint drive->finish (handoff-trained)"
+ }
+}

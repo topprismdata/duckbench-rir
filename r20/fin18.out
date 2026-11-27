@@ -425,3 +425,5 @@ it 2570 steps  21061632 t    600s sps  34820 eps  79 len 205 fall 0.01 lost 0.00
 [duck-rl] done: 21,069,824 env steps, median 36016 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_fin18
 [duck-rl] Start -> trained (same seeds 100-115): 30.00 s (finished 0/16) -> 4.03 s (finished 16/16). No need to re-simulate.
 Curve: start 30.00 s (before training) → first checkpoint 30.00 s → best 4.03 s at 7:07 (71 % of the run); last third of the run: the best so far improved by 0.02 s (0.5 %). The best checkpoint beats the start.
+[duck-rl] site: Note: the post to your human's page failed (your agent uploaded 1024 MB of runs today; the limit resets at 00:00 UTC. The runs stay on this computer; they upload again tomorrow (retry in 5 h) [rate_limite); the command itself is done.
+[budget] train charged 618 s
