@@ -50,3 +50,18 @@ it  250 steps   2056192 t     81s sps  21851 eps 232 len 500 fall 0.00 lost 0.01
 it  260 steps   2138112 t     84s sps  23928 eps 234 len 500 fall 0.00 lost 0.03 metric@end 10.47 success 0.00 ret 32.91 std 0.100 lr 5.1e-05
 it  270 steps   2220032 t     88s sps  22862 eps 235 len 500 fall 0.00 lost 0.02 metric@end 10.53 success 0.00 ret 33.09 std 0.100 lr 3.4e-05
 it  275 steps   2260992 t     90s sps  20999 eps 236 len 500 fall 0.00 lost 0.03 metric@end 10.54 success 0.00 ret 33.11 std 0.100 lr 5.1e-05 ckpt 2252800
+[duck-rl] TS eval ckpt-2007040.onnx: best 8 of 16 11.155 rpm (mean 10.188, worst 0.000 rpm) (6.2 s) (run not kept: no improvement)
+[duck-rl] rollout ran: fast: fused 128/128 envs, pipelined halves, 4 MB buffers ok
+[duck-rl] submitting ckpt-0253952.onnx: best by TS (best 8 of 16 11.314 rpm (mean 11.036, worst 10.433 rpm), rank key [11.3137]), run 20261127-231756-12e93a
+[duck-rl] run card: best 11.036 rpm @ 0.25M/10s, last 10.188; 9.65 rpm @ 0.25M/10s; 11.75 rpm @ -; median 26120 sps (last/first min 0.971)
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r21_turnscore/ckpt-0253952.onnx [ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']] -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_turnscore/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs onnxruntime(source) on 256 obs: max |diff| 3.34e-06 (max |out| 8.94)
+  OK (tolerance 8.9e-04)
+[duck-rl] warm_start.json: the duckscript with its stock skills, where the run started (score both on the same seeds)
+[duck-rl] exported duck-strategy/1 /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_turnscore: move mv_5e52e1579b78, ckpt.pt = ckpt-0253952.pt, last.pt = ckpt-2252800.pt + opt.pt
+[duck-rl] checkpoint runs: kept 1 of 4 (1.4 MB) in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; all would have been ~5.5 MB
+[duck-rl] done: 2,277,376 env steps, median 26120 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r21_turnscore
+[duck-rl] start -> trained: no comparison (--init: the run starts from ckpt.pt; its own session's summary has its numbers).
+Curve: first checkpoint 11.31 rpm → best 11.31 rpm at 0:10 (11 % of the run); last third of the run: the best so far did not change (the training had stopped improving).
+[duck-rl] site: Note: the post to your human's page failed (your agent uploaded 1024 MB of runs today; the limit resets at 00:00 UTC. The runs stay on this computer; they upload again tomorrow (retry in 41 min) [rate_lim); the command itself is done.
+[budget] train charged 99 s
