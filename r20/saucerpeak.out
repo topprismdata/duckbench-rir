@@ -10,3 +10,24 @@ duck-rl kit 1.31.2 · standalone · budget 540.0/1200.0 min · 1 other charged c
 [duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json
 it    0 steps      8192 t      1s sps   6081 eps   9 len 60 fall 1.00 lost 0.00 metric@end 9.66 success 0.00 ret 7.03 std 0.150 lr 1.0e-03 (warm-up: critic only)
 [duck-rl] TS eval of the start (saucer-spinner@1): best 8 of 16 55.423 rpm (mean 55.054, worst 53.873 rpm) (5.9 s), the same seeds and opponents as every checkpoint's
+it   10 steps     90112 t      7s sps  15361 eps  37 len 217 fall 0.95 lost 0.00 metric@end 28.12 success 0.00 ret 25.71 std 0.150 lr 2.0e-04
+it   20 steps    172032 t     12s sps  15723 eps  36 len 224 fall 0.97 lost 0.00 metric@end 30.04 success 0.00 ret 27.27 std 0.150 lr 2.0e-04
+it   30 steps    253952 t     18s sps  14153 eps  25 len 320 fall 0.80 lost 0.00 metric@end 36.49 success 0.00 ret 35.43 std 0.150 lr 2.0e-04
+it   31 steps    262144 t     18s sps  12665 eps  23 len 306 fall 0.83 lost 0.00 metric@end 35.23 success 0.00 ret 33.96 std 0.150 lr 2.0e-04 ckpt 253952
+it   40 steps    335872 t     24s sps  13069 eps  21 len 288 fall 0.76 lost 0.00 metric@end 33.20 success 0.00 ret 32.00 std 0.150 lr 2.0e-04
+[duck-rl] TS eval ckpt-0253952.onnx: best 8 of 16 50.188 rpm (mean 46.594, worst 36.387 rpm) (6.4 s) <- best run 20261127-182613-11b647
+[duck-rl] one checkpoint run = 1.4 MB (16 seeds); --save-runs all would use ~1.6 MB/min of training (~98 MB/hour) at one eval every 50 s, ~33 MB over this 20-min run; improved-only usually keeps a handful
+it   50 steps    417792 t     30s sps  15700 eps  19 len 402 fall 0.42 lost 0.00 metric@end 42.24 success 0.00 ret 42.89 std 0.149 lr 2.0e-04
+it   60 steps    499712 t     35s sps  15767 eps  16 len 386 fall 0.62 lost 0.00 metric@end 41.65 success 0.00 ret 41.67 std 0.149 lr 2.0e-04
+it   62 steps    516096 t     36s sps  15084 eps  15 len 412 fall 0.20 lost 0.00 metric@end 43.18 success 0.00 ret 44.49 std 0.149 lr 2.0e-04 ckpt 507904
+it   70 steps    581632 t     40s sps  14798 eps  16 len 431 fall 0.38 lost 0.00 metric@end 45.70 success 0.00 ret 46.90 std 0.149 lr 2.0e-04
+it   80 steps    663552 t     46s sps  13783 eps  26 len 434 fall 0.38 lost 0.00 metric@end 46.45 success 0.00 ret 47.18 std 0.148 lr 2.0e-04
+it   90 steps    745472 t     52s sps  14084 eps  16 len 397 fall 0.62 lost 0.00 metric@end 44.55 success 0.00 ret 44.27 std 0.148 lr 2.0e-04
+it   92 steps    761856 t     53s sps  13705 eps  22 len 397 fall 0.64 lost 0.00 metric@end 45.46 success 0.00 ret 44.99 std 0.148 lr 2.0e-04 ckpt 753664
+it  100 steps    827392 t     57s sps  15549 eps  22 len 424 fall 0.27 lost 0.00 metric@end 43.76 success 0.00 ret 45.14 std 0.148 lr 2.0e-04
+it  110 steps    909312 t     62s sps  16914 eps  13 len 384 fall 0.54 lost 0.00 metric@end 39.82 success 0.00 ret 40.07 std 0.148 lr 2.0e-04
+it  120 steps    991232 t     68s sps  15171 eps  19 len 384 fall 0.47 lost 0.00 metric@end 42.21 success 0.00 ret 42.31 std 0.147 lr 2.0e-04
+it  123 steps   1015808 t     70s sps  11940 eps  22 len 465 fall 0.18 lost 0.00 metric@end 47.27 success 0.00 ret 49.20 std 0.147 lr 2.0e-04 ckpt 1007616
+it  130 steps   1073152 t     74s sps  12942 eps  19 len 445 fall 0.32 lost 0.00 metric@end 46.03 success 0.00 ret 47.42 std 0.147 lr 2.0e-04
+[duck-rl] TS eval ckpt-0753664.onnx: best 8 of 16 52.658 rpm (mean 51.788, worst 48.774 rpm) (6.2 s) <- best run 20261127-182703-ccdcf2
+it  140 steps   1155072 t     80s sps  14493 eps  15 len 500 fall 0.07 lost 0.00 metric@end 51.19 success 0.00 ret 53.82 std 0.147 lr 2.0e-04
