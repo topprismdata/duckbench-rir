@@ -1,0 +1,291 @@
+{
+ "version": "0.1.0",
+ "types": {
+  "Competition": {
+   "prefix": "COMP",
+   "required": [
+    "platform",
+    "namespace",
+    "official_url"
+   ]
+  },
+  "Task": {
+   "prefix": "TASK",
+   "required": [
+    "challenge_key",
+    "task_version",
+    "objective",
+    "task_mode"
+   ]
+  },
+  "MetricDefinition": {
+   "prefix": "MET",
+   "required": [
+    "name",
+    "unit",
+    "direction",
+    "aggregation",
+    "failure_policy"
+   ]
+  },
+  "Environment": {
+   "prefix": "ENV",
+   "required": [
+    "role",
+    "engine",
+    "engine_version",
+    "model_ref"
+   ]
+  },
+  "PolicyAsset": {
+   "prefix": "POL",
+   "required": [
+    "asset_kind",
+    "format",
+    "parameter_count",
+    "weight_ref",
+    "identity_status"
+   ]
+  },
+  "ProgramAsset": {
+   "prefix": "PRG",
+   "required": [
+    "format",
+    "program_ref",
+    "node_keys"
+   ]
+  },
+  "TrainingRecipe": {
+   "prefix": "RCP",
+   "required": [
+    "trainer_version",
+    "algorithm",
+    "initialization_mode",
+    "config_ref"
+   ]
+  },
+  "RewardVersion": {
+   "prefix": "REW",
+   "required": [
+    "implementation_ref",
+    "terms",
+    "parameters"
+   ]
+  },
+  "HostContract": {
+   "prefix": "HST",
+   "required": [
+    "host_name",
+    "observation_dim",
+    "action_dim",
+    "policy_hz",
+    "clamp_spec"
+   ]
+  },
+  "CommandProfile": {
+   "prefix": "CMD",
+   "required": [
+    "nominal_commands",
+    "effective_commands",
+    "schedule"
+   ]
+  },
+  "Experiment": {
+   "prefix": "EXP",
+   "required": [
+    "purpose",
+    "design_kind",
+    "arms",
+    "primary_endpoint",
+    "success_criteria",
+    "stop_criteria"
+   ]
+  },
+  "TrainingRun": {
+   "prefix": "RUN",
+   "required": [
+    "run_key",
+    "train_seed",
+    "started_at",
+    "termination_reason",
+    "actual_steps",
+    "effective_parameters"
+   ]
+  },
+  "SeedSet": {
+   "prefix": "SEED",
+   "required": [
+    "visibility",
+    "declared_count",
+    "membership_digest"
+   ]
+  },
+  "EvaluationProtocol": {
+   "prefix": "EPR",
+   "required": [
+    "evaluator_version",
+    "seed_role",
+    "metric_set",
+    "selection_policy"
+   ]
+  },
+  "EvaluationRun": {
+   "prefix": "EV",
+   "required": [
+    "run_key",
+    "evaluation_role",
+    "sample_count",
+    "valid_count",
+    "execution_status"
+   ]
+  },
+  "MetricResult": {
+   "prefix": "RES",
+   "required": [
+    "value",
+    "unit",
+    "n_total",
+    "n_valid",
+    "verification_status"
+   ]
+  },
+  "EvidenceArtifact": {
+   "prefix": "ART",
+   "required": [
+    "path",
+    "sha256",
+    "verification"
+   ]
+  },
+  "CompetitionAttempt": {
+   "prefix": "ATT",
+   "required": [
+    "challenge",
+    "score",
+    "unit",
+    "rank",
+    "submitted_at"
+   ]
+  },
+  "LeaderboardSnapshot": {
+   "prefix": "LB",
+   "required": [
+    "challenge",
+    "observed_at",
+    "record_value",
+    "holder"
+   ]
+  },
+  "Observation": {
+   "prefix": "OBS",
+   "required": [
+    "statement",
+    "observed_at",
+    "source_refs"
+   ]
+  },
+  "Hypothesis": {
+   "prefix": "HYP",
+   "required": [
+    "statement",
+    "prediction",
+    "falsifier",
+    "status"
+   ]
+  },
+  "Claim": {
+   "prefix": "CLM",
+   "required": [
+    "statement",
+    "scope",
+    "evidence_level",
+    "limitations"
+   ]
+  },
+  "Counterexample": {
+   "prefix": "CEX",
+   "required": [
+    "statement",
+    "refutes"
+   ]
+  },
+  "LiteratureSource": {
+   "prefix": "LIT",
+   "required": [
+    "title",
+    "url",
+    "published_at"
+   ]
+  },
+  "Scope": {
+   "prefix": "SCP",
+   "required": [
+    "task_ref",
+    "conditions"
+   ]
+  },
+  "ResearchSession": {
+   "prefix": "SES",
+   "required": [
+    "started_at",
+    "objective"
+   ]
+  },
+  "Decision": {
+   "prefix": "DEC",
+   "required": [
+    "statement",
+    "decided_at",
+    "authority"
+   ]
+  },
+  "Exclusion": {
+   "prefix": "EXC",
+   "required": [
+    "route",
+    "reason_ref",
+    "reopen_condition"
+   ]
+  },
+  "BudgetAllocation": {
+   "prefix": "BUD",
+   "required": [
+    "scope",
+    "granted_minutes",
+    "status"
+   ]
+  }
+ },
+ "relations": [
+  "SUPPORTS",
+  "REFUTES",
+  "TESTED_BY",
+  "PRODUCES",
+  "DERIVES_FROM",
+  "SUPERSEDES",
+  "EXCLUDES",
+  "DEPENDS_ON",
+  "EVALUATED_ON",
+  "USED_IN",
+  "BOUND_TO"
+ ],
+ "enums": {
+  "evidence_level": [
+   "ANECDOTAL",
+   "EXPLORATORY",
+   "REPLICATED",
+   "STRONG",
+   "FALSIFIED"
+  ],
+  "identity_status": [
+   "HASHED",
+   "UNVERIFIED",
+   "MISSING"
+  ],
+  "verification": [
+   "VERIFIED",
+   "UNVERIFIED",
+   "NOT_DERIVABLE"
+  ]
+ }
+}
