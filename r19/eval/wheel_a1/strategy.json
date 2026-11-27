@@ -1,0 +1,23 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "wheel",
+  "version": 2
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "policy.mlp.json",
+   "host": "raw",
+   "command": {
+    "run": {
+     "vx": 0.7
+    }
+   }
+  }
+ ],
+ "notes": "a1"
+}
