@@ -102,3 +102,4 @@
 {"kind": "train", "label": "r20_sprintf50", "start": "2026-11-28T01:54:36", "seconds": 1818.1, "run": "31692-1795802076762", "end": "exit"}
 {"kind": "train", "label": "r20_saucerpeak", "start": "2026-11-28T02:25:43", "seconds": 518.2, "run": "32468-1795803943267", "end": "exit"}
 {"kind": "train", "label": "r20_saucershort", "start": "2026-11-28T02:34:22", "seconds": 261.1, "run": "32971-1795804462698", "end": "exit"}
+{"kind": "train", "label": "r20_sprintf80", "start": "2026-11-28T02:25:42", "seconds": 1816.3, "run": "32465-1795803942268", "end": "exit"}
