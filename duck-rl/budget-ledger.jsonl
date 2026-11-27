@@ -90,3 +90,4 @@
 {"kind": "train", "label": "r19_wheel30", "start": "2026-11-27T23:12:47", "seconds": 580.4, "run": "25832-1795792367396", "end": "last heartbeat"}
 {"kind": "train", "label": "r19_sprint30", "start": "2026-11-27T23:22:42", "seconds": 1823.8, "run": "26364-1795792962920", "end": "exit"}
 {"kind": "train", "label": "r19_hurdles30", "start": "2026-11-27T23:22:33", "seconds": 550.5, "run": "26212-1795792953462", "end": "last heartbeat"}
+{"kind": "train", "label": "r19_turn20", "start": "2026-11-27T23:53:25", "seconds": 1233.0, "run": "27138-1795794805732", "end": "exit"}
