@@ -97,3 +97,4 @@
 {"kind": "train", "label": "r19_sspin20", "start": "2026-11-28T00:28:17", "seconds": 250.3, "run": "29070-1795796897521", "end": "last heartbeat"}
 {"kind": "train", "label": "r19_hfast50", "start": "2026-11-28T00:48:32", "seconds": 1822.7, "run": "29846-1795798112820", "end": "exit"}
 {"kind": "train", "label": "r20_wheelf20", "start": "2026-11-28T01:28:51", "seconds": 285.2, "run": "30754-1795800531676", "end": "exit"}
+{"kind": "train", "label": "r20_turnlive", "start": "2026-11-28T01:33:33", "seconds": 259.6, "run": "31170-1795800813305", "end": "exit"}
