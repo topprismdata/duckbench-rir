@@ -1,0 +1,36 @@
+{
+ "format": "duck-program/2",
+ "start": "go",
+ "any": [
+  {
+   "if": "fallen",
+   "go": "up",
+   "except": [
+    "up"
+   ]
+  }
+ ],
+ "nodes": {
+  "go": {
+   "skill": "walk",
+   "params": {},
+   "feed": {
+    "vx": "clamp(0.5 - 0.8 * abs(path(0, 0)), 0, 0.5)",
+    "wz": "clamp(3.0 * path(0, 0), -1.5, 1.5)"
+   }
+  },
+  "up": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "BACK"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Maze race: steer along path(0, 0)",
+  "idea": "one raw walk node: its speed and turn fed every program tick from path(0, 0), the shortest route round the walls, slower in sharp turns; get up after a fall"
+ }
+}

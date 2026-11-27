@@ -1,0 +1,26 @@
+{
+  "format": "duck-program/2",
+  "start": "out",
+  "nodes": {
+    "out": { "skill": "walk", "params": {"vx": 0.19}, "max_time": {"s": 1.8, "go": "face"},
+      "until": [{ "if": "fallen", "go": "up" }]
+    },
+    "face": { "skill": "walk", "params": {"vx": 0, "wz": -0.6}, "max_time": {"s": 2.6, "go": "backpedal"},
+      "until": [{ "if": "fallen", "go": "up" }]
+    },
+    "backpedal": { "skill": "walk", "params": {"vx": -0.16, "wz": 0.5},
+      "until": [
+        { "if": "fallen", "go": "up" },
+        { "if": "t >= 8.5", "go": "lunge" }
+      ]
+    },
+    "up": { "skill": "get_up",
+      "until": [{ "if": "done", "go": "backpedal" }]
+    },
+    "lunge": { "skill": "roulade",
+      "until": [{ "if": "done", "go": "rest" }]
+    },
+    "rest": { "skill": "stand" }
+  },
+  "meta": {"title": "Back-pedal, then roll against it", "idea": "walk 30 cm out, turn right, back-pedal a circle near the edge while the bearing bleeds the disc's spin, then at 8.5 s roll forward against the way you went: the roll peaks at the bell and goes over the edge only after it"}
+}

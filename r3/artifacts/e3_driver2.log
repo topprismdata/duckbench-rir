@@ -1,0 +1,8 @@
+[e3] seed 101 cond A finished by earlier driver: done
+[e3] seed 101 cond B start 08:36:29
+[e3] seed 101 cond B ended: done 08:41:44
+[e3] seed 102 cond B start 08:41:44
+[e3] seed 102 cond B ended: done 08:46:58
+[e3] seed 102 cond A start 08:46:58
+[e3] seed 102 cond A ended: done 08:52:16
+[e3] seed 103 cond A start 08:52:16

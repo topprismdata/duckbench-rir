@@ -1,0 +1,66 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.1,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "t>3",
+     "go": "b"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "b": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "t>6",
+     "go": "c"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "c": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.1,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "V7 t=3s/6s 0.10->0.19->0.10",
+  "idea": "T2p evaluation"
+ }
+}

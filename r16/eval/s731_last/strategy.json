@@ -1,0 +1,17 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "saucer",
+  "version": 1
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "policy.mlp.json"
+  }
+ ],
+ "notes": "r16 s731 last ckpt"
+}

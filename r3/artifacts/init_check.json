@@ -1,0 +1,144 @@
+{
+ "created": "2026-11-27",
+ "subject": "E3 init check (A warm-start vs B scratch), kit lab/learn.py DUCK_DUMP_INIT",
+ "kit_build_line": "lab/learn.py:188 always calls warm_start(alg.actor, move.warm_start); scratch must therefore re-draw",
+ "layers": [
+  {
+   "layer": "mlp.0.weight",
+   "shape": [
+    512,
+    61
+   ],
+   "A_vs_hfw_max_abs": 0.0,
+   "A_bias_vs_hfw_max_abs": 0.0,
+   "B_vs_hfw_max_abs": 0.03024642914533615,
+   "B_vs_hfw_rms": 0.006762541830539703,
+   "A_std": 0.09915901720523834,
+   "B_std": 0.09881848841905594
+  },
+  {
+   "layer": "mlp.2.weight",
+   "shape": [
+    256,
+    512
+   ],
+   "A_vs_hfw_max_abs": 0.0,
+   "A_bias_vs_hfw_max_abs": 0.0,
+   "B_vs_hfw_max_abs": 0.06803080439567566,
+   "B_vs_hfw_rms": 0.007979086600244045,
+   "A_std": 0.07967230677604675,
+   "B_std": 0.07924114167690277
+  },
+  {
+   "layer": "mlp.4.weight",
+   "shape": [
+    128,
+    256
+   ],
+   "A_vs_hfw_max_abs": 0.0,
+   "A_bias_vs_hfw_max_abs": 0.0,
+   "B_vs_hfw_max_abs": 0.035286128520965576,
+   "B_vs_hfw_rms": 0.007348571438342333,
+   "A_std": 0.0719301775097847,
+   "B_std": 0.07145850360393524
+  },
+  {
+   "layer": "mlp.6.weight",
+   "shape": [
+    14,
+    128
+   ],
+   "A_vs_hfw_max_abs": 0.0,
+   "A_bias_vs_hfw_max_abs": 0.0,
+   "B_vs_hfw_max_abs": 0.027435680851340294,
+   "B_vs_hfw_rms": 0.006032444071024656,
+   "A_std": 0.027763480320572853,
+   "B_std": 0.026873765513300896
+  }
+ ],
+ "norm": {
+  "A_sub_max_diff": 0.0,
+  "A_div_max_diff": 0.0,
+  "B_sub_max_diff": 0.0,
+  "B_div_max_diff": 0.0,
+  "A_vs_B_norm_identical": true
+ },
+ "log_std_equal": true,
+ "hfw": {
+  "json_sha256": "65074cfb255366eda825540931ae0e7c874aa311d6152dc012c8b9835a395d88",
+  "bin_sha256": "f37c68365a05dcdb49d8270cfab4f0081eaccbaf9d1bdc70d71f4a4f8dbe7681",
+  "cache_path": ".duckbench-home/cache/moves/mv_f37c68365a05/policy.mlp.json"
+ },
+ "dumps": {
+  "A_sha256": "b8f9cf0cc239d436474dc842a1ecce65aee1da6426e97ae38709c62473f586a4",
+  "B_sha256": "28b07cf2d861267dbf32a1ea866eed6924c1b3f9c05f10d8f17da032790553e0"
+ },
+ "verdict": "A = HFW bit-exact; B = random weights with the identical normaliser -> true scratch",
+ "correction_R31": {
+  "what_was_wrong": "The value recorded earlier as \"B\" was dumped BEFORE the reset hook ran (DUCK_DUMP_INIT fires before the DUCK_SCRATCH block); it is the alpha_walking stock weights, which is why it sat close to HFW and far from the default-init SD.",
+  "why_it_matters": "GPT flagged exactly this: pre- and post-reset weights were conflated.",
+  "probe": "re-ran the same init probe once (41 s, no training value used) with DUCK_DUMP_INIT and DUCK_DUMP_INIT_AFTER",
+  "pre_reset_equals_stock_alpha_walking": true
+ },
+ "layers_B_post_reset": [
+  {
+   "layer": "mlp.0.weight",
+   "fan_in": 61,
+   "pre_reset_sd": 0.09881848841905594,
+   "post_reset_sd": 0.07374799251556396,
+   "pytorch_default_sd": 0.07392212709545729,
+   "post_min": -0.12801606953144073,
+   "post_max": 0.12803350389003754,
+   "uniform_bound": 0.12803687993289598,
+   "post_vs_hfw_rms": 0.12384606152772903,
+   "pre_vs_hfw_max_abs": 0.03024642914533615
+  },
+  {
+   "layer": "mlp.2.weight",
+   "fan_in": 512,
+   "pre_reset_sd": 0.07924114167690277,
+   "post_reset_sd": 0.025473548099398613,
+   "pytorch_default_sd": 0.025515518153991442,
+   "post_min": -0.044193994253873825,
+   "post_max": 0.04419413581490517,
+   "uniform_bound": 0.044194173824159216,
+   "post_vs_hfw_rms": 0.08515862375497818,
+   "pre_vs_hfw_max_abs": 0.06803080439567566
+  },
+  {
+   "layer": "mlp.4.weight",
+   "fan_in": 256,
+   "pre_reset_sd": 0.07145850360393524,
+   "post_reset_sd": 0.03616195544600487,
+   "pytorch_default_sd": 0.036084391824351615,
+   "post_min": -0.06249962002038956,
+   "post_max": 0.062498681247234344,
+   "uniform_bound": 0.0625,
+   "post_vs_hfw_rms": 0.0804244801402092,
+   "pre_vs_hfw_max_abs": 0.035286128520965576
+  },
+  {
+   "layer": "mlp.6.weight",
+   "fan_in": 128,
+   "pre_reset_sd": 0.026873765513300896,
+   "post_reset_sd": 0.05066462233662605,
+   "pytorch_default_sd": 0.051031036307982884,
+   "post_min": -0.08838697522878647,
+   "post_max": 0.08837957680225372,
+   "uniform_bound": 0.08838834764831843,
+   "post_vs_hfw_rms": 0.057178039103746414,
+   "pre_vs_hfw_max_abs": 0.027435680851340294
+  }
+ ],
+ "raw_tensors": {
+  "pre": {
+   "path": "r3/artifacts/initB_pre.pt",
+   "sha256": "a3707400686f0033f9b1309d9dcd0059dd5b634f6fbe6949190c04c8685638f0"
+  },
+  "post": {
+   "path": "r3/artifacts/initB_post.pt",
+   "sha256": "2a970b402dd236cee60b3577e2ae8a76cb256f4a1c8a2be822bce2c9fa28851a"
+  }
+ },
+ "training_ckpt_check": "all six e3_b runs: first-layer sd 0.0740-0.0745, rms distance from HFW 0.1234-0.1244 (home/runs/e3_b*/ckpt.pt)"
+}

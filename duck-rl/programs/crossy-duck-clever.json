@@ -1,0 +1,170 @@
+{
+  "format": "duck-program/2",
+  "start": "approach",
+  "nodes": {
+    "approach": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "kerb_dist < 0.11",
+          "go": "wait"
+        },
+        {
+          "if": "maze_yaw > 0.08",
+          "go": "approach_r"
+        },
+        {
+          "if": "maze_yaw < -0.08",
+          "go": "approach_l"
+        }
+      ]
+    },
+    "approach_l": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0,
+        "wz": 0.5
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "kerb_dist < 0.11",
+          "go": "wait"
+        },
+        {
+          "if": "maze_yaw > -0.02",
+          "go": "approach"
+        }
+      ]
+    },
+    "approach_r": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0,
+        "wz": -0.5
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "kerb_dist < 0.11",
+          "go": "wait"
+        },
+        {
+          "if": "maze_yaw < 0.02",
+          "go": "approach"
+        }
+      ]
+    },
+    "wait": {
+      "skill": "stand",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "car_eta > 1.7",
+          "go": "cross"
+        }
+      ]
+    },
+    "cross": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "kerb_dist > 0.14",
+          "go": "approach"
+        },
+        {
+          "if": "maze_yaw > 0.08",
+          "go": "cross_r"
+        },
+        {
+          "if": "maze_yaw < -0.08",
+          "go": "cross_l"
+        }
+      ]
+    },
+    "cross_l": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0,
+        "wz": 0.5
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "kerb_dist > 0.14",
+          "go": "approach"
+        },
+        {
+          "if": "maze_yaw > -0.02",
+          "go": "cross"
+        }
+      ]
+    },
+    "cross_r": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0,
+        "wz": -0.5
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "back_up"
+        },
+        {
+          "if": "kerb_dist > 0.14",
+          "go": "approach"
+        },
+        {
+          "if": "maze_yaw < 0.02",
+          "go": "cross"
+        }
+      ]
+    },
+    "back_up": {
+      "skill": "get_up",
+      "until": [
+        {
+          "if": "done",
+          "go": "approach"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "title": "Clever: wait for a gap",
+    "idea": "stock walk straight across, kept straight with maze_yaw; stop on the verge or median before each lane and cross it when the next car is more than 1.7 s away"
+  }
+}

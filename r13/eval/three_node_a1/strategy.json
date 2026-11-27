@@ -1,0 +1,19 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "launch",
+    "drive",
+    "finish"
+   ],
+   "move": "policy.mlp.json"
+  }
+ ],
+ "notes": "r13 three-node same weights"
+}

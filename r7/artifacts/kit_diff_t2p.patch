@@ -1,0 +1,154 @@
+--- release/duck_rl/env.py
++++ kit/duck_rl/env.py
+@@ -268,6 +268,9 @@
+         self._use_head = "head_pose" in names or self.host_raw
+         self._use_body = "body_pose" in names or self.host_raw
+         self._ranges = {int(i): (float(lo), float(hi)) for i, (lo, hi) in (cfg.get("command_ranges") or {}).items()}
++        self.cmd_stage = cfg.get("cmd_stage")  # E2.1: {height: m, vx: m/s} -> switch the walk command once per episode
++        self.cmd_sched = cfg.get("cmd_schedule")  # T2': episode | time | state command scheduling for the walk host
++        self._cmd = None
+         self._draw: dict[int, float] = {}
+         done = cfg.get("done") or {}
+         self.done_ticks = {k: int(round(float(done[k]) / DT)) for k in ("after_s", "upright_s", "rolled_then_upright_s")
+@@ -379,7 +382,17 @@
+         """The command controller of a trained node: the raw host's block (raw_command[node id], with this episode's
+         command_ranges draw), else the walk-stand controller of its skill and params."""
+         if not self.host_raw:
+-            return make_controller(node)
++            ctrl = make_controller(node)
++            for i, v in self._draw.items():  # E2.1: walk-stand command draw (slots 0-2 only)
++                if i == 0:
++                    ctrl.vx = float(v); ctrl.moving = True
++                elif i == 1:
++                    ctrl.vy = float(v)
++                elif i == 2:
++                    ctrl.wz = float(v)
++            if self._draw:
++                ctrl.reset()
++            return ctrl
+         rc = self.cfg.get("raw_command") or {}
+         nid = node.get("id")
+         if nid not in rc:
+@@ -490,6 +503,9 @@
+         """ep = explicit draws (dx, dy, dyaw, friction, mass) -> a Challenge reset (no noise, nominal props, spawn start);
+         bank_state = a handoff state (tests); else a training draw."""
+         train = ep is None and bank_state is None
++        if os.environ.get("DUCK_CMD_DEBUG") and getattr(self, "_cmd_counts", None):
++            print(f"[cmd] episode done switches={self._cmd_switches} resamples={self._cmd_resamples} "
++                  f"dwell={self._cmd_dwell[-6:]} exposure={self._cmd_counts}", flush=True)
+         duck = self.duck
+         P = duck.bam.P
+         P[:] = self._P0
+@@ -501,7 +517,22 @@
+             bank_state = self.bank[int(self.rng.integers(len(self.bank)))]
+         # command-conditioned training (raw host): one draw of the ranged slots per training episode
+         self._draw = {i: float(self.rng.uniform(lo, hi)) for i, (lo, hi) in sorted(self._ranges.items())} if train else {}
++        if train and self._draw and os.environ.get("DUCK_CMD_DEBUG"):
++            print(f"[cmd] episode draw {self._draw}", flush=True)
+         self._done_reset()
++        self._staged = False
++        if self.cmd_sched:
++            sc = self.cmd_sched
++            vals = list(sc.get("values") or [0.10, 0.19])
++            self._cmd = float(self.rng.choice(vals)) if train else float(vals[-1])
++            self._next_switch_t = self.rng.uniform(*sc.get("interval", [1.0, 3.0]))
++            self._cmd_counts = {v: 0 for v in vals}
++            self._cmd_resamples = 0
++            self._cmd_switches = 0
++            self._cmd_dwell = []
++            self._cmd_last_t = 0.0
++        else:
++            self._cmd = None
+         self.t_out = None
+         self.score = 0.0
+         self._down = 0
+@@ -615,7 +646,38 @@
+                         self.ctrl.feed(feed, sp.rt.walk_ranges)
+                     if sp.node.head:
+                         self._head = head
++            if self.cmd_sched and not self.host_raw:
++                sc = self.cmd_sched
++                vals = list(sc.get("values") or [0.10, 0.19])
++                t = self.k * 0.02
++                if sc.get("mode") == "time" and self.k % 50 == 25:  # every 0.5 s of policy time
++                    if t >= self._next_switch_t:
++                        new = float(self.rng.choice(vals))
++                        self._cmd_resamples += 1
++                        if new != self._cmd:
++                            self._cmd_switches += 1
++                            self._cmd_dwell.append(round(t - self._cmd_last_t, 2))
++                            self._cmd_last_t = t
++                            self._cmd = new
++                        self._next_switch_t = t + self.rng.uniform(*sc.get("interval", [1.0, 3.0]))
++                elif sc.get("mode") == "state":
++                    h = float(d.qpos[2])
++                    want = vals[-1] if h >= float(sc.get("height", 0.15)) else vals[0]
++                    if want != self._cmd:
++                        self._cmd = want
++                        self._cmd_switches += 1
++                if self._cmd is not None:
++                    self.ctrl.vx = self._cmd; self.ctrl.moving = True
++                    if self._cmd in self._cmd_counts:
++                        self._cmd_counts[self._cmd] += 1
++            if (self.cmd_stage and not self.host_raw and not self._staged
++                    and float(d.qpos[2]) >= float(self.cmd_stage["height"])):
++                self.ctrl.vx = float(self.cmd_stage["vx"]); self.ctrl.moving = True; self._staged = True
++                if os.environ.get("DUCK_CMD_DEBUG"):
++                    print(f"[cmd] staged vx={self.cmd_stage['vx']} at z={float(d.qpos[2]):.3f}", flush=True)
+             self.cmd = self.ctrl.command()
++            if os.environ.get("DUCK_CMD_DEBUG") and self.cmd_sched and self.k == 100:
++                print(f"[cmd] obs twist at k=100: {np.round(self.cmd[:3], 4).tolist()} (walk cmd vx={self.ctrl.vx})", flush=True)
+             use_head, use_body = self._use_head, self._use_body
+         lag = duck.lag_joint_vel
+         nb_obs(self._ob, self._pr, self._vn, duck.head_cmd, d.sensordata, duck.gyro_adr, d.xquat[duck.trunk], d.qpos,
+--- release/lab/learn.py
++++ kit/lab/learn.py
+@@ -186,6 +186,19 @@
+     with contextlib.redirect_stdout(io.StringIO()):  # rsl_rl prints the model summaries
+         alg = PPO.construct_algorithm(env.get_observations(), env, cfg, device)
+     warm_start(alg.actor, move.warm_start)
++    if os.environ.get("DUCK_DUMP_INIT"):
++        torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
++                   os.environ["DUCK_DUMP_INIT"])
++    if os.environ.get("DUCK_SCRATCH") == "1":
++        # E3 condition B: keep the stock input normaliser (shared interface), re-draw every linear weight/bias
++        # with PyTorch's default init (the same draw rsl_rl uses when nothing is warm-started).
++        with torch.no_grad():
++            for m in alg.actor.mlp:
++                if isinstance(m, nn.Linear):
++                    m.reset_parameters()
++        if os.environ.get("DUCK_DUMP_INIT_AFTER"):
++            torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
++                       os.environ["DUCK_DUMP_INIT_AFTER"])
+     alg.actor.to(device)
+     return alg
+ 
+--- release/train.py
++++ kit/train.py
+@@ -630,8 +630,11 @@
+         raise SystemExit(f"HOST {host!r}: 'walk-stand' (the default) or 'raw'")
+     rc = getattr(cfg_mod, "RAW_COMMAND", None) or {}
+     cr = getattr(cfg_mod, "COMMAND_RANGES", None) or {}
+-    if host != "raw" and (rc or cr):
+-        raise SystemExit("RAW_COMMAND / COMMAND_RANGES need HOST = 'raw'")
++    if host != "raw" and rc:
++        raise SystemExit("RAW_COMMAND needs HOST = 'raw'")
++    if host != "raw" and cr:
++        # E2.1: a walk-stand node's twist command may be redrawn per training episode (vx/vy/wz only; kit patch)
++        pass
+     knob_slot = {k["name"]: k["slot"] for k in knobs}
+     slot_index = {s: i for i, s in enumerate(COMMAND_SLOTS)}
+ 
+@@ -736,6 +739,12 @@
+     hc = host_config(cfg_mod, nodes, config_knobs(cfg_mod) if getattr(cfg_mod, "HOST", None) == "raw" else ())
+     if hc["host"] == "raw":
+         env_cfg.update(host="raw", raw_command=hc["raw_command"], command_ranges=hc["command_ranges"])
++    elif hc["command_ranges"]:
++        env_cfg["command_ranges"] = hc["command_ranges"]
++    if getattr(cfg_mod, "CMD_STAGE", None):
++        env_cfg["cmd_stage"] = dict(cfg_mod.CMD_STAGE)
++    if getattr(cfg_mod, "CMD_SCHEDULE", None):
++        env_cfg["cmd_schedule"] = dict(cfg_mod.CMD_SCHEDULE)
+     if getattr(cfg_mod, "VISION", False):  # the ray eye's vision moves were removed (LB-330)
+         raise SystemExit("VISION was removed with the ray eye (LB-330, 2026-11-14): drop it; a move that sees is a camera "
+                          "move (ENCODER = \"emb1\", configs/sprint/encoder.py)")

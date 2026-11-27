@@ -1,0 +1,17 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "saucer",
+  "version": 1
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "saucer-spinner@1"
+  }
+ ],
+ "notes": "wz016_vym008"
+}

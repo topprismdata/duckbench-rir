@@ -1,0 +1,31 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "p2_vx019_hp06"
+ }
+}

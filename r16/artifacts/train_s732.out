@@ -1,0 +1,6 @@
+duck-rl kit 1.31.2 · standalone · budget 0.2/420.0 min
+[duck-rl] WARNING: this machine is busy (load 14.2 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] WARM_MLP saucer-spinner@1 -> mv_b804c7e21720 (saucer-spinner@1): /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json
+[duck-rl] lineage: parent mv_b804c7e21720 (saucer-spinner@1), root stock:alpha_walking, parent cumulative {'steps': 31744000, 'train_s': 2377}
+[budget] train charged 2 s
+not enough budget left to train (-12 s after the export reserve)

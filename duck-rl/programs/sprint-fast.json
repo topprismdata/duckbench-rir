@@ -1,0 +1,32 @@
+{
+  "format": "duck-program/2",
+  "start": "run",
+  "nodes": {
+    "run": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.19,
+        "head_pitch": 0.6
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "recover"
+        }
+      ]
+    },
+    "recover": {
+      "skill": "get_up",
+      "until": [
+        {
+          "if": "done",
+          "go": "run"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "title": "Sprint: run straight at the top speed",
+    "idea": "walk straight at vx 0.19, head down (head_pitch 0.6: the stance hurdles-fast-walker@1 was trained in); get up after a fall"
+  }
+}

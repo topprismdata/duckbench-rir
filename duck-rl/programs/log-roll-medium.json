@@ -1,0 +1,68 @@
+{
+  "format": "duck-program/2",
+  "start": "hold",
+  "nodes": {
+    "hold": {
+      "skill": "stand",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "log_off > 0.05",
+          "go": "back"
+        },
+        {
+          "if": "log_off < -0.05",
+          "go": "fwd"
+        }
+      ]
+    },
+    "back": {
+      "skill": "walk",
+      "params": {
+        "vx": -0.15
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "log_off < 0.025",
+          "go": "hold"
+        }
+      ]
+    },
+    "fwd": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.15
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "log_off > -0.025",
+          "go": "hold"
+        }
+      ]
+    },
+    "up": {
+      "skill": "get_up",
+      "until": [
+        {
+          "if": "done",
+          "go": "hold"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "title": "Arena bot: medium",
+    "idea": "stands; when more than 5 cm off the log's top line (log_off) walks back toward it at 0.15 m/s until within 2.5 cm; gets up after a fall"
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "steps",
+  "version": 4
+ },
+ "program": "prog_v6.json",
+ "moves": [
+  {
+   "nodes": [
+    "run",
+    "b"
+   ],
+   "move": "policy.mlp.json"
+  }
+ ],
+ "notes": "T2p c2 s303 v6"
+}

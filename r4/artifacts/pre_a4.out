@@ -1,0 +1,46 @@
+duck-rl kit 1.31.2 · standalone · budget 22.5/120.0 min
+[duck-rl] train.model: none yet (no --model, no DUCKBENCH_AGENT_MODEL, no model in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/agent.json); the export takes it from there if the CLI saves one meanwhile; else pass --model <your model>
+[duck-rl] WARNING: this machine is busy (load 10.1 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] PROGRAM /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/programs/a3.json carries trained moves: run base-sidestep-left@1 -> the plain duckscript /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/e4_pre_a4/program.plain.json
+[duck-rl] PROGRAM: node run's move is the warm start: WARM_MLP base-sidestep-left@1, HOST raw, RAW_COMMAND {'run': {'vy': 0.2}}
+[duck-rl] raw host: command {'run': {'vy': 0.2}}
+[duck-rl] WARM_MLP base-sidestep-left@1 -> mv_e22047bac89c (base-sidestep-left@1): /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_e22047bac89c/policy.mlp.json
+[duck-rl] lineage: parent mv_e22047bac89c (base-sidestep-left@1), root stock:alpha_walking, parent cumulative {'steps': None, 'train_s': None}; the parent's card lineage lacks cumulative steps, train_s
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 e4_pre_a4: nodes ['run'] (raw host, command {'run': {'vy': 0.2}}), warm start alpha_walking graph, weights base-sidestep-left@1 = /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_e22047bac89c/policy.mlp.json (mv_e22047bac89c, base-sidestep-left@1), init stock, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 0.50 min, 8x16 envs (one per performance core (8)), nice 10, seed 107, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/e4_pre_a4
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:408f997accecabfc
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (base-sidestep-left@1) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_e22047bac89c/policy.mlp.json
+it    0 steps      8192 t      1s sps   7491 eps 110 len 50 fall 1.00 lost 0.00 metric@end 0.10 success 0.00 ret -16.91 std 0.100 lr 1.0e-03 (warm-up: critic only)
+[duck-rl] TS eval of the start (base-sidestep-left@1): best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s) (6.3 s), the same seeds and opponents as every checkpoint's
+it   10 steps     90112 t      5s sps  24843 eps 127 len 61 fall 1.00 lost 0.00 metric@end 0.08 success 0.00 ret -16.98 std 0.100 lr 1.0e-04
+it   20 steps    172032 t      8s sps  25399 eps  88 len 84 fall 1.00 lost 0.00 metric@end 0.08 success 0.00 ret -17.00 std 0.100 lr 1.0e-04
+it   30 steps    253952 t     11s sps  26369 eps   0 len - fall - lost - metric@end - success - ret - std 0.099 lr 1.0e-04
+it   31 steps    262144 t     11s sps  26401 eps   1 len 207 fall 1.00 lost 0.00 metric@end 0.05 success 0.00 ret -17.30 std 0.099 lr 1.0e-04 ckpt 253952
+it   40 steps    335872 t     14s sps  25835 eps   1 len 1063 fall 1.00 lost 0.00 metric@end 0.04 success 0.00 ret -18.30 std 0.099 lr 1.0e-04
+it   50 steps    417792 t     17s sps  26006 eps  10 len 1500 fall 0.00 lost 0.00 metric@end 0.06 success 0.00 ret -16.77 std 0.099 lr 1.0e-04
+[duck-rl] TS eval ckpt-0253952.onnx: best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s) (7.7 s) <- best run 20261127-021437-16ccc3
+[duck-rl] one checkpoint run = 2.4 MB (16 seeds); --save-runs all would use ~4.9 MB/min of training (~291 MB/hour) at one eval every 30 s, ~2.4 MB over this 0-min run; improved-only usually keeps a handful
+it   60 steps    499712 t     20s sps  29230 eps   5 len 796 fall 0.80 lost 0.00 metric@end 0.12 success 0.00 ret -17.38 std 0.099 lr 1.0e-04
+it   62 steps    516096 t     21s sps  29031 eps   0 len - fall - lost - metric@end - success - ret - std 0.099 lr 1.0e-04 ckpt 507904
+it   70 steps    581632 t     23s sps  29383 eps  17 len 1500 fall 0.00 lost 0.00 metric@end 0.05 success 0.00 ret -16.80 std 0.099 lr 1.0e-04
+it   80 steps    663552 t     26s sps  28818 eps   6 len 1500 fall 0.00 lost 0.00 metric@end 0.06 success 0.00 ret -16.77 std 0.098 lr 1.0e-04
+it   90 steps    745472 t     29s sps  28570 eps   0 len - fall - lost - metric@end - success - ret - std 0.098 lr 1.0e-04
+it   92 steps    761856 t     30s sps  28978 eps   4 len 1500 fall 0.00 lost 0.00 metric@end 0.06 success 0.00 ret -16.75 std 0.098 lr 1.0e-04 ckpt 753664
+[duck-rl] {'ckpt': 770048, 'ckpt_pass': None, 'final': True}
+[duck-rl] TS eval policy.onnx: best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s) (6.8 s) (run not kept: no improvement)
+[duck-rl] rollout ran: fast: fused 128/128 envs, pipelined halves, 4 MB buffers ok
+[duck-rl] submitting ckpt-0253952.onnx: best by TS (best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s), rank key [-30]), run 20261127-021437-16ccc3
+[duck-rl] run card: best 30.000 s @ 0.25M/11s, last 30.000; median 26140 sps (last/first min 1.027)
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/e4_pre_a4/ckpt-0253952.onnx [ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']] -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/e4_pre_a4/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs onnxruntime(source) on 256 obs: max |diff| 1.19e-06 (max |out| 2.52)
+  OK (tolerance 2.5e-04)
+[duck-rl] warm_start.json: the same strategy with base-sidestep-left@1 (score both on the same seeds)
+[duck-rl] exported duck-strategy/1 /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/e4_pre_a4: move mv_c7b10defdf75, ckpt.pt = ckpt-0253952.pt, last.pt = ckpt-0770048.pt + opt.pt
+[duck-rl] checkpoint runs: kept 1 of 2 (2.4 MB) in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; all would have been ~4.9 MB
+[duck-rl] done: 770,048 env steps, median 26140 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/e4_pre_a4
+[duck-rl] Training didn't help: 30.00 s (finished 0/16), as before (same seeds 100-115). No need to re-simulate.
+Curve: start 30.00 s (before training) → first checkpoint 30.00 s → best 30.00 s at 0:11 (35 % of the run); last third of the run: the best so far did not change (the training had stopped improving). Training did not beat the start.
+[budget] train charged 43 s

@@ -1,0 +1,4959 @@
+{
+ "run_id": "20261127-033516-c04804",
+ "challenge": "sprint v6",
+ "valid": true,
+ "moves": [
+  "run ← mv_5318d430a244 · raw vy=0.2"
+ ],
+ "result": 30,
+ "result_text": "30.00 s",
+ "ranked_by": "average finish time of the best 16 of 32 runs (a run that never finishes counts as 30 s); ties: the earlier submission",
+ "finished": "0/32 (finish: torso_reach >= 4.5 m)",
+ "metric": "torso_reach (m, higher is better)",
+ "seed_set": "32 seeds beyond the 8 practice seeds (a robustness check), so not a local record",
+ "worst_result": 30,
+ "worst_seed": {
+  "seed": 8,
+  "result": 30,
+  "result_text": "30.00 s (didn't finish)",
+  "metric": 0.4601
+ },
+ "flags": [],
+ "summary": "Sprint (sprint v6) on 32 seeds: finished 0/32 · result 30.00 s (the average of the best 16 of 32; a run that never finishes counts as 30 s); worst: seed 8, 30.00 s (didn't finish).\nFinish: metric >= 4.5 m (torso_reach): the torso crossing the line, in any pose.\nBy node over 32 seeds: run entered on 32, fell on 32 (32 didn't finish); recover entered on 32, no falls. The 32 seeds that didn't finish: fell first in run 32.\n- seed 8: 0.46 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.3 s in run at x 0.3 height 0.04, …); ended fallen (tilt 40°) at x 0.2 y 0.5 m.\n- seed 9: 0.4 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.3 s in run at x 0.2 height 0.04, …); ended upright at x 0.1 y 0.4 m.\n- seed 10: 0.38 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.3 s in run at x 0.3 height 0.04, …); ended upright at x 0.1 y 0.4 m.\n- seed 11: 0.34 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.3 s in run at x 0.2 height 0.04, …); ended upright at x 0.0 y 0.3 m.\n- seed 12: 0.43 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.3 s in run at x 0.3 height 0.04, …); ended upright at x 0.1 y 0.3 m.\n- seed 13: 0.4 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.9 s in run at x 0.2 height 0.04, 6.5 s in run at x 0.3 height 0.04, …); ended fallen (tilt 69°) at x 0.0 y 0.3 m.\n- seed 14: 0.55 m; fell 12× (1.3 s in run at x 0.1 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.4 s in run at x 0.3 height 0.04, …); ended upright at x 0.4 y 0.5 m.\n- seed 15: 0.53 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.9 s in run at x 0.2 height 0.04, 6.4 s in run at x 0.3 height 0.04, …); ended upright at x 0.4 y 0.5 m.\n- seed 16: 0.41 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.8 s in run at x 0.2 height 0.04, 6.3 s in run at x 0.3 height 0.04, …); ended upright at x 0.1 y 0.5 m.\n- seed 17: 0.52 m; fell 12× (1.3 s in run at x 0.1 height 0.04, 3.9 s in run at x 0.2 height 0.04, 6.5 s in run at x 0.2 height 0.04, …); ended upright at x 0.3 y 0.6 m.\n- seed 18: 0.53 m; fell 12× (1.3 s in run at x 0.2 height 0.04, 3.9 s in run at x 0.2 height 0.04, 6.5 s in run at x 0.3 height 0.04, …); ended upright at x 0.3 y 0.5 m.\n- …21 more lines left out.",
+ "trace_columns": "t s, x m, y m, height m, speed m/s, yaw deg; a last cell \"until T\" = the same until T s",
+ "seeds": [
+  {
+   "seed": 8,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4601,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.9 FALL, …1 more…, 9.3 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14.1 FALL, …1 more…, 14.5 up, …1 more…, 16.7 FALL, …1 more…, 17.1 up, …1 more…, 19.3 FALL, …1 more…, 19.7 up, …1 more…, 21.9 FALL, …1 more…, 22.3 up, …1 more…, 24.5 FALL, …1 more…, 24.9 up, …1 more…, 27.1 FALL, 27.1 recover(get_up), 27.5 up, 28.5 run(walk), 29.7 FALL, 29.7 recover(get_up), end x0.17 y0.47 z0.079 yaw151° tilt40°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.01,
+     0.115,
+     0.06,
+     17
+    ],
+    [
+     4,
+     0.22,
+     0.06,
+     0.049,
+     0.05,
+     -67
+    ],
+    [
+     6,
+     0.26,
+     0.02,
+     0.065,
+     0.21,
+     -83
+    ],
+    [
+     8,
+     0.22,
+     -0.02,
+     0.115,
+     0.06,
+     40
+    ],
+    [
+     10,
+     0.28,
+     0.02,
+     0.116,
+     0.01,
+     67
+    ],
+    [
+     12,
+     0.33,
+     0.07,
+     0.115,
+     0.27,
+     79
+    ],
+    [
+     14,
+     0.32,
+     0.25,
+     0.042,
+     0.18,
+     -37
+    ],
+    [
+     16,
+     0.39,
+     0.18,
+     0.112,
+     0.16,
+     73
+    ],
+    [
+     18,
+     0.4,
+     0.22,
+     0.116,
+     0,
+     104
+    ],
+    [
+     20,
+     0.41,
+     0.28,
+     0.115,
+     0.05,
+     124
+    ],
+    [
+     22,
+     0.29,
+     0.41,
+     0.038,
+     0.1,
+     -1
+    ],
+    [
+     24,
+     0.33,
+     0.45,
+     0.075,
+     0.49,
+     48
+    ],
+    [
+     26,
+     0.36,
+     0.43,
+     0.116,
+     0.01,
+     166
+    ],
+    [
+     28,
+     0.29,
+     0.48,
+     0.115,
+     0.03,
+     179
+    ],
+    [
+     30,
+     0.17,
+     0.47,
+     0.079,
+     0.43,
+     151
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.17 y0.06 z0.042 yaw-119° tilt90°",
+    "3.8 FALL in run x0.22 y0.07 z0.042 yaw-108° tilt90°",
+    "6.3 FALL in run x0.28 y0.09 z0.043 yaw-96° tilt90°",
+    "8.9 FALL in run x0.30 y0.14 z0.043 yaw-72° tilt91°",
+    "11.5 FALL in run x0.32 y0.19 z0.044 yaw-57° tilt91°",
+    "14.1 FALL in run x0.32 y0.25 z0.042 yaw-38° tilt91°",
+    "16.7 FALL in run x0.32 y0.31 z0.043 yaw-28° tilt91°",
+    "19.3 FALL in run x0.33 y0.37 z0.039 yaw-23° tilt91°",
+    "21.9 FALL in run x0.29 y0.41 z0.042 yaw0° tilt89°",
+    "24.5 FALL in run x0.23 y0.43 z0.044 yaw25° tilt91°",
+    "27.1 FALL in run x0.18 y0.43 z0.042 yaw44° tilt91°",
+    "29.7 FALL in run x0.12 y0.44 z0.041 yaw56° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 20.32
+   }
+  },
+  {
+   "seed": 9,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4048,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.7 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.8 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.3 up, end x0.14 y0.44 z0.116 yaw-150°",
+   "trace": [
+    [
+     2,
+     0.06,
+     -0.08,
+     0.115,
+     0.05,
+     26
+    ],
+    [
+     4,
+     0.2,
+     0.01,
+     0.05,
+     0.06,
+     -50
+    ],
+    [
+     6,
+     0.25,
+     0,
+     0.065,
+     0.21,
+     -70
+    ],
+    [
+     8,
+     0.21,
+     -0.05,
+     0.115,
+     0.07,
+     46
+    ],
+    [
+     10,
+     0.25,
+     -0.01,
+     0.116,
+     0,
+     76
+    ],
+    [
+     12,
+     0.3,
+     0.05,
+     0.115,
+     0.03,
+     94
+    ],
+    [
+     14,
+     0.28,
+     0.21,
+     0.048,
+     0.05,
+     3
+    ],
+    [
+     16,
+     0.32,
+     0.24,
+     0.062,
+     0.18,
+     -10
+    ],
+    [
+     18,
+     0.35,
+     0.18,
+     0.115,
+     0.07,
+     104
+    ],
+    [
+     20,
+     0.35,
+     0.25,
+     0.116,
+     0,
+     138
+    ],
+    [
+     22,
+     0.33,
+     0.31,
+     0.115,
+     0.05,
+     160
+    ],
+    [
+     24,
+     0.16,
+     0.36,
+     0.048,
+     0.05,
+     74
+    ],
+    [
+     26,
+     0.14,
+     0.4,
+     0.062,
+     0.2,
+     62
+    ],
+    [
+     28,
+     0.2,
+     0.4,
+     0.115,
+     0.07,
+     175
+    ],
+    [
+     30,
+     0.14,
+     0.44,
+     0.116,
+     0,
+     -150
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.17 y0.01 z0.041 yaw-120° tilt89°",
+    "3.8 FALL in run x0.21 y0.02 z0.042 yaw-98° tilt91°",
+    "6.3 FALL in run x0.25 y0.07 z0.043 yaw-82° tilt91°",
+    "8.8 FALL in run x0.26 y0.12 z0.044 yaw-66° tilt91°",
+    "11.3 FALL in run x0.27 y0.17 z0.043 yaw-49° tilt91°",
+    "13.8 FALL in run x0.27 y0.22 z0.043 yaw-34° tilt90°",
+    "16.3 FALL in run x0.26 y0.27 z0.043 yaw-21° tilt91°",
+    "18.8 FALL in run x0.24 y0.32 z0.043 yaw-7° tilt90°",
+    "21.3 FALL in run x0.20 y0.34 z0.044 yaw14° tilt91°",
+    "23.8 FALL in run x0.15 y0.35 z0.044 yaw35° tilt91°",
+    "26.3 FALL in run x0.10 y0.35 z0.042 yaw49° tilt91°",
+    "28.8 FALL in run x0.04 y0.34 z0.042 yaw64° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 19.4
+   }
+  },
+  {
+   "seed": 10,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3818,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.7 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.3 up, …1 more…, 21.3 FALL, …1 more…, 21.7 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.2 up, end x0.06 y0.37 z0.116 yaw-129°",
+   "trace": [
+    [
+     2,
+     0.09,
+     -0.05,
+     0.115,
+     0.04,
+     25
+    ],
+    [
+     4,
+     0.23,
+     0.05,
+     0.047,
+     0.05,
+     -62
+    ],
+    [
+     6,
+     0.27,
+     0.04,
+     0.065,
+     0.21,
+     -63
+    ],
+    [
+     8,
+     0.25,
+     -0.01,
+     0.114,
+     0.07,
+     63
+    ],
+    [
+     10,
+     0.28,
+     0.03,
+     0.115,
+     0,
+     90
+    ],
+    [
+     12,
+     0.31,
+     0.08,
+     0.115,
+     0.04,
+     105
+    ],
+    [
+     14,
+     0.26,
+     0.24,
+     0.046,
+     0.05,
+     11
+    ],
+    [
+     16,
+     0.28,
+     0.28,
+     0.063,
+     0.21,
+     6
+    ],
+    [
+     18,
+     0.32,
+     0.23,
+     0.115,
+     0.07,
+     122
+    ],
+    [
+     20,
+     0.31,
+     0.3,
+     0.116,
+     0.01,
+     167
+    ],
+    [
+     22,
+     0.26,
+     0.34,
+     0.115,
+     0.06,
+     -177
+    ],
+    [
+     24,
+     0.09,
+     0.32,
+     0.047,
+     0.05,
+     90
+    ],
+    [
+     26,
+     0.07,
+     0.35,
+     0.063,
+     0.2,
+     82
+    ],
+    [
+     28,
+     0.12,
+     0.38,
+     0.114,
+     0.07,
+     -161
+    ],
+    [
+     30,
+     0.06,
+     0.37,
+     0.116,
+     0,
+     -129
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.20 y0.04 z0.041 yaw-121° tilt89°",
+    "3.8 FALL in run x0.24 y0.06 z0.043 yaw-97° tilt91°",
+    "6.3 FALL in run x0.26 y0.11 z0.044 yaw-74° tilt91°",
+    "8.8 FALL in run x0.26 y0.16 z0.044 yaw-50° tilt91°",
+    "11.3 FALL in run x0.25 y0.20 z0.043 yaw-36° tilt91°",
+    "13.8 FALL in run x0.24 y0.25 z0.043 yaw-22° tilt90°",
+    "16.3 FALL in run x0.22 y0.29 z0.043 yaw-5° tilt91°",
+    "18.8 FALL in run x0.17 y0.32 z0.045 yaw10° tilt91°",
+    "21.3 FALL in run x0.13 y0.31 z0.043 yaw42° tilt91°",
+    "23.8 FALL in run x0.08 y0.31 z0.044 yaw56° tilt91°",
+    "26.3 FALL in run x0.04 y0.29 z0.043 yaw70° tilt91°",
+    "28.8 FALL in run x-0.00 y0.26 z0.044 yaw87° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 14.96
+   }
+  },
+  {
+   "seed": 11,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3364,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.3 up, …1 more…, 21.3 FALL, …1 more…, 21.7 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.9 FALL, 28.9 recover(get_up), 29.3 up, end x-0.04 y0.33 z0.116 yaw-120°",
+   "trace": [
+    [
+     2,
+     0.06,
+     -0.05,
+     0.115,
+     0.04,
+     30
+    ],
+    [
+     4,
+     0.19,
+     0.05,
+     0.046,
+     0.04,
+     -58
+    ],
+    [
+     6,
+     0.23,
+     0.05,
+     0.066,
+     0.2,
+     -49
+    ],
+    [
+     8,
+     0.22,
+     -0.02,
+     0.115,
+     0.07,
+     74
+    ],
+    [
+     10,
+     0.25,
+     0.04,
+     0.116,
+     0,
+     101
+    ],
+    [
+     12,
+     0.28,
+     0.11,
+     0.115,
+     0.07,
+     115
+    ],
+    [
+     14,
+     0.19,
+     0.24,
+     0.048,
+     0.05,
+     28
+    ],
+    [
+     16,
+     0.21,
+     0.29,
+     0.066,
+     0.19,
+     23
+    ],
+    [
+     18,
+     0.26,
+     0.26,
+     0.115,
+     0.07,
+     142
+    ],
+    [
+     20,
+     0.23,
+     0.31,
+     0.116,
+     0.01,
+     177
+    ],
+    [
+     22,
+     0.17,
+     0.35,
+     0.115,
+     0.07,
+     -169
+    ],
+    [
+     24,
+     0.01,
+     0.3,
+     0.046,
+     0.05,
+     100
+    ],
+    [
+     26,
+     -0.03,
+     0.33,
+     0.064,
+     0.21,
+     95
+    ],
+    [
+     28,
+     0.02,
+     0.37,
+     0.115,
+     0.06,
+     -147
+    ],
+    [
+     30,
+     -0.04,
+     0.33,
+     0.116,
+     0,
+     -120
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.04 z0.043 yaw-116° tilt90°",
+    "3.8 FALL in run x0.19 y0.06 z0.043 yaw-92° tilt90°",
+    "6.3 FALL in run x0.20 y0.12 z0.043 yaw-62° tilt91°",
+    "8.8 FALL in run x0.19 y0.15 z0.042 yaw-37° tilt90°",
+    "11.3 FALL in run x0.19 y0.20 z0.043 yaw-24° tilt91°",
+    "13.8 FALL in run x0.18 y0.25 z0.044 yaw-9° tilt91°",
+    "16.3 FALL in run x0.14 y0.28 z0.043 yaw11° tilt90°",
+    "18.8 FALL in run x0.09 y0.30 z0.044 yaw30° tilt91°",
+    "21.3 FALL in run x0.05 y0.29 z0.044 yaw52° tilt91°",
+    "23.8 FALL in run x0.00 y0.29 z0.043 yaw67° tilt90°",
+    "26.3 FALL in run x-0.04 y0.27 z0.043 yaw84° tilt91°",
+    "28.9 FALL in run x-0.07 y0.22 z0.043 yaw102° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 14.4
+   }
+  },
+  {
+   "seed": 12,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4327,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.3 up, …1 more…, 11.3 FALL, …1 more…, 11.8 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.8 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.8 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.3 up, end x0.10 y0.35 z0.116 yaw-125°",
+   "trace": [
+    [
+     2,
+     0.08,
+     -0.05,
+     0.115,
+     0.04,
+     22
+    ],
+    [
+     4,
+     0.22,
+     0.03,
+     0.049,
+     0.06,
+     -57
+    ],
+    [
+     6,
+     0.27,
+     0.01,
+     0.065,
+     0.2,
+     -74
+    ],
+    [
+     8,
+     0.24,
+     -0.03,
+     0.115,
+     0.07,
+     51
+    ],
+    [
+     10,
+     0.29,
+     -0.01,
+     0.116,
+     0.01,
+     83
+    ],
+    [
+     12,
+     0.35,
+     0.04,
+     0.115,
+     0.07,
+     101
+    ],
+    [
+     14,
+     0.3,
+     0.2,
+     0.046,
+     0.05,
+     11
+    ],
+    [
+     16,
+     0.33,
+     0.23,
+     0.066,
+     0.2,
+     6
+    ],
+    [
+     18,
+     0.37,
+     0.19,
+     0.115,
+     0.06,
+     130
+    ],
+    [
+     20,
+     0.34,
+     0.25,
+     0.116,
+     0.01,
+     163
+    ],
+    [
+     22,
+     0.3,
+     0.3,
+     0.115,
+     0.03,
+     180
+    ],
+    [
+     24,
+     0.14,
+     0.28,
+     0.049,
+     0.05,
+     96
+    ],
+    [
+     26,
+     0.11,
+     0.32,
+     0.064,
+     0.21,
+     79
+    ],
+    [
+     28,
+     0.17,
+     0.35,
+     0.115,
+     0.07,
+     -163
+    ],
+    [
+     30,
+     0.1,
+     0.35,
+     0.116,
+     0.01,
+     -125
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.19 y0.03 z0.041 yaw-123° tilt89°",
+    "3.8 FALL in run x0.23 y0.05 z0.044 yaw-102° tilt91°",
+    "6.3 FALL in run x0.27 y0.08 z0.043 yaw-86° tilt91°",
+    "8.8 FALL in run x0.28 y0.13 z0.043 yaw-62° tilt91°",
+    "11.3 FALL in run x0.28 y0.17 z0.044 yaw-41° tilt90°",
+    "13.8 FALL in run x0.28 y0.21 z0.043 yaw-23° tilt90°",
+    "16.3 FALL in run x0.26 y0.25 z0.043 yaw-7° tilt91°",
+    "18.8 FALL in run x0.22 y0.27 z0.043 yaw17° tilt91°",
+    "21.3 FALL in run x0.17 y0.27 z0.043 yaw39° tilt90°",
+    "23.8 FALL in run x0.13 y0.27 z0.043 yaw55° tilt91°",
+    "26.3 FALL in run x0.08 y0.26 z0.043 yaw67° tilt91°",
+    "28.8 FALL in run x0.04 y0.24 z0.043 yaw84° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 16.94
+   }
+  },
+  {
+   "seed": 13,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3996,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.6 FALL, …1 more…, 12 up, …1 more…, 14.2 FALL, …1 more…, 14.6 up, …1 more…, 16.8 FALL, …1 more…, 17.2 up, …1 more…, 19.4 FALL, …1 more…, 19.8 up, …1 more…, 22 FALL, …1 more…, 22.4 up, …1 more…, 24.6 FALL, …1 more…, 25 up, …1 more…, 27.2 FALL, 27.2 recover(get_up), 27.6 up, 28.6 run(walk), 29.8 FALL, 29.8 recover(get_up), end x-0.00 y0.31 z0.055 yaw163° tilt69°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.02,
+     0.116,
+     0.02,
+     9
+    ],
+    [
+     4,
+     0.21,
+     0.04,
+     0.041,
+     0.09,
+     -101
+    ],
+    [
+     6,
+     0.24,
+     -0.01,
+     0.081,
+     0.44,
+     -53
+    ],
+    [
+     8,
+     0.23,
+     -0.01,
+     0.116,
+     0,
+     48
+    ],
+    [
+     10,
+     0.31,
+     0.04,
+     0.116,
+     0.01,
+     85
+    ],
+    [
+     12,
+     0.32,
+     0.12,
+     0.098,
+     0.46,
+     76
+    ],
+    [
+     14,
+     0.28,
+     0.25,
+     0.044,
+     0.27,
+     -9
+    ],
+    [
+     16,
+     0.34,
+     0.21,
+     0.114,
+     0.08,
+     111
+    ],
+    [
+     18,
+     0.32,
+     0.27,
+     0.116,
+     0,
+     136
+    ],
+    [
+     20,
+     0.27,
+     0.34,
+     0.115,
+     0.08,
+     154
+    ],
+    [
+     22,
+     0.11,
+     0.37,
+     0.039,
+     0.01,
+     35
+    ],
+    [
+     24,
+     0.18,
+     0.43,
+     0.108,
+     0.24,
+     146
+    ],
+    [
+     26,
+     0.15,
+     0.45,
+     0.116,
+     0,
+     -159
+    ],
+    [
+     28,
+     0.08,
+     0.45,
+     0.116,
+     0.03,
+     -135
+    ],
+    [
+     30,
+     0,
+     0.31,
+     0.055,
+     0.05,
+     163
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.15 y0.06 z0.041 yaw-121° tilt91°",
+    "3.9 FALL in run x0.22 y0.05 z0.037 yaw-116° tilt89°",
+    "6.5 FALL in run x0.26 y0.08 z0.038 yaw-95° tilt89°",
+    "9.1 FALL in run x0.29 y0.14 z0.041 yaw-72° tilt91°",
+    "11.6 FALL in run x0.28 y0.20 z0.037 yaw-36° tilt89°",
+    "14.2 FALL in run x0.26 y0.25 z0.038 yaw-16° tilt90°",
+    "16.8 FALL in run x0.22 y0.30 z0.039 yaw-1° tilt90°",
+    "19.4 FALL in run x0.17 y0.35 z0.039 yaw11° tilt89°",
+    "22 FALL in run x0.11 y0.37 z0.039 yaw35° tilt90°",
+    "24.6 FALL in run x0.07 y0.37 z0.037 yaw55° tilt90°",
+    "27.2 FALL in run x0.03 y0.35 z0.037 yaw76° tilt89°",
+    "29.8 FALL in run x-0.01 y0.30 z0.039 yaw98° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 15.3
+   }
+  },
+  {
+   "seed": 14,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5523,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.6 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 8.9 FALL, …1 more…, 9.3 up, …1 more…, 11.4 FALL, …1 more…, 11.8 up, …1 more…, 13.9 FALL, …1 more…, 14.3 up, …1 more…, 16.4 FALL, …1 more…, 16.8 up, …1 more…, 19 FALL, …1 more…, 19.4 up, …1 more…, 21.5 FALL, …1 more…, 21.9 up, …1 more…, 24.1 FALL, …1 more…, 24.4 up, …1 more…, 26.6 FALL, 26.6 recover(get_up), 27 up, 28 run(walk), 29.2 FALL, 29.2 recover(get_up), 29.6 up, end x0.42 y0.52 z0.116 yaw169°",
+   "trace": [
+    [
+     2,
+     0.05,
+     -0.02,
+     0.116,
+     0.04,
+     5
+    ],
+    [
+     4,
+     0.2,
+     0.02,
+     0.057,
+     0.06,
+     -56
+    ],
+    [
+     6,
+     0.24,
+     -0.02,
+     0.069,
+     0.29,
+     -81
+    ],
+    [
+     8,
+     0.21,
+     -0.04,
+     0.115,
+     0.05,
+     26
+    ],
+    [
+     10,
+     0.28,
+     -0.02,
+     0.116,
+     0,
+     48
+    ],
+    [
+     12,
+     0.37,
+     0.02,
+     0.115,
+     0.15,
+     60
+    ],
+    [
+     14,
+     0.41,
+     0.18,
+     0.04,
+     0.15,
+     -53
+    ],
+    [
+     16,
+     0.48,
+     0.2,
+     0.067,
+     0.2,
+     -28
+    ],
+    [
+     18,
+     0.49,
+     0.14,
+     0.116,
+     0.02,
+     91
+    ],
+    [
+     20,
+     0.5,
+     0.22,
+     0.116,
+     0,
+     107
+    ],
+    [
+     22,
+     0.5,
+     0.29,
+     0.114,
+     0.19,
+     119
+    ],
+    [
+     24,
+     0.39,
+     0.41,
+     0.039,
+     0.28,
+     2
+    ],
+    [
+     26,
+     0.46,
+     0.42,
+     0.108,
+     0.23,
+     106
+    ],
+    [
+     28,
+     0.44,
+     0.45,
+     0.116,
+     0,
+     149
+    ],
+    [
+     30,
+     0.42,
+     0.52,
+     0.116,
+     0.04,
+     169
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.04 z0.041 yaw-125° tilt90°",
+    "3.8 FALL in run x0.21 y0.02 z0.037 yaw-122° tilt89°",
+    "6.4 FALL in run x0.26 y0.05 z0.040 yaw-101° tilt89°",
+    "8.9 FALL in run x0.32 y0.09 z0.040 yaw-88° tilt89°",
+    "11.4 FALL in run x0.37 y0.13 z0.042 yaw-74° tilt91°",
+    "13.9 FALL in run x0.40 y0.19 z0.041 yaw-59° tilt91°",
+    "16.4 FALL in run x0.43 y0.25 z0.039 yaw-45° tilt90°",
+    "19 FALL in run x0.43 y0.29 z0.040 yaw-24° tilt89°",
+    "21.5 FALL in run x0.41 y0.36 z0.040 yaw-17° tilt90°",
+    "24.1 FALL in run x0.38 y0.41 z0.040 yaw-2° tilt89°",
+    "26.6 FALL in run x0.33 y0.46 z0.042 yaw15° tilt91°",
+    "29.2 FALL in run x0.29 y0.51 z0.037 yaw24° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 22.48
+   }
+  },
+  {
+   "seed": 15,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5346,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 9 FALL, …1 more…, 9.4 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14.1 FALL, …1 more…, 14.5 up, …1 more…, 16.7 FALL, …1 more…, 17.1 up, …1 more…, 19.3 FALL, …1 more…, 19.7 up, …1 more…, 21.9 FALL, …1 more…, 22.4 up, …1 more…, 24.5 FALL, …1 more…, 24.9 up, …1 more…, 27 FALL, 27 recover(get_up), 27.5 up, 28.4 run(walk), 29.6 FALL, 29.6 recover(get_up), end x0.36 y0.49 z0.110 yaw156°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.04,
+     0.116,
+     0.07,
+     16
+    ],
+    [
+     4,
+     0.21,
+     0.04,
+     0.04,
+     0.12,
+     -102
+    ],
+    [
+     6,
+     0.26,
+     0,
+     0.071,
+     0.31,
+     -81
+    ],
+    [
+     8,
+     0.22,
+     -0.03,
+     0.116,
+     0.02,
+     29
+    ],
+    [
+     10,
+     0.3,
+     0,
+     0.116,
+     0,
+     51
+    ],
+    [
+     12,
+     0.35,
+     0.04,
+     0.113,
+     0.4,
+     54
+    ],
+    [
+     14,
+     0.38,
+     0.19,
+     0.039,
+     0.29,
+     -48
+    ],
+    [
+     16,
+     0.43,
+     0.11,
+     0.113,
+     0.12,
+     68
+    ],
+    [
+     18,
+     0.45,
+     0.16,
+     0.116,
+     0,
+     97
+    ],
+    [
+     20,
+     0.46,
+     0.24,
+     0.116,
+     0.05,
+     106
+    ],
+    [
+     22,
+     0.4,
+     0.38,
+     0.042,
+     0.12,
+     -7
+    ],
+    [
+     24,
+     0.46,
+     0.39,
+     0.094,
+     0.38,
+     68
+    ],
+    [
+     26,
+     0.46,
+     0.38,
+     0.116,
+     0.02,
+     133
+    ],
+    [
+     28,
+     0.44,
+     0.46,
+     0.116,
+     0.01,
+     164
+    ],
+    [
+     30,
+     0.36,
+     0.49,
+     0.11,
+     0.37,
+     156
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.04 z0.039 yaw-122° tilt88°",
+    "3.9 FALL in run x0.21 y0.05 z0.040 yaw-107° tilt89°",
+    "6.4 FALL in run x0.28 y0.07 z0.040 yaw-102° tilt90°",
+    "9 FALL in run x0.33 y0.11 z0.041 yaw-89° tilt89°",
+    "11.5 FALL in run x0.36 y0.16 z0.043 yaw-69° tilt91°",
+    "14.1 FALL in run x0.38 y0.20 z0.042 yaw-50° tilt91°",
+    "16.7 FALL in run x0.38 y0.25 z0.039 yaw-34° tilt89°",
+    "19.3 FALL in run x0.39 y0.32 z0.039 yaw-27° tilt89°",
+    "21.9 FALL in run x0.39 y0.39 z0.038 yaw-22° tilt90°",
+    "24.5 FALL in run x0.35 y0.42 z0.041 yaw1° tilt89°",
+    "27 FALL in run x0.30 y0.46 z0.044 yaw20° tilt91°",
+    "29.6 FALL in run x0.27 y0.46 z0.041 yaw45° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 22.94
+   }
+  },
+  {
+   "seed": 16,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4104,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.7 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.8 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.2 up, end x0.13 y0.51 z0.116 yaw-150°",
+   "trace": [
+    [
+     2,
+     0.09,
+     -0.02,
+     0.115,
+     0.04,
+     28
+    ],
+    [
+     4,
+     0.23,
+     0.08,
+     0.049,
+     0.05,
+     -54
+    ],
+    [
+     6,
+     0.27,
+     0.07,
+     0.064,
+     0.21,
+     -65
+    ],
+    [
+     8,
+     0.24,
+     0.02,
+     0.115,
+     0.07,
+     56
+    ],
+    [
+     10,
+     0.29,
+     0.06,
+     0.116,
+     0.01,
+     85
+    ],
+    [
+     12,
+     0.32,
+     0.12,
+     0.115,
+     0.07,
+     99
+    ],
+    [
+     14,
+     0.29,
+     0.28,
+     0.05,
+     0.06,
+     18
+    ],
+    [
+     16,
+     0.33,
+     0.32,
+     0.064,
+     0.2,
+     -5
+    ],
+    [
+     18,
+     0.36,
+     0.27,
+     0.115,
+     0.07,
+     111
+    ],
+    [
+     20,
+     0.35,
+     0.34,
+     0.116,
+     0.01,
+     146
+    ],
+    [
+     22,
+     0.33,
+     0.41,
+     0.115,
+     0.04,
+     167
+    ],
+    [
+     24,
+     0.16,
+     0.43,
+     0.048,
+     0.05,
+     82
+    ],
+    [
+     26,
+     0.14,
+     0.47,
+     0.064,
+     0.19,
+     70
+    ],
+    [
+     28,
+     0.19,
+     0.49,
+     0.115,
+     0.07,
+     -178
+    ],
+    [
+     30,
+     0.13,
+     0.51,
+     0.116,
+     0,
+     -150
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.19 y0.07 z0.044 yaw-115° tilt91°",
+    "3.8 FALL in run x0.23 y0.09 z0.043 yaw-95° tilt91°",
+    "6.3 FALL in run x0.26 y0.14 z0.043 yaw-76° tilt91°",
+    "8.8 FALL in run x0.27 y0.19 z0.043 yaw-54° tilt91°",
+    "11.3 FALL in run x0.27 y0.24 z0.042 yaw-39° tilt90°",
+    "13.8 FALL in run x0.27 y0.29 z0.043 yaw-27° tilt91°",
+    "16.3 FALL in run x0.26 y0.34 z0.043 yaw-16° tilt90°",
+    "18.8 FALL in run x0.24 y0.39 z0.042 yaw0° tilt90°",
+    "21.3 FALL in run x0.19 y0.41 z0.043 yaw23° tilt91°",
+    "23.8 FALL in run x0.15 y0.42 z0.042 yaw44° tilt90°",
+    "26.3 FALL in run x0.10 y0.42 z0.042 yaw58° tilt90°",
+    "28.8 FALL in run x0.04 y0.41 z0.043 yaw70° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 19.4
+   }
+  },
+  {
+   "seed": 17,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5164,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.6 FALL, …1 more…, 12 up, …1 more…, 14.1 FALL, …1 more…, 14.5 up, …1 more…, 16.7 FALL, …1 more…, 17.1 up, …1 more…, 19.3 FALL, …1 more…, 19.7 up, …1 more…, 21.9 FALL, …1 more…, 22.3 up, …1 more…, 24.5 FALL, …1 more…, 24.9 up, …1 more…, 27 FALL, 27 recover(get_up), 27.4 up, 28.4 run(walk), 29.6 FALL, 29.6 recover(get_up), end x0.32 y0.55 z0.109 yaw144°",
+   "trace": [
+    [
+     2,
+     0.06,
+     -0.03,
+     0.116,
+     0.04,
+     16
+    ],
+    [
+     4,
+     0.2,
+     0.04,
+     0.041,
+     0.14,
+     -99
+    ],
+    [
+     6,
+     0.22,
+     -0.01,
+     0.084,
+     0.43,
+     -46
+    ],
+    [
+     8,
+     0.21,
+     -0.01,
+     0.116,
+     0.01,
+     41
+    ],
+    [
+     10,
+     0.28,
+     0.03,
+     0.116,
+     0.01,
+     53
+    ],
+    [
+     12,
+     0.33,
+     0.09,
+     0.11,
+     0.39,
+     48
+    ],
+    [
+     14,
+     0.37,
+     0.23,
+     0.039,
+     0.24,
+     -51
+    ],
+    [
+     16,
+     0.42,
+     0.15,
+     0.113,
+     0.14,
+     67
+    ],
+    [
+     18,
+     0.45,
+     0.2,
+     0.116,
+     0,
+     100
+    ],
+    [
+     20,
+     0.46,
+     0.27,
+     0.115,
+     0.03,
+     110
+    ],
+    [
+     22,
+     0.38,
+     0.41,
+     0.042,
+     0.11,
+     -2
+    ],
+    [
+     24,
+     0.43,
+     0.43,
+     0.084,
+     0.44,
+     50
+    ],
+    [
+     26,
+     0.43,
+     0.42,
+     0.116,
+     0.02,
+     131
+    ],
+    [
+     28,
+     0.39,
+     0.5,
+     0.116,
+     0,
+     154
+    ],
+    [
+     30,
+     0.32,
+     0.55,
+     0.109,
+     0.35,
+     144
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.15 y0.04 z0.040 yaw-121° tilt91°",
+    "3.9 FALL in run x0.20 y0.05 z0.040 yaw-110° tilt90°",
+    "6.5 FALL in run x0.24 y0.08 z0.039 yaw-93° tilt89°",
+    "9.1 FALL in run x0.30 y0.14 z0.042 yaw-79° tilt91°",
+    "11.6 FALL in run x0.34 y0.18 z0.042 yaw-66° tilt91°",
+    "14.1 FALL in run x0.37 y0.23 z0.040 yaw-52° tilt90°",
+    "16.7 FALL in run x0.38 y0.28 z0.040 yaw-34° tilt89°",
+    "19.3 FALL in run x0.38 y0.35 z0.039 yaw-23° tilt89°",
+    "21.9 FALL in run x0.38 y0.42 z0.038 yaw-18° tilt90°",
+    "24.5 FALL in run x0.33 y0.45 z0.040 yaw3° tilt90°",
+    "27 FALL in run x0.28 y0.50 z0.042 yaw15° tilt90°",
+    "29.6 FALL in run x0.23 y0.54 z0.042 yaw31° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 22.64
+   }
+  },
+  {
+   "seed": 18,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5316,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9 FALL, …1 more…, 9.4 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14.1 FALL, …1 more…, 14.5 up, …1 more…, 16.7 FALL, …1 more…, 17.1 up, …1 more…, 19.3 FALL, …1 more…, 19.7 up, …1 more…, 21.9 FALL, …1 more…, 22.3 up, …1 more…, 24.4 FALL, …1 more…, 24.8 up, …1 more…, 27 FALL, 27 recover(get_up), 27.4 up, 28.4 run(walk), 29.6 FALL, 29.6 recover(get_up), end x0.25 y0.47 z0.097 yaw179°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.04,
+     0.116,
+     0.05,
+     19
+    ],
+    [
+     4,
+     0.21,
+     0.05,
+     0.041,
+     0.11,
+     -96
+    ],
+    [
+     6,
+     0.25,
+     -0.01,
+     0.082,
+     0.44,
+     -54
+    ],
+    [
+     8,
+     0.23,
+     -0.02,
+     0.116,
+     0.02,
+     33
+    ],
+    [
+     10,
+     0.31,
+     0.03,
+     0.116,
+     0,
+     53
+    ],
+    [
+     12,
+     0.37,
+     0.08,
+     0.116,
+     0.19,
+     71
+    ],
+    [
+     14,
+     0.39,
+     0.23,
+     0.037,
+     0.23,
+     -48
+    ],
+    [
+     16,
+     0.46,
+     0.16,
+     0.113,
+     0.14,
+     71
+    ],
+    [
+     18,
+     0.48,
+     0.21,
+     0.116,
+     0,
+     112
+    ],
+    [
+     20,
+     0.48,
+     0.27,
+     0.116,
+     0.05,
+     135
+    ],
+    [
+     22,
+     0.34,
+     0.36,
+     0.04,
+     0.13,
+     14
+    ],
+    [
+     24,
+     0.34,
+     0.43,
+     0.068,
+     0.22,
+     44
+    ],
+    [
+     26,
+     0.39,
+     0.42,
+     0.116,
+     0.02,
+     163
+    ],
+    [
+     28,
+     0.33,
+     0.48,
+     0.116,
+     0.01,
+     -170
+    ],
+    [
+     30,
+     0.25,
+     0.47,
+     0.097,
+     0.47,
+     179
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.05 z0.040 yaw-118° tilt90°",
+    "3.9 FALL in run x0.21 y0.06 z0.039 yaw-107° tilt89°",
+    "6.5 FALL in run x0.27 y0.08 z0.039 yaw-96° tilt89°",
+    "9 FALL in run x0.32 y0.12 z0.039 yaw-87° tilt89°",
+    "11.5 FALL in run x0.36 y0.18 z0.039 yaw-67° tilt90°",
+    "14.1 FALL in run x0.40 y0.23 z0.037 yaw-50° tilt89°",
+    "16.7 FALL in run x0.41 y0.28 z0.037 yaw-31° tilt89°",
+    "19.3 FALL in run x0.38 y0.33 z0.037 yaw-13° tilt90°",
+    "21.9 FALL in run x0.33 y0.36 z0.040 yaw9° tilt89°",
+    "24.4 FALL in run x0.28 y0.40 z0.039 yaw29° tilt90°",
+    "27 FALL in run x0.24 y0.41 z0.038 yaw49° tilt89°",
+    "29.6 FALL in run x0.18 y0.41 z0.037 yaw66° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 19.96
+   }
+  },
+  {
+   "seed": 19,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3706,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.3 up, …1 more…, 6.3 FALL, …1 more…, 6.7 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.8 up, …1 more…, 18.8 FALL, …1 more…, 19.3 up, …1 more…, 21.3 FALL, …1 more…, 21.8 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.2 up, end x0.04 y0.31 z0.116 yaw-115°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.08,
+     0.115,
+     0.05,
+     22
+    ],
+    [
+     4,
+     0.22,
+     0,
+     0.045,
+     0.07,
+     -71
+    ],
+    [
+     6,
+     0.26,
+     -0.01,
+     0.064,
+     0.22,
+     -65
+    ],
+    [
+     8,
+     0.23,
+     -0.06,
+     0.115,
+     0.07,
+     60
+    ],
+    [
+     10,
+     0.27,
+     -0.02,
+     0.115,
+     0,
+     89
+    ],
+    [
+     12,
+     0.3,
+     0.04,
+     0.115,
+     0.05,
+     105
+    ],
+    [
+     14,
+     0.24,
+     0.19,
+     0.049,
+     0.06,
+     22
+    ],
+    [
+     16,
+     0.27,
+     0.23,
+     0.066,
+     0.2,
+     5
+    ],
+    [
+     18,
+     0.31,
+     0.2,
+     0.115,
+     0.07,
+     130
+    ],
+    [
+     20,
+     0.29,
+     0.27,
+     0.116,
+     0.01,
+     174
+    ],
+    [
+     22,
+     0.25,
+     0.32,
+     0.115,
+     0.04,
+     -166
+    ],
+    [
+     24,
+     0.09,
+     0.27,
+     0.049,
+     0.05,
+     110
+    ],
+    [
+     26,
+     0.05,
+     0.29,
+     0.063,
+     0.22,
+     92
+    ],
+    [
+     28,
+     0.1,
+     0.32,
+     0.115,
+     0.07,
+     -150
+    ],
+    [
+     30,
+     0.04,
+     0.31,
+     0.116,
+     0.01,
+     -115
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.18 y0.01 z0.041 yaw-120° tilt89°",
+    "3.8 FALL in run x0.22 y0.02 z0.043 yaw-100° tilt90°",
+    "6.3 FALL in run x0.25 y0.06 z0.044 yaw-76° tilt91°",
+    "8.8 FALL in run x0.24 y0.11 z0.043 yaw-52° tilt91°",
+    "11.3 FALL in run x0.24 y0.16 z0.043 yaw-36° tilt90°",
+    "13.8 FALL in run x0.23 y0.20 z0.044 yaw-21° tilt91°",
+    "16.3 FALL in run x0.20 y0.25 z0.043 yaw-7° tilt90°",
+    "18.8 FALL in run x0.15 y0.27 z0.045 yaw17° tilt91°",
+    "21.3 FALL in run x0.12 y0.26 z0.043 yaw50° tilt90°",
+    "23.8 FALL in run x0.08 y0.25 z0.044 yaw69° tilt91°",
+    "26.3 FALL in run x0.03 y0.23 z0.044 yaw81° tilt91°",
+    "28.8 FALL in run x0.00 y0.18 z0.044 yaw99° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 16.92
+   }
+  },
+  {
+   "seed": 20,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5122,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 8.9 FALL, …1 more…, 9.3 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14 FALL, …1 more…, 14.4 up, …1 more…, 16.6 FALL, …1 more…, 17 up, …1 more…, 19.1 FALL, …1 more…, 19.5 up, …1 more…, 21.7 FALL, …1 more…, 22.1 up, …1 more…, 24.3 FALL, …1 more…, 24.7 up, …1 more…, 26.9 FALL, 26.9 recover(get_up), 27.3 up, 28.2 run(walk), 29.4 FALL, 29.4 recover(get_up), 29.8 up, end x0.29 y0.52 z0.115 yaw-178°",
+   "trace": [
+    [
+     2,
+     0.05,
+     -0.04,
+     0.116,
+     0.05,
+     21
+    ],
+    [
+     4,
+     0.19,
+     0.04,
+     0.05,
+     0.06,
+     -58
+    ],
+    [
+     6,
+     0.24,
+     0,
+     0.067,
+     0.21,
+     -78
+    ],
+    [
+     8,
+     0.21,
+     -0.03,
+     0.115,
+     0.06,
+     31
+    ],
+    [
+     10,
+     0.27,
+     0,
+     0.116,
+     0,
+     54
+    ],
+    [
+     12,
+     0.34,
+     0.05,
+     0.116,
+     0.18,
+     67
+    ],
+    [
+     14,
+     0.39,
+     0.22,
+     0.041,
+     0,
+     -59
+    ],
+    [
+     16,
+     0.43,
+     0.17,
+     0.108,
+     0.24,
+     58
+    ],
+    [
+     18,
+     0.45,
+     0.19,
+     0.116,
+     0,
+     106
+    ],
+    [
+     20,
+     0.46,
+     0.26,
+     0.116,
+     0.01,
+     122
+    ],
+    [
+     22,
+     0.39,
+     0.35,
+     0.082,
+     0.42,
+     94
+    ],
+    [
+     24,
+     0.35,
+     0.44,
+     0.059,
+     0.22,
+     17
+    ],
+    [
+     26,
+     0.41,
+     0.42,
+     0.115,
+     0.06,
+     136
+    ],
+    [
+     28,
+     0.35,
+     0.48,
+     0.115,
+     0,
+     166
+    ],
+    [
+     30,
+     0.29,
+     0.52,
+     0.115,
+     0.04,
+     -178
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.04 z0.042 yaw-117° tilt90°",
+    "3.8 FALL in run x0.20 y0.05 z0.042 yaw-105° tilt90°",
+    "6.4 FALL in run x0.25 y0.07 z0.042 yaw-94° tilt91°",
+    "8.9 FALL in run x0.30 y0.11 z0.043 yaw-82° tilt91°",
+    "11.5 FALL in run x0.35 y0.16 z0.043 yaw-71° tilt91°",
+    "14 FALL in run x0.39 y0.22 z0.041 yaw-59° tilt91°",
+    "16.6 FALL in run x0.37 y0.28 z0.041 yaw-32° tilt89°",
+    "19.1 FALL in run x0.37 y0.34 z0.042 yaw-19° tilt90°",
+    "21.7 FALL in run x0.34 y0.38 z0.042 yaw-2° tilt91°",
+    "24.3 FALL in run x0.30 y0.44 z0.044 yaw9° tilt91°",
+    "26.9 FALL in run x0.25 y0.47 z0.042 yaw25° tilt91°",
+    "29.4 FALL in run x0.18 y0.47 z0.041 yaw45° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 20.48
+   }
+  },
+  {
+   "seed": 21,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4907,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9 FALL, …1 more…, 9.4 up, …1 more…, 11.6 FALL, …1 more…, 12 up, …1 more…, 14.1 FALL, …1 more…, 14.5 up, …1 more…, 16.7 FALL, …1 more…, 17.1 up, …1 more…, 19.3 FALL, …1 more…, 19.7 up, …1 more…, 21.9 FALL, …1 more…, 22.3 up, …1 more…, 24.4 FALL, …1 more…, 24.8 up, …1 more…, 26.9 FALL, 26.9 recover(get_up), 27.3 up, 28.3 run(walk), 29.5 FALL, 29.5 recover(get_up), 29.9 up, end x0.25 y0.53 z0.113 yaw-178°",
+   "trace": [
+    [
+     2,
+     0.06,
+     -0.05,
+     0.116,
+     0.05,
+     14
+    ],
+    [
+     4,
+     0.2,
+     0.01,
+     0.042,
+     0.11,
+     -95
+    ],
+    [
+     6,
+     0.22,
+     -0.03,
+     0.085,
+     0.43,
+     -38
+    ],
+    [
+     8,
+     0.21,
+     -0.04,
+     0.116,
+     0.02,
+     37
+    ],
+    [
+     10,
+     0.28,
+     0.01,
+     0.116,
+     0.01,
+     59
+    ],
+    [
+     12,
+     0.33,
+     0.08,
+     0.112,
+     0.35,
+     54
+    ],
+    [
+     14,
+     0.36,
+     0.22,
+     0.039,
+     0.26,
+     -43
+    ],
+    [
+     16,
+     0.41,
+     0.15,
+     0.113,
+     0.13,
+     69
+    ],
+    [
+     18,
+     0.44,
+     0.2,
+     0.116,
+     0,
+     110
+    ],
+    [
+     20,
+     0.44,
+     0.27,
+     0.115,
+     0.04,
+     134
+    ],
+    [
+     22,
+     0.3,
+     0.36,
+     0.04,
+     0.15,
+     15
+    ],
+    [
+     24,
+     0.31,
+     0.44,
+     0.068,
+     0.23,
+     34
+    ],
+    [
+     26,
+     0.35,
+     0.42,
+     0.115,
+     0.06,
+     140
+    ],
+    [
+     28,
+     0.31,
+     0.49,
+     0.116,
+     0,
+     174
+    ],
+    [
+     30,
+     0.25,
+     0.53,
+     0.113,
+     0.22,
+     -178
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.02 z0.040 yaw-120° tilt89°",
+    "3.9 FALL in run x0.20 y0.02 z0.037 yaw-111° tilt90°",
+    "6.5 FALL in run x0.24 y0.07 z0.042 yaw-87° tilt91°",
+    "9 FALL in run x0.30 y0.11 z0.040 yaw-83° tilt91°",
+    "11.6 FALL in run x0.32 y0.17 z0.041 yaw-60° tilt90°",
+    "14.1 FALL in run x0.35 y0.22 z0.039 yaw-47° tilt89°",
+    "16.7 FALL in run x0.37 y0.28 z0.038 yaw-33° tilt89°",
+    "19.3 FALL in run x0.34 y0.33 z0.038 yaw-14° tilt90°",
+    "21.9 FALL in run x0.29 y0.36 z0.041 yaw9° tilt90°",
+    "24.4 FALL in run x0.24 y0.42 z0.041 yaw17° tilt90°",
+    "26.9 FALL in run x0.20 y0.46 z0.039 yaw30° tilt90°",
+    "29.5 FALL in run x0.15 y0.47 z0.038 yaw52° tilt89°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 20.04
+   }
+  },
+  {
+   "seed": 22,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4187,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.7 FALL, …1 more…, 12.1 up, …1 more…, 14.3 FALL, …1 more…, 14.7 up, …1 more…, 16.9 FALL, …1 more…, 17.3 up, …1 more…, 19.5 FALL, …1 more…, 19.9 up, …1 more…, 22 FALL, …1 more…, 22.4 up, …1 more…, 24.5 FALL, …1 more…, 24.9 up, …1 more…, 27.1 FALL, 27.1 recover(get_up), 27.5 up, 28.5 run(walk), 29.7 FALL, 29.7 recover(get_up), end x0.03 y0.42 z0.081 yaw177° tilt40°",
+   "trace": [
+    [
+     2,
+     0.06,
+     -0.03,
+     0.116,
+     0.06,
+     12
+    ],
+    [
+     4,
+     0.19,
+     0.04,
+     0.041,
+     0.1,
+     -98
+    ],
+    [
+     6,
+     0.22,
+     -0.01,
+     0.085,
+     0.42,
+     -44
+    ],
+    [
+     8,
+     0.21,
+     -0.01,
+     0.116,
+     0,
+     51
+    ],
+    [
+     10,
+     0.29,
+     0.04,
+     0.116,
+     0.01,
+     74
+    ],
+    [
+     12,
+     0.31,
+     0.15,
+     0.077,
+     0.36,
+     52
+    ],
+    [
+     14,
+     0.33,
+     0.22,
+     0.056,
+     0.21,
+     -17
+    ],
+    [
+     16,
+     0.37,
+     0.18,
+     0.116,
+     0.05,
+     106
+    ],
+    [
+     18,
+     0.35,
+     0.24,
+     0.116,
+     0,
+     136
+    ],
+    [
+     20,
+     0.3,
+     0.3,
+     0.116,
+     0.17,
+     143
+    ],
+    [
+     22,
+     0.15,
+     0.38,
+     0.041,
+     0.06,
+     20
+    ],
+    [
+     24,
+     0.17,
+     0.45,
+     0.074,
+     0.47,
+     58
+    ],
+    [
+     26,
+     0.2,
+     0.46,
+     0.116,
+     0.01,
+     178
+    ],
+    [
+     28,
+     0.12,
+     0.49,
+     0.116,
+     0.01,
+     -157
+    ],
+    [
+     30,
+     0.03,
+     0.42,
+     0.081,
+     0.39,
+     177
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.04 z0.040 yaw-123° tilt90°",
+    "3.9 FALL in run x0.20 y0.05 z0.039 yaw-111° tilt89°",
+    "6.5 FALL in run x0.25 y0.09 z0.037 yaw-95° tilt89°",
+    "9.1 FALL in run x0.27 y0.14 z0.039 yaw-68° tilt90°",
+    "11.7 FALL in run x0.29 y0.19 z0.036 yaw-46° tilt90°",
+    "14.3 FALL in run x0.29 y0.24 z0.036 yaw-29° tilt89°",
+    "16.9 FALL in run x0.26 y0.29 z0.038 yaw-8° tilt89°",
+    "19.5 FALL in run x0.20 y0.32 z0.040 yaw10° tilt89°",
+    "22 FALL in run x0.15 y0.38 z0.041 yaw20° tilt90°",
+    "24.5 FALL in run x0.10 y0.41 z0.037 yaw37° tilt89°",
+    "27.1 FALL in run x0.05 y0.41 z0.038 yaw59° tilt89°",
+    "29.7 FALL in run x-0.00 y0.38 z0.039 yaw78° tilt89°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 15.04
+   }
+  },
+  {
+   "seed": 23,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4344,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.4 FALL, …1 more…, 11.8 up, …1 more…, 13.9 FALL, …1 more…, 14.3 up, …1 more…, 16.4 FALL, …1 more…, 16.8 up, …1 more…, 18.9 FALL, …1 more…, 19.3 up, …1 more…, 21.4 FALL, …1 more…, 21.9 up, …1 more…, 24 FALL, …1 more…, 24.4 up, …1 more…, 26.6 FALL, 26.6 recover(get_up), 27 up, 28 run(walk), 29.2 FALL, 29.2 recover(get_up), 29.6 up, end x0.17 y0.48 z0.116 yaw-170°",
+   "trace": [
+    [
+     2,
+     0.04,
+     -0.02,
+     0.115,
+     0.06,
+     17
+    ],
+    [
+     4,
+     0.19,
+     0.04,
+     0.049,
+     0.05,
+     -69
+    ],
+    [
+     6,
+     0.23,
+     0.01,
+     0.066,
+     0.18,
+     -75
+    ],
+    [
+     8,
+     0.2,
+     -0.02,
+     0.115,
+     0.07,
+     35
+    ],
+    [
+     10,
+     0.26,
+     0,
+     0.116,
+     0.01,
+     69
+    ],
+    [
+     12,
+     0.31,
+     0.06,
+     0.115,
+     0.04,
+     86
+    ],
+    [
+     14,
+     0.31,
+     0.23,
+     0.037,
+     0.14,
+     -39
+    ],
+    [
+     16,
+     0.37,
+     0.23,
+     0.071,
+     0.44,
+     -5
+    ],
+    [
+     18,
+     0.38,
+     0.19,
+     0.116,
+     0.02,
+     103
+    ],
+    [
+     20,
+     0.38,
+     0.26,
+     0.116,
+     0.01,
+     127
+    ],
+    [
+     22,
+     0.38,
+     0.35,
+     0.115,
+     0.16,
+     151
+    ],
+    [
+     24,
+     0.21,
+     0.38,
+     0.042,
+     0.01,
+     35
+    ],
+    [
+     26,
+     0.25,
+     0.44,
+     0.101,
+     0.32,
+     124
+    ],
+    [
+     28,
+     0.24,
+     0.45,
+     0.116,
+     0,
+     -176
+    ],
+    [
+     30,
+     0.17,
+     0.48,
+     0.116,
+     0.03,
+     -170
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.05 z0.040 yaw-121° tilt89°",
+    "3.8 FALL in run x0.20 y0.06 z0.043 yaw-108° tilt90°",
+    "6.4 FALL in run x0.24 y0.08 z0.043 yaw-91° tilt91°",
+    "8.8 FALL in run x0.28 y0.13 z0.043 yaw-76° tilt91°",
+    "11.4 FALL in run x0.29 y0.17 z0.043 yaw-54° tilt91°",
+    "13.9 FALL in run x0.30 y0.23 z0.043 yaw-38° tilt90°",
+    "16.4 FALL in run x0.30 y0.28 z0.042 yaw-27° tilt90°",
+    "18.9 FALL in run x0.28 y0.34 z0.042 yaw-15° tilt90°",
+    "21.4 FALL in run x0.25 y0.38 z0.043 yaw3° tilt91°",
+    "24 FALL in run x0.21 y0.38 z0.042 yaw35° tilt91°",
+    "26.6 FALL in run x0.14 y0.41 z0.040 yaw44° tilt91°",
+    "29.2 FALL in run x0.08 y0.41 z0.041 yaw58° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 22
+   }
+  },
+  {
+   "seed": 24,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.485,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 9 FALL, …1 more…, 9.4 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14 FALL, …1 more…, 14.4 up, …1 more…, 16.6 FALL, …1 more…, 17 up, …1 more…, 19.2 FALL, …1 more…, 19.6 up, …1 more…, 21.8 FALL, …1 more…, 22.2 up, …1 more…, 24.3 FALL, …1 more…, 24.7 up, …1 more…, 26.8 FALL, 26.8 recover(get_up), 27.2 up, 28.2 run(walk), 29.4 FALL, 29.4 recover(get_up), 29.8 up, end x0.31 y0.62 z0.115 yaw178°",
+   "trace": [
+    [
+     2,
+     0.1,
+     -0.02,
+     0.116,
+     0.04,
+     21
+    ],
+    [
+     4,
+     0.24,
+     0.06,
+     0.05,
+     0.05,
+     -63
+    ],
+    [
+     6,
+     0.28,
+     0.03,
+     0.068,
+     0.21,
+     -73
+    ],
+    [
+     8,
+     0.24,
+     0,
+     0.116,
+     0.02,
+     37
+    ],
+    [
+     10,
+     0.33,
+     0.05,
+     0.116,
+     0,
+     69
+    ],
+    [
+     12,
+     0.37,
+     0.11,
+     0.116,
+     0.17,
+     87
+    ],
+    [
+     14,
+     0.35,
+     0.28,
+     0.04,
+     0.02,
+     -35
+    ],
+    [
+     16,
+     0.42,
+     0.24,
+     0.104,
+     0.28,
+     59
+    ],
+    [
+     18,
+     0.43,
+     0.26,
+     0.116,
+     0,
+     108
+    ],
+    [
+     20,
+     0.44,
+     0.34,
+     0.116,
+     0.03,
+     120
+    ],
+    [
+     22,
+     0.33,
+     0.45,
+     0.053,
+     0.06,
+     53
+    ],
+    [
+     24,
+     0.34,
+     0.53,
+     0.056,
+     0.21,
+     9
+    ],
+    [
+     26,
+     0.38,
+     0.51,
+     0.114,
+     0.09,
+     125
+    ],
+    [
+     28,
+     0.36,
+     0.56,
+     0.116,
+     0,
+     162
+    ],
+    [
+     30,
+     0.31,
+     0.62,
+     0.115,
+     0.06,
+     178
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.18 y0.06 z0.040 yaw-120° tilt89°",
+    "3.8 FALL in run x0.25 y0.08 z0.043 yaw-105° tilt90°",
+    "6.4 FALL in run x0.29 y0.11 z0.042 yaw-91° tilt90°",
+    "9 FALL in run x0.33 y0.15 z0.042 yaw-79° tilt91°",
+    "11.5 FALL in run x0.34 y0.22 z0.041 yaw-51° tilt90°",
+    "14 FALL in run x0.35 y0.28 z0.040 yaw-35° tilt90°",
+    "16.6 FALL in run x0.36 y0.34 z0.040 yaw-27° tilt90°",
+    "19.2 FALL in run x0.34 y0.40 z0.041 yaw-16° tilt90°",
+    "21.8 FALL in run x0.31 y0.46 z0.042 yaw-4° tilt91°",
+    "24.3 FALL in run x0.28 y0.53 z0.042 yaw1° tilt91°",
+    "26.8 FALL in run x0.23 y0.57 z0.044 yaw19° tilt91°",
+    "29.4 FALL in run x0.19 y0.58 z0.039 yaw39° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 19.92
+   }
+  },
+  {
+   "seed": 25,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3956,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.9 FALL, …1 more…, 9.3 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14.1 FALL, …1 more…, 14.5 up, …1 more…, 16.6 FALL, …1 more…, 17 up, …1 more…, 19.2 FALL, …1 more…, 19.6 up, …1 more…, 21.8 FALL, …1 more…, 22.2 up, …1 more…, 24.4 FALL, …1 more…, 24.8 up, …1 more…, 26.9 FALL, 26.9 recover(get_up), 27.3 up, 28.3 run(walk), 29.5 FALL, 29.5 recover(get_up), 29.9 up, end x0.15 y0.58 z0.115 yaw178°",
+   "trace": [
+    [
+     2,
+     0.04,
+     -0.02,
+     0.116,
+     0.07,
+     25
+    ],
+    [
+     4,
+     0.18,
+     0.07,
+     0.047,
+     0.04,
+     -63
+    ],
+    [
+     6,
+     0.22,
+     0.05,
+     0.066,
+     0.2,
+     -67
+    ],
+    [
+     8,
+     0.2,
+     -0.01,
+     0.115,
+     0.06,
+     60
+    ],
+    [
+     10,
+     0.25,
+     0.05,
+     0.116,
+     0,
+     81
+    ],
+    [
+     12,
+     0.28,
+     0.11,
+     0.114,
+     0.19,
+     87
+    ],
+    [
+     14,
+     0.26,
+     0.29,
+     0.041,
+     0.23,
+     -34
+    ],
+    [
+     16,
+     0.34,
+     0.26,
+     0.101,
+     0.32,
+     51
+    ],
+    [
+     18,
+     0.35,
+     0.27,
+     0.116,
+     0,
+     113
+    ],
+    [
+     20,
+     0.34,
+     0.34,
+     0.116,
+     0.02,
+     129
+    ],
+    [
+     22,
+     0.23,
+     0.46,
+     0.051,
+     0.06,
+     55
+    ],
+    [
+     24,
+     0.24,
+     0.51,
+     0.068,
+     0.23,
+     32
+    ],
+    [
+     26,
+     0.27,
+     0.49,
+     0.115,
+     0.06,
+     140
+    ],
+    [
+     28,
+     0.22,
+     0.55,
+     0.115,
+     0.01,
+     165
+    ],
+    [
+     30,
+     0.15,
+     0.58,
+     0.115,
+     0.16,
+     178
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.06 z0.042 yaw-118° tilt89°",
+    "3.8 FALL in run x0.18 y0.08 z0.043 yaw-100° tilt90°",
+    "6.3 FALL in run x0.22 y0.12 z0.044 yaw-79° tilt91°",
+    "8.9 FALL in run x0.22 y0.16 z0.041 yaw-53° tilt91°",
+    "11.5 FALL in run x0.25 y0.22 z0.041 yaw-45° tilt91°",
+    "14.1 FALL in run x0.26 y0.29 z0.042 yaw-35° tilt91°",
+    "16.6 FALL in run x0.28 y0.36 z0.041 yaw-30° tilt91°",
+    "19.2 FALL in run x0.25 y0.41 z0.043 yaw-12° tilt91°",
+    "21.8 FALL in run x0.21 y0.46 z0.044 yaw3° tilt91°",
+    "24.4 FALL in run x0.16 y0.49 z0.043 yaw17° tilt91°",
+    "26.9 FALL in run x0.11 y0.54 z0.043 yaw26° tilt91°",
+    "29.5 FALL in run x0.04 y0.56 z0.042 yaw42° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 20.56
+   }
+  },
+  {
+   "seed": 26,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4873,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 9 FALL, …1 more…, 9.4 up, …1 more…, 11.6 FALL, …1 more…, 12 up, …1 more…, 14.2 FALL, …1 more…, 14.6 up, …1 more…, 16.8 FALL, …1 more…, 17.2 up, …1 more…, 19.4 FALL, …1 more…, 19.8 up, …1 more…, 22 FALL, …1 more…, 22.4 up, …1 more…, 24.6 FALL, …1 more…, 25 up, …1 more…, 27.1 FALL, 27.1 recover(get_up), 27.5 up, 28.4 run(walk), 29.6 FALL, 29.6 recover(get_up), end x0.35 y0.54 z0.102 yaw123°",
+   "trace": [
+    [
+     2,
+     0.04,
+     0,
+     0.115,
+     0.06,
+     11
+    ],
+    [
+     4,
+     0.19,
+     0.05,
+     0.05,
+     0.05,
+     -69
+    ],
+    [
+     6,
+     0.23,
+     0,
+     0.067,
+     0.21,
+     -87
+    ],
+    [
+     8,
+     0.19,
+     -0.02,
+     0.116,
+     0.02,
+     28
+    ],
+    [
+     10,
+     0.26,
+     0,
+     0.116,
+     0.01,
+     54
+    ],
+    [
+     12,
+     0.31,
+     0.07,
+     0.1,
+     0.49,
+     40
+    ],
+    [
+     14,
+     0.36,
+     0.2,
+     0.04,
+     0.32,
+     -47
+    ],
+    [
+     16,
+     0.39,
+     0.11,
+     0.114,
+     0.09,
+     72
+    ],
+    [
+     18,
+     0.41,
+     0.17,
+     0.116,
+     0,
+     95
+    ],
+    [
+     20,
+     0.43,
+     0.23,
+     0.115,
+     0.07,
+     105
+    ],
+    [
+     22,
+     0.35,
+     0.39,
+     0.04,
+     0.04,
+     -18
+    ],
+    [
+     24,
+     0.44,
+     0.38,
+     0.105,
+     0.28,
+     77
+    ],
+    [
+     26,
+     0.43,
+     0.4,
+     0.116,
+     0.01,
+     120
+    ],
+    [
+     28,
+     0.41,
+     0.48,
+     0.115,
+     0.01,
+     134
+    ],
+    [
+     30,
+     0.35,
+     0.54,
+     0.102,
+     0.49,
+     123
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.15 y0.06 z0.042 yaw-124° tilt90°",
+    "3.8 FALL in run x0.20 y0.06 z0.042 yaw-115° tilt90°",
+    "6.4 FALL in run x0.25 y0.07 z0.041 yaw-104° tilt91°",
+    "9 FALL in run x0.30 y0.11 z0.043 yaw-88° tilt91°",
+    "11.6 FALL in run x0.33 y0.17 z0.044 yaw-69° tilt91°",
+    "14.2 FALL in run x0.35 y0.21 z0.040 yaw-53° tilt91°",
+    "16.8 FALL in run x0.35 y0.26 z0.040 yaw-36° tilt90°",
+    "19.4 FALL in run x0.37 y0.33 z0.040 yaw-30° tilt91°",
+    "22 FALL in run x0.35 y0.39 z0.040 yaw-18° tilt90°",
+    "24.6 FALL in run x0.33 y0.46 z0.043 yaw-11° tilt91°",
+    "27.1 FALL in run x0.31 y0.52 z0.042 yaw-4° tilt91°",
+    "29.6 FALL in run x0.26 y0.57 z0.043 yaw14° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 23.14
+   }
+  },
+  {
+   "seed": 27,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3615,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.8 run(walk), 4 FALL, 4 recover(get_up), 4.4 up, …1 more…, 6.5 FALL, …1 more…, 7 up, …1 more…, 9.2 FALL, …1 more…, 9.6 up, …1 more…, 11.7 FALL, …1 more…, 12.2 up, …1 more…, 14.2 FALL, …1 more…, 14.6 up, …1 more…, 16.7 FALL, …1 more…, 17.2 up, …1 more…, 19.2 FALL, …1 more…, 19.6 up, …1 more…, 21.7 FALL, …1 more…, 22.1 up, …1 more…, 24.2 FALL, …1 more…, 24.6 up, …1 more…, 26.7 FALL, 26.7 recover(get_up), 27.2 up, 28.1 run(walk), 29.2 FALL, 29.2 recover(get_up), 29.6 up, end x-0.01 y0.33 z0.115 yaw-108°",
+   "trace": [
+    [
+     2,
+     0.06,
+     -0.05,
+     0.114,
+     0.05,
+     26
+    ],
+    [
+     4,
+     0.2,
+     0.07,
+     0.043,
+     0.01,
+     -93
+    ],
+    [
+     6,
+     0.2,
+     0,
+     0.099,
+     0.33,
+     -3
+    ],
+    [
+     8,
+     0.23,
+     -0.02,
+     0.116,
+     0,
+     76
+    ],
+    [
+     10,
+     0.27,
+     0.04,
+     0.115,
+     0.02,
+     96
+    ],
+    [
+     12,
+     0.25,
+     0.19,
+     0.056,
+     0.15,
+     54
+    ],
+    [
+     14,
+     0.25,
+     0.25,
+     0.046,
+     0.3,
+     -9
+    ],
+    [
+     16,
+     0.3,
+     0.19,
+     0.113,
+     0.12,
+     111
+    ],
+    [
+     18,
+     0.3,
+     0.25,
+     0.116,
+     0,
+     162
+    ],
+    [
+     20,
+     0.25,
+     0.29,
+     0.115,
+     0.03,
+     179
+    ],
+    [
+     22,
+     0.11,
+     0.29,
+     0.059,
+     0.25,
+     138
+    ],
+    [
+     24,
+     0.04,
+     0.31,
+     0.053,
+     0.24,
+     71
+    ],
+    [
+     26,
+     0.1,
+     0.35,
+     0.113,
+     0.11,
+     -174
+    ],
+    [
+     28,
+     0.05,
+     0.36,
+     0.116,
+     0,
+     -130
+    ],
+    [
+     30,
+     -0.01,
+     0.33,
+     0.115,
+     0.02,
+     -108
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.05 z0.040 yaw-117° tilt89°",
+    "4 FALL in run x0.20 y0.07 z0.043 yaw-93° tilt91°",
+    "6.5 FALL in run x0.24 y0.11 z0.043 yaw-79° tilt90°",
+    "9.2 FALL in run x0.24 y0.16 z0.043 yaw-47° tilt91°",
+    "11.7 FALL in run x0.23 y0.21 z0.043 yaw-31° tilt90°",
+    "14.2 FALL in run x0.21 y0.26 z0.044 yaw-15° tilt91°",
+    "16.7 FALL in run x0.17 y0.29 z0.045 yaw4° tilt91°",
+    "19.2 FALL in run x0.12 y0.28 z0.043 yaw36° tilt90°",
+    "21.7 FALL in run x0.07 y0.27 z0.043 yaw52° tilt91°",
+    "24.2 FALL in run x0.02 y0.27 z0.042 yaw64° tilt90°",
+    "26.7 FALL in run x-0.03 y0.25 z0.044 yaw79° tilt90°",
+    "29.2 FALL in run x-0.04 y0.21 z0.043 yaw105° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 14.78
+   }
+  },
+  {
+   "seed": 28,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3975,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.3 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.3 up, …1 more…, 21.3 FALL, …1 more…, 21.7 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.3 up, end x-0.00 y0.34 z0.116 yaw-103°",
+   "trace": [
+    [
+     2,
+     0.09,
+     -0.04,
+     0.115,
+     0.05,
+     31
+    ],
+    [
+     4,
+     0.22,
+     0.06,
+     0.046,
+     0.04,
+     -58
+    ],
+    [
+     6,
+     0.26,
+     0.06,
+     0.064,
+     0.19,
+     -57
+    ],
+    [
+     8,
+     0.24,
+     0,
+     0.115,
+     0.07,
+     62
+    ],
+    [
+     10,
+     0.28,
+     0.04,
+     0.115,
+     0,
+     91
+    ],
+    [
+     12,
+     0.31,
+     0.1,
+     0.115,
+     0.08,
+     104
+    ],
+    [
+     14,
+     0.26,
+     0.25,
+     0.044,
+     0.11,
+     8
+    ],
+    [
+     16,
+     0.27,
+     0.29,
+     0.064,
+     0.22,
+     18
+    ],
+    [
+     18,
+     0.32,
+     0.24,
+     0.115,
+     0.06,
+     142
+    ],
+    [
+     20,
+     0.29,
+     0.3,
+     0.115,
+     0,
+     177
+    ],
+    [
+     22,
+     0.22,
+     0.33,
+     0.115,
+     0.05,
+     -167
+    ],
+    [
+     24,
+     0.07,
+     0.28,
+     0.048,
+     0.05,
+     105
+    ],
+    [
+     26,
+     0.03,
+     0.31,
+     0.065,
+     0.2,
+     93
+    ],
+    [
+     28,
+     0.07,
+     0.35,
+     0.115,
+     0.07,
+     -147
+    ],
+    [
+     30,
+     0,
+     0.34,
+     0.116,
+     0,
+     -103
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.20 y0.05 z0.043 yaw-117° tilt90°",
+    "3.8 FALL in run x0.23 y0.08 z0.044 yaw-93° tilt91°",
+    "6.3 FALL in run x0.24 y0.12 z0.043 yaw-69° tilt90°",
+    "8.8 FALL in run x0.25 y0.17 z0.044 yaw-51° tilt91°",
+    "11.3 FALL in run x0.25 y0.22 z0.043 yaw-34° tilt90°",
+    "13.8 FALL in run x0.24 y0.26 z0.043 yaw-19° tilt90°",
+    "16.3 FALL in run x0.20 y0.28 z0.045 yaw7° tilt91°",
+    "18.8 FALL in run x0.15 y0.28 z0.044 yaw31° tilt91°",
+    "21.3 FALL in run x0.11 y0.28 z0.043 yaw51° tilt91°",
+    "23.8 FALL in run x0.06 y0.27 z0.043 yaw65° tilt90°",
+    "26.3 FALL in run x0.01 y0.25 z0.043 yaw81° tilt90°",
+    "28.8 FALL in run x-0.02 y0.20 z0.044 yaw101° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 14.42
+   }
+  },
+  {
+   "seed": 29,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.41,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.8 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.8 up, …1 more…, 23.8 FALL, …1 more…, 24.3 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.2 up, end x0.15 y0.41 z0.116 yaw-151°",
+   "trace": [
+    [
+     2,
+     0.08,
+     -0.06,
+     0.115,
+     0.08,
+     20
+    ],
+    [
+     4,
+     0.22,
+     0.02,
+     0.048,
+     0.05,
+     -62
+    ],
+    [
+     6,
+     0.27,
+     0,
+     0.065,
+     0.19,
+     -71
+    ],
+    [
+     8,
+     0.23,
+     -0.05,
+     0.115,
+     0.07,
+     54
+    ],
+    [
+     10,
+     0.28,
+     -0.01,
+     0.116,
+     0,
+     84
+    ],
+    [
+     12,
+     0.31,
+     0.05,
+     0.115,
+     0.03,
+     99
+    ],
+    [
+     14,
+     0.28,
+     0.21,
+     0.05,
+     0.05,
+     13
+    ],
+    [
+     16,
+     0.33,
+     0.25,
+     0.064,
+     0.18,
+     -8
+    ],
+    [
+     18,
+     0.36,
+     0.19,
+     0.115,
+     0.07,
+     114
+    ],
+    [
+     20,
+     0.34,
+     0.25,
+     0.116,
+     0.01,
+     143
+    ],
+    [
+     22,
+     0.32,
+     0.32,
+     0.115,
+     0.05,
+     164
+    ],
+    [
+     24,
+     0.16,
+     0.35,
+     0.045,
+     0.07,
+     70
+    ],
+    [
+     26,
+     0.14,
+     0.39,
+     0.062,
+     0.21,
+     70
+    ],
+    [
+     28,
+     0.2,
+     0.4,
+     0.115,
+     0.07,
+     -178
+    ],
+    [
+     30,
+     0.15,
+     0.41,
+     0.116,
+     0,
+     -151
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.19 y0.02 z0.042 yaw-122° tilt90°",
+    "3.8 FALL in run x0.23 y0.03 z0.043 yaw-102° tilt91°",
+    "6.3 FALL in run x0.26 y0.07 z0.044 yaw-83° tilt91°",
+    "8.8 FALL in run x0.27 y0.12 z0.043 yaw-57° tilt90°",
+    "11.3 FALL in run x0.27 y0.16 z0.042 yaw-42° tilt90°",
+    "13.8 FALL in run x0.27 y0.22 z0.043 yaw-31° tilt91°",
+    "16.3 FALL in run x0.26 y0.28 z0.043 yaw-20° tilt90°",
+    "18.8 FALL in run x0.23 y0.31 z0.044 yaw0° tilt91°",
+    "21.3 FALL in run x0.18 y0.33 z0.043 yaw20° tilt91°",
+    "23.8 FALL in run x0.14 y0.34 z0.043 yaw41° tilt90°",
+    "26.3 FALL in run x0.10 y0.34 z0.044 yaw59° tilt91°",
+    "28.8 FALL in run x0.05 y0.33 z0.044 yaw69° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 16.92
+   }
+  },
+  {
+   "seed": 30,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4256,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.7 FALL, …1 more…, 12.1 up, …1 more…, 14.2 FALL, …1 more…, 14.6 up, …1 more…, 16.8 FALL, …1 more…, 17.2 up, …1 more…, 19.4 FALL, …1 more…, 19.8 up, …1 more…, 21.9 FALL, …1 more…, 22.3 up, …1 more…, 24.5 FALL, …1 more…, 24.9 up, …1 more…, 27.1 FALL, 27.1 recover(get_up), 27.5 up, 28.5 run(walk), 29.7 FALL, 29.7 recover(get_up), end x0.12 y0.52 z0.083 yaw141° tilt36°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.05,
+     0.116,
+     0.06,
+     23
+    ],
+    [
+     4,
+     0.21,
+     0.03,
+     0.041,
+     0.16,
+     -93
+    ],
+    [
+     6,
+     0.23,
+     -0.02,
+     0.091,
+     0.4,
+     -25
+    ],
+    [
+     8,
+     0.22,
+     -0.03,
+     0.116,
+     0.01,
+     56
+    ],
+    [
+     10,
+     0.28,
+     0.02,
+     0.116,
+     0.01,
+     77
+    ],
+    [
+     12,
+     0.29,
+     0.13,
+     0.08,
+     0.39,
+     49
+    ],
+    [
+     14,
+     0.31,
+     0.24,
+     0.04,
+     0.31,
+     -33
+    ],
+    [
+     16,
+     0.37,
+     0.16,
+     0.114,
+     0.08,
+     91
+    ],
+    [
+     18,
+     0.38,
+     0.22,
+     0.116,
+     0,
+     122
+    ],
+    [
+     20,
+     0.35,
+     0.28,
+     0.115,
+     0.07,
+     133
+    ],
+    [
+     22,
+     0.23,
+     0.4,
+     0.039,
+     0.19,
+     7
+    ],
+    [
+     24,
+     0.27,
+     0.46,
+     0.073,
+     0.47,
+     39
+    ],
+    [
+     26,
+     0.29,
+     0.43,
+     0.116,
+     0.01,
+     152
+    ],
+    [
+     28,
+     0.23,
+     0.51,
+     0.116,
+     0.01,
+     170
+    ],
+    [
+     30,
+     0.12,
+     0.52,
+     0.083,
+     0.41,
+     141
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.03 z0.041 yaw-116° tilt89°",
+    "3.9 FALL in run x0.22 y0.04 z0.041 yaw-104° tilt91°",
+    "6.5 FALL in run x0.26 y0.09 z0.044 yaw-85° tilt91°",
+    "9.1 FALL in run x0.26 y0.13 z0.044 yaw-63° tilt91°",
+    "11.7 FALL in run x0.28 y0.18 z0.041 yaw-44° tilt90°",
+    "14.2 FALL in run x0.31 y0.24 z0.038 yaw-39° tilt91°",
+    "16.8 FALL in run x0.29 y0.29 z0.039 yaw-19° tilt90°",
+    "19.4 FALL in run x0.25 y0.34 z0.042 yaw-3° tilt91°",
+    "21.9 FALL in run x0.21 y0.40 z0.043 yaw5° tilt91°",
+    "24.5 FALL in run x0.17 y0.45 z0.044 yaw16° tilt91°",
+    "27.1 FALL in run x0.12 y0.48 z0.041 yaw30° tilt91°",
+    "29.7 FALL in run x0.06 y0.50 z0.041 yaw46° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 17.84
+   }
+  },
+  {
+   "seed": 31,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5152,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.7 up, …1 more…, 8.8 FALL, …1 more…, 9.3 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.9 FALL, …1 more…, 14.3 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.7 up, …1 more…, 23.8 FALL, …1 more…, 24.3 up, …1 more…, 26.5 FALL, 26.5 recover(get_up), 26.9 up, 27.8 run(walk), 29 FALL, 29 recover(get_up), 29.4 up, end x0.31 y0.44 z0.116 yaw-179°",
+   "trace": [
+    [
+     2,
+     0.1,
+     -0.06,
+     0.116,
+     0.05,
+     12
+    ],
+    [
+     4,
+     0.25,
+     -0.01,
+     0.049,
+     0.05,
+     -72
+    ],
+    [
+     6,
+     0.3,
+     -0.04,
+     0.063,
+     0.2,
+     -89
+    ],
+    [
+     8,
+     0.25,
+     -0.08,
+     0.115,
+     0.07,
+     25
+    ],
+    [
+     10,
+     0.32,
+     -0.07,
+     0.116,
+     0,
+     64
+    ],
+    [
+     12,
+     0.38,
+     -0.04,
+     0.116,
+     0.05,
+     83
+    ],
+    [
+     14,
+     0.38,
+     0.12,
+     0.04,
+     0.14,
+     -33
+    ],
+    [
+     16,
+     0.44,
+     0.17,
+     0.064,
+     0.19,
+     -17
+    ],
+    [
+     18,
+     0.46,
+     0.12,
+     0.115,
+     0.07,
+     92
+    ],
+    [
+     20,
+     0.47,
+     0.18,
+     0.116,
+     0,
+     118
+    ],
+    [
+     22,
+     0.46,
+     0.25,
+     0.116,
+     0.04,
+     134
+    ],
+    [
+     24,
+     0.33,
+     0.36,
+     0.045,
+     0.06,
+     41
+    ],
+    [
+     26,
+     0.36,
+     0.41,
+     0.074,
+     0.48,
+     61
+    ],
+    [
+     28,
+     0.39,
+     0.4,
+     0.116,
+     0.02,
+     165
+    ],
+    [
+     30,
+     0.31,
+     0.44,
+     0.116,
+     0.01,
+     -179
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.20 y0.00 z0.041 yaw-124° tilt90°",
+    "3.8 FALL in run x0.26 y0.00 z0.043 yaw-114° tilt91°",
+    "6.3 FALL in run x0.31 y0.02 z0.043 yaw-101° tilt91°",
+    "8.8 FALL in run x0.35 y0.05 z0.043 yaw-86° tilt90°",
+    "11.3 FALL in run x0.36 y0.10 z0.042 yaw-59° tilt90°",
+    "13.9 FALL in run x0.37 y0.13 z0.041 yaw-39° tilt90°",
+    "16.3 FALL in run x0.38 y0.20 z0.041 yaw-31° tilt89°",
+    "18.8 FALL in run x0.38 y0.26 z0.041 yaw-21° tilt89°",
+    "21.3 FALL in run x0.36 y0.31 z0.042 yaw-7° tilt90°",
+    "23.8 FALL in run x0.32 y0.35 z0.041 yaw10° tilt89°",
+    "26.5 FALL in run x0.28 y0.36 z0.041 yaw39° tilt90°",
+    "29 FALL in run x0.22 y0.39 z0.040 yaw47° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 20.06
+   }
+  },
+  {
+   "seed": 32,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4742,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.7 FALL, …1 more…, 12.1 up, …1 more…, 14.3 FALL, …1 more…, 14.7 up, …1 more…, 16.9 FALL, …1 more…, 17.3 up, …1 more…, 19.5 FALL, …1 more…, 19.9 up, …1 more…, 22.1 FALL, …1 more…, 22.5 up, …1 more…, 24.7 FALL, …1 more…, 25.1 up, …1 more…, 27.3 FALL, 27.3 recover(get_up), 27.7 up, 28.6 run(walk), 29.8 FALL, 29.8 recover(get_up), end x0.14 y0.35 z0.057 yaw126° tilt71°",
+   "trace": [
+    [
+     2,
+     0.08,
+     -0.06,
+     0.116,
+     0.07,
+     12
+    ],
+    [
+     4,
+     0.22,
+     0,
+     0.04,
+     0.13,
+     -103
+    ],
+    [
+     6,
+     0.25,
+     -0.06,
+     0.079,
+     0.46,
+     -68
+    ],
+    [
+     8,
+     0.23,
+     -0.07,
+     0.116,
+     0.01,
+     35
+    ],
+    [
+     10,
+     0.3,
+     -0.04,
+     0.116,
+     0.01,
+     58
+    ],
+    [
+     12,
+     0.35,
+     0.09,
+     0.058,
+     0.21,
+     22
+    ],
+    [
+     14,
+     0.4,
+     0.12,
+     0.06,
+     0.17,
+     -32
+    ],
+    [
+     16,
+     0.4,
+     0.07,
+     0.115,
+     0.05,
+     83
+    ],
+    [
+     18,
+     0.43,
+     0.14,
+     0.116,
+     0,
+     115
+    ],
+    [
+     20,
+     0.42,
+     0.2,
+     0.115,
+     0.2,
+     121
+    ],
+    [
+     22,
+     0.29,
+     0.32,
+     0.04,
+     0.3,
+     10
+    ],
+    [
+     24,
+     0.37,
+     0.31,
+     0.113,
+     0.11,
+     131
+    ],
+    [
+     26,
+     0.35,
+     0.35,
+     0.116,
+     0,
+     173
+    ],
+    [
+     28,
+     0.28,
+     0.39,
+     0.116,
+     0.04,
+     -172
+    ],
+    [
+     30,
+     0.14,
+     0.35,
+     0.057,
+     0.05,
+     126
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.01 z0.039 yaw-124° tilt89°",
+    "3.9 FALL in run x0.22 y0.01 z0.040 yaw-112° tilt90°",
+    "6.5 FALL in run x0.28 y0.03 z0.040 yaw-102° tilt90°",
+    "9.1 FALL in run x0.33 y0.07 z0.043 yaw-85° tilt90°",
+    "11.7 FALL in run x0.35 y0.13 z0.044 yaw-62° tilt91°",
+    "14.3 FALL in run x0.35 y0.16 z0.041 yaw-44° tilt90°",
+    "16.9 FALL in run x0.35 y0.22 z0.039 yaw-30° tilt90°",
+    "19.5 FALL in run x0.32 y0.27 z0.041 yaw-9° tilt89°",
+    "22.1 FALL in run x0.28 y0.32 z0.041 yaw6° tilt89°",
+    "24.7 FALL in run x0.22 y0.33 z0.044 yaw30° tilt91°",
+    "27.3 FALL in run x0.19 y0.33 z0.040 yaw52° tilt89°",
+    "29.8 FALL in run x0.12 y0.34 z0.038 yaw60° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 17.98
+   }
+  },
+  {
+   "seed": 33,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3552,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.2 up, …1 more…, 16.3 FALL, …1 more…, 16.7 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.8 up, …1 more…, 23.8 FALL, …1 more…, 24.2 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.3 up, end x0.04 y0.43 z0.116 yaw-122°",
+   "trace": [
+    [
+     2,
+     0.04,
+     -0.04,
+     0.115,
+     0.06,
+     27
+    ],
+    [
+     4,
+     0.18,
+     0.05,
+     0.049,
+     0.05,
+     -57
+    ],
+    [
+     6,
+     0.22,
+     0.04,
+     0.065,
+     0.19,
+     -69
+    ],
+    [
+     8,
+     0.19,
+     -0.01,
+     0.115,
+     0.07,
+     58
+    ],
+    [
+     10,
+     0.23,
+     0.02,
+     0.116,
+     0,
+     89
+    ],
+    [
+     12,
+     0.26,
+     0.1,
+     0.115,
+     0.05,
+     100
+    ],
+    [
+     14,
+     0.22,
+     0.25,
+     0.047,
+     0.05,
+     10
+    ],
+    [
+     16,
+     0.26,
+     0.29,
+     0.065,
+     0.18,
+     1
+    ],
+    [
+     18,
+     0.3,
+     0.25,
+     0.115,
+     0.07,
+     121
+    ],
+    [
+     20,
+     0.28,
+     0.31,
+     0.116,
+     0.01,
+     154
+    ],
+    [
+     22,
+     0.25,
+     0.38,
+     0.115,
+     0.04,
+     -180
+    ],
+    [
+     24,
+     0.08,
+     0.36,
+     0.047,
+     0.05,
+     93
+    ],
+    [
+     26,
+     0.06,
+     0.4,
+     0.064,
+     0.18,
+     83
+    ],
+    [
+     28,
+     0.11,
+     0.44,
+     0.115,
+     0.07,
+     -160
+    ],
+    [
+     30,
+     0.04,
+     0.43,
+     0.116,
+     0.01,
+     -122
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.15 y0.05 z0.042 yaw-118° tilt90°",
+    "3.8 FALL in run x0.19 y0.07 z0.044 yaw-97° tilt91°",
+    "6.3 FALL in run x0.22 y0.11 z0.044 yaw-81° tilt91°",
+    "8.8 FALL in run x0.21 y0.16 z0.044 yaw-53° tilt91°",
+    "11.3 FALL in run x0.21 y0.20 z0.043 yaw-37° tilt91°",
+    "13.8 FALL in run x0.21 y0.26 z0.043 yaw-26° tilt90°",
+    "16.3 FALL in run x0.19 y0.31 z0.042 yaw-11° tilt90°",
+    "18.8 FALL in run x0.16 y0.35 z0.043 yaw10° tilt91°",
+    "21.3 FALL in run x0.11 y0.36 z0.043 yaw31° tilt90°",
+    "23.8 FALL in run x0.07 y0.35 z0.042 yaw58° tilt90°",
+    "26.3 FALL in run x0.03 y0.34 z0.043 yaw71° tilt90°",
+    "28.8 FALL in run x-0.01 y0.31 z0.044 yaw88° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 16.92
+   }
+  },
+  {
+   "seed": 34,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5102,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.6 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.3 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 8.9 FALL, …1 more…, 9.3 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14 FALL, …1 more…, 14.4 up, …1 more…, 16.5 FALL, …1 more…, 17 up, …1 more…, 19.1 FALL, …1 more…, 19.5 up, …1 more…, 21.7 FALL, …1 more…, 22.1 up, …1 more…, 24.2 FALL, …1 more…, 24.6 up, …1 more…, 26.7 FALL, 26.7 recover(get_up), 27.1 up, 28.1 run(walk), 29.3 FALL, 29.3 recover(get_up), 29.7 up, end x0.24 y0.52 z0.115 yaw-163°",
+   "trace": [
+    [
+     2,
+     0.08,
+     -0.02,
+     0.116,
+     0.04,
+     11
+    ],
+    [
+     4,
+     0.22,
+     0.04,
+     0.056,
+     0.07,
+     -52
+    ],
+    [
+     6,
+     0.26,
+     0,
+     0.069,
+     0.29,
+     -74
+    ],
+    [
+     8,
+     0.24,
+     -0.03,
+     0.115,
+     0.05,
+     33
+    ],
+    [
+     10,
+     0.3,
+     0.01,
+     0.116,
+     0,
+     57
+    ],
+    [
+     12,
+     0.36,
+     0.06,
+     0.117,
+     0.17,
+     72
+    ],
+    [
+     14,
+     0.36,
+     0.22,
+     0.039,
+     0.14,
+     -42
+    ],
+    [
+     16,
+     0.45,
+     0.24,
+     0.072,
+     0.45,
+     -15
+    ],
+    [
+     18,
+     0.47,
+     0.2,
+     0.116,
+     0.01,
+     111
+    ],
+    [
+     20,
+     0.45,
+     0.27,
+     0.116,
+     0,
+     131
+    ],
+    [
+     22,
+     0.36,
+     0.35,
+     0.085,
+     0.4,
+     103
+    ],
+    [
+     24,
+     0.26,
+     0.41,
+     0.042,
+     0.3,
+     35
+    ],
+    [
+     26,
+     0.34,
+     0.43,
+     0.113,
+     0.13,
+     144
+    ],
+    [
+     28,
+     0.3,
+     0.48,
+     0.116,
+     0,
+     179
+    ],
+    [
+     30,
+     0.24,
+     0.52,
+     0.115,
+     0.04,
+     -163
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.16 y0.05 z0.041 yaw-118° tilt90°",
+    "3.8 FALL in run x0.23 y0.03 z0.037 yaw-118° tilt90°",
+    "6.4 FALL in run x0.27 y0.08 z0.040 yaw-93° tilt90°",
+    "8.9 FALL in run x0.32 y0.12 z0.043 yaw-80° tilt91°",
+    "11.5 FALL in run x0.36 y0.17 z0.043 yaw-64° tilt91°",
+    "14 FALL in run x0.36 y0.22 z0.039 yaw-42° tilt89°",
+    "16.5 FALL in run x0.39 y0.29 z0.037 yaw-38° tilt90°",
+    "19.1 FALL in run x0.36 y0.33 z0.039 yaw-11° tilt89°",
+    "21.7 FALL in run x0.31 y0.37 z0.042 yaw7° tilt91°",
+    "24.2 FALL in run x0.24 y0.40 z0.042 yaw28° tilt91°",
+    "26.7 FALL in run x0.20 y0.43 z0.039 yaw43° tilt89°",
+    "29.3 FALL in run x0.14 y0.45 z0.038 yaw54° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 17.68
+   }
+  },
+  {
+   "seed": 35,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4911,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.7 up, …1 more…, 8.9 FALL, …1 more…, 9.3 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14 FALL, …1 more…, 14.4 up, …1 more…, 16.5 FALL, …1 more…, 16.9 up, …1 more…, 19 FALL, …1 more…, 19.4 up, …1 more…, 21.5 FALL, …1 more…, 21.9 up, …1 more…, 24.1 FALL, …1 more…, 24.5 up, …1 more…, 26.7 FALL, 26.7 recover(get_up), 27.1 up, 28.1 run(walk), 29.3 FALL, 29.3 recover(get_up), 29.7 up, end x0.25 y0.46 z0.115 yaw-176°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.02,
+     0.115,
+     0.06,
+     16
+    ],
+    [
+     4,
+     0.22,
+     0.04,
+     0.05,
+     0.06,
+     -66
+    ],
+    [
+     6,
+     0.27,
+     0.01,
+     0.066,
+     0.19,
+     -83
+    ],
+    [
+     8,
+     0.23,
+     -0.03,
+     0.115,
+     0.06,
+     32
+    ],
+    [
+     10,
+     0.29,
+     0,
+     0.116,
+     0.01,
+     65
+    ],
+    [
+     12,
+     0.34,
+     0.05,
+     0.115,
+     0.26,
+     75
+    ],
+    [
+     14,
+     0.34,
+     0.22,
+     0.042,
+     0.17,
+     -42
+    ],
+    [
+     16,
+     0.41,
+     0.17,
+     0.099,
+     0.34,
+     46
+    ],
+    [
+     18,
+     0.42,
+     0.17,
+     0.116,
+     0.01,
+     103
+    ],
+    [
+     20,
+     0.44,
+     0.24,
+     0.116,
+     0.01,
+     121
+    ],
+    [
+     22,
+     0.43,
+     0.31,
+     0.112,
+     0.4,
+     126
+    ],
+    [
+     24,
+     0.28,
+     0.39,
+     0.04,
+     0.26,
+     22
+    ],
+    [
+     26,
+     0.36,
+     0.41,
+     0.112,
+     0.17,
+     138
+    ],
+    [
+     28,
+     0.33,
+     0.44,
+     0.116,
+     0,
+     178
+    ],
+    [
+     30,
+     0.25,
+     0.46,
+     0.115,
+     0.04,
+     -176
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.17 y0.04 z0.041 yaw-124° tilt89°",
+    "3.8 FALL in run x0.23 y0.05 z0.043 yaw-111° tilt90°",
+    "6.3 FALL in run x0.28 y0.07 z0.042 yaw-96° tilt90°",
+    "8.9 FALL in run x0.32 y0.11 z0.044 yaw-80° tilt91°",
+    "11.5 FALL in run x0.33 y0.17 z0.042 yaw-58° tilt90°",
+    "14 FALL in run x0.34 y0.22 z0.042 yaw-42° tilt90°",
+    "16.5 FALL in run x0.35 y0.27 z0.042 yaw-29° tilt90°",
+    "19 FALL in run x0.35 y0.32 z0.041 yaw-19° tilt89°",
+    "21.5 FALL in run x0.32 y0.37 z0.043 yaw-3° tilt90°",
+    "24.1 FALL in run x0.27 y0.39 z0.043 yaw21° tilt91°",
+    "26.7 FALL in run x0.22 y0.40 z0.043 yaw39° tilt91°",
+    "29.3 FALL in run x0.15 y0.41 z0.042 yaw53° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 22.1
+   }
+  },
+  {
+   "seed": 36,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5024,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.6 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.4 FALL, …1 more…, 6.8 up, …1 more…, 9 FALL, …1 more…, 9.4 up, …1 more…, 11.5 FALL, …1 more…, 11.9 up, …1 more…, 14 FALL, …1 more…, 14.4 up, …1 more…, 16.6 FALL, …1 more…, 17 up, …1 more…, 19.2 FALL, …1 more…, 19.6 up, …1 more…, 21.7 FALL, …1 more…, 22.1 up, …1 more…, 24.2 FALL, …1 more…, 24.6 up, …1 more…, 26.7 FALL, 26.7 recover(get_up), 27.1 up, 28.1 run(walk), 29.3 FALL, 29.3 recover(get_up), 29.7 up, end x0.23 y0.51 z0.115 yaw-175°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.04,
+     0.116,
+     0.04,
+     5
+    ],
+    [
+     4,
+     0.22,
+     0,
+     0.056,
+     0.05,
+     -57
+    ],
+    [
+     6,
+     0.27,
+     -0.05,
+     0.068,
+     0.28,
+     -81
+    ],
+    [
+     8,
+     0.23,
+     -0.07,
+     0.116,
+     0.02,
+     41
+    ],
+    [
+     10,
+     0.3,
+     -0.03,
+     0.116,
+     0,
+     59
+    ],
+    [
+     12,
+     0.36,
+     0.02,
+     0.116,
+     0.17,
+     77
+    ],
+    [
+     14,
+     0.37,
+     0.18,
+     0.036,
+     0.06,
+     -45
+    ],
+    [
+     16,
+     0.44,
+     0.14,
+     0.107,
+     0.25,
+     67
+    ],
+    [
+     18,
+     0.45,
+     0.16,
+     0.116,
+     0,
+     123
+    ],
+    [
+     20,
+     0.42,
+     0.24,
+     0.116,
+     0.02,
+     131
+    ],
+    [
+     22,
+     0.33,
+     0.32,
+     0.081,
+     0.39,
+     102
+    ],
+    [
+     24,
+     0.27,
+     0.41,
+     0.05,
+     0.21,
+     24
+    ],
+    [
+     26,
+     0.31,
+     0.42,
+     0.112,
+     0.16,
+     130
+    ],
+    [
+     28,
+     0.3,
+     0.47,
+     0.116,
+     0,
+     172
+    ],
+    [
+     30,
+     0.23,
+     0.51,
+     0.115,
+     0.04,
+     -175
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.15 y0.02 z0.040 yaw-122° tilt90°",
+    "3.8 FALL in run x0.22 y-0.01 z0.037 yaw-123° tilt89°",
+    "6.4 FALL in run x0.28 y0.02 z0.038 yaw-101° tilt89°",
+    "9 FALL in run x0.31 y0.08 z0.041 yaw-75° tilt90°",
+    "11.5 FALL in run x0.35 y0.13 z0.041 yaw-62° tilt91°",
+    "14 FALL in run x0.37 y0.18 z0.036 yaw-45° tilt90°",
+    "16.6 FALL in run x0.36 y0.23 z0.038 yaw-24° tilt89°",
+    "19.2 FALL in run x0.32 y0.27 z0.040 yaw-1° tilt90°",
+    "21.7 FALL in run x0.28 y0.34 z0.041 yaw5° tilt90°",
+    "24.2 FALL in run x0.23 y0.39 z0.041 yaw17° tilt90°",
+    "26.7 FALL in run x0.18 y0.44 z0.039 yaw30° tilt91°",
+    "29.3 FALL in run x0.14 y0.44 z0.040 yaw51° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 17.34
+   }
+  },
+  {
+   "seed": 37,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.5064,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.6 FALL, …1 more…, 12 up, …1 more…, 14.2 FALL, …1 more…, 14.6 up, …1 more…, 16.8 FALL, …1 more…, 17.2 up, …1 more…, 19.4 FALL, …1 more…, 19.8 up, …1 more…, 22 FALL, …1 more…, 22.4 up, …1 more…, 24.5 FALL, …1 more…, 24.9 up, …1 more…, 27.1 FALL, 27.1 recover(get_up), 27.5 up, 28.4 run(walk), 29.6 FALL, 29.6 recover(get_up), end x0.27 y0.49 z0.098 yaw162°",
+   "trace": [
+    [
+     2,
+     0.06,
+     0.01,
+     0.115,
+     0.04,
+     9
+    ],
+    [
+     4,
+     0.2,
+     0.05,
+     0.042,
+     0.12,
+     -104
+    ],
+    [
+     6,
+     0.21,
+     0,
+     0.09,
+     0.4,
+     -41
+    ],
+    [
+     8,
+     0.2,
+     0,
+     0.116,
+     0.01,
+     34
+    ],
+    [
+     10,
+     0.28,
+     0.03,
+     0.116,
+     0.01,
+     50
+    ],
+    [
+     12,
+     0.33,
+     0.1,
+     0.101,
+     0.49,
+     38
+    ],
+    [
+     14,
+     0.39,
+     0.21,
+     0.042,
+     0.29,
+     -48
+    ],
+    [
+     16,
+     0.41,
+     0.14,
+     0.114,
+     0.08,
+     70
+    ],
+    [
+     18,
+     0.45,
+     0.19,
+     0.116,
+     0,
+     103
+    ],
+    [
+     20,
+     0.46,
+     0.26,
+     0.115,
+     0.08,
+     122
+    ],
+    [
+     22,
+     0.33,
+     0.38,
+     0.041,
+     0.11,
+     -1
+    ],
+    [
+     24,
+     0.39,
+     0.42,
+     0.092,
+     0.38,
+     79
+    ],
+    [
+     26,
+     0.4,
+     0.42,
+     0.116,
+     0.01,
+     154
+    ],
+    [
+     28,
+     0.34,
+     0.48,
+     0.115,
+     0.02,
+     173
+    ],
+    [
+     30,
+     0.27,
+     0.49,
+     0.098,
+     0.48,
+     162
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.14 y0.07 z0.041 yaw-120° tilt90°",
+    "3.9 FALL in run x0.21 y0.06 z0.039 yaw-119° tilt90°",
+    "6.5 FALL in run x0.25 y0.09 z0.040 yaw-101° tilt89°",
+    "9.1 FALL in run x0.31 y0.14 z0.043 yaw-87° tilt91°",
+    "11.6 FALL in run x0.35 y0.19 z0.043 yaw-71° tilt91°",
+    "14.2 FALL in run x0.37 y0.23 z0.040 yaw-55° tilt90°",
+    "16.8 FALL in run x0.38 y0.28 z0.039 yaw-37° tilt90°",
+    "19.4 FALL in run x0.37 y0.34 z0.039 yaw-21° tilt89°",
+    "22 FALL in run x0.33 y0.38 z0.041 yaw-1° tilt89°",
+    "24.5 FALL in run x0.28 y0.42 z0.042 yaw17° tilt90°",
+    "27.1 FALL in run x0.23 y0.44 z0.042 yaw36° tilt91°",
+    "29.6 FALL in run x0.18 y0.45 z0.039 yaw51° tilt90°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 20.44
+   }
+  },
+  {
+   "seed": 38,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.4349,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.7 up, 2.7 run(walk), 3.9 FALL, 3.9 recover(get_up), 4.3 up, …1 more…, 6.5 FALL, …1 more…, 6.9 up, …1 more…, 9.1 FALL, …1 more…, 9.5 up, …1 more…, 11.7 FALL, …1 more…, 12.1 up, …1 more…, 14.3 FALL, …1 more…, 14.7 up, …1 more…, 16.9 FALL, …1 more…, 17.3 up, …1 more…, 19.5 FALL, …1 more…, 19.9 up, …1 more…, 22 FALL, …1 more…, 22.4 up, …1 more…, 24.6 FALL, …1 more…, 25 up, …1 more…, 27.2 FALL, 27.2 recover(get_up), 27.6 up, 28.6 run(walk), 29.8 FALL, 29.8 recover(get_up), end x0.02 y0.30 z0.052 yaw164° tilt71°",
+   "trace": [
+    [
+     2,
+     0.07,
+     -0.01,
+     0.115,
+     0.03,
+     23
+    ],
+    [
+     4,
+     0.2,
+     0.09,
+     0.041,
+     0.07,
+     -89
+    ],
+    [
+     6,
+     0.24,
+     0.05,
+     0.078,
+     0.45,
+     -50
+    ],
+    [
+     8,
+     0.22,
+     0.04,
+     0.116,
+     0.01,
+     51
+    ],
+    [
+     10,
+     0.3,
+     0.09,
+     0.116,
+     0,
+     73
+    ],
+    [
+     12,
+     0.32,
+     0.21,
+     0.075,
+     0.34,
+     51
+    ],
+    [
+     14,
+     0.35,
+     0.27,
+     0.055,
+     0.18,
+     -15
+    ],
+    [
+     16,
+     0.38,
+     0.23,
+     0.116,
+     0.05,
+     110
+    ],
+    [
+     18,
+     0.36,
+     0.3,
+     0.116,
+     0,
+     141
+    ],
+    [
+     20,
+     0.3,
+     0.37,
+     0.117,
+     0.16,
+     158
+    ],
+    [
+     22,
+     0.15,
+     0.38,
+     0.038,
+     0.05,
+     44
+    ],
+    [
+     24,
+     0.19,
+     0.45,
+     0.108,
+     0.24,
+     155
+    ],
+    [
+     26,
+     0.16,
+     0.47,
+     0.116,
+     0,
+     -151
+    ],
+    [
+     28,
+     0.1,
+     0.44,
+     0.116,
+     0.04,
+     -133
+    ],
+    [
+     30,
+     0.02,
+     0.3,
+     0.052,
+     0.06,
+     164
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.15 y0.07 z0.038 yaw-122° tilt89°",
+    "3.9 FALL in run x0.20 y0.09 z0.037 yaw-104° tilt89°",
+    "6.5 FALL in run x0.24 y0.15 z0.039 yaw-86° tilt90°",
+    "9.1 FALL in run x0.28 y0.20 z0.039 yaw-68° tilt90°",
+    "11.7 FALL in run x0.30 y0.25 z0.037 yaw-47° tilt90°",
+    "14.3 FALL in run x0.30 y0.29 z0.037 yaw-27° tilt89°",
+    "16.9 FALL in run x0.26 y0.34 z0.038 yaw-6° tilt89°",
+    "19.5 FALL in run x0.20 y0.37 z0.040 yaw19° tilt90°",
+    "22 FALL in run x0.15 y0.38 z0.038 yaw44° tilt90°",
+    "24.6 FALL in run x0.09 y0.38 z0.037 yaw63° tilt90°",
+    "27.2 FALL in run x0.05 y0.35 z0.038 yaw83° tilt89°",
+    "29.8 FALL in run x0.02 y0.28 z0.040 yaw102° tilt89°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 15.3
+   }
+  },
+  {
+   "seed": 39,
+   "result": 30,
+   "finished": false,
+   "finish_t": null,
+   "metric": 0.3919,
+   "falls": 12,
+   "first_fall_t": 1.3,
+   "flags": [],
+   "timeline": "0 run(walk), 1.3 FALL, 1.3 recover(get_up), 1.8 up, 2.7 run(walk), 3.8 FALL, 3.8 recover(get_up), 4.2 up, …1 more…, 6.3 FALL, …1 more…, 6.8 up, …1 more…, 8.8 FALL, …1 more…, 9.2 up, …1 more…, 11.3 FALL, …1 more…, 11.7 up, …1 more…, 13.8 FALL, …1 more…, 14.3 up, …1 more…, 16.3 FALL, …1 more…, 16.8 up, …1 more…, 18.8 FALL, …1 more…, 19.2 up, …1 more…, 21.3 FALL, …1 more…, 21.7 up, …1 more…, 23.8 FALL, …1 more…, 24.3 up, …1 more…, 26.3 FALL, 26.3 recover(get_up), 26.7 up, 27.7 run(walk), 28.8 FALL, 28.8 recover(get_up), 29.3 up, end x0.03 y0.34 z0.116 yaw-100°",
+   "trace": [
+    [
+     2,
+     0.08,
+     -0.05,
+     0.115,
+     0.05,
+     29
+    ],
+    [
+     4,
+     0.22,
+     0.04,
+     0.05,
+     0.06,
+     -53
+    ],
+    [
+     6,
+     0.26,
+     0.03,
+     0.066,
+     0.2,
+     -71
+    ],
+    [
+     8,
+     0.24,
+     -0.02,
+     0.115,
+     0.07,
+     57
+    ],
+    [
+     10,
+     0.29,
+     0.01,
+     0.116,
+     0,
+     90
+    ],
+    [
+     12,
+     0.32,
+     0.07,
+     0.115,
+     0.05,
+     108
+    ],
+    [
+     14,
+     0.26,
+     0.22,
+     0.046,
+     0.05,
+     13
+    ],
+    [
+     16,
+     0.28,
+     0.26,
+     0.065,
+     0.19,
+     13
+    ],
+    [
+     18,
+     0.33,
+     0.23,
+     0.115,
+     0.07,
+     138
+    ],
+    [
+     20,
+     0.3,
+     0.27,
+     0.115,
+     0,
+     169
+    ],
+    [
+     22,
+     0.24,
+     0.31,
+     0.115,
+     0.06,
+     -174
+    ],
+    [
+     24,
+     0.08,
+     0.28,
+     0.045,
+     0.08,
+     87
+    ],
+    [
+     26,
+     0.05,
+     0.32,
+     0.064,
+     0.18,
+     91
+    ],
+    [
+     28,
+     0.1,
+     0.35,
+     0.115,
+     0.07,
+     -146
+    ],
+    [
+     30,
+     0.03,
+     0.34,
+     0.116,
+     0.01,
+     -100
+    ]
+   ],
+   "key_poses": [
+    "1.3 FALL in run x0.19 y0.03 z0.041 yaw-120° tilt89°",
+    "3.8 FALL in run x0.22 y0.06 z0.043 yaw-97° tilt91°",
+    "6.3 FALL in run x0.26 y0.10 z0.043 yaw-84° tilt91°",
+    "8.8 FALL in run x0.27 y0.15 z0.043 yaw-54° tilt90°",
+    "11.3 FALL in run x0.26 y0.19 z0.043 yaw-35° tilt91°",
+    "13.8 FALL in run x0.24 y0.23 z0.043 yaw-19° tilt91°",
+    "16.3 FALL in run x0.21 y0.27 z0.043 yaw1° tilt90°",
+    "18.8 FALL in run x0.17 y0.28 z0.044 yaw25° tilt91°",
+    "21.3 FALL in run x0.12 y0.28 z0.044 yaw43° tilt91°",
+    "23.8 FALL in run x0.07 y0.27 z0.043 yaw59° tilt90°",
+    "26.3 FALL in run x0.03 y0.25 z0.043 yaw79° tilt91°",
+    "28.8 FALL in run x0.01 y0.20 z0.045 yaw103° tilt91°"
+   ],
+   "milestones": {
+    "peak_height": {
+     "t": 0,
+     "m": 0.12
+    },
+    "score_reached_t": 16.92
+   }
+  }
+ ],
+ "viewer_url": "http://127.0.0.1:5393/runs/20261127-033516-c04804?seed=8",
+ "on_site": "no",
+ "viewer_hint": "The Training gym isn't running, so viewer_url won't open yet: start it once with `duckbench view`, then give your human the link.",
+ "cpu_s": 12.604,
+ "wall_s": 2.19
+}

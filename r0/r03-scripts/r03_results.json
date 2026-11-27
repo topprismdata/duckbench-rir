@@ -1,0 +1,238 @@
+{
+ "table1a": {
+  "sim": {
+   "scoring_success_rate": {
+    "n": 50,
+    "mean": 0.7,
+    "std": 0.4629100498862757,
+    "sem": 0.06546536707079771
+   },
+   "time_to_ball_contact_incl_inf": {
+    "n": 50,
+    "mean": 4.606000000000367,
+    "std": 1.160649009153613,
+    "sem": 0.1641405569899934
+   },
+   "time_to_ball_contact_excl_inf": {
+    "n": 50,
+    "mean": 4.606000000000367,
+    "std": 1.160649009153613,
+    "sem": 0.1641405569899934
+   },
+   "goal_side_counts": {
+    "left": 35,
+    "none": 15
+   },
+   "substep_s": 0.1
+  },
+  "real": {
+   "scoring_success_rate": {
+    "n": 50,
+    "mean": 0.58,
+    "std": 0.4985693819032899,
+    "sem": 0.07050835816716038
+   },
+   "time_to_ball_contact_incl_inf": {
+    "n": 50,
+    "mean": 4.699997979970649,
+    "std": 1.004479326978137,
+    "sem": 0.142054828733588
+   },
+   "time_to_ball_contact_excl_inf": {
+    "n": 50,
+    "mean": 4.699997979970649,
+    "std": 1.004479326978137,
+    "sem": 0.142054828733588
+   },
+   "goal_side_counts": {
+    "left": 29,
+    "none": 21
+   },
+   "substep_s": 0.1
+  }
+ },
+ "table1b": {
+  "real_baseline|Walking Speed": {
+   "n": 10,
+   "mean": 0.20429982781983397,
+   "std": 0.014190045873985061,
+   "sem": 0.004487286506406745
+  },
+  "real_learned|Walking Speed": {
+   "n": 10,
+   "mean": 0.5737329008086077,
+   "std": 0.008758376306825192,
+   "sem": 0.002769641773442134
+  },
+  "sim_learned|Walking Speed": {
+   "n": 10,
+   "mean": 0.5096811729712103,
+   "std": 0.019081887461962627,
+   "sem": 0.006034222643481151
+  },
+  "real_baseline|Turning Speed": {
+   "n": 10,
+   "mean": 0.7091658214564228,
+   "std": 0.11139401897480805,
+   "sem": 0.035225881768040805,
+   "failed_turns": 0
+  },
+  "real_learned|Turning Speed": {
+   "n": 10,
+   "mean": 2.84900366047735,
+   "std": 0.5973647361021375,
+   "sem": 0.18890331599481686,
+   "failed_turns": 0
+  },
+  "sim_learned|Turning Speed": {
+   "n": 10,
+   "mean": 3.1854284931115857,
+   "std": 0.39231656134833265,
+   "sem": 0.12406138976659098,
+   "failed_turns": 0
+  },
+  "real_baseline|Get-up Time": {
+   "n": 10,
+   "mean": 2.5199990000575783,
+   "std": 0.015811388372833243,
+   "sem": 0.005000000022765662,
+   "never_upright_episodes": 0
+  },
+  "real_learned|Get-up Time": {
+   "n": 10,
+   "mean": 0.9324995000846684,
+   "std": 0.3864099472264367,
+   "sem": 0.12219355437810031,
+   "never_upright_episodes": 0
+  },
+  "sim_learned|Get-up Time": {
+   "n": 10,
+   "mean": 0.7274999999999845,
+   "std": 0.04322100826629887,
+   "sem": 0.013667682889046977,
+   "never_upright_episodes": 0
+  },
+  "real_baseline|Kicking Speed": {
+   "n": 10,
+   "mean": 2.0744703854291195,
+   "std": 0.1613466507023716,
+   "sem": 0.051022290905910046
+  },
+  "real_learned|Kicking Speed": {
+   "n": 10,
+   "mean": 2.0179912529791046,
+   "std": 0.8124383878715614,
+   "sem": 0.25691557642294516
+  },
+  "real_with_run_up|Kicking Speed": {
+   "n": 10,
+   "mean": 2.7697468398040526,
+   "std": 0.3616138815110259,
+   "sem": 0.11435234991090926
+  },
+  "sim_learned|Kicking Speed": {
+   "n": 10,
+   "mean": 2.1230897217867812,
+   "std": 0.21807673106633302,
+   "sem": 0.06896191748536125
+  }
+ },
+ "improvements": {
+  "Walking Speed": 180.82887143427547,
+  "Turning Speed": 301.7401254090778,
+  "Get-up Time": 62.99603690067488,
+  "Kicking Speed": 33.51585345630808
+ },
+ "sensitivity": {
+  "success_rate_sim_goal_width_0.8": {
+   "n": 50,
+   "mean": 0.7,
+   "std": 0.4629100498862757,
+   "sem": 0.06546536707079771
+  },
+  "success_rate_sim_goal_width_0.85": {
+   "n": 50,
+   "mean": 0.7,
+   "std": 0.4629100498862757,
+   "sem": 0.06546536707079771
+  },
+  "success_rate_real_goal_width_0.8": {
+   "n": 50,
+   "mean": 0.58,
+   "std": 0.4985693819032899,
+   "sem": 0.07050835816716038
+  },
+  "success_rate_real_goal_width_0.85": {
+   "n": 50,
+   "mean": 0.58,
+   "std": 0.4985693819032899,
+   "sem": 0.07050835816716038
+  }
+ },
+ "fig7": {
+  "curves_final": {
+   "opponents6": {
+    "n_points": 75,
+    "x_last_1e7": 75.0,
+    "y_mean_last": 0.6677083333333333,
+    "y_stderr_last": 0.011312199453752626,
+    "ci2_last": 0.022624398907505252,
+    "ci_t_last": 0.031402665683617284,
+    "y_mean_max": 0.6765625
+   },
+   "self-play": {
+    "n_points": 75,
+    "x_last_1e7": 76.0,
+    "y_mean_last": 0.725,
+    "y_stderr_last": 0.013422229695546097,
+    "ci2_last": 0.026844459391092194,
+    "ci_t_last": 0.03726010963483596,
+    "y_mean_max": 0.7325833333333334
+   },
+   "self-play_noteacher_noshaping": {
+    "n_points": 75,
+    "x_last_1e7": 75.0,
+    "y_mean_last": 0.4383055555555556,
+    "y_stderr_last": 0.03566196100837645,
+    "ci2_last": 0.0713239220167529,
+    "ci_t_last": 0.09899760375925303,
+    "y_mean_max": 0.4383055555555556
+   },
+   "self-play_oppfrac10": {
+    "n_points": 75,
+    "x_last_1e7": 76.0,
+    "y_mean_last": 0.4608333333333333,
+    "y_stderr_last": 0.004938862329637362,
+    "ci2_last": 0.009877724659274724,
+    "ci_t_last": 0.013710281827073316,
+    "y_mean_max": 0.47802083333333334
+   }
+  },
+  "columns": [
+   "ablation_name",
+   "ten_million_actor_steps",
+   "y_mean",
+   "y_stderr"
+  ],
+  "paper_claims_check": {
+   "A_full_ge_B_fixed": true,
+   "A_vs_B_diff": 0.05729166666666663,
+   "A_ge_C_oppfrac10": true
+  }
+ },
+ "checks": {
+  "guas_sim_no_touch_episodes": 0,
+  "guas_real_no_touch_episodes": 0,
+  "dt_get_up_and_shoot": 0.10000000009313226,
+  "dt_walking_speed": 0.02500000037252903,
+  "turning_cols": [
+   "Trial",
+   "Step",
+   "Time",
+   "X pos",
+   "Y pos",
+   "Z pos"
+  ],
+  "kick_first_frame_moving_suspect": 0
+ }
+}

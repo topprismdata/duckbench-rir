@@ -1,0 +1,17 @@
+{
+  "format": "duck-program/2",
+  "start": "run",
+  "nodes": {
+    "run": { "skill": "walk",
+      "until": [
+        { "if": "fallen", "go": "recover" }
+      ]
+    },
+    "recover": { "skill": "get_up",
+      "until": [
+        { "if": "done", "go": "run" }
+      ]
+    }
+  },
+  "meta": {"title": "Raw sprint", "idea": "the move-lab sprint (sprint-raw@1) on a raw walk node at its speed knob; get up after a fall, as the clever walk does"}
+}

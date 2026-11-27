@@ -1,0 +1,47 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "launch"
+   ],
+   "move": "move_launch.mlp.json",
+   "host": "raw",
+   "command": {
+    "launch": {
+     "vx": 0.7
+    }
+   }
+  },
+  {
+   "nodes": [
+    "drive"
+   ],
+   "move": "move_drive.mlp.json",
+   "host": "raw",
+   "command": {
+    "drive": {
+     "vx": 0.7
+    }
+   }
+  },
+  {
+   "nodes": [
+    "finish"
+   ],
+   "move": "move_finish.mlp.json",
+   "host": "raw",
+   "command": {
+    "finish": {
+     "vx": 0.7
+    }
+   }
+  }
+ ],
+ "notes": "r13 launch(O2-init 0.5s) + O2 drive/finish"
+}

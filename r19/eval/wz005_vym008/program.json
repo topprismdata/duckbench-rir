@@ -1,0 +1,33 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "vy": -0.08,
+    "wz": 0.05
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "up"
+    }
+   ]
+  },
+  "up": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Run uphill, lean out of the swing",
+  "idea": "run uphill along the tangent at full speed, edging 3 cm/s out toward the rim and turning slowly left; get up after a fall and run again (packages/challenges/baselines/saucer/clever.json, the Saucer's clever duckscript)"
+ }
+}

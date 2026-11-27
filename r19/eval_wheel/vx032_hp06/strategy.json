@@ -1,0 +1,17 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "wheel",
+  "version": 2
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "wheel-uphill-runner-opus@1"
+  }
+ ],
+ "notes": "vx032_hp06"
+}

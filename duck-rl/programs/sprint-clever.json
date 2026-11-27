@@ -1,0 +1,17 @@
+{
+  "format": "duck-program/2",
+  "start": "walk",
+  "nodes": {
+    "walk": { "skill": "walk", "params": {"vx": 0.19},
+      "until": [
+        { "if": "fallen", "go": "recover" }
+      ]
+    },
+    "recover": { "skill": "get_up",
+      "until": [
+        { "if": "done", "go": "walk" }
+      ]
+    }
+  },
+  "meta": {"title": "Full speed ahead", "idea": "walk straight at the top speed, 0.19 m/s, and get up after a fall"}
+}

@@ -1,0 +1,17 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "steps",
+  "version": 4
+ },
+ "program": "prog_fixed10.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "policy.mlp.json"
+  }
+ ],
+ "notes": "E2.1 t1 s202 fixed10"
+}

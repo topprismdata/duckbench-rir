@@ -1,0 +1,23 @@
+{
+  "format": "duck-program/2",
+  "start": "roll",
+  "nodes": {
+    "roll": { "skill": "roulade",
+      "until": [
+        { "if": "done and fallen", "go": "recover" },
+        { "if": "done", "go": "run" }
+      ]
+    },
+    "run": { "skill": "walk", "params": {"vx": 0.19},
+      "until": [
+        { "if": "fallen", "go": "recover" }
+      ]
+    },
+    "recover": { "skill": "get_up",
+      "until": [
+        { "if": "done", "go": "run" }
+      ]
+    }
+  },
+  "meta": {"title": "Roll, then run", "idea": "roll once from a standstill to fling the wheel round (rolling onto an already moving rim tips the duck more often), then run up the rim at full speed and get up after a fall"}
+}

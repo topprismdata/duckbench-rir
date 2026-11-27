@@ -1,0 +1,59 @@
+{
+ "format": "duck-program/2",
+ "start": "climb",
+ "vars": {
+  "tries": 0
+ },
+ "any": [
+  {
+   "if": "fallen",
+   "go": "up",
+   "except": [
+    "up"
+   ]
+  },
+  {
+   "if": "held(avg(speed, 1) < 0.04) > 1.5",
+   "go": "back",
+   "except": [
+    "up",
+    "back"
+   ]
+  }
+ ],
+ "nodes": {
+  "climb": {
+   "skill": "walk",
+   "params": {},
+   "feed": {
+    "wz": "clamp(1.0 * path(0, 0), -1.2, 1.2)"
+   }
+  },
+  "back": {
+   "skill": "walk",
+   "params": {
+    "vx": -0.12
+   },
+   "set": {
+    "tries": "tries + 1"
+   },
+   "max_time": {
+    "s": 1.2,
+    "go": "BACK"
+   }
+  },
+  "up": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "BACK"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Cliff: climb, back off when stuck, climb again",
+  "idea": "the cliff-climber@1 move on one raw walk node, steered at the summit by path() (gain 1); stuck 1.5 s: back off 1.2 s; get up after a fall"
+ }
+}

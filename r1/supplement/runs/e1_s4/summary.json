@@ -1,0 +1,298 @@
+{
+ "iters": 878,
+ "steps": 7192576,
+ "train_s": 301.0,
+ "setup_s": 2.9,
+ "onnx": "/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/e1_s4/policy.onnx",
+ "onnx_vs_torch": 2.384185791015625e-06,
+ "device": "cpu",
+ "workers": 8,
+ "per_worker": 16,
+ "env": "fast",
+ "learner": "mlx",
+ "overlap": true,
+ "iw_cap": 3.0,
+ "mlx_fallback": null,
+ "stopped_by": "minutes",
+ "init": "stock",
+ "rollout_steps": 64,
+ "knobs": {
+  "dkl": 0.03,
+  "value_clip": null,
+  "critic_epochs": 10
+ },
+ "released_at_it": 14,
+ "resume": false,
+ "value_bias_shift": 0.28504,
+ "curriculum": "final stage from the first step",
+ "run_card": {
+  "direction": "lower",
+  "unit": "s",
+  "seed": 4,
+  "recipe": "sha256:f987a706def61c81",
+  "knobs": {
+   "LR_FIXED": 0.0001
+  },
+  "overrides": {},
+  "steps": 7192576,
+  "train_s": 301.0,
+  "n_evals": 10,
+  "to_frac_best": {
+   "50": {
+    "threshold": 8.3332,
+    "at": {
+     "steps": 253952,
+     "train_s": 18.6,
+     "result": 5.4535,
+     "mean": 5.4875,
+     "worst": 5.5586
+    }
+   },
+   "80": {
+    "threshold": 5.2083,
+    "at": {
+     "steps": 1007616,
+     "train_s": 48.7,
+     "result": 4.9577,
+     "mean": 5.0128,
+     "worst": 5.1295
+    }
+   },
+   "90": {
+    "threshold": 4.6296,
+    "at": {
+     "steps": 3252224,
+     "train_s": 137.7,
+     "result": 4.4639,
+     "mean": 4.5287,
+     "worst": 4.6906
+    }
+   },
+   "95": {
+    "threshold": 4.3859,
+    "at": {
+     "steps": 3751936,
+     "train_s": 159.2,
+     "result": 4.3069,
+     "mean": 4.3536,
+     "worst": 4.4691
+    }
+   }
+  },
+  "to_frac_gain": {
+   "50": {
+    "threshold": 4.8101,
+    "at": {
+     "steps": 1753088,
+     "train_s": 77.2,
+     "result": 4.7568,
+     "mean": 4.8011,
+     "worst": 4.9399
+    }
+   },
+   "80": {
+    "threshold": 4.424,
+    "at": {
+     "steps": 3751936,
+     "train_s": 159.2,
+     "result": 4.3069,
+     "mean": 4.3536,
+     "worst": 4.4691
+    }
+   },
+   "90": {
+    "threshold": 4.2953,
+    "at": {
+     "steps": 4505600,
+     "train_s": 190.4,
+     "result": 4.2838,
+     "mean": 4.3192,
+     "worst": 4.4218
+    }
+   },
+   "95": {
+    "threshold": 4.231,
+    "at": {
+     "steps": 5251072,
+     "train_s": 220.9,
+     "result": 4.1991,
+     "mean": 4.242,
+     "worst": 4.3752
+    }
+   }
+  },
+  "first": {
+   "steps": 253952,
+   "train_s": 18.6,
+   "result": 5.4535,
+   "mean": 5.4875,
+   "worst": 5.5586
+  },
+  "to_target": null,
+  "at_min": {
+   "2": {
+    "last": {
+     "steps": 2506752,
+     "train_s": 107.5,
+     "result": 4.6696,
+     "mean": 4.709,
+     "worst": 4.8003
+    },
+    "best": {
+     "steps": 2506752,
+     "train_s": 107.5,
+     "result": 4.6696,
+     "mean": 4.709,
+     "worst": 4.8003
+    }
+   },
+   "5": {
+    "last": {
+     "steps": 6004736,
+     "train_s": 251.5,
+     "result": 4.3158,
+     "mean": 4.3638,
+     "worst": 4.4998
+    },
+    "best": {
+     "steps": 5251072,
+     "train_s": 220.9,
+     "result": 4.1991,
+     "mean": 4.242,
+     "worst": 4.3752
+    }
+   }
+  },
+  "best": {
+   "steps": 7192576,
+   "train_s": 301.0,
+   "result": 4.1666,
+   "mean": 4.2058,
+   "worst": 4.3044
+  },
+  "last": {
+   "steps": 7192576,
+   "train_s": 301.0,
+   "result": 4.1666,
+   "mean": 4.2058,
+   "worst": 4.3044
+  },
+  "gap_last_vs_best": -0.0,
+  "sps": {
+   "median": 25290,
+   "first_min": 21436,
+   "last_min": 24699,
+   "last_vs_first": 1.152,
+   "learner_share": 0.207
+  }
+ },
+ "curve": {
+  "scope": "run",
+  "sessions": 1,
+  "direction": "lower",
+  "unit": "s",
+  "points": [
+   [
+    253952,
+    18.6,
+    5.4535
+   ],
+   [
+    1007616,
+    48.7,
+    4.9577
+   ],
+   [
+    1753088,
+    77.2,
+    4.7568
+   ],
+   [
+    2506752,
+    107.5,
+    4.6696
+   ],
+   [
+    3252224,
+    137.7,
+    4.4639
+   ],
+   [
+    3751936,
+    159.2,
+    4.3069
+   ],
+   [
+    4505600,
+    190.4,
+    4.2838
+   ],
+   [
+    5251072,
+    220.9,
+    4.1991
+   ],
+   [
+    6004736,
+    251.5,
+    4.3158
+   ],
+   [
+    7192576,
+    301.0,
+    4.1666
+   ]
+  ],
+  "offset": {
+   "steps": 0,
+   "train_s": 0.0
+  },
+  "train_s": 301.0,
+  "first": 5.4535,
+  "best": 4.1666,
+  "best_steps": 7192576,
+  "best_train_s": 301.0,
+  "best_frac": 1.0,
+  "start": 5.6758,
+  "beat_start": true,
+  "last_third": {
+   "from": 4.2838,
+   "to": 4.1666,
+   "change": 0.1172,
+   "pct": 2.74
+  },
+  "line": "Curve: start 5.68 s (before training) \u2192 first checkpoint 5.45 s \u2192 best 4.17 s at 5:01 (100 % of the run); last third of the run: the best so far improved by 0.12 s (2.7 %). The best checkpoint beats the start."
+ },
+ "start_vs_trained": {
+  "seeds": "100-115",
+  "opponents": [],
+  "unit": "s",
+  "direction": "lower",
+  "start": {
+   "what": "hurdles-fast-walker@1",
+   "result": 5.67578075297956,
+   "text": "5.68 s (finished 16/16)",
+   "n": 16,
+   "rank_key": [
+    -5.67578075297956
+   ],
+   "eval_s": 10.4,
+   "finished": 16
+  },
+  "trained": {
+   "what": "policy",
+   "result": 4.166620006194899,
+   "text": "4.17 s (finished 16/16)",
+   "n": 16,
+   "rank_key": [
+    -4.166620006194899
+   ],
+   "eval_s": 8.3,
+   "finished": 16
+  },
+  "verdict": "better",
+  "change": 1.5092,
+  "line": "[duck-rl] Start -> trained (same seeds 100-115): 5.68 s (finished 16/16) -> 4.17 s (finished 16/16). No need to re-simulate."
+ },
+ "busy": null
+}

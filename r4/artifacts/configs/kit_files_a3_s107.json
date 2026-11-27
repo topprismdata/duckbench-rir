@@ -1,0 +1,283 @@
+{
+ "format": "duck-rl-kit-files/1",
+ "session": "e4_a3_s107-20261127-103053",
+ "label": "e4_a3_s107",
+ "kit_version": "1.31.2",
+ "mode": "standalone",
+ "config": "configs/e4/a3.py",
+ "overrides": {},
+ "eye": null,
+ "encoder": null,
+ "release": "found",
+ "changed": [
+  "lab/learn.py"
+ ],
+ "removed": [],
+ "files": {
+  "duck_rl/__init__.py": {
+   "sha256": "01bffe75b51c9ab0a14c9fa496369c0d27368bf274263f9962f0699e3d286ac2",
+   "release": "same"
+  },
+  "duck_rl/bridge.py": {
+   "sha256": "8e193ef8d39421c2de33fcc2da37872b18f83349b429c47e66f206eb029a0749",
+   "release": "same"
+  },
+  "duck_rl/budget.py": {
+   "sha256": "6d8d83474f0b7a1a0c5b1e3fa152d15cab01760463d68a6a8a6e22cddc9cde15",
+   "release": "same"
+  },
+  "duck_rl/busy.py": {
+   "sha256": "6496d0cb2b4daf6b7d6cd9930615ef9fb8e3502c88d56bdf2ad1105a19b7deb7",
+   "release": "same"
+  },
+  "duck_rl/challenges/__init__.py": {
+   "sha256": "1885aecbda031be7ff225cdbda603209a150c6d2aecf0aafef731a7365c3d433",
+   "release": "same"
+  },
+  "duck_rl/challenges/gpu_rush.py": {
+   "sha256": "c8ccaaacf300c6579a4ce2343849fd8a1d104c3a7e38d16e8fc4e04886394d90",
+   "release": "same"
+  },
+  "duck_rl/challenges/log_roll.py": {
+   "sha256": "86997c37994bc32c8479de7874c18784b7fd88a959bed894d06972cb85ebecd0",
+   "release": "same"
+  },
+  "duck_rl/challenges/race.py": {
+   "sha256": "cfdd280480b757de2403326b13f75744759c152bf4a3b29e405a52e7596f030c",
+   "release": "same"
+  },
+  "duck_rl/challenges/saucer.py": {
+   "sha256": "21561f454d33380d49740b4af22faf84afa151eefc8b968f74aa968745572932",
+   "release": "same"
+  },
+  "duck_rl/challenges/sumo.py": {
+   "sha256": "bcdce4be97dabec6f409704f18c28ebb6e24aac94c35552069857a8e06081788",
+   "release": "same"
+  },
+  "duck_rl/challenges/turntable.py": {
+   "sha256": "a076f44232c04f09735d67e87d268872eee34a2436e295d5d8dd7ddadba850b2",
+   "release": "same"
+  },
+  "duck_rl/challenges/wheel.py": {
+   "sha256": "4101ca1170459ec1fc1a2220e2ad8a8b06d34c3875395dbfa64e68020e3b9ee3",
+   "release": "same"
+  },
+  "duck_rl/challenges/wobbly_raft.py": {
+   "sha256": "75b6d1ed0dd0c86ff58275c154afabb5ddd890553ee47a8fd12d7a44a8aa8dc5",
+   "release": "same"
+  },
+  "duck_rl/controller.py": {
+   "sha256": "cbdbcee41f46781cbc5751d3821b22ea32c78dce368fc73dfe2869ede9129e94",
+   "release": "same"
+  },
+  "duck_rl/crumbs.py": {
+   "sha256": "08af172795b32eb8b9f1bb23652b2caf56f5fc06f71481bf7dc1ff8af67061dc",
+   "release": "same"
+  },
+  "duck_rl/device.py": {
+   "sha256": "a23492f531a66525a40ae779e4004d92fcb5b52dc72ce827e0facb3b7025625b",
+   "release": "same"
+  },
+  "duck_rl/duel.py": {
+   "sha256": "eb7baf652f03a92db0cf55f8100110c30af3eebd5ff641e831f9c3c589f10a02",
+   "release": "same"
+  },
+  "duck_rl/duel_env.py": {
+   "sha256": "fb0829f2efbc6c520d45f71787be1d7969444f0ed1c98eba467b441a4d7cf286",
+   "release": "same"
+  },
+  "duck_rl/encoder.py": {
+   "sha256": "a5129c49ef219d47b94a74bfeaa7e3e6cb6ad4e5726ae4db575f68f8544222ed",
+   "release": "same"
+  },
+  "duck_rl/env.py": {
+   "sha256": "b9a575f1fb98a90bbc6deb43a99f9db0de7c162a9b131e9b2152184c3761e45e",
+   "release": "same"
+  },
+  "duck_rl/fused.py": {
+   "sha256": "114c5d5338f2d37a816cc009c1aa418c75845a5cf98a68fad54bf1404373356d",
+   "release": "same"
+  },
+  "duck_rl/jsmath.py": {
+   "sha256": "7982745ac4bcadfd0b7052d1f978e12b3a5e19eaa8ffc665c7b16390766106e0",
+   "release": "same"
+  },
+  "duck_rl/metrics.py": {
+   "sha256": "c778ea69a6416b4d1003eba3e240314b9bfebaf9dbe388aec7584c2966278267",
+   "release": "same"
+  },
+  "duck_rl/movers.py": {
+   "sha256": "4da8c167613c2b6ae602cb330291c06433e3725b9136edb0b4018cf7c9ac2f95",
+   "release": "same"
+  },
+  "duck_rl/moves.py": {
+   "sha256": "86b7d7cc43e7047aac2293afc6bc94ab8ae4e19591baaf4bc600d6b2cd37aa2a",
+   "release": "same"
+  },
+  "duck_rl/prng.py": {
+   "sha256": "ec99a256ce3ad313471b71c5ddc7271c06dcf0a0283c48468268e0cfe2c1a9c6",
+   "release": "same"
+  },
+  "duck_rl/program.py": {
+   "sha256": "d69f056c74287b3231204175e69eb48b34f79bf591e1b29504f1387c798b08bf",
+   "release": "same"
+  },
+  "duck_rl/provenance.py": {
+   "sha256": "f304fe58b67204b86ac55d88d5f72a23090f1786c040cf31d0809937c1a50644",
+   "release": "same"
+  },
+  "duck_rl/rank.py": {
+   "sha256": "219246a8945b0f763512d64e8be84af063a47f0db2e01d29d10e9935572d9a0c",
+   "release": "same"
+  },
+  "duck_rl/rollout.py": {
+   "sha256": "a7e7adb66170cca660af0e94ada15987124df41075ef19257957061c18885822",
+   "release": "same"
+  },
+  "duck_rl/sense/__init__.py": {
+   "sha256": "9ab7087951df3d43a83c967b2b4cc9a1de7366fc80e1839906356fe1fab3c73d",
+   "release": "same"
+  },
+  "duck_rl/sense/__main__.py": {
+   "sha256": "c4a6e11222921c6a7c8825d4ea2ea1a5fb2c9d803e4f8269b5d0491a29a466fc",
+   "release": "same"
+  },
+  "duck_rl/sense/check.py": {
+   "sha256": "c60f9b4b5d9742b16eaa216311c08b469519d5bf967ffe1933e227f64eff0d04",
+   "release": "same"
+  },
+  "duck_rl/sense/data.py": {
+   "sha256": "ddf670789fbdb1021928b8153a8d06d923206584c43b7ac0a624ba8e6f9689d6",
+   "release": "same"
+  },
+  "duck_rl/sense/ref.py": {
+   "sha256": "398518fcf5a0ca5afccc9116f1c1016dc9508f2ca692fac4c843277061c0e309",
+   "release": "same"
+  },
+  "duck_rl/sense/synth.py": {
+   "sha256": "8a6018efb574773bda6ad69a3e30c6e501db08c9f4cfade3d7e246289ffde9d2",
+   "release": "same"
+  },
+  "duck_rl/sense/train.py": {
+   "sha256": "129d3e9c8a2b7a10c25168125bad18c389a1c95b69a2fad26030aa9f0687d19a",
+   "release": "same"
+  },
+  "duck_rl/simd_mlp.py": {
+   "sha256": "5102a5364df6cbdd211216f8647bb1283b002d99d6d69acba9c472cd731d96a0",
+   "release": "same"
+  },
+  "duck_rl/solo_program.py": {
+   "sha256": "8135e62801b20d0a56a2313c11961e256898d4440b838d594a42ef59b743bf19",
+   "release": "same"
+  },
+  "duck_rl/status.py": {
+   "sha256": "c1a2c4f6b35df32d38f4da7643cdc1badff32565cd44f5bc756eff507113eca1",
+   "release": "same"
+  },
+  "duck_rl/v2.py": {
+   "sha256": "e33f17de0dfb7f6f8d82dcb6be8b0e8686b56260016dcb1be28c5300efbb32d3",
+   "release": "same"
+  },
+  "duck_rl/vision.py": {
+   "sha256": "30187581a2530a1f6724df9d05479eab39730636fa092db1718c3a4b44f6915a",
+   "release": "same"
+  },
+  "duckref/__init__.py": {
+   "sha256": "8736824110d6db1bfc7dfea645b602dae4c99e21a67b970b971b3ca088cde09b",
+   "release": "same"
+  },
+  "duckref/bam.py": {
+   "sha256": "2258c571eb3ce16a240640e598cb42b435a2dafd53bf8583fba6ada85c8c4cb7",
+   "release": "same"
+  },
+  "duckref/mlp.py": {
+   "sha256": "9a95a47a9c1ce6c8839f84bcefd96c79045895903ef21015c987ed63f7cabfa4",
+   "release": "same"
+  },
+  "duckref/plant.py": {
+   "sha256": "7f75f335287fc10a1f50b864343896c40019d710fbdfcfddd9908468457a37d9",
+   "release": "same"
+  },
+  "lab/__init__.py": {
+   "sha256": "f9206c7e4da73b5a96d9a7ade334b805611e0c8dfb13b51253b55967bb0e38ce",
+   "release": "same"
+  },
+  "lab/batch_layout.py": {
+   "sha256": "ea84f2399b470dc094b7352259547cc09299de3ff3c0ff173b5cbf41c66a66f3",
+   "release": "same"
+  },
+  "lab/duck.py": {
+   "sha256": "fdd8a0ab2e75410fdcced98e3fec7040f7c964d1cf55ec71febfd9cedde0dd4c",
+   "release": "same"
+  },
+  "lab/fastenv.py": {
+   "sha256": "cb1a7ba12a10a33254935875fa25c630272611bbf862d2847023807a8d83a370",
+   "release": "same"
+  },
+  "lab/learn.py": {
+   "sha256": "fccc89794cdd5ec227007db7778d248397dc3cf10045a3e90b97218a944f6141",
+   "release": "changed",
+   "release_sha256": "2e2ba008eb189358d14531489e36229e34b2a200432516a9e0c54a2739e9ab69"
+  },
+  "lab/mlx_ppo.py": {
+   "sha256": "e313218c9f5812d6f524f21b7b71723834d3a67e361a2faa4a552e8126307e4a",
+   "release": "same"
+  },
+  "lab/overlap.py": {
+   "sha256": "63386dd0481034f3305c66136f90307aa866f3f54ab69ea36b8b6421cb06c2b2",
+   "release": "same"
+  },
+  "lab/pool.py": {
+   "sha256": "67b5001c1c6a5f0aa4d1b71c61571ca9dd62d9b009c40605b8363f9e2fb06da0",
+   "release": "same"
+  },
+  "lab/probestop.py": {
+   "sha256": "b5f3687c58304a47673cced3ce44bff89db6a7062fd61c1515f5db2a9c4a3889",
+   "release": "same"
+  },
+  "lab/replay.py": {
+   "sha256": "8938fbd69c1b2b00346e539bb60d167ed971b2387d061c6bb4b20a1cfec8c10f",
+   "release": "same"
+  },
+  "lab/spec.py": {
+   "sha256": "23113f10511be11dbe443eda0962b8a39228a72ec4db114fefdcd441e0cbdae4",
+   "release": "same"
+  },
+  "make_bank.py": {
+   "sha256": "e5d1cc1dedd4957efe59bd04113741016c99bc70d0824f4673221cb62de679f3",
+   "release": "same"
+  },
+  "probe.py": {
+   "sha256": "656d68b0ae1ca9c08d5f68a365d62f71930696a05e37ebb53f09cc8a5b2f84ff",
+   "release": "same"
+  },
+  "tools/eval_ts.py": {
+   "sha256": "00e5afc1d364c95d5412ee018ce24ace25bf1ae6266dbebbbdacc37e498a5a88",
+   "release": "same"
+  },
+  "tools/parity.py": {
+   "sha256": "28382608694aaed02d1685e4b1e7de663317ae35c67ec1100e95531e94bd3f0d",
+   "release": "same"
+  },
+  "tools/rollout_identity.py": {
+   "sha256": "50e5bce32348bf973876aec53c0f552294fb9242ae6e89c2c4cc1eef386e59f6",
+   "release": "same"
+  },
+  "tools/sense_test.py": {
+   "sha256": "df99d510a2f49bec98a2c9485e1e8cc1976d7ff18773e602799f7f862a079f51",
+   "release": "same"
+  },
+  "tools/to_mlp.py": {
+   "sha256": "fbf40f815aa8e8ec2c3c3fddc60aebc893395b64b8c66e6f42387d128b31c94a",
+   "release": "same"
+  },
+  "tools/track_check.py": {
+   "sha256": "dc9b3be19455ee2a880691ea1a790dbea887c4f55d40c125a6a6ee309b2f1fe2",
+   "release": "same"
+  },
+  "train.py": {
+   "sha256": "d17cefa60a8649c8171f8f4b21907b0bb42aebfc8ad3c658fba062a772640e0b",
+   "release": "same"
+  }
+ }
+}

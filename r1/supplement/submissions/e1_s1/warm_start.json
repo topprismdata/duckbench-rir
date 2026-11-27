@@ -1,0 +1,19 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6,
+  "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9"
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "hurdles-fast-walker@1",
+   "pin": "mv_f37c68365a05"
+  }
+ ],
+ "notes": "train.py e1_s1: its warm start hurdles-fast-walker@1"
+}

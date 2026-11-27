@@ -1,0 +1,19 @@
+{
+ "run_id": "20261127-152730-0bb27d",
+ "challenge": "hurdles v4",
+ "valid": false,
+ "moves": [
+  "run ← hurdles-fast-walker@1 (mv_f37c68365a05)"
+ ],
+ "errors": [
+  "$.nodes.run.feed.vx: must be an expression string, got 0.32 (e.g. \"fallen\" or \"since(target_seen) > 1\")"
+ ],
+ "warnings": [
+  "$.nodes.run: hurdles-fast-walker@1 was trained at one walk command (vx 0.19, vy 0, wz 0, head_pitch 0.6) and its card measures no other: its feed asks vx 0.32 → clamped to 0.19 (the walk's range) · applied: policy vx 0.4 (= node vx 0.19 m/s from the feed after the walk's speed map), vy 0, wz 0 + heading hold, head_pitch 0.6"
+ ],
+ "next": "fix these errors and call simulate again",
+ "viewer_url": "http://127.0.0.1:5393/runs/20261127-152730-0bb27d",
+ "on_site": "no",
+ "site_note": "uploads are off (DUCKBENCH_NO_UPLOAD=1): your human sees none of your runs on the site; unset it",
+ "wall_s": 0.01
+}

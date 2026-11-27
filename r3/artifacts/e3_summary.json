@@ -1,0 +1,183 @@
+{
+ "pairs": [
+  {
+   "seed": 101,
+   "A": {
+    "best_half": 3.876125,
+    "mean_all": 3.91840625,
+    "worst_half": 3.9606875,
+    "worst": 4.044,
+    "finished": 32,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 31,
+    "events_pre_fall": 0,
+    "events_post_fall": 35
+   },
+   "B": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "worst": 30.0,
+    "finished": 0,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 0,
+    "events_pre_fall": 0,
+    "events_post_fall": 0
+   },
+   "d_a_minus_b": -26.123874999999998
+  },
+  {
+   "seed": 102,
+   "A": {
+    "best_half": 4.42525,
+    "mean_all": 4.47403125,
+    "worst_half": 4.5228125,
+    "worst": 4.594,
+    "finished": 32,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 32,
+    "events_pre_fall": 0,
+    "events_post_fall": 59
+   },
+   "B": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "worst": 30.0,
+    "finished": 0,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 0,
+    "events_pre_fall": 0,
+    "events_post_fall": 0
+   },
+   "d_a_minus_b": -25.57475
+  },
+  {
+   "seed": 103,
+   "A": {
+    "best_half": 4.0421875,
+    "mean_all": 4.1050625,
+    "worst_half": 4.1679375,
+    "worst": 4.237,
+    "finished": 32,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 25,
+    "events_pre_fall": 0,
+    "events_post_fall": 40
+   },
+   "B": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "worst": 30.0,
+    "finished": 0,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 0,
+    "events_pre_fall": 0,
+    "events_post_fall": 0
+   },
+   "d_a_minus_b": -25.9578125
+  },
+  {
+   "seed": 104,
+   "A": {
+    "best_half": 3.93625,
+    "mean_all": 3.981,
+    "worst_half": 4.02575,
+    "worst": 4.089,
+    "finished": 32,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 17,
+    "events_pre_fall": 0,
+    "events_post_fall": 20
+   },
+   "B": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "worst": 30.0,
+    "finished": 0,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 0,
+    "events_pre_fall": 0,
+    "events_post_fall": 0
+   },
+   "d_a_minus_b": -26.06375
+  },
+  {
+   "seed": 105,
+   "A": {
+    "best_half": 3.8719375,
+    "mean_all": 3.90521875,
+    "worst_half": 3.9385,
+    "worst": 4.016,
+    "finished": 32,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 32,
+    "events_pre_fall": 0,
+    "events_post_fall": 38
+   },
+   "B": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "worst": 30.0,
+    "finished": 0,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 0,
+    "events_pre_fall": 0,
+    "events_post_fall": 0
+   },
+   "d_a_minus_b": -26.1280625
+  },
+  {
+   "seed": 106,
+   "A": {
+    "best_half": 3.803375,
+    "mean_all": 3.83625,
+    "worst_half": 3.869125,
+    "worst": 3.951,
+    "finished": 32,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 30,
+    "events_pre_fall": 0,
+    "events_post_fall": 44
+   },
+   "B": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "worst": 30.0,
+    "finished": 0,
+    "n": 32,
+    "episodes_pre_fall": 0,
+    "episodes_post_fall": 0,
+    "events_pre_fall": 0,
+    "events_post_fall": 0
+   },
+   "d_a_minus_b": -26.196625
+  }
+ ],
+ "n": 6,
+ "mean_d": -26.007479166666666,
+ "sd_d": 0.22660635150336428,
+ "se": 0.09251165560950171,
+ "ci95": [
+  -26.24528796336665,
+  -25.769670369966683
+ ],
+ "sesoi_reference_s": 0.2,
+ "decision": "warm-start faster beyond reference",
+ "note": "paired differences; CI from t(df=5); a CI spanning 0 is not evidence of equivalence"
+}

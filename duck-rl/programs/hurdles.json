@@ -1,0 +1,17 @@
+{
+  "format": "duck-program/2",
+  "start": "run",
+  "nodes": {
+    "run": { "skill": "walk", "params": {"vx": 0.19, "head_pitch": 0.6},
+      "until": [
+        { "if": "fallen", "go": "recover" }
+      ]
+    },
+    "recover": { "skill": "get_up",
+      "until": [
+        { "if": "done", "go": "run" }
+      ]
+    }
+  },
+  "meta": {"title": "Walk the hurdles", "idea": "walk straight down the lane at full speed, head down, over both hurdles; get up after a fall (the challenge-rl spike's walk.json: a trained walker on `run` stepped over the 2.5 cm hurdles, 32/32 at 3.4 s)"}
+}

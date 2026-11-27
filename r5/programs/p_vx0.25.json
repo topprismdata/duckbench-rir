@@ -1,0 +1,33 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "move": "steps-starter@1",
+   "params": {
+    "vx": 0.25,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "static vx0.25",
+  "idea": "E2.1 command-parameter survey"
+ }
+}

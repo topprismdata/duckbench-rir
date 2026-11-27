@@ -1,0 +1,106 @@
+{
+ "format": "duck-program/2",
+ "start": "out",
+ "nodes": {
+  "out": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19
+   },
+   "max_time": {
+    "s": 1.8,
+    "go": "face"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "up"
+    }
+   ]
+  },
+  "face": {
+   "skill": "walk",
+   "params": {
+    "vx": 0,
+    "wz": -0.6
+   },
+   "max_time": {
+    "s": 2.6,
+    "go": "backpedal"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "up"
+    }
+   ]
+  },
+  "backpedal": {
+   "skill": "walk",
+   "params": {
+    "vx": -0.16,
+    "wz": 0.5
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "up"
+    },
+    {
+     "if": "t >= 8.5",
+     "go": "settle"
+    }
+   ]
+  },
+  "up": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "backpedal"
+    }
+   ]
+  },
+  "rest": {
+   "skill": "stand",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "up2"
+    }
+   ]
+  },
+  "settle": {
+   "skill": "stand",
+   "until": [
+    {
+     "if": "t >= 9.2",
+     "go": "roll"
+    }
+   ]
+  },
+  "roll": {
+   "skill": "stand",
+   "move": "turntable-starter@1",
+   "until": [
+    {
+     "if": "t >= 11",
+     "go": "rest"
+    }
+   ]
+  },
+  "up2": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "rest"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Lazy Susan start: turntable-starter@1",
+  "idea": "The RL kit's programs/turntable-roll.json with turntable-starter@1 on node roll."
+ }
+}

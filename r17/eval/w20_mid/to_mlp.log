@@ -1,0 +1,5 @@
+home/runs/r17_w20/ckpt-11001856.pt [checkpoint 'plain' (PlainActor); normaliser sub/div] -> ../r17/eval/w20_mid/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs torch(source) on 256 obs: max |diff| 1.06e-06 (max |out| 3.49)
+  numpy(blob) vs onnxruntime(ckpt-11001856.onnx): max |diff| 1.67e-06
+  numpy(blob) vs torch(checkpoint 'actor', eps auto): max |diff| 1.06e-06
+  OK (tolerance 3.5e-04)

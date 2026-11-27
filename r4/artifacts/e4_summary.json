@@ -1,0 +1,590 @@
+{
+ "arms": [
+  {
+   "arm": 0,
+   "prior": "HFW",
+   "T0": {
+    "best_half": 5.6758,
+    "mean_all": 5.7219,
+    "worst_half": 5.7679,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 33,
+    "falls_episodes": 32,
+    "x_mean": 5.461,
+    "x_max": 5.56,
+    "y_mean": 0.308
+   },
+   "best": {
+    "best_half": 3.8298,
+    "mean_all": 3.8797,
+    "worst_half": 3.9295,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 31.3333,
+    "falls_episodes": 22,
+    "x_mean": 13.307,
+    "x_max": 32.6833,
+    "y_mean": -2.8337,
+    "runs": [
+     {
+      "best_half": 3.72,
+      "mean_all": 3.7491,
+      "worst_half": 3.7782,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 36,
+      "falls_episodes": 29,
+      "x_mean": 5.261,
+      "x_max": 30.54,
+      "y_mean": 1.797
+     },
+     {
+      "best_half": 4.0405,
+      "mean_all": 4.1114,
+      "worst_half": 4.1824,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 42,
+      "falls_episodes": 25,
+      "x_mean": 15.637,
+      "x_max": 36.34,
+      "y_mean": 3.107
+     },
+     {
+      "best_half": 3.7289,
+      "mean_all": 3.7785,
+      "worst_half": 3.828,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 16,
+      "falls_episodes": 12,
+      "x_mean": 19.023,
+      "x_max": 31.17,
+      "y_mean": -13.405
+     }
+    ]
+   },
+   "last": {
+    "best_half": 3.8298,
+    "mean_all": 3.8797,
+    "worst_half": 3.9295,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 31.3333,
+    "falls_episodes": 22,
+    "x_mean": 13.307,
+    "x_max": 32.6833,
+    "y_mean": -2.8337,
+    "runs": [
+     {
+      "best_half": 3.72,
+      "mean_all": 3.7491,
+      "worst_half": 3.7782,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 36,
+      "falls_episodes": 29,
+      "x_mean": 5.261,
+      "x_max": 30.54,
+      "y_mean": 1.797
+     },
+     {
+      "best_half": 4.0405,
+      "mean_all": 4.1114,
+      "worst_half": 4.1824,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 42,
+      "falls_episodes": 25,
+      "x_mean": 15.637,
+      "x_max": 36.34,
+      "y_mean": 3.107
+     },
+     {
+      "best_half": 3.7289,
+      "mean_all": 3.7785,
+      "worst_half": 3.828,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 16,
+      "falls_episodes": 12,
+      "x_mean": 19.023,
+      "x_max": 31.17,
+      "y_mean": -13.405
+     }
+    ]
+   }
+  },
+  {
+   "arm": 1,
+   "prior": "run-forward@2",
+   "T0": {
+    "best_half": 4.5204,
+    "mean_all": 4.6005,
+    "worst_half": 4.6806,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 12,
+    "falls_episodes": 7,
+    "x_mean": 6.123,
+    "x_max": 24.7,
+    "y_mean": -7.415
+   },
+   "best": {
+    "best_half": 3.3111,
+    "mean_all": 3.348,
+    "worst_half": 3.3849,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 25,
+    "falls_episodes": 23,
+    "x_mean": 2.1953,
+    "x_max": 9.5067,
+    "y_mean": -1.074,
+    "runs": [
+     {
+      "best_half": 3.2842,
+      "mean_all": 3.3182,
+      "worst_half": 3.3521,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 36,
+      "falls_episodes": 32,
+      "x_mean": 5.568,
+      "x_max": 6.02,
+      "y_mean": 0.686
+     },
+     {
+      "best_half": 3.3766,
+      "mean_all": 3.4244,
+      "worst_half": 3.4723,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 7,
+      "falls_episodes": 5,
+      "x_mean": -4.783,
+      "x_max": 9.12,
+      "y_mean": -4.185
+     },
+     {
+      "best_half": 3.2724,
+      "mean_all": 3.3013,
+      "worst_half": 3.3302,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 32,
+      "falls_episodes": 32,
+      "x_mean": 5.801,
+      "x_max": 13.38,
+      "y_mean": 0.277
+     }
+    ]
+   },
+   "last": {
+    "best_half": 3.3976,
+    "mean_all": 3.4512,
+    "worst_half": 3.5048,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 12.6667,
+    "falls_episodes": 9,
+    "x_mean": -1.6747,
+    "x_max": 10.57,
+    "y_mean": -2.8147,
+    "runs": [
+     {
+      "best_half": 3.4222,
+      "mean_all": 3.4717,
+      "worst_half": 3.5213,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 16,
+      "falls_episodes": 12,
+      "x_mean": -3.71,
+      "x_max": 5.64,
+      "y_mean": -3.897
+     },
+     {
+      "best_half": 3.3766,
+      "mean_all": 3.4244,
+      "worst_half": 3.4723,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 7,
+      "falls_episodes": 5,
+      "x_mean": -4.783,
+      "x_max": 9.12,
+      "y_mean": -4.185
+     },
+     {
+      "best_half": 3.394,
+      "mean_all": 3.4575,
+      "worst_half": 3.5209,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 15,
+      "falls_episodes": 10,
+      "x_mean": 3.469,
+      "x_max": 16.95,
+      "y_mean": -0.362
+     }
+    ]
+   }
+  },
+  {
+   "arm": 2,
+   "prior": "hop-forward@2",
+   "T0": {
+    "best_half": 6.7497,
+    "mean_all": 7.3766,
+    "worst_half": 8.0034,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 0,
+    "falls_episodes": 0,
+    "x_mean": 10.053,
+    "x_max": 22.42,
+    "y_mean": -4.59
+   },
+   "best": {
+    "best_half": 4.266,
+    "mean_all": 4.3333,
+    "worst_half": 4.4007,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 35.3333,
+    "falls_episodes": 26.6667,
+    "x_mean": 5.484,
+    "x_max": 22.64,
+    "y_mean": 1.0433,
+    "runs": [
+     {
+      "best_half": 4.2761,
+      "mean_all": 4.3543,
+      "worst_half": 4.4326,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 33,
+      "falls_episodes": 30,
+      "x_mean": 4.175,
+      "x_max": 20.65,
+      "y_mean": 0.68
+     },
+     {
+      "best_half": 4.2836,
+      "mean_all": 4.3339,
+      "worst_half": 4.3843,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 42,
+      "falls_episodes": 29,
+      "x_mean": 7.323,
+      "x_max": 33.84,
+      "y_mean": 2.425
+     },
+     {
+      "best_half": 4.2382,
+      "mean_all": 4.3117,
+      "worst_half": 4.3852,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 31,
+      "falls_episodes": 21,
+      "x_mean": 4.954,
+      "x_max": 13.43,
+      "y_mean": 0.025
+     }
+    ]
+   },
+   "last": {
+    "best_half": 4.3773,
+    "mean_all": 4.4445,
+    "worst_half": 4.5116,
+    "finished": 32,
+    "n": 32,
+    "falls_events": 35.6667,
+    "falls_episodes": 24.6667,
+    "x_mean": 3.6447,
+    "x_max": 19.13,
+    "y_mean": 0.3867,
+    "runs": [
+     {
+      "best_half": 4.4582,
+      "mean_all": 4.5276,
+      "worst_half": 4.5971,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 35,
+      "falls_episodes": 25,
+      "x_mean": 1.846,
+      "x_max": 22.03,
+      "y_mean": 0.822
+     },
+     {
+      "best_half": 4.4356,
+      "mean_all": 4.4941,
+      "worst_half": 4.5526,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 41,
+      "falls_episodes": 28,
+      "x_mean": 4.134,
+      "x_max": 21.93,
+      "y_mean": 0.313
+     },
+     {
+      "best_half": 4.2382,
+      "mean_all": 4.3117,
+      "worst_half": 4.3852,
+      "finished": 32,
+      "n": 32,
+      "falls_events": 31,
+      "falls_episodes": 21,
+      "x_mean": 4.954,
+      "x_max": 13.43,
+      "y_mean": 0.025
+     }
+    ]
+   }
+  },
+  {
+   "arm": 3,
+   "prior": "sidestep-left@1",
+   "T0": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "finished": 0,
+    "n": 32,
+    "falls_events": 0,
+    "falls_episodes": 0,
+    "x_mean": -1.351,
+    "x_max": -0.39,
+    "y_mean": -0.832
+   },
+   "best": {
+    "best_half": 25.7801,
+    "mean_all": 27.89,
+    "worst_half": 30.0,
+    "finished": 10.6667,
+    "n": 32,
+    "falls_events": 0,
+    "falls_episodes": 0,
+    "x_mean": 2.829,
+    "x_max": 5.9967,
+    "y_mean": 1.9643,
+    "runs": [
+     {
+      "best_half": 26.7979,
+      "mean_all": 28.3989,
+      "worst_half": 30.0,
+      "finished": 9,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 1.838,
+      "x_max": 5.52,
+      "y_mean": 4.055
+     },
+     {
+      "best_half": 28.9952,
+      "mean_all": 29.4976,
+      "worst_half": 30.0,
+      "finished": 10,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 4.17,
+      "x_max": 4.96,
+      "y_mean": 4.683
+     },
+     {
+      "best_half": 21.5471,
+      "mean_all": 25.7736,
+      "worst_half": 30.0,
+      "finished": 13,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 2.479,
+      "x_max": 7.51,
+      "y_mean": -2.845
+     }
+    ]
+   },
+   "last": {
+    "best_half": 26.0342,
+    "mean_all": 28.0171,
+    "worst_half": 30.0,
+    "finished": 9,
+    "n": 32,
+    "falls_events": 0,
+    "falls_episodes": 0,
+    "x_mean": 2.3873,
+    "x_max": 5.91,
+    "y_mean": 0.8683,
+    "runs": [
+     {
+      "best_half": 26.7979,
+      "mean_all": 28.3989,
+      "worst_half": 30.0,
+      "finished": 9,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 1.838,
+      "x_max": 5.52,
+      "y_mean": 4.055
+     },
+     {
+      "best_half": 29.7575,
+      "mean_all": 29.8788,
+      "worst_half": 30.0,
+      "finished": 5,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 2.845,
+      "x_max": 4.7,
+      "y_mean": 1.395
+     },
+     {
+      "best_half": 21.5471,
+      "mean_all": 25.7736,
+      "worst_half": 30.0,
+      "finished": 13,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 2.479,
+      "x_max": 7.51,
+      "y_mean": -2.845
+     }
+    ]
+   }
+  },
+  {
+   "arm": 4,
+   "prior": "sidestep scratch",
+   "T0": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "finished": 0,
+    "n": 32,
+    "falls_events": 347.3333,
+    "falls_episodes": 32,
+    "x_mean": 0.5367,
+    "x_max": 1.28,
+    "y_mean": 0.2233
+   },
+   "best": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "finished": 0,
+    "n": 32,
+    "falls_events": 0,
+    "falls_episodes": 0,
+    "x_mean": -0.0007,
+    "x_max": 0.0333,
+    "y_mean": -0.0017,
+    "runs": [
+     {
+      "best_half": 30.0,
+      "mean_all": 30.0,
+      "worst_half": 30.0,
+      "finished": 0,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": -0.002,
+      "x_max": 0.03,
+      "y_mean": -0.003
+     },
+     {
+      "best_half": 30.0,
+      "mean_all": 30.0,
+      "worst_half": 30.0,
+      "finished": 0,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 0.007,
+      "x_max": 0.04,
+      "y_mean": -0.001
+     },
+     {
+      "best_half": 30.0,
+      "mean_all": 30.0,
+      "worst_half": 30.0,
+      "finished": 0,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": -0.007,
+      "x_max": 0.03,
+      "y_mean": -0.001
+     }
+    ]
+   },
+   "last": {
+    "best_half": 30.0,
+    "mean_all": 30.0,
+    "worst_half": 30.0,
+    "finished": 0,
+    "n": 32,
+    "falls_events": 0,
+    "falls_episodes": 0,
+    "x_mean": 0.035,
+    "x_max": 0.0667,
+    "y_mean": 0.0013,
+    "runs": [
+     {
+      "best_half": 30.0,
+      "mean_all": 30.0,
+      "worst_half": 30.0,
+      "finished": 0,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 0.046,
+      "x_max": 0.08,
+      "y_mean": 0.001
+     },
+     {
+      "best_half": 30.0,
+      "mean_all": 30.0,
+      "worst_half": 30.0,
+      "finished": 0,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 0.033,
+      "x_max": 0.06,
+      "y_mean": -0.001
+     },
+     {
+      "best_half": 30.0,
+      "mean_all": 30.0,
+      "worst_half": 30.0,
+      "finished": 0,
+      "n": 32,
+      "falls_events": 0,
+      "falls_episodes": 0,
+      "x_mean": 0.026,
+      "x_max": 0.06,
+      "y_mean": 0.004
+     }
+    ]
+   }
+  }
+ ],
+ "seeds": [
+  107,
+  108,
+  109
+ ],
+ "n_per_arm": 3
+}

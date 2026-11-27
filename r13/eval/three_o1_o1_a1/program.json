@@ -1,0 +1,48 @@
+{
+ "format": "duck-program/2",
+ "start": "launch",
+ "nodes": {
+  "launch": {
+   "skill": "walk",
+   "max_time": {
+    "s": 0.3,
+    "go": "drive"
+   }
+  },
+  "drive": {
+   "skill": "walk",
+   "until": [
+    {
+     "if": "t >= 1.8",
+     "go": "finish"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "finish": {
+   "skill": "walk",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "launch"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "3-node raw launch/drive/finish (r13)",
+  "idea": "mirror of #1 with raw commands"
+ }
+}

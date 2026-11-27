@@ -1,0 +1,1165 @@
+{
+ "id": "sprint",
+ "version": 6,
+ "title": "Sprint",
+ "task": "Run to the line, fast",
+ "what_counts": "Your time when the duck's body crosses the line, as on a running track: diving or falling over it counts. No finish in 30 s counts as 30 s.",
+ "description": "A tutorial on an empty floor. Get as far as you can along +x (straight ahead) in 30 s. The finish line is marked 4.5 m ahead (the target point, visible from 2 m). The floor is open: a wall stands across it 1.1 m past the line, and the side boards are drawn only (nothing stops a duck that drifts sideways). Result: the moment the duck's torso (its body, not the head or legs) first crosses the line, in any pose: standing, rolling, diving or falling over it all count; a run that never finishes counts as 30 s.",
+ "frame": "Positions are metres in the challenge frame: x forward, y left, z up; the duck spawns at `spawn` facing yaw (0 = +x). Duckscripts cannot read positions, only the signals below.",
+ "scene": [],
+ "spawn": {
+  "x": 0,
+  "y": 0,
+  "yaw": 0
+ },
+ "duration_s": 30,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "routes": false,
+ "target": {
+  "x": 4.5,
+  "y": 0,
+  "z": 0
+ },
+ "goal": null,
+ "scoring": {
+  "metric": "torso_reach",
+  "unit": "m",
+  "better": "higher",
+  "how": "Metres along +x (straight ahead) reached by the front of the torso, in any pose. The finish line is at 4.5 m: a run's result is the time the torso first crosses it (a run that never finishes counts as 30 s), and an attempt ranks by the average of its best half of runs (lower is better).",
+  "metric_definition": "How far the duck's torso got along the challenge axis (+x, the spawn heading, measured from the spawn point): the furthest point of the torso (the body without the head and legs), in any pose; standing, rolling, diving or falling all count. A race's finish time is the moment the torso first crosses the line (interpolated between ticks), as on a running track.",
+  "metric_params": {},
+  "ranking": {
+   "kind": "finish",
+   "unit": "s",
+   "lower_is_better": true,
+   "miss_s": 30
+  },
+  "finish": "torso_reach >= 4.5 m",
+  "ranked_by": "average finish time of the best 12 of 24 runs (a run that never finishes counts as 30 s); ties: the earlier submission. Local runs use the same rule over the seeds they run; only a run on all practice seeds (the default) counts as a local record; ranked play uses the server's 24 hidden seeds (submit).",
+  "local_best": null
+ },
+ "signals": {
+  "t": {
+   "type": "number",
+   "unit": "s",
+   "range": {
+    "min": 0,
+    "max": 300
+   },
+   "summary": "Seconds on the clock since the start (of the seed; in a match, of the round), a multiple of 0.1."
+  },
+  "t_state": {
+   "type": "number",
+   "unit": "s",
+   "range": {
+    "min": 0,
+    "max": 300
+   },
+   "summary": "Seconds since the current node was entered (a multiple of 0.1; restarts on every transition, even to the same node)."
+  },
+  "fallen": {
+   "type": "boolean",
+   "summary": "True once the body has been tilted more than 60° for 0.5 s. Not raised while roulade or get_up is still running (it can be true as soon as they are done). Nothing recovers automatically: go to a get_up node."
+  },
+  "upright": {
+   "type": "boolean",
+   "summary": "True while the body tilt is below 32°."
+  },
+  "tilt": {
+   "type": "number",
+   "unit": "deg",
+   "range": {
+    "min": 0,
+    "max": 180
+   },
+   "summary": "Angle between the body's up axis and vertical, degrees (0 = perfectly upright, 90 = lying on its side)."
+  },
+  "speed": {
+   "type": "number",
+   "unit": "m/s",
+   "range": {
+    "min": 0,
+    "max": 2
+   },
+   "summary": "Horizontal speed of the body over the last 0.1 s, m/s (never negative). Walking tops out near 0.18 (about 0.19 with the head pitched up)."
+  },
+  "yaw_rate": {
+   "type": "number",
+   "unit": "rad/s",
+   "range": {
+    "min": -10,
+    "max": 10
+   },
+   "summary": "Turn rate from the body gyro, rad/s (positive = turning left)."
+  },
+  "done": {
+   "type": "boolean",
+   "summary": "True once the current node's skill has finished (see the skill's `done`); stays true until the node changes. Never true for walk and stand."
+  },
+  "obstacle_dist": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 1
+   },
+   "summary": "Distance from the head's range sensor, straight along the direction the head faces, to the nearest prop (box, step, ramp, wall, ball), m. It ignores the floor and the duck itself, reaches 1 m and reads Infinity when nothing is hit. It looks where the head looks: at the default head pose the beam starts 0.23 m high and passes over low props such as steps; pitch the head down (head_pitch ≈ 0.6) to see a low step's front face from about 0.2–0.3 m."
+  },
+  "target_seen": {
+   "type": "boolean",
+   "summary": "True while the challenge's target (see the challenge) is in view: within 2 m (horizontally) of the head camera, inside a ±40° cone around the direction the head faces, and not hidden behind a prop. The camera sits about 0.24 m high and looks 11° down, so a point on the floor leaves the view when it is closer than about 0.2 m; pitch the head down (head_pitch ≈ 0.6) to keep close things in view."
+  },
+  "target_bearing": {
+   "type": "number",
+   "unit": "rad",
+   "range": {
+    "min": -3.141592653589793,
+    "max": 3.141592653589793
+   },
+   "summary": "Horizontal direction to the target relative to the body's heading, rad (positive = to the left; about ±0.03 rad noise); 0 when not seen."
+  },
+  "target_dist": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 10
+   },
+   "summary": "Horizontal distance from the head to the target, m (about ±3 % noise); Infinity when not seen."
+  },
+  "goal_seen": {
+   "type": "boolean",
+   "summary": "True while the challenge's goal point (a second sensed point, e.g. the middle of a goal mouth; see the challenge) is in view: within 2 m (horizontally) of the head camera, inside a ±40° cone around the direction the head faces, and not hidden behind a prop. The camera sits about 0.24 m high and looks 11° down, so a point on the floor leaves the view when it is closer than about 0.2 m; pitch the head down (head_pitch ≈ 0.6) to keep close things in view. Always false if the challenge has no goal."
+  },
+  "goal_bearing": {
+   "type": "number",
+   "unit": "rad",
+   "range": {
+    "min": -3.141592653589793,
+    "max": 3.141592653589793
+   },
+   "summary": "Horizontal direction to the goal point relative to the body's heading, rad (positive = to the left; about ±0.03 rad noise); 0 when not seen."
+  },
+  "goal_dist": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 10
+   },
+   "summary": "Horizontal distance from the head to the goal point, m (about ±3 % noise); Infinity when not seen."
+  },
+  "height": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 0.5
+   },
+   "summary": "Height of the body above the world floor (z = 0), m: about 0.117 standing on the floor, higher on a step or ramp, about 0.06 sitting. In a duel on a raised stage it reads from the stage's out line (the duel's platform height) instead: about 0.117 standing on Sumo's stage, about 0.42 standing on the raft in Wobbly Raft while it is level (its out line is 0.2 m above the water, the raft's top 0.5 m)."
+  },
+  "heading": {
+   "type": "number",
+   "unit": "rad",
+   "range": {
+    "min": -3.141592653589793,
+    "max": 3.141592653589793
+   },
+   "summary": "The body's heading in the arena from the IMU's orientation, rad in (−π, π] (0 = the arena's +x axis, positive = turned left, counter-clockwise). Differences wrap: use wrap(). E.g. where a lost target is now, relative to the body: wrap(last(target_bearing, target_seen) + last(heading, target_seen) - heading)."
+  },
+  "forward_speed": {
+   "type": "number",
+   "unit": "m/s",
+   "range": {
+    "min": -2,
+    "max": 2
+   },
+   "summary": "The body's horizontal velocity over the last 0.1 s along its heading, m/s (odometry): positive = moving forward, negative = moving backward, e.g. being pushed back. speed is its magnitude together with side_speed."
+  },
+  "side_speed": {
+   "type": "number",
+   "unit": "m/s",
+   "range": {
+    "min": -2,
+    "max": 2
+   },
+   "summary": "The body's horizontal velocity over the last 0.1 s across its heading, m/s (positive = to its left)."
+  },
+  "touching": {
+   "type": "boolean",
+   "summary": "True while the duck's body touches the target's body (in a duel: the other duck; a prop target: that prop), felt anywhere on the body, also behind or beside it where the camera does not see. Always false for a fixed target point."
+  },
+  "touch_bearing": {
+   "type": "number",
+   "unit": "rad",
+   "range": {
+    "min": -3.141592653589793,
+    "max": 3.141592653589793
+   },
+   "summary": "Horizontal direction of the touch (the middle of the contact points) from the body's centre, relative to its heading, rad (positive = to the left, ±π = behind); 0 when not touching. E.g. turn toward an opponent pressing on your back: touching and abs(touch_bearing) > 0.7."
+  },
+  "cam_free_left": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 3
+   },
+   "summary": "Head camera: horizontal distance from the camera to the nearest thing in the way (another duck, the side of a wall, obstacle or prop, a steep side, or a platform more than 3 cm above your support) 10-40° to the left of your heading, m; Infinity when nothing is seen within 3 m. Only what the camera sees: turn the head to look."
+  },
+  "cam_free_ahead": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 3
+   },
+   "summary": "Head camera: the same within ±10° of your heading, m; Infinity when nothing."
+  },
+  "cam_free_right": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 3
+   },
+   "summary": "Head camera: the same 10-40° to the right, m; Infinity when nothing."
+  },
+  "cam_duck_seen": {
+   "type": "boolean",
+   "summary": "Head camera: true while another duck fills at least 2 of the picture's rays."
+  },
+  "cam_duck_bearing": {
+   "type": "number",
+   "unit": "rad",
+   "range": {
+    "min": -3.141592653589793,
+    "max": 3.141592653589793
+   },
+   "summary": "Head camera: direction of the other duck (the mean of its nearest seen rays) relative to your heading, rad (+ = left); last value while not seen, 0 before."
+  },
+  "cam_duck_dist": {
+   "type": "number",
+   "unit": "m",
+   "range": {
+    "min": 0,
+    "max": 3
+   },
+   "summary": "Head camera: horizontal distance from your trunk to the other duck's trunk (the mean of its nearest seen rays + 4 cm), m; Infinity while not seen."
+  },
+  "cam_free_known": {
+   "type": "boolean",
+   "summary": "Head camera: true while the camera sees any floor or platform (false when tipped over or looking at the sky): the cam_free_* values mean something."
+  }
+ },
+ "skills": {
+  "walk": {
+   "kind": "perpetual",
+   "summary": "Walk with real speeds in m/s and rad/s until a transition fires. The stock walk is slow: vx 0.19 m/s at most (trained moves go faster: `duckbench moves`). vx is the speed at the default head pose: at moderate speeds the head pitch changes the real speed by about -30 % to +13 % (looking down, head_pitch > 0, slows it; looking up speeds it up); at vx 0.19 it changes little (-2 % to +7 %). It holds its heading with a gyro loop, so wz = 0 walks straight; vx = 0 with wz or vy turns or side-steps in place, once the gait is going: from standing, only a node whose own params have a non-zero vx, vy or wz gets the start push (e.g. {\"vx\": 0, \"wz\": 0.5} turns at about the asked rate); a feed alone (params all 0, fed vx 0 with wz or vy) does not start it, and the duck stays put. Starting from a standstill it adds a short 0.5 s push to get the gait going. Switching from one walk node to another keeps the gait (no new push), but every new walk node, even walk → walk, restarts the heading hold from wherever the duck then points, so turns add up: side-steps switched every 0.2 s turn the duck 8–42° in 4 s (worst with the head down; at head_pitch 1.1 the walk also veers left by itself), and a side-step from standing lurches 7–12 cm forward. Prefer few switches; to aim a kick, turn before the side-step line-up (about 20 cm from the ball). Slopes are hard: up an 8° ramp vx 0.19 climbs at about 0.06 m/s; up a 9° ramp at about 0.04 m/s, reaching the top on about half the seeds unsteered and on nearly all when it steers at a marker; up a 10° ramp it barely climbs (about 0.04 m/s), veers about 25° left and walks off the side unless it steers; slower walks stall at the foot of a 10° ramp.",
+   "params": {
+    "vx": {
+     "min": -0.16,
+     "max": 0.19,
+     "default": 0.12,
+     "unit": "m/s",
+     "summary": "Forward speed, m/s: 0.04 to 0.19 forward, -0.08 to -0.16 backward, 0 = no forward motion. Non-zero speeds between -0.08 and 0.04 are moved to the nearer end.",
+     "dead_band": {
+      "min": -0.08,
+      "max": 0.04
+     }
+    },
+    "vy": {
+     "min": -0.06,
+     "max": 0.06,
+     "default": 0,
+     "unit": "m/s",
+     "summary": "Sideways speed, m/s (positive = left); at most about 6 cm/s."
+    },
+    "wz": {
+     "min": -0.6,
+     "max": 0.6,
+     "default": 0,
+     "unit": "rad/s",
+     "summary": "Turn rate, rad/s (positive = left); 0.6 rad/s is about 34°/s."
+    }
+   },
+   "head_params": true,
+   "done": "never; leave walk with a guard or max_time"
+  },
+  "stand": {
+   "kind": "perpetual",
+   "summary": "Stand still and keep balance; the head can look around. Stand does not get up after a fall: use get_up.",
+   "params": {},
+   "head_params": true,
+   "done": "never; leave stand with a guard or max_time"
+  },
+  "sit": {
+   "kind": "posture",
+   "summary": "Sit down and stay seated. Leaving sit for any skill except stand_up first runs stand_up automatically (0.5 s).",
+   "params": {},
+   "head_params": false,
+   "done": "1.6 s after the node starts (seated); the duck keeps sitting"
+  },
+  "stand_up": {
+   "kind": "episodic",
+   "summary": "Rise from sitting back to standing (0.5 s). To recover from a fall use get_up.",
+   "params": {},
+   "head_params": false,
+   "done": "0.5 s after the node starts; then the duck stands"
+  },
+  "get_up": {
+   "kind": "episodic",
+   "summary": "Recover from a fall to standing (typically about 0.6 s, at worst about 2.5 s). Nothing recovers automatically: go here when fallen. Safe to run while standing.",
+   "params": {},
+   "head_params": false,
+   "done": "once the duck has been upright for 1 s, or after 6 s if it cannot get up (then fallen is still true); then the duck stands"
+  },
+  "kick_left": {
+   "kind": "episodic",
+   "summary": "A fixed left-foot kick (0.5 s); it does not aim: the heading is the aim. It connects with the ball 6–12 cm ahead of the body and 0–10 cm left. If the head is turned when the node starts, the duck first stands until the head is back at its default pose (about 0.4 s after a steep look down; at most 0.5 s), then kicks: the kick policies only work with the head at rest. The ball goes a steady way only from the kick's plateau, 7–10 cm ahead and 4–6 cm left: it leaves at about 1.3 m/s, 10–14° left of the heading, and rolls about 2.5 m. Off the plateau the direction swings about 10° per cm toward the side the ball is off (a ball only 2 cm left goes 9–16° right), 20° right to 35° left in all. The spot is under the head camera: out of view at head_pitch 0.5; creeping in at head_pitch 1.1 keeps the ball in view down to the foot, and the ball reaches the spot about when target_dist < 0.07 and target_bearing > 1.2, with target_dist then about the ball's sideways offset (0.04–0.06 on the plateau). The body turns about 40° right.",
+   "params": {},
+   "head_params": false,
+   "done": "0.5 s after the kick itself starts (a head reset first is not counted); then the duck stands"
+  },
+  "kick_right": {
+   "kind": "episodic",
+   "summary": "A fixed right-foot kick (0.5 s); it does not aim: the heading is the aim. It connects with the ball 6–12 cm ahead of the body and 0–10 cm right (at about 10 cm right it can topple the duck). If the head is turned when the node starts, the duck first stands until the head is back at its default pose (about 0.4 s after a steep look down; at most 0.5 s), then kicks: the kick policies only work with the head at rest. The ball goes a steady way only from the kick's plateau, 8–10 cm ahead and 3–6 cm right: it leaves at about 1.4 m/s, 2–10° right of the heading, and rolls about 2.4 m. Off the plateau the direction swings about 10° per cm toward the side the ball is off (a ball only 2 cm right goes 8–17° left; 8–9 cm right, 22–37° right), 20° left to 45° right in all. The spot is under the head camera: out of view at head_pitch 0.5; creeping in at head_pitch 1.1 keeps the ball in view down to the foot, and the ball reaches the spot about when target_dist < 0.07 and target_bearing < -1.2, with target_dist then about the ball's sideways offset (0.03–0.06 on the plateau). The body turns about 8° left.",
+   "params": {},
+   "head_params": false,
+   "done": "0.5 s after the kick itself starts (a head reset first is not counted); then the duck stands"
+  },
+  "ground_pick": {
+   "kind": "episodic",
+   "summary": "Peck the ground with the beak, then stand back up (2.8 s). The body tilts about 33° mid-peck (up to about 42° right after a walk), so upright is briefly false.",
+   "params": {},
+   "head_params": false,
+   "done": "2.8 s after the node starts; then the duck stands"
+  },
+  "roulade": {
+   "kind": "episodic",
+   "summary": "A forward roll: about 1.5 s, travels about 0.53 m forward (0.52–0.54) and stays within about 5 cm of its line; the heading changes by a few degrees. Unless the duck is already standing still, it first stands until it is (at most 1 s; about 0.65 s after a walk or another roll), so a roll works straight from a walk and rolls chain back to back (about 0.24 m/s). Leave roulade on done, not on a timer: that wait counts toward t_state. It lands upright almost always; if not, the duck lies fallen when done fires, so follow with get_up if fallen.",
+   "params": {},
+   "head_params": false,
+   "done": "once the duck has rolled over and stayed upright for 0.5 s, or 3 s after the roll began (the settle wait not counted); then the duck stands (or lies fallen)"
+  }
+ },
+ "head_params": {
+  "note": "Extra params for skills with head_params: true (walk, stand).",
+  "head_pitch": {
+   "min": -1.1,
+   "max": 1.1,
+   "default": 0,
+   "unit": "rad",
+   "summary": "Head pitch offset, rad (positive = look down). The head camera and range sensor look where the head looks: 0.6 aims them about 38° down."
+  },
+  "head_yaw": {
+   "min": -1.4,
+   "max": 1.4,
+   "default": 0,
+   "unit": "rad",
+   "summary": "Head yaw offset, rad (positive = look left)."
+  },
+  "head_roll": {
+   "min": -0.3,
+   "max": 0.3,
+   "default": 0,
+   "unit": "rad",
+   "summary": "Head roll offset, rad (tilt the head sideways)."
+  }
+ },
+ "rules": [
+  "A duckscript is a JSON object {\"format\": \"duck-program/2\", \"start\", \"nodes\", \"meta\"?}: a state machine. Each node runs one skill; its `until` transitions are checked in order at every duckscript tick (10 Hz: t = 0, 0.1, 0.2 s, …) and the first true condition fires. At most one transition per tick.",
+  "Conditions (`if`) are true/false expressions: signals and numbers with + - * /, comparisons < <= > >= == != between any two numbers (`obstacle_dist < 0.25`, `target_dist < goal_dist`), boolean signals alone (`fallen`), and / or / not, parentheses. A number alone is not a condition.",
+  "`go` names a node or END (the duck stands until time runs out). Optional `max_time: {s, go}` fires once t_state >= s if no condition fired first.",
+  "Entering a node, even the same one again, resets t_state to 0 and done to false and restarts the skill's own clock (episodic timers, ground_pick's peck, the get_up and roulade done rules). It does not restart the body: the policies have no phase, so a walk → walk switch keeps the gait going (no new start push) and only re-anchors the heading hold to the current heading.",
+  "When an episodic skill finishes (`done`) and no transition fires, the duck just stands (done stays true). Leave walk and stand with a condition or max_time: they never finish.",
+  "Nothing recovers from a fall by itself: give every moving node a `fallen` → get_up transition, and leave get_up on `done`.",
+  "Limits: at most 32 nodes, 8 transitions per node, 16384 bytes of JSON; node ids are lowercase snake_case; meta.title ≤ 80 and meta.idea ≤ 280 characters.",
+  "Memory (avg, since, held, last, …), named conditions (let), variables (vars, set), priority rules every node checks (any, BACK), live inputs (feed) and a held head (head): program_more, with an example.",
+  "Old duckscripts with \"format\": \"duck-program/1\" are still accepted and run the same; write \"duck-program/2\".",
+  "Params outside a skill's range are clamped (a warning); unknown skills, params or signals are errors.",
+  "Trained moves: a walk or stand node can run a trained move in place of its stock policy: `\"move\": \"<alias>\"` on the node (starts: the moves measured here; `duckbench moves` lists all, `duckbench start <challenge> --move <alias>` writes the kit's duckscript with one on its node, where the kit has a config for the challenge). A raw move (host raw on its card) runs at its card's trained command unless `\"command\": {<knob>: value}` changes it, and the node's `feed` may name its knobs; `\"done\": {\"after_s\": s}` makes the node raise done. simulate, probe and submit take such a duckscript as it is (submit uploads the moves' weights and ranks it with a \"trained\" tag).",
+  "Each seed is simulated for the full duration_s; each seed jitters the spawn (±3 cm, ±5°), sole friction (×0.7–1.3) and body mass (±5 %), so robust duckscripts beat lucky ones.",
+  "Each seed gives one result: its finish time, s, the moment the duck first reaches the finish line (torso_reach >= 4.5 m). An attempt's number is the average of its best half of seeds (ranked: 12 of the 24 hidden seeds the server runs; locally: the best half of the seeds you run, 4 of the 8 practice seeds), lower is better; a seed that never finishes counts as 30 s inside that sort; ties go to the earlier submission. Falls on up to half the runs cost nothing if the rest are fast: pick checkpoints and strategies by this same number, not the plain mean."
+ ],
+ "program_schema": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://duckbench.local/schemas/duck-program-2.json",
+  "title": "duck-program/2",
+  "description": "A DuckBench duckscript: a state machine over pretrained skills (or trained moves bound to its nodes), with expressions, memory, named conditions (let), variables (vars + set) and global rules (any). This schema covers the structure only. validateProgram (packages/schema) also checks that start and every go target exist, that every node is reachable, the expression grammar, types and allowed signals, the 16384-byte canonical JSON limit and the 32 memory calls; it clamps out-of-range params instead of rejecting them. The old name \"duck-program/1\" is still accepted and runs the same (with its older, smaller limits); write \"duck-program/2\".",
+  "type": "object",
+  "required": [
+   "format",
+   "start",
+   "nodes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+   "format": {
+    "const": "duck-program/2"
+   },
+   "start": {
+    "$ref": "#/$defs/nodeId",
+    "description": "The node the duckscript starts in."
+   },
+   "nodes": {
+    "type": "object",
+    "description": "Nodes keyed by node id.",
+    "minProperties": 1,
+    "maxProperties": 32,
+    "propertyNames": {
+     "$ref": "#/$defs/nodeId"
+    },
+    "additionalProperties": {
+     "$ref": "#/$defs/node"
+    }
+   },
+   "let": {
+    "type": "object",
+    "maxProperties": 16,
+    "propertyNames": {
+     "$ref": "#/$defs/name"
+    },
+    "additionalProperties": {
+     "$ref": "#/$defs/expression"
+    },
+    "description": "Named expressions, in order (a let may use the ones above it); use them anywhere by name."
+   },
+   "vars": {
+    "type": "object",
+    "maxProperties": 8,
+    "propertyNames": {
+     "$ref": "#/$defs/name"
+    },
+    "additionalProperties": {
+     "type": "number"
+    },
+    "description": "Numeric variables with their start values; nodes assign them with set."
+   },
+   "any": {
+    "type": "array",
+    "maxItems": 8,
+    "items": {
+     "$ref": "#/$defs/anyRule"
+    },
+    "description": "Rules every node checks first, in order, before its own until (a rule is skipped in its own go node and in except)."
+   },
+   "meta": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "title": {
+      "type": "string",
+      "maxLength": 80
+     },
+     "idea": {
+      "type": "string",
+      "maxLength": 280,
+      "description": "The player's sentence; becomes the clip caption."
+     }
+    }
+   }
+  },
+  "$defs": {
+   "nodeId": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]{0,31}$",
+    "description": "Lowercase snake_case, 1-32 characters. END is reserved."
+   },
+   "name": {
+    "type": "string",
+    "pattern": "^[a-z][a-z0-9_]{0,31}$",
+    "description": "A let or variable name: lowercase snake_case, 1-32 characters, not a signal, function or keyword."
+   },
+   "expression": {
+    "type": "string",
+    "minLength": 1,
+    "maxLength": 300,
+    "description": "An expression, e.g. \"since(target_seen) < 1\" or \"clamp(1.5 * target_bearing, -0.6, 0.6)\": numbers, signals, lets and vars with + - * /, comparisons, and / or / not, functions and memory functions."
+   },
+   "target": {
+    "type": "string",
+    "pattern": "^(?:[a-z][a-z0-9_]{0,31}|END)$",
+    "description": "A node id, or END to finish (the duck stands until time runs out)."
+   },
+   "untilTarget": {
+    "type": "string",
+    "pattern": "^(?:[a-z][a-z0-9_]{0,31}|END|BACK)$",
+    "description": "A node id, END to finish (the duck stands until time runs out), or BACK: the node the last any rule left."
+   },
+   "transition": {
+    "type": "object",
+    "required": [
+     "if",
+     "go"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "if": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "description": "A condition (true/false), e.g. \"fallen\" or \"obstacle_dist < 0.1 and not fallen\" or \"held(avg(speed, 1) < 0.03) > 2\"."
+     },
+     "go": {
+      "$ref": "#/$defs/untilTarget"
+     }
+    }
+   },
+   "anyRule": {
+    "type": "object",
+    "required": [
+     "if",
+     "go"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "if": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "description": "A condition (true/false)."
+     },
+     "go": {
+      "$ref": "#/$defs/target"
+     },
+     "except": {
+      "type": "array",
+      "items": {
+       "$ref": "#/$defs/nodeId"
+      },
+      "description": "Nodes this rule is skipped in."
+     }
+    }
+   },
+   "params": {
+    "type": "object",
+    "additionalProperties": {
+     "type": "number"
+    },
+    "description": "Skill parameters in real units (m/s, rad/s, rad); missing ones take the catalogue default, out-of-range ones are clamped."
+   },
+   "node": {
+    "type": "object",
+    "required": [
+     "skill"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "skill": {
+      "enum": [
+       "walk",
+       "stand",
+       "sit",
+       "stand_up",
+       "get_up",
+       "kick_left",
+       "kick_right",
+       "ground_pick",
+       "roulade"
+      ]
+     },
+     "params": {
+      "$ref": "#/$defs/params"
+     },
+     "until": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+       "$ref": "#/$defs/transition"
+      },
+      "description": "Checked in order at every 10 Hz tick; the first true guard fires."
+     },
+     "max_time": {
+      "type": "object",
+      "required": [
+       "s",
+       "go"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "s": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "maximum": 300
+       },
+       "go": {
+        "$ref": "#/$defs/untilTarget"
+       }
+      },
+      "description": "Leave the node after s seconds in it, if no until guard fired first."
+     },
+     "set": {
+      "type": "object",
+      "maxProperties": 4,
+      "propertyNames": {
+       "$ref": "#/$defs/name"
+      },
+      "additionalProperties": {
+       "$ref": "#/$defs/expression"
+      },
+      "description": "Variable -> number expression, assigned in order when the node is entered."
+     },
+     "feed": {
+      "type": "object",
+      "propertyNames": {
+       "pattern": "^[a-z][a-z0-9]*(?:[-_][a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+       "$ref": "#/$defs/expression"
+      },
+      "description": "Walk or stand nodes: command slot -> number expression, re-evaluated every program tick (a stock walk: vx, vy, wz; a raw trained move: any slot, or its card's knob names)."
+     },
+     "head": {
+      "type": "object",
+      "propertyNames": {
+       "enum": [
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll"
+       ]
+      },
+      "additionalProperties": {
+       "anyOf": [
+        {
+         "$ref": "#/$defs/expression"
+        },
+        {
+         "type": "number"
+        }
+       ]
+      },
+      "description": "Walk or stand nodes: head joint -> number expression (rad from the default pose, clamped to ±1.5), every program tick."
+     },
+     "move": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Walk or stand nodes: a trained move that runs here in place of the skill's stock policy: an alias (\"hurdles-fast-walker@1\", from duckbench moves), a mv_ id, or a path to x.mlp.json relative to the duckscript file. Runs through the duckbench CLI or MCP (simulate, probe, submit)."
+     },
+     "host": {
+      "enum": [
+       "walk-stand",
+       "raw"
+      ],
+      "description": "With move: how the node feeds it (default: the move card's host). walk-stand: the node's params through the stock walk or stand; raw: the move's own command block (command, feed); the node's params don't reach it."
+     },
+     "command": {
+      "type": "object",
+      "propertyNames": {
+       "pattern": "^[a-z][a-z0-9]*(?:[-_][a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+       "type": "number"
+      },
+      "description": "With a raw move: its card's knob names (or command slot names) -> value; unset slots are 0. Default: the card's trained values."
+     },
+     "done": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+       "after_s": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "upright_s": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       },
+       "rolled_then_upright_s": {
+        "type": "number",
+        "exclusiveMinimum": 0
+       }
+      },
+      "description": "With move: the move ends itself: the node raises done when a rule fires (seconds of the move since the node was entered): after_s, upright_s (upright that long), rolled_then_upright_s (tipped over, then upright that long)."
+     }
+    },
+    "allOf": [
+     {
+      "if": {
+       "required": [
+        "skill"
+       ],
+       "properties": {
+        "skill": {
+         "const": "walk"
+        }
+       }
+      },
+      "then": {
+       "properties": {
+        "params": {
+         "type": "object",
+         "propertyNames": {
+          "enum": [
+           "vx",
+           "vy",
+           "wz",
+           "head_pitch",
+           "head_yaw",
+           "head_roll"
+          ]
+         }
+        }
+       }
+      }
+     },
+     {
+      "if": {
+       "required": [
+        "skill"
+       ],
+       "properties": {
+        "skill": {
+         "const": "stand"
+        }
+       }
+      },
+      "then": {
+       "properties": {
+        "params": {
+         "type": "object",
+         "propertyNames": {
+          "enum": [
+           "head_pitch",
+           "head_yaw",
+           "head_roll"
+          ]
+         }
+        }
+       }
+      }
+     },
+     {
+      "if": {
+       "required": [
+        "skill"
+       ],
+       "properties": {
+        "skill": {
+         "enum": [
+          "sit",
+          "stand_up",
+          "get_up",
+          "kick_left",
+          "kick_right",
+          "ground_pick",
+          "roulade"
+         ]
+        }
+       }
+      },
+      "then": {
+       "properties": {
+        "params": {
+         "type": "object",
+         "maxProperties": 0
+        }
+       }
+      }
+     },
+     {
+      "if": {
+       "required": [
+        "skill"
+       ],
+       "properties": {
+        "skill": {
+         "not": {
+          "enum": [
+           "walk",
+           "stand"
+          ]
+         }
+        }
+       }
+      },
+      "then": {
+       "properties": {
+        "move": false,
+        "host": false,
+        "command": false,
+        "done": false
+       }
+      }
+     },
+     {
+      "if": {
+       "required": [
+        "move"
+       ],
+       "properties": {
+        "move": {
+         "type": "string"
+        }
+       }
+      },
+      "else": {
+       "properties": {
+        "feed": {
+         "type": "object",
+         "propertyNames": {
+          "enum": [
+           "vx",
+           "vy",
+           "wz",
+           "neck_pitch",
+           "head_pitch",
+           "head_yaw",
+           "head_roll",
+           "body_0",
+           "body_1",
+           "body_2",
+           "body_3",
+           "body_4",
+           "body_5"
+          ]
+         }
+        }
+       }
+      }
+     }
+    ],
+    "dependentRequired": {
+     "host": [
+      "move"
+     ],
+     "command": [
+      "move"
+     ],
+     "done": [
+      "move"
+     ]
+    }
+   }
+  }
+ },
+ "example": {
+  "format": "duck-program/2",
+  "start": "run",
+  "nodes": {
+   "run": {
+    "skill": "walk",
+    "params": {
+     "vx": 0.19,
+     "head_pitch": 0.6
+    },
+    "until": [
+     {
+      "if": "fallen",
+      "go": "recover"
+     }
+    ]
+   },
+   "recover": {
+    "skill": "get_up",
+    "until": [
+     {
+      "if": "done",
+      "go": "run"
+     }
+    ]
+   }
+  },
+  "meta": {
+   "title": "Sprint: run straight at the top speed",
+   "idea": "walk straight at vx 0.19, head down (head_pitch 0.6: the stance hurdles-fast-walker@1 was trained in); get up after a fall"
+  }
+ },
+ "starts": {
+  "measured_on": {
+   "program": "programs/sprint-fast.json",
+   "nodes": [
+    "run"
+   ],
+   "seeds": "check 8-39",
+   "measure": "finish time, s, mean of the best half of 32 seeds (a miss = 30 s)",
+   "better": "lower",
+   "measured_as": "on the kit program's run node",
+   "note": "The number is the move in the role the kit's start program gives it (bound on its run node); it does not measure the move on one node of your own duckscript — `duckbench probe` (MCP probe_moves) does."
+  },
+  "rows": [
+   {
+    "alias": "base-run-forward@2",
+    "host": "raw",
+    "result": 4.52,
+    "unit": "s",
+    "finished": "32/32",
+    "falls": 10,
+    "measured_as": "on the kit program's run node"
+   },
+   {
+    "alias": "base-hop-forward@1",
+    "host": "raw",
+    "result": 5.388,
+    "unit": "s",
+    "finished": "29/32",
+    "falls": 19,
+    "response": {
+     "vx": "0.4→0.98 (falls 1/4), 0.45→1.02, 0.5→1.04, 0.55→1.02, 0.6→0.92 (falls 2/4) m/s",
+     "vy": "-0.4→0.16 (falls 1/4), -0.2→0.19 (falls 3/4), 0→0.19 (falls 1/4), 0.2→0.24, 0.4→0.27 m/s (+ = left)"
+    },
+    "measured_as": "on the kit program's run node"
+   },
+   {
+    "alias": "hurdles-fast-walker@1",
+    "host": "walk",
+    "result": 5.676,
+    "unit": "s",
+    "finished": "32/32",
+    "falls": 35,
+    "kit_start": true,
+    "response": {
+     "vx": "0→0.4, 0.048→0.54 (falls 1/4), 0.095→0.52 (falls 2/4), 0.143→0.61 (falls 3/4), 0.19→0.62 (falls 3/4) m/s",
+     "vy": "-0.06→-0.02 (falls 4/4), -0.03→-0.03 (falls 4/4), 0→-0.01 (falls 3/4), 0.03→0 (falls 4/4), 0.06→0 (falls 3/4) m/s (+ = left)",
+     "wz": "-0.6→-0.44, -0.3→-0.29, 0→-0.03 (falls 3/4), 0.3→0.31, 0.6→0.47 (falls 1/4) rad/s (+ = left)"
+    },
+    "measured_as": "on the kit program's run node"
+   },
+   {
+    "alias": "base-hop-forward@3",
+    "host": "raw",
+    "result": 5.971,
+    "unit": "s",
+    "finished": "32/32",
+    "falls": 27,
+    "response": {
+     "vx": "0.4→0.57 (falls 2/4), 0.45→0.64 (falls 2/4), 0.5→0.71 (falls 3/4), 0.55→0.77 (falls 2/4), 0.6→0.69 (falls 4/4) m/s",
+     "vy": "-0.4→-0.03 (falls 1/4), -0.2→-0.02 (falls 4/4), 0→0 (falls 2/4), 0.2→0.01 (falls 1/4), 0.4→0.03 (falls 3/4) m/s (+ = left)"
+    },
+    "measured_as": "on the kit program's run node"
+   },
+   {
+    "alias": "base-run-forward@3",
+    "host": "raw",
+    "result": 6.304,
+    "unit": "s",
+    "finished": "32/32",
+    "falls": 0,
+    "response": {
+     "vx": "0.6→0.61, 0.625→0.56, 0.65→0.57, 0.675→0.55, 0.7→0.55 m/s",
+     "wz": "-0.3→-0.11, -0.075→-0.03, 0→-0.03, 0.15→-0.02, 0.375→-0.02, 0.6→-0.04 rad/s (+ = left)"
+    },
+    "measured_as": "on the kit program's run node"
+   },
+   {
+    "alias": "stock",
+    "host": "stock",
+    "result": 22.725,
+    "unit": "s",
+    "finished": "32/32",
+    "falls": 6,
+    "measured_as": "on the kit program's run node"
+   }
+  ],
+  "measured": 65,
+  "not_on_board": 31,
+  "not_on_board_experimental": 29,
+  "next": {
+   "all": "duckbench moves --challenge sprint",
+   "write": "duckbench start sprint --move <ref>",
+   "probe": "duckbench probe sprint <duckscript.json> --node <node> --candidates stock,<move>,…"
+  }
+ },
+ "kit": "configs/sprint/baseline.py",
+ "move_example": {
+  "note": "A trained move right on a walk or stand node: \"move\" (an alias or mv_ id from duckbench moves, or a path to x.mlp.json relative to the duckscript); a raw move also takes \"command\" (its card's knobs; default: their trained values) and its node's feed may name them; \"host\" (default: the card's) and \"done\" are optional. simulate, probe and submit take it as it is.",
+  "duckscript": {
+   "format": "duck-program/2",
+   "start": "run",
+   "nodes": {
+    "run": {
+     "skill": "walk",
+     "move": "hurdles-fast-walker@1",
+     "params": {
+      "vx": 0.19,
+      "head_pitch": 0.6
+     },
+     "until": [
+      {
+       "if": "fallen",
+       "go": "recover"
+      }
+     ]
+    },
+    "recover": {
+     "skill": "get_up",
+     "until": [
+      {
+       "if": "done",
+       "go": "run"
+      }
+     ]
+    }
+   },
+   "meta": {
+    "title": "Sprint start: hurdles-fast-walker@1",
+    "idea": "The RL kit's programs/sprint-fast.json with hurdles-fast-walker@1 on node run."
+   }
+  }
+ },
+ "program_more": {
+  "rules": [
+   "Beyond nodes and transitions, a duckscript can also use: expressions, memory, named conditions (let), variables (vars, set), global rules (any, BACK), live inputs (feed) and a held head (head). All of it is in \"format\": \"duck-program/2\"; nothing to switch on.",
+   "Expressions: numbers and signals with + - * /, comparisons between any two numbers (signal vs signal too: `target_dist < goal_dist`), and / or / not, parentheses, true / false; functions abs(x), sign(x), min(a, b), max(a, b), clamp(x, lo, hi). A condition must be true/false; there is no number-as-condition.",
+   "Memory functions (updated at every 10 Hz program tick, whatever node runs): avg(x, s) the mean over the last s seconds (s ≤ 10, a number), delta(x, s) the change over the last s seconds, held(c) seconds c has been true without a break (0.1 at its first tick), since(c) seconds since c was last true (0 while true; Infinity if never), last(x, c) x when c was last true (0 if never), count(c) how many times c has become true, ever(c) whether c has ever been true, sum(x) x × 0.1 s added up (the integral over time: e.g. with heading and forward_speed / side_speed, how far the body has moved since it last saw something). E.g. `abs(avg(yaw_rate, 1)) > 1.5` (turning, the gait's wobble averaged out), `since(target_seen) < 1` (seen recently), `last(target_bearing, target_seen) > 0` (lost on the left).",
+   "\"let\": {\"name\": \"expression\", …}: named expressions, in order (a let may use the ones above it); use them anywhere by name. \"vars\": {\"name\": number, …}: numeric variables with their start values; a node's \"set\": {\"name\": \"expression\", …} assigns them in order when the node is entered (the start node's at the first tick).",
+   "\"any\": [{\"if\": condition, \"go\": node, \"except\": [nodes]?}, …]: rules every node checks first, in order, before its own `until` (a rule is skipped in its own `go` node and in `except`). Use them for priorities: down → get up, the opponent in view → fight, stuck → its own move.",
+   "\"go\": \"BACK\" (in until and max_time) returns to the node the last any rule left (nodes that are themselves any targets do not count; the start node if none). So a scenario is: an any rule with its limit → a node running its own move, with max_time → BACK. E.g. {\"if\": \"held(avg(speed, 1) < 0.03) > 2 and tries < 3 and t - tried_at > 4\", \"go\": \"unstick\"} with \"unstick\": {\"skill\": \"walk\", \"params\": {\"vx\": -0.1}, \"set\": {\"tries\": \"tries + 1\", \"tried_at\": \"t\"}, \"max_time\": {\"s\": 1, \"go\": \"BACK\"}}: a limit, a retry cap and a cooldown, then back to what the duck was doing.",
+   "Steering a stock walk: a walk node may have \"feed\": {\"vx\": …, \"vy\": …, \"wz\": …} (number expressions, in the walk params' own units and ranges: vx m/s, vy m/s, wz rad/s), re-evaluated every program tick and replacing its params, so the duck steers as it goes (from standing, a feed with vx 0 does not start the gait: put the turn or side-step in the node's params, e.g. {\"vx\": 0, \"wz\": 0.5}): e.g. \"go\": {\"skill\": \"walk\", \"params\": {\"vx\": 0.19}, \"feed\": {\"wz\": \"clamp(1.5 * path(0, 0), -0.6, 0.6)\"}}. Routes (only on a Challenge whose get-challenge says routes: true, e.g. maze-race and cliff; elsewhere they are an error): path(x, y) is the bearing (rad, positive = left, relative to the body's heading) from the duck to a waypoint about 15 cm ahead (3 cells) along the shortest route to the point (x, y) round the Challenge's walls (a 5 cm grid, walls grown by 8 cm; walkable props are no obstacle; a target inside a grown wall, or with no route, gives the straight line), path_len(x, y) is that route's length (m). Points are in the arena's frame, the same for both ducks of a duel. More math: round (half to even), floor, sqrt (of max(x, 0)), mod(a, b) (floored, so mod(-1, 4) = 3), exp.",
+   "Feed (a trained move's live inputs): a walk or stand node bound to a raw-host move may have \"feed\": {\"<command slot>\": \"number expression\", …} (slots: vx vy wz neck_pitch head_pitch head_yaw head_roll body_0 … body_5). Every program tick while the node runs, each expression is evaluated and written to that slot of the node's command block, which the move reads until the next tick (non-finite values become 0; clamped to ±4). So the duckscript can hand a move what it remembers: e.g. \"feed\": {\"wz\": \"clamp(opp_dir, -1, 1)\", \"body_4\": \"min(since(target_seen), 3)\"} with \"let\": {\"opp_dir\": \"wrap(last(target_bearing, target_seen) + last(heading, target_seen) - heading)\"} (where the opponent last seen is now, relative to the body). wrap(a) is the angle a in (−π, π], sin(a) and cos(a) take radians (a direction as two smooth inputs: no jump at ±π), atan2(y, x) and hypot(x, y) turn a vector into a direction and a length, choose(condition, a, b) is a where the condition holds, else b (e.g. the fresher of two estimates: choose(since(touching) < since(target_seen), touch_dir, seen_dir)); the `heading` signal is the body's heading in the arena.",
+   "Head (the duckscript aims the camera): a walk or stand node may have \"head\": {\"<joint>\": \"number expression\", …} (joints: neck_pitch head_pitch head_yaw head_roll; rad from the default pose, clamped to ±1.5; positive head_pitch / neck_pitch = down, positive head_yaw = left). Every program tick while the node runs, each value replaces the move's own action for that joint (approached smoothly, ~0.1 s), whatever runs the legs: a trained move, or a stock skill. The camera sits on the head, so this decides what target_* and goal_* see: e.g. \"head\": {\"neck_pitch\": 0, \"head_pitch\": 0} keeps the camera level while a fighting move would hang its head, and \"head_yaw\": \"clamp(opp_dir, -1.2, 1.2)\" looks where the opponent probably is. Senses: touching / touch_bearing feel the target's body against the duck's own, also behind it.",
+   "Head camera (every Challenge): cam_free_left / cam_free_ahead / cam_free_right (m to the nearest thing in the way; Infinity = nothing within 3 m; meaningful while cam_free_known), cam_duck_seen / cam_duck_bearing / cam_duck_dist, from the picture and the duck's own body only. Your own trained senses (duck-sense/1, skill.md \"Senses\") bind in a duck-strategy/1 as \"senses\": [{\"sense\": \"senses/near.sense.json\", \"as\": \"near\"}] and read as sense_near_<output>. The camera runs (about a quarter more CPU per run) only when a duckscript reads a cam_* or sense_* name.",
+   "Limits: 32 nodes, 8 transitions per node, 8 any rules, 16 lets, 8 vars, 4 assignments per node, 32 memory calls, 16384 bytes of JSON, 300 characters per expression."
+  ],
+  "example": {
+   "format": "duck-program/2",
+   "start": "seek",
+   "let": {
+    "lost_left": "last(target_bearing, target_seen) > 0",
+    "stuck": "since(target_seen) > 2 and abs(avg(yaw_rate, 1)) < 0.2"
+   },
+   "vars": {
+    "tries": 0
+   },
+   "any": [
+    {
+     "if": "fallen",
+     "go": "recover",
+     "except": [
+      "recover"
+     ]
+    },
+    {
+     "if": "target_seen and target_dist < 0.4",
+     "go": "push"
+    },
+    {
+     "if": "stuck and tries < 3",
+     "go": "back_off"
+    }
+   ],
+   "nodes": {
+    "seek": {
+     "skill": "walk",
+     "params": {
+      "vx": 0.15
+     },
+     "until": [
+      {
+       "if": "not target_seen and lost_left",
+       "go": "turn_left"
+      },
+      {
+       "if": "not target_seen",
+       "go": "turn_right"
+      }
+     ]
+    },
+    "turn_left": {
+     "skill": "walk",
+     "params": {
+      "wz": 0.8
+     },
+     "until": [
+      {
+       "if": "target_seen",
+       "go": "seek"
+      }
+     ]
+    },
+    "turn_right": {
+     "skill": "walk",
+     "params": {
+      "wz": -0.8
+     },
+     "until": [
+      {
+       "if": "target_seen",
+       "go": "seek"
+      }
+     ]
+    },
+    "push": {
+     "skill": "walk",
+     "params": {
+      "vx": 0.19
+     },
+     "until": [
+      {
+       "if": "since(target_seen) > 0.5",
+       "go": "seek"
+      }
+     ]
+    },
+    "back_off": {
+     "skill": "walk",
+     "params": {
+      "vx": -0.1
+     },
+     "set": {
+      "tries": "tries + 1"
+     },
+     "max_time": {
+      "s": 1,
+      "go": "seek"
+     }
+    },
+    "recover": {
+     "skill": "get_up",
+     "until": [
+      {
+       "if": "done",
+       "go": "seek"
+      }
+     ]
+    }
+   },
+   "meta": {
+    "title": "Seek and push",
+    "idea": "turn toward where the target was last seen; back off when stuck"
+   }
+  }
+ },
+ "strategy_example": {
+  "note": "The same moves in a separate envelope (still accepted; a move on the node itself is simpler): a duck-strategy/1 file binds trained moves to walk/stand nodes; simulate and submit take it like a duckscript. `move` is an alias or mv_ id (`duckbench moves`) or a path to a .mlp.json. A move whose card says host raw needs \"host\": \"raw\" and a command block per node (the card's knob names or slot names).",
+  "strategy": {
+   "format": "duck-strategy/1",
+   "challenge": {
+    "id": "sprint",
+    "version": 6
+   },
+   "program": "my-duckscript.json",
+   "moves": [
+    {
+     "nodes": [
+      "walk"
+     ],
+     "move": "<alias, e.g. from duckbench moves>"
+    },
+    {
+     "nodes": [
+      "fast"
+     ],
+     "move": "<a raw-host alias>",
+     "host": "raw",
+     "command": {
+      "fast": {
+       "vx": 0.4
+      }
+     }
+    }
+   ]
+  }
+ }
+}

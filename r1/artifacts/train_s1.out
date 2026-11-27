@@ -1,0 +1,7 @@
+# RECONSTRUCTED 2026-11-27 from the background job log (the S1 process was started by the
+# first driver, whose `tee` target directory did not exist yet; the training itself was not
+# interrupted). Verbatim lines observed:
+[driver] start seed 1 07:48:38
+[duck-rl] Start -> trained (same seeds 100-115): 5.68 s (finished 16/16) -> 4.38 s (finished 16/16). No need to re-simulate.
+Curve: start 5.68 s (before training) → first checkpoint 5.34 s → best 4.38 s at 4:19 (86 % of the run); last third of the run: the best so far improved by 0.26 s (5.7 %). The best checkpoint beats the start.
+[budget] train charged 335 s

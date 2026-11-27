@@ -1,0 +1,54 @@
+{
+ "format": "duck-mlp/1",
+ "source_onnx_sha256": "635d4a6c53b8fb8f1b38a158e793f11e7c59115be7fe7028500ddb57efeb38a2",
+ "input_dim": 61,
+ "output_dim": 14,
+ "norm": {
+  "sub_offset": 0,
+  "div_offset": 61,
+  "len": 61
+ },
+ "layers": [
+  {
+   "in": 61,
+   "out": 512,
+   "weight_offset": 122,
+   "bias_offset": 31354,
+   "weight_layout": "out_major",
+   "activation": "elu",
+   "elu_alpha": 1.0
+  },
+  {
+   "in": 512,
+   "out": 256,
+   "weight_offset": 31866,
+   "bias_offset": 162938,
+   "weight_layout": "out_major",
+   "activation": "elu",
+   "elu_alpha": 1.0
+  },
+  {
+   "in": 256,
+   "out": 128,
+   "weight_offset": 163194,
+   "bias_offset": 195962,
+   "weight_layout": "out_major",
+   "activation": "elu",
+   "elu_alpha": 1.0
+  },
+  {
+   "in": 128,
+   "out": 14,
+   "weight_offset": 196090,
+   "bias_offset": 197882,
+   "weight_layout": "out_major",
+   "activation": "none",
+   "elu_alpha": null
+  }
+ ],
+ "meta": {
+  "converter": "spikes/duck-rl/kit/tools/to_mlp.py",
+  "source": "last.pt",
+  "source_kind": "checkpoint 'actor' (rsl_rl MLPModel); normaliser obs_normalizer (_std + 0.0)"
+ }
+}

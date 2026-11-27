@@ -1,0 +1,51 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "move": "steps-starter@1",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "height>0.5",
+     "go": "top"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "top": {
+   "skill": "walk",
+   "move": "hurdles-fast-walker@1",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Z4 steps-starter then fast walker",
+  "idea": "order control"
+ }
+}

@@ -1,0 +1,22 @@
+--- release/lab/learn.py
++++ kit/lab/learn.py
+@@ -186,6 +186,19 @@
+     with contextlib.redirect_stdout(io.StringIO()):  # rsl_rl prints the model summaries
+         alg = PPO.construct_algorithm(env.get_observations(), env, cfg, device)
+     warm_start(alg.actor, move.warm_start)
++    if os.environ.get("DUCK_DUMP_INIT"):
++        torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
++                   os.environ["DUCK_DUMP_INIT"])
++    if os.environ.get("DUCK_SCRATCH") == "1":
++        # E3 condition B: keep the stock input normaliser (shared interface), re-draw every linear weight/bias
++        # with PyTorch's default init (the same draw rsl_rl uses when nothing is warm-started).
++        with torch.no_grad():
++            for m in alg.actor.mlp:
++                if isinstance(m, nn.Linear):
++                    m.reset_parameters()
++        if os.environ.get("DUCK_DUMP_INIT_AFTER"):
++            torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
++                       os.environ["DUCK_DUMP_INIT_AFTER"])
+     alg.actor.to(device)
+     return alg
+ 

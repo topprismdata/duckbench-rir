@@ -1,0 +1,98 @@
+{
+  "format": "duck-program/2",
+  "start": "seek",
+  "nodes": {
+    "hold": {
+      "skill": "stand",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "hill_dist > 0.25",
+          "go": "seek"
+        }
+      ]
+    },
+    "seek": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.15
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "hill_dist < 0.12",
+          "go": "hold"
+        },
+        {
+          "if": "hill_bearing > 0.3",
+          "go": "left"
+        },
+        {
+          "if": "hill_bearing < -0.3",
+          "go": "right"
+        }
+      ]
+    },
+    "left": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.05,
+        "wz": 0.6
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "hill_dist < 0.12",
+          "go": "hold"
+        },
+        {
+          "if": "hill_bearing < 0.1",
+          "go": "seek"
+        }
+      ]
+    },
+    "right": {
+      "skill": "walk",
+      "params": {
+        "vx": 0.05,
+        "wz": -0.6
+      },
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "hill_dist < 0.12",
+          "go": "hold"
+        },
+        {
+          "if": "hill_bearing > -0.1",
+          "go": "seek"
+        }
+      ]
+    },
+    "up": {
+      "skill": "get_up",
+      "until": [
+        {
+          "if": "done",
+          "go": "seek"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "title": "Arena bot: medium",
+    "idea": "stock walk to the raft centre (hill_bearing/hill_dist) and stand there; walks back when it slides 25 cm off"
+  }
+}

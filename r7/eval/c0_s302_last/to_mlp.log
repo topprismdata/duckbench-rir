@@ -1,0 +1,3 @@
+submissions/t2p_c0_s302/last.pt [checkpoint 'actor' (rsl_rl MLPModel); normaliser obs_normalizer (_std + 0.0)] -> /Users/guohongbin/1-Projects/duckbench-rir/r7/eval/c0_s302_last/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs torch(source) on 256 obs: max |diff| 9.54e-07 (max |out| 3.16)
+  OK (tolerance 3.2e-04)

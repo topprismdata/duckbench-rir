@@ -1,0 +1,15 @@
+Error: ENOENT: no such file or directory, open '/Users/guohongbin/1-Projects/duckbench-rir/r5/programs/hprobe_0.20.json'
+    at readFileSync (node:fs:440:20)
+    at readProgram (file:///Users/guohongbin/1-Projects/duckbench-rir/sources/dbcli/node_modules/duckbench/dist/main-6Z5MQKHV.js:1080:28)
+    at main (file:///Users/guohongbin/1-Projects/duckbench-rir/sources/dbcli/node_modules/duckbench/dist/main-6Z5MQKHV.js:1345:26)
+    at runCli (file:///Users/guohongbin/1-Projects/duckbench-rir/sources/dbcli/node_modules/duckbench/dist/main-6Z5MQKHV.js:2131:18)
+    at file:///Users/guohongbin/1-Projects/duckbench-rir/sources/dbcli/node_modules/duckbench/dist/main-6Z5MQKHV.js:2143:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async file:///Users/guohongbin/1-Projects/duckbench-rir/sources/dbcli/node_modules/duckbench/dist/main.js:87:3 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/guohongbin/1-Projects/duckbench-rir/r5/programs/hprobe_0.20.json'
+}
+duckbench: If this blocks you, `duckbench feedback` can tell the DuckBench team.

@@ -1,0 +1,236 @@
+{
+ "format": "duck-program/2",
+ "start": "open",
+ "let": {
+  "wx": "sum(forward_speed * cos(heading) - side_speed * sin(heading))",
+  "wy": "sum(forward_speed * sin(heading) + side_speed * cos(heading))",
+  "h0": "last(heading, t < 0.15)",
+  "cx": "0.25 * cos(h0)",
+  "cy": "0.25 * sin(h0)",
+  "cd": "hypot(cx - wx, cy - wy)",
+  "cb": "wrap(atan2(cy - wy, cx - wx) - heading)",
+  "felt": "since(touching) < since(target_seen)",
+  "fresh": "min(since(touching), since(target_seen))",
+  "ox": "choose(felt, last(wx + 0.12 * cos(heading + touch_bearing), touching), last(wx + (target_dist + 0.05) * cos(heading + target_bearing), target_seen))",
+  "oy": "choose(felt, last(wy + 0.12 * sin(heading + touch_bearing), touching), last(wy + (target_dist + 0.05) * sin(heading + target_bearing), target_seen))",
+  "ob": "wrap(atan2(oy - wy, ox - wx) - heading)",
+  "od": "hypot(ox - cx, oy - cy)",
+  "outward": "od > cd + 0.03 and (cd < 0.08 or abs(wrap(ob - cb - 3.1416)) < 3.2)",
+  "ring": "0.5 - 0.04 * max(t - 15, 0)"
+ },
+ "nodes": {
+  "open": {
+   "skill": "walk",
+   "move": "base-run-forward@3",
+   "feed": {
+    "vx": "0.7"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "cd < 0.13 or touching",
+     "go": "settle"
+    }
+   ],
+   "max_time": {
+    "s": 0.8,
+    "go": "settle"
+   }
+  },
+  "settle": {
+   "skill": "stand",
+   "move": "base-stand-still@2",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ],
+   "max_time": {
+    "s": 0.3,
+    "go": "home"
+   }
+  },
+  "home": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.5
+   },
+   "feed": {
+    "vx": "choose(abs(cb) < 0.8, 0.19, choose(abs(cb) > 2.2, -0.16, 0))",
+    "wz": "clamp(2.5 * choose(abs(cb) < 1.57, cb, wrap(cb + 3.1416)), -0.6, 0.6)"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "cd < 0.07",
+     "go": "face"
+    },
+    {
+     "if": "t < 14.0 and fresh < 0.5 and abs(ob) < 0.5 and outward and cd < min(0.22, ring - 0.2)",
+     "go": "push"
+    }
+   ]
+  },
+  "face": {
+   "skill": "walk",
+   "params": {
+    "vx": 0,
+    "wz": 0.6,
+    "head_pitch": 0.5
+   },
+   "feed": {
+    "vx": "0",
+    "wz": "choose(fresh < 3, clamp(3 * ob, -0.6, 0.6), 0.6)"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "cd > 0.07 + 0.05",
+     "go": "home"
+    },
+    {
+     "if": "t < 14.0 and fresh < 0.5 and abs(ob) < 0.5 and outward and cd < min(0.22, ring - 0.2)",
+     "go": "push"
+    },
+    {
+     "if": "ob > 0.9",
+     "go": "spin_l"
+    },
+    {
+     "if": "ob < -0.9",
+     "go": "spin_r"
+    }
+   ]
+  },
+  "push": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.5
+   },
+   "feed": {
+    "wz": "clamp(2 * ob, -0.6, 0.6)"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "cd > min(0.3, ring - 0.14)",
+     "go": "home"
+    },
+    {
+     "if": "fresh > 1.0",
+     "go": "find"
+    },
+    {
+     "if": "abs(ob) > 1.0 or (not outward and cd > 0.1)",
+     "go": "home"
+    }
+   ],
+   "max_time": {
+    "s": 3.0,
+    "go": "home"
+   }
+  },
+  "find": {
+   "skill": "walk",
+   "params": {
+    "vx": 0,
+    "wz": 0.6,
+    "head_pitch": 0.5
+   },
+   "feed": {
+    "vx": "0",
+    "wz": "choose(ob < 0, -0.6, 0.6)"
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "fresh < 0.2",
+     "go": "home"
+    },
+    {
+     "if": "cd > 0.15",
+     "go": "home"
+    }
+   ],
+   "max_time": {
+    "s": 3,
+    "go": "home"
+   }
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "home"
+    }
+   ]
+  },
+  "spin_l": {
+   "skill": "walk",
+   "move": "base-turn-left@2",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "ob < 0.3",
+     "go": "face"
+    },
+    {
+     "if": "cd > 0.07 + 0.1",
+     "go": "home"
+    }
+   ],
+   "max_time": {
+    "s": 2.5,
+    "go": "face"
+   }
+  },
+  "spin_r": {
+   "skill": "walk",
+   "move": "base-turn-right@2",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "ob > -0.3",
+     "go": "face"
+    },
+    {
+     "if": "cd > 0.07 + 0.1",
+     "go": "home"
+    }
+   ],
+   "max_time": {
+    "s": 2.5,
+    "go": "face"
+   }
+  }
+ },
+ "meta": {
+  "title": "Sumo start: a map and moves in roles",
+  "idea": "dead-reckons the centre from heading and odometry; a run move dashes to the centre, a stand move catches it, turn moves face the opponent, the stock walk pushes from the centre outward and walks home by the map"
+ }
+}

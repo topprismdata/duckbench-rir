@@ -1,0 +1,11 @@
+{
+ "asis": [
+  "sha256:641fcbe940a681e2",
+  "sha256:cc68907d36fb5cd6"
+ ],
+ "normalized": [
+  "sha256:da12141855743da5",
+  "sha256:da12141855743da5"
+ ],
+ "note": "same knobs/run_shape on both sides"
+}

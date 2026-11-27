@@ -1,0 +1,18 @@
+bash: line 1: setsid: command not found
+[e3] seed 103 cond A start 09:13:37
+[e3] seed 103 cond A ended: done 09:18:53
+[e3] seed 103 cond B start 09:18:53
+[e3] seed 103 cond B ended: done 09:24:06
+[e3] seed 104 cond B start 09:24:06
+[e3] seed 104 cond B ended: done 09:29:18
+[e3] seed 104 cond A start 09:29:18
+[e3] seed 104 cond A ended: done 09:34:33
+[e3] seed 105 cond A start 09:34:33
+[e3] seed 105 cond A ended: done 09:39:47
+[e3] seed 105 cond B start 09:39:47
+[e3] seed 105 cond B ended: done 09:44:59
+[e3] seed 106 cond B start 09:44:59
+[e3] seed 106 cond B ended: done 09:50:11
+[e3] seed 106 cond A start 09:50:11
+[e3] seed 106 cond A ended: done 09:55:24
+[e3] ALLDONE 09:55:24

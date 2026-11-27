@@ -1,0 +1,29 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "move": "base-sidestep-left@1",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Sprint start: base-sidestep-left@1",
+  "idea": "The RL kit's programs/sprint-fast.json with base-sidestep-left@1 on node run."
+ }
+}

@@ -1,0 +1,5 @@
+{"kind": "train", "label": "e1_s1", "start": "2026-11-27T07:48:38", "seconds": 334.8, "run": "33138-1795736918377", "end": "exit"}
+{"kind": "train", "label": "e1_s2", "start": "2026-11-27T07:54:27", "seconds": 314.2, "run": "33615-1795737267809", "end": "exit"}
+{"kind": "train", "label": "e1_s3", "start": "2026-11-27T07:59:42", "seconds": 313.8, "run": "33890-1795737582150", "end": "exit"}
+{"kind": "train", "label": "e1_s4", "start": "2026-11-27T08:04:56", "seconds": 315.0, "run": "34307-1795737896137", "end": "exit"}
+{"kind": "train", "label": "e1_s5", "start": "2026-11-27T08:10:11", "seconds": 315.2, "run": "34732-1795738211319", "end": "exit"}

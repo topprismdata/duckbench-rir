@@ -1,0 +1,34 @@
+{
+  "format": "duck-program/2",
+  "start": "go",
+  "nodes": {
+    "go": { "skill": "walk", "params": { "vx": 0.19, "head_pitch": 0.3 },
+      "until": [
+        { "if": "light < 0.5", "go": "freeze" },
+        { "if": "fallen", "go": "back_up" },
+        { "if": "goal_seen and goal_bearing > 0.08", "go": "left" },
+        { "if": "goal_seen and goal_bearing < -0.08", "go": "right" }
+      ]
+    },
+    "left": { "skill": "walk", "params": { "vx": 0.19, "wz": 0.2, "head_pitch": 0.3 },
+      "until": [
+        { "if": "light < 0.5", "go": "freeze" },
+        { "if": "fallen", "go": "back_up" },
+        { "if": "not goal_seen or goal_bearing < 0.02", "go": "go" }
+      ]
+    },
+    "right": { "skill": "walk", "params": { "vx": 0.19, "wz": -0.2, "head_pitch": 0.3 },
+      "until": [
+        { "if": "light < 0.5", "go": "freeze" },
+        { "if": "fallen", "go": "back_up" },
+        { "if": "not goal_seen or goal_bearing > -0.02", "go": "go" }
+      ]
+    },
+    "freeze": { "skill": "stand", "until": [ { "if": "light > 0.5", "go": "go" } ] },
+    "back_up": { "skill": "get_up", "until": [ { "if": "done", "go": "go" } ] }
+  },
+  "meta": {
+    "title": "Clever: freeze on red",
+    "idea": "stock walk toward the line on green, stand still the moment the light turns red, walk on at green; get up after a fall"
+  }
+}

@@ -1,0 +1,51 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "move": "steps-starter@1",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "height>0.15",
+     "go": "fast"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "fast": {
+   "skill": "walk",
+   "move": "hurdles-fast-walker@1",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "C5 steps->HFW @0.15",
+  "idea": "R5.1 corrected matrix"
+ }
+}

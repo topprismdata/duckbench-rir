@@ -1,0 +1,102 @@
+id	statement_zh	section	source_family	status
+K001	被动动力学可在特定结构及环境条件下产生步态	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K002	能量平衡是必要而非充分稳定条件	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K003	低维模板可描述部分复杂运动	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K004	动态稳定不同于静态稳定	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K005	Poincaré映射可在相应假设下评价局部轨道稳定	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K006	接触切换使运动成为混合动力系统	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K007	速度影响恢复平衡所需落脚点	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K008	无量纲量可辅助跨尺度比较	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K009	Froude相似不足以保证完整动力学相似	RD02-A	McGeer; Full & Koditschek; Pratt; MIT Underactuated	CANDIDATE_UNAUDITED
+K010	CPG可产生节律信号	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K011	节律信号不保证步态稳定	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K012	神经控制、身体、环境可以耦合	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K013	机械响应可先于神经反馈	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K014	肌肉反射模型可产生仿真步态	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K015	运动协同的低维性不证明特定神经机制	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K016	最优反馈控制可允许任务无关方向变化	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K017	CPG与RL结合已有实体机器人案例	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K018	CPG普遍优于其他方法尚无充分证据	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K019	CPG在Microduck上的收益待验证	RD02-B	Taga; Geyer/Herr; Ijspeert; CPG-RL	CANDIDATE_UNAUDITED
+K020	PD可近似解释为弹簧阻尼反馈	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K021	阻抗控制描述交互动态关系	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K022	ZMP在支撑域内不构成完整稳定保证	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K023	HZD利用虚拟约束与混合不变性组织周期运动	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K024	MPC通过滚动时域求解控制	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K025	WBC协调多任务及物理约束	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K026	接触轨迹优化可联合优化运动与接触	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K027	MPC与RL抗扰表现可能依赖扰动方向，特定仿真证据	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K028	物理控制与学习可组合	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K029	状态表示影响控制问题	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K030	传统或学习控制普遍占优均未证实	RD02-C	Hogan; Kajita; Westervelt; MPC/RL benchmark	CANDIDATE_UNAUDITED
+K031	黑盒优化可直接搜索策略	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K032	CMA-ES利用协方差适应搜索	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K033	全协方差高维成本较大	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K034	线性策略可解决部分MuJoCo任务	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K035	贝叶斯优化有参数化步态研究先例	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K036	在线采样规划可优化候选控制轨迹	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K037	QD可形成多样化策略档案	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K038	预构建档案可辅助受损机器人适应，离线成本须计入	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K039	进化与梯度学习可组合	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K040	运动生成器与简单策略结合已有案例	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K041	表示与优化器是不同变量	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K042	黑盒优化普遍优于RL尚未证实	RD02-D	Hansen; ARS; MAP-Elites; PMTG	CANDIDATE_UNAUDITED
+K043	Bellman方程分解长期价值	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K044	部分可观测性限制可达控制表现	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K045	折扣时间尺度取决于决策频率	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K046	Actor-Critic可利用轨迹时序信息	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K047	PPO裁剪目标不是严格策略变化保证	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K048	实现细节可能比核心算法差异更重要	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K049	动作表示可改变学习速度及质量	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K050	势函数塑形在规定条件下保持最优策略	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K051	任意塑形可能改变任务最优策略	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K052	周期奖励已有多种双足步态实体案例	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K053	大规模并行可缩短训练墙钟时间	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K054	Off-policy可扩展至大规模机器人训练	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K055	真实终止与外部截断应区分	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K056	最佳训练结果不代表算法可靠性	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K057	竞赛与科学评价目标可能不同	RD02-E	Sutton/Barto; PPO; SAC; TD3; Action Space; Periodic Rewards; rliable	CANDIDATE_UNAUDITED
+K058	行为克隆存在闭环误差累积风险	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K059	DAgger利用学生访问状态上的专家反馈	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K060	运动轨迹不等于执行器标签	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K061	参考状态初始化是独立知识注入渠道	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K062	AMP利用运动分布构建风格奖励	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K063	运动技能可通过潜在空间组织复用	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K064	教师能力可部分蒸馏至学生	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K065	蒸馏不能消除不可辨识的信息缺失	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K066	跨形态迁移需运动学及动力学检查	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K067	动物运动数据可辅助实体机器人技能学习	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K068	多种人形机器人可共享部分控制能力	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K069	共享控制仍有形态专属差异	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K070	不匹配先验可能产生负迁移	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K071	Microduck直接继承通用人形模型尚无充分证据	RD02-F	DAgger; DeepMimic; AMP; ASE; RMA; XHugWBC	CANDIDATE_UNAUDITED
+K072	世界模型不必是神经网络	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K073	系统辨识可估计物理参数	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K074	模型可生成额外训练经验	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K075	模型生成经验可能引入系统偏差	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K076	概率模型集合可辅助估计不确定性	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K077	延长预测范围可能累积误差	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K078	潜在模型可支持连续控制	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K079	可微动力学可提供策略优化梯度	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K080	接触预测准确性不等于梯度准确性	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K081	已知环境信息可与学习动力学组合	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K082	可微模型改善特定人形任务样本效率的预印本证据	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K083	墙钟与总计算成本应分开	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K084	训练与部署数据分布差异可导致失败	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K085	世界模型普遍优于模型无关RL尚无充分证据	RD02-G	Dyna; PETS; MBPO; Dreamer; TD-MPC2; XSoma	CANDIDATE_UNAUDITED
+K086	电机可用力矩受速度与电压影响	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K087	堵转力矩不等于持续输出力矩	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K088	减速比影响速度、力矩和等效惯量	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K089	执行器摩擦可能依赖负载和速度	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K090	回差改变传动及反馈特性	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K091	BAM扩展模型可改善特定舵机仿真精度	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K092	Microduck官方训练使用BAM，DuckBench未核验	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K093	固定时延引入频率相关相位滞后	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K094	局部保护可能影响整体稳定，官方工程观察待核验	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K095	摩擦约束限制接触力	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K096	MuJoCo软接触可产生缓慢滑移	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K097	策略失败不等于物理不可行	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K098	可捕获性描述规定条件下恢复能力	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K099	辨识、随机化和适应可互补	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K100	跨仿真器成功不证明实体迁移	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED
+K101	NVIDIA已有Microduck与AI Agent案例，厂商资料待核验	RD02-H	ROBOTIS; BAM; Microduck; MuJoCo; Capturability	CANDIDATE_UNAUDITED

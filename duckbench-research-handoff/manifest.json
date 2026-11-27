@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "claims": 101,
+  "hypotheses": 42,
+  "rounds": 14,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "bf17e91b6afca0875e309fae161821a21549c8dfde5905e537f24d3540b7212d",
+      "bytes": 1287
+    },
+    {
+      "path": "agent/START-HERE.md",
+      "sha256": "78ae22a8e11c78d4c4bae013fc228c76acbbcd185d8b20d6e33d950270df363d",
+      "bytes": 3754
+    },
+    {
+      "path": "evidence/limitations.md",
+      "sha256": "8eda3181bb1ff4fc8535649fc98149fcfcd2b2e00676a8b1ece522f1005d8ae9",
+      "bytes": 2284
+    },
+    {
+      "path": "governance/01-protocol.md",
+      "sha256": "569a9ea37ad9fef847d035b3b99b7a3aab468d9821489830925ef66e36fc2c03",
+      "bytes": 3626
+    },
+    {
+      "path": "knowledge/claims.tsv",
+      "sha256": "ff6abd8044d2f43a70226ce9c25e8ec13dbee884b0f3dc1ac7ae1fd15d68db18",
+      "bytes": 12267
+    },
+    {
+      "path": "knowledge/hypotheses.tsv",
+      "sha256": "0e1cfbb1690652dfab5acf4dd53050918a2eeb8074d36bff6c8fb01c86f0b9a2",
+      "bytes": 3077
+    },
+    {
+      "path": "research/01-synthesis.md",
+      "sha256": "6379a5c6754d930a53633477fd12a773caddea6d8db5d666b4968e75e3f2ce7b",
+      "bytes": 4989
+    },
+    {
+      "path": "research/02-literature.md",
+      "sha256": "419fa3a23e9421594254445e30712c299640497334197cdc3576564bb2e8b0f2",
+      "bytes": 7068
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+duck-rl kit 1.31.2 · standalone · budget 2.5/420.0 min
+[duck-rl] WARNING: this machine is busy (load 7.8 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+saucer v1: nq 22 nv 21, metric disc_peak_rpm {"window_s":0.5,"until_s":10}, result score, spawn {"x":0,"y":-0.4275,"z":0.1757654299780526,"yaw":0}, props disc(turntable) qpos 21 dof 20
+[duck-rl] WARM_MLP saucer-spinner@1 -> mv_b804c7e21720 (saucer-spinner@1): /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json
+[duck-rl] lineage: parent mv_b804c7e21720 (saucer-spinner@1), root stock:alpha_walking, parent cumulative {'steps': 31744000, 'train_s': 2377}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 saucer v1 r16_s731: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': -0.03, 'wz': 0.05, 'head_pitch': 0, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights saucer-spinner@1 = /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json (mv_b804c7e21720, saucer-spinner@1), init stock, terms ['alive', 'drive', 'edge', 'fall', 'peak', 'smooth', 'spin'], episode 10.0 s, 2.03 min, 8x16 envs (one per performance core (8)), nice 10, seed 731, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r16_s731
+[duck-rl] learner: INIT_STD 0.15, LR_FIXED 0.0002, WARMUP_ITERS 30; recipe sha256:2beea6ffa21d3902
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 50.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (saucer-spinner@1) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/cache/moves/mv_b804c7e21720/policy.mlp.json
+it    0 steps      8192 t      1s sps   5829 eps  14 len 58 fall 1.00 lost 0.00 metric@end 9.43 success 0.00 ret 2.19 std 0.150 lr 1.0e-03 (warm-up: critic only)
+[duck-rl] TS eval of the start (saucer-spinner@1): best 8 of 16 55.423 rpm (mean 55.054, worst 53.873 rpm) (6.4 s), the same seeds and opponents as every checkpoint's
+it   10 steps     90112 t      6s sps  18337 eps  28 len 256 fall 0.82 lost 0.00 metric@end 31.29 success 0.00 ret 13.88 std 0.150 lr 2.0e-04
+it   20 steps    172032 t     10s sps  17983 eps  20 len 294 fall 0.80 lost 0.00 metric@end 34.09 success 0.00 ret 15.68 std 0.150 lr 2.0e-04
+it   30 steps    253952 t     14s sps  19874 eps  19 len 375 fall 0.58 lost 0.00 metric@end 42.52 success 0.00 ret 20.89 std 0.149 lr 2.0e-04
+it   31 steps    262144 t     15s sps  19491 eps  11 len 339 fall 0.82 lost 0.00 metric@end 38.84 success 0.00 ret 18.37 std 0.149 lr 2.0e-04 ckpt 253952
+it   40 steps    335872 t     19s sps  17922 eps  24 len 430 fall 0.54 lost 0.00 metric@end 45.93 success 0.00 ret 23.62 std 0.149 lr 2.0e-04
+[duck-rl] TS eval ckpt-0253952.onnx: best 8 of 16 52.975 rpm (mean 47.317, worst 26.525 rpm) (6.2 s) <- best run 20261127-141845-86d1fb
+[duck-rl] one checkpoint run = 1.4 MB (16 seeds); --save-runs all would use ~1.6 MB/min of training (~98 MB/hour) at one eval every 50 s, ~3.3 MB over this 2-min run; improved-only usually keeps a handful
+it   50 steps    417792 t     24s sps  17079 eps  15 len 432 fall 0.33 lost 0.00 metric@end 45.77 success 0.00 ret 24.19 std 0.149 lr 2.0e-04
+it   60 steps    499712 t     29s sps  20315 eps  20 len 475 fall 0.30 lost 0.00 metric@end 48.84 success 0.00 ret 26.22 std 0.148 lr 2.0e-04
+it   62 steps    516096 t     30s sps  15838 eps  19 len 385 fall 0.53 lost 0.00 metric@end 41.81 success 0.00 ret 21.10 std 0.148 lr 2.0e-04 ckpt 507904
+it   70 steps    581632 t     34s sps  18033 eps  19 len 447 fall 0.32 lost 0.00 metric@end 46.33 success 0.00 ret 24.85 std 0.147 lr 2.0e-04
+it   80 steps    663552 t     38s sps  18292 eps  24 len 458 fall 0.25 lost 0.00 metric@end 47.76 success 0.00 ret 25.79 std 0.147 lr 2.0e-04
+it   90 steps    745472 t     43s sps  15540 eps  20 len 435 fall 0.25 lost 0.00 metric@end 45.89 success 0.00 ret 24.22 std 0.146 lr 2.0e-04
+it   92 steps    761856 t     44s sps  18750 eps  25 len 417 fall 0.32 lost 0.00 metric@end 43.65 success 0.00 ret 22.86 std 0.146 lr 2.0e-04 ckpt 753664
+it  100 steps    827392 t     48s sps  19035 eps  22 len 434 fall 0.27 lost 0.00 metric@end 44.57 success 0.00 ret 23.94 std 0.146 lr 2.0e-04
+it  110 steps    909312 t     52s sps  19174 eps  23 len 455 fall 0.26 lost 0.00 metric@end 47.15 success 0.00 ret 25.24 std 0.146 lr 2.0e-04
+it  120 steps    991232 t     57s sps  19819 eps  16 len 333 fall 0.56 lost 0.00 metric@end 36.50 success 0.00 ret 18.08 std 0.146 lr 2.0e-04
+it  123 steps   1015808 t     58s sps  19229 eps  20 len 420 fall 0.45 lost 0.00 metric@end 44.18 success 0.00 ret 22.68 std 0.146 lr 2.0e-04 ckpt 1007616
+it  130 steps   1073152 t     61s sps  18531 eps  26 len 458 fall 0.19 lost 0.00 metric@end 47.39 success 0.00 ret 25.50 std 0.145 lr 2.0e-04
+it  140 steps   1155072 t     65s sps  18418 eps  16 len 470 fall 0.25 lost 0.00 metric@end 49.43 success 0.00 ret 26.42 std 0.145 lr 2.0e-04
+it  150 steps   1236992 t     71s sps  16041 eps  17 len 404 fall 0.35 lost 0.00 metric@end 42.24 success 0.00 ret 22.33 std 0.145 lr 2.0e-04
+[duck-rl] TS eval ckpt-1007616.onnx: best 8 of 16 51.794 rpm (mean 50.792, worst 42.364 rpm) (6.9 s) (run not kept: no improvement)
+it  153 steps   1261568 t     72s sps  15752 eps  26 len 422 fall 0.38 lost 0.00 metric@end 44.64 success 0.00 ret 23.08 std 0.145 lr 2.0e-04 ckpt 1253376
+it  160 steps   1318912 t     75s sps  18766 eps  22 len 357 fall 0.55 lost 0.00 metric@end 39.57 success 0.00 ret 19.77 std 0.144 lr 2.0e-04
+it  170 steps   1400832 t     80s sps  18532 eps  24 len 434 fall 0.29 lost 0.00 metric@end 45.78 success 0.00 ret 24.23 std 0.144 lr 2.0e-04
+it  180 steps   1482752 t     85s sps  17489 eps  18 len 387 fall 0.44 lost 0.00 metric@end 42.98 success 0.00 ret 21.77 std 0.144 lr 2.0e-04
+it  184 steps   1515520 t     86s sps  17712 eps  19 len 406 fall 0.42 lost 0.00 metric@end 43.43 success 0.00 ret 22.35 std 0.144 lr 2.0e-04 ckpt 1507328
+it  190 steps   1564672 t     89s sps  19359 eps  21 len 393 fall 0.43 lost 0.00 metric@end 41.37 success 0.00 ret 21.47 std 0.144 lr 2.0e-04
+it  200 steps   1646592 t     93s sps  19001 eps  29 len 355 fall 0.59 lost 0.00 metric@end 38.79 success 0.00 ret 19.36 std 0.143 lr 2.0e-04
+it  210 steps   1728512 t     98s sps  18975 eps  18 len 444 fall 0.39 lost 0.00 metric@end 45.19 success 0.00 ret 24.01 std 0.143 lr 2.0e-04
+it  214 steps   1761280 t     99s sps  18965 eps  17 len 434 fall 0.35 lost 0.00 metric@end 44.98 success 0.00 ret 23.66 std 0.143 lr 2.0e-04 ckpt 1753088
+it  220 steps   1810432 t    102s sps  19230 eps  21 len 376 fall 0.48 lost 0.00 metric@end 39.86 success 0.00 ret 20.22 std 0.143 lr 2.0e-04
+it  230 steps   1892352 t    107s sps  19408 eps  13 len 416 fall 0.46 lost 0.00 metric@end 43.99 success 0.00 ret 22.55 std 0.143 lr 2.0e-04
+it  240 steps   1974272 t    111s sps  17873 eps  11 len 419 fall 0.45 lost 0.00 metric@end 44.18 success 0.00 ret 22.72 std 0.143 lr 2.0e-04
+it  245 steps   2015232 t    113s sps  18988 eps  20 len 422 fall 0.25 lost 0.00 metric@end 44.76 success 0.00 ret 23.73 std 0.143 lr 2.0e-04 ckpt 2007040
+it  250 steps   2056192 t    116s sps  14314 eps  18 len 444 fall 0.39 lost 0.00 metric@end 46.32 success 0.00 ret 24.31 std 0.143 lr 2.0e-04
+[duck-rl] 25 s to the budget deadline: training stops for the export
+[duck-rl] {'ckpt': 2105344, 'ckpt_pass': None, 'final': True}
+[duck-rl] TS eval policy.onnx: best 8 of 16 51.386 rpm (mean 51.003, worst 50.206 rpm) (4.5 s) (run not kept: no improvement)
+[duck-rl] rollout ran: fast: fused 128/128 envs, pipelined halves, 4 MB buffers ok
+[duck-rl] submitting ckpt-0253952.onnx: best by TS (best 8 of 16 52.975 rpm (mean 47.317, worst 26.525 rpm), rank key [52.9749]), run 20261127-141845-86d1fb
+[duck-rl] run card: best 47.317 rpm @ 0.25M/14s, last 51.003; median 18643 sps (last/first min 1.03)
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r16_s731/ckpt-0253952.onnx [ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']] -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r16_s731/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs onnxruntime(source) on 256 obs: max |diff| 3.34e-06 (max |out| 9.88)
+  OK (tolerance 9.9e-04)
+[duck-rl] warm_start.json: the same strategy with saucer-spinner@1 (score both on the same seeds)
+[duck-rl] exported duck-strategy/1 /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r16_s731: move mv_2b650bdf45a5, ckpt.pt = ckpt-0253952.pt, last.pt = ckpt-2105344.pt + opt.pt
+[duck-rl] checkpoint runs: kept 1 of 3 (1.4 MB) in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; all would have been ~4.1 MB
+[duck-rl] done: 2,105,344 env steps, median 18643 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r16_s731
+[duck-rl] Training didn't help: start 55.423 rpm -> trained 52.975 rpm (same seeds 100-115); the start was better. No need to re-simulate.
+Curve: start 55.42 rpm (before training) → first checkpoint 52.97 rpm → best 52.97 rpm at 0:14 (12 % of the run); last third of the run: the best so far did not change (the training had stopped improving). Training did not beat the start.
+[duck-rl] site: Posted "Training done" to your human's page.
+[budget] train charged 134 s

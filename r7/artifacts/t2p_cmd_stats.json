@@ -1,0 +1,128 @@
+{
+ "c1_s302": {
+  "episodes": 20693,
+  "switches": 0,
+  "resamples": 0,
+  "exp": {
+   "0.1": 4209844,
+   "0.19": 3795790
+  },
+  "dwell_mean": null,
+  "exposure_pct": {
+   "0.1": 52.6,
+   "0.19": 47.4
+  }
+ },
+ "c1_s303": {
+  "episodes": 18949,
+  "switches": 0,
+  "resamples": 0,
+  "exp": {
+   "0.1": 3984394,
+   "0.19": 3552186
+  },
+  "dwell_mean": null,
+  "exposure_pct": {
+   "0.1": 52.9,
+   "0.19": 47.1
+  }
+ },
+ "c1_s301": {
+  "episodes": 18248,
+  "switches": 0,
+  "resamples": 0,
+  "exp": {
+   "0.1": 3822510,
+   "0.19": 3232943
+  },
+  "dwell_mean": null,
+  "exposure_pct": {
+   "0.1": 54.2,
+   "0.19": 45.8
+  }
+ },
+ "c2_s301": {
+  "episodes": 18140,
+  "switches": 24278,
+  "resamples": 48517,
+  "exp": {
+   "0.1": 3615136,
+   "0.19": 3529426
+  },
+  "dwell_mean": 3.45,
+  "exposure_pct": {
+   "0.1": 50.6,
+   "0.19": 49.4
+  }
+ },
+ "c3_s301": {
+  "episodes": 18416,
+  "switches": 55308,
+  "resamples": 0,
+  "exp": {
+   "0.1": 1278450,
+   "0.19": 5828120
+  },
+  "dwell_mean": null,
+  "exposure_pct": {
+   "0.1": 18.0,
+   "0.19": 82.0
+  }
+ },
+ "c3_s302": {
+  "episodes": 19971,
+  "switches": 64267,
+  "resamples": 0,
+  "exp": {
+   "0.1": 1407159,
+   "0.19": 6324402
+  },
+  "dwell_mean": null,
+  "exposure_pct": {
+   "0.1": 18.2,
+   "0.19": 81.8
+  }
+ },
+ "c2_s302": {
+  "episodes": 19997,
+  "switches": 26435,
+  "resamples": 52831,
+  "exp": {
+   "0.1": 3933453,
+   "0.19": 3866272
+  },
+  "dwell_mean": 3.46,
+  "exposure_pct": {
+   "0.1": 50.4,
+   "0.19": 49.6
+  }
+ },
+ "c2_s303": {
+  "episodes": 19643,
+  "switches": 25698,
+  "resamples": 51104,
+  "exp": {
+   "0.1": 3796319,
+   "0.19": 3789209
+  },
+  "dwell_mean": 3.43,
+  "exposure_pct": {
+   "0.1": 50.0,
+   "0.19": 50.0
+  }
+ },
+ "c3_s303": {
+  "episodes": 21340,
+  "switches": 61894,
+  "resamples": 0,
+  "exp": {
+   "0.1": 1482509,
+   "0.19": 6680360
+  },
+  "dwell_mean": null,
+  "exposure_pct": {
+   "0.1": 18.2,
+   "0.19": 81.8
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "format": "duck-program/2",
+ "start": "launch",
+ "nodes": {
+  "launch": {
+   "skill": "walk",
+   "move": "base-hop-forward@1",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    },
+    {
+     "if": "t_state >= 0.4",
+     "go": "drive"
+    }
+   ]
+  },
+  "drive": {
+   "skill": "walk",
+   "move": "base-run-forward@2",
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "drive"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "R0 pilot: hop launch -> run drive"
+ }
+}

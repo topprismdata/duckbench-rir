@@ -1,0 +1,17 @@
+{
+  "format": "duck-program/1",
+  "start": "move",
+  "nodes": {
+    "move": { "skill": "walk",
+      "until": [
+        { "if": "fallen", "go": "recover" }
+      ]
+    },
+    "recover": { "skill": "get_up",
+      "until": [
+        { "if": "done", "go": "move" }
+      ]
+    }
+  },
+  "meta": {"title": "Base move", "idea": "one raw walk node that runs the base move being trained (configs/base/move.py); get up after a fall"}
+}

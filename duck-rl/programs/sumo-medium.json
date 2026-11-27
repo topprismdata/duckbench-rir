@@ -1,0 +1,77 @@
+{
+  "format": "duck-program/2",
+  "start": "seek",
+  "nodes": {
+    "seek": { "skill": "walk", "params": { "vx": 0.19, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "not target_seen", "go": "shove" },
+        { "if": "target_bearing > 0.25", "go": "left" },
+        { "if": "target_bearing < -0.25", "go": "right" }
+      ]
+    },
+    "left": { "skill": "walk", "params": { "vx": 0.08, "wz": 0.6, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "not target_seen or target_bearing < 0.08", "go": "seek" }
+      ]
+    },
+    "right": { "skill": "walk", "params": { "vx": 0.08, "wz": -0.6, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "not target_seen or target_bearing > -0.08", "go": "seek" }
+      ]
+    },
+    "shove": { "skill": "walk", "params": { "vx": 0.19, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "target_seen", "go": "seek" },
+        { "if": "goal_seen and goal_dist > 0.38", "go": "home" }
+      ],
+      "max_time": { "s": 1, "go": "back" }
+    },
+    "back": { "skill": "walk", "params": { "vx": -0.12, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "target_seen and target_dist > 0.2", "go": "seek" }
+      ],
+      "max_time": { "s": 1, "go": "find" }
+    },
+    "find": { "skill": "walk", "params": { "vx": 0, "wz": 0.6, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "goal_seen and (goal_dist > 0.38 or t > 14)", "go": "home" },
+        { "if": "target_seen", "go": "seek" }
+      ]
+    },
+    "home": { "skill": "walk", "params": { "vx": 0.19, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "not goal_seen or goal_dist < 0.2", "go": "seek" },
+        { "if": "goal_bearing > 0.25", "go": "home_left" },
+        { "if": "goal_bearing < -0.25", "go": "home_right" }
+      ]
+    },
+    "home_left": { "skill": "walk", "params": { "vx": 0.08, "wz": 0.6, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "not goal_seen or goal_bearing < 0.08", "go": "home" }
+      ]
+    },
+    "home_right": { "skill": "walk", "params": { "vx": 0.08, "wz": -0.6, "head_pitch": 0.5 },
+      "until": [
+        { "if": "fallen", "go": "recover" },
+        { "if": "not goal_seen or goal_bearing > -0.08", "go": "home" }
+      ]
+    },
+    "recover": { "skill": "get_up",
+      "until": [
+        { "if": "done", "go": "find" }
+      ]
+    }
+  },
+  "meta": {
+    "title": "Arena bot: medium",
+    "idea": "chase the other duck with turning, full speed; it drops out of view at contact, so shove on blind 1 s, then back off until it is in view again; near the edge facing in, or after 14 s, walk back to the centre; after a fall get up at once"
+  }
+}

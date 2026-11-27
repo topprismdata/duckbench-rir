@@ -1,0 +1,129 @@
+{
+  "format": "duck-program/2",
+  "start": "a_run",
+  "nodes": {
+    "a_run": {
+      "skill": "walk",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "(crumb_rival_dist < 0.35 and crumb_dist > 0.5 or crumb_rival_dist < 0.6 and crumb_dist > 0.9) and crumb2_rival_dist > 0.5",
+          "go": "b_run"
+        },
+        {
+          "if": "crumb_bearing > 0.3",
+          "go": "a_l"
+        },
+        {
+          "if": "crumb_bearing < -0.3",
+          "go": "a_r"
+        }
+      ]
+    },
+    "a_l": {
+      "skill": "walk",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "(crumb_rival_dist < 0.35 and crumb_dist > 0.5 or crumb_rival_dist < 0.6 and crumb_dist > 0.9) and crumb2_rival_dist > 0.5",
+          "go": "b_run"
+        },
+        {
+          "if": "crumb_bearing < 0.1",
+          "go": "a_run"
+        }
+      ]
+    },
+    "a_r": {
+      "skill": "walk",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "(crumb_rival_dist < 0.35 and crumb_dist > 0.5 or crumb_rival_dist < 0.6 and crumb_dist > 0.9) and crumb2_rival_dist > 0.5",
+          "go": "b_run"
+        },
+        {
+          "if": "crumb_bearing > -0.1",
+          "go": "a_run"
+        }
+      ]
+    },
+    "b_run": {
+      "skill": "walk",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "crumb2_dist > 4 or crumb_dist < 0.4 or crumb_rival_dist > 0.7 or crumb2_rival_dist < 0.35",
+          "go": "a_run"
+        },
+        {
+          "if": "crumb2_bearing > 0.3",
+          "go": "b_l"
+        },
+        {
+          "if": "crumb2_bearing < -0.3",
+          "go": "b_r"
+        }
+      ]
+    },
+    "b_l": {
+      "skill": "walk",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "crumb2_dist > 4 or crumb_dist < 0.4 or crumb_rival_dist > 0.7 or crumb2_rival_dist < 0.35",
+          "go": "a_run"
+        },
+        {
+          "if": "crumb2_bearing < 0.1",
+          "go": "b_run"
+        }
+      ]
+    },
+    "b_r": {
+      "skill": "walk",
+      "until": [
+        {
+          "if": "fallen",
+          "go": "up"
+        },
+        {
+          "if": "crumb2_dist > 4 or crumb_dist < 0.4 or crumb_rival_dist > 0.7 or crumb2_rival_dist < 0.35",
+          "go": "a_run"
+        },
+        {
+          "if": "crumb2_bearing > -0.1",
+          "go": "b_run"
+        }
+      ]
+    },
+    "up": {
+      "skill": "get_up",
+      "until": [
+        {
+          "if": "done",
+          "go": "a_run"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "title": "House bot: medium",
+    "idea": "trained sprint (sprint-raw@1) straight at the nearest crumb, steer-walk@1 to turn in place; when the other duck is clearly closer to the nearest crumb and not to the second, goes for the second (crumb2_*)"
+  }
+}

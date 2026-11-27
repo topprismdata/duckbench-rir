@@ -1,0 +1,129 @@
+{
+ "frozen_before_run": {
+  "head_slots": {
+   "48": "vx",
+   "49": "vy",
+   "50": "wz",
+   "51": "neck_pitch"
+  },
+  "head_pose_slots_[51:55]": [
+   "neck_pitch",
+   "head_pitch",
+   "head_yaw",
+   "head_roll"
+  ],
+  "source": "GUIDE.md raw 13-slot order (vx vy wz neck_pitch head_pitch head_yaw head_roll body_0..5)",
+  "ema_constant": 0.2,
+  "update": "per policy tick (50 Hz)",
+  "init": "zeros on reset",
+  "policy_rule": "e1_s2 = highest E1 best-half (3.7663 s), frozen before the EMA runs",
+  "head_step": [
+   0.0,
+   0.72,
+   0.0,
+   0.0
+  ],
+  "ticks": 400
+ },
+ "step_response": {
+  "measured": [
+   0.144,
+   0.2592,
+   0.35136,
+   0.425088,
+   0.4840704,
+   0.53125632,
+   0.569005056,
+   0.5992040448,
+   0.62336323584,
+   0.642690588672
+  ],
+  "analytic": [
+   0.144,
+   0.2592,
+   0.35136,
+   0.425088,
+   0.4840704,
+   0.53125632,
+   0.569005056,
+   0.5992040448,
+   0.62336323584,
+   0.642690588672
+  ],
+  "max_abs_err_rad": 0.0,
+  "tau_ticks_analytic": 4.481420117724551
+ },
+ "paired": {
+  "obs_head_max_abs_diff_rad": 0.576,
+  "obs_head_mean_abs_diff_rad": 0.0018000000000000325,
+  "action_max_abs_diff": 3.0113425254821777,
+  "action_mean_abs_diff": 0.277469664812088,
+  "torso_max_abs_diff_m": 0.9370998002067079,
+  "torso_final_diff_m": 0.9682442160737664,
+  "A_ema": {
+   "final_x": 7.59770070157599,
+   "max_x": 7.59770070157599,
+   "finish_tick": 226,
+   "n": 400
+  },
+  "B_no_ema": {
+   "final_x": 7.19815624967477,
+   "max_x": 7.19815624967477,
+   "finish_tick": 245,
+   "n": 400
+  },
+  "A_ema_effect_size": {
+   "delta_final_x_m": 0.3995444519012201,
+   "note": "single deterministic pair; sd is quoted from E1 as a scale, not as an error bar"
+  }
+ },
+ "head_pitch_ladder": {
+  "0.0": {
+   "finish_tick_A_ema": null,
+   "finish_tick_B_no_ema": null,
+   "final_x_A": 1.5669178621077864,
+   "final_x_B": 1.5669178621077864,
+   "obs_head_max_abs_diff_rad": 0.0,
+   "action_max_abs_diff": 0.0,
+   "torso_max_abs_diff_m": 0.0
+  },
+  "0.2": {
+   "finish_tick_A_ema": 244,
+   "finish_tick_B_no_ema": null,
+   "final_x_A": 7.46497662944566,
+   "final_x_B": 1.1982805585619787,
+   "obs_head_max_abs_diff_rad": 0.16,
+   "action_max_abs_diff": 10.070406913757324,
+   "torso_max_abs_diff_m": 6.266696070883682
+  },
+  "0.6": {
+   "finish_tick_A_ema": null,
+   "finish_tick_B_no_ema": 226,
+   "final_x_A": 1.1911954696973988,
+   "final_x_B": 8.072927012917493,
+   "obs_head_max_abs_diff_rad": 0.48,
+   "action_max_abs_diff": 8.069856643676758,
+   "torso_max_abs_diff_m": 6.881731543220094
+  },
+  "0.72": {
+   "finish_tick_A_ema": 226,
+   "finish_tick_B_no_ema": 245,
+   "final_x_A": 7.59770070157599,
+   "final_x_B": 7.19815624967477,
+   "obs_head_max_abs_diff_rad": 0.576,
+   "action_max_abs_diff": 3.0113425254821777,
+   "torso_max_abs_diff_m": 0.9370998002067079
+  }
+ },
+ "policy": {
+  "path": "/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/e1_s2",
+  "onnx_sha256": "f94f95d25dfbbde1562cb69c746c789d13257c8d1cb3bba9667af24ced0dfabf"
+ },
+ "invalid_fields_removed": [
+  {
+   "field": "paired.A_ema_effect_size.delta_in_run_sd",
+   "reason": "metres divided by a time SD; not a valid standardized effect size (GPT R2 P0).",
+   "resolved": "2026-11-27"
+  }
+ ]
+}

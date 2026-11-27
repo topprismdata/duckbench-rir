@@ -1,0 +1,17 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "turntable",
+  "version": 1
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "roll"
+   ],
+   "move": "turntable-starter@1"
+  }
+ ],
+ "notes": "turntable participation"
+}

@@ -1,0 +1,1339 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6,
+  "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9"
+ },
+ "program": "program.json",
+ "moves": [
+  {
+   "nodes": [
+    "run"
+   ],
+   "move": "policy.mlp.json",
+   "host": "raw",
+   "command": {
+    "run": {
+     "vy": 0.2
+    }
+   }
+  }
+ ],
+ "notes": "A4 T0 (random init) seed 109",
+ "train": {
+  "model": "deepseek-v4.1-flash",
+  "minutes": 5.22,
+  "device": "M1 Max MacBook Pro",
+  "kit_version": "1.31.2",
+  "challenge": "sprint",
+  "label": "e4_a4_s109",
+  "session": "e4_a4_s109-20261127-110720",
+  "config": "configs/e4/a4.py",
+  "seed": 109,
+  "nodes": [
+   "run"
+  ],
+  "warm_start": "<local>/mv_e22047bac89c/policy.mlp.json (mv_e22047bac89c, base-sidestep-left@1)",
+  "init": null,
+  "steps": 7790592,
+  "iters": 951,
+  "train_s": 300.8,
+  "stopped": "minutes",
+  "sps": 26444,
+  "onnx": "<local>/e4_a4_s109/ckpt-0253952.onnx",
+  "choice": "best by TS (best 8 of 16 30.00 s (mean 30.00 s, finished 0/16, worst 30.00 s), rank key [-30]), run 20261127-030742-2e8d6b",
+  "ts_evals": [
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-0253952.onnx",
+    "steps": 253952,
+    "stage": 0,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.03369622396717091,
+    "mean_score": 0.03417982110983467,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 6.4,
+    "cpu_s": 5.94,
+    "t": "11:07:42",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-030742-2e8d6b",
+    "run_dir": "<local>/runs/20261127-030742-2e8d6b",
+    "train_elapsed_s": 10.2,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": true,
+    "run_kept": true
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-1007616.onnx",
+    "steps": 1007616,
+    "stage": 1,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.04171194985310786,
+    "mean_score": 0.04192697980293647,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.4,
+    "cpu_s": 6.93,
+    "t": "11:08:13",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-030813-693914",
+    "run_dir": null,
+    "train_elapsed_s": 38.6,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-1753088.onnx",
+    "steps": 1753088,
+    "stage": 2,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.04771476395734369,
+    "mean_score": 0.047841264829201646,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 8.3,
+    "cpu_s": 7.4,
+    "t": "11:08:44",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-030844-7d52bd",
+    "run_dir": null,
+    "train_elapsed_s": 66.7,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-2506752.onnx",
+    "steps": 2506752,
+    "stage": 3,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.04977746391134971,
+    "mean_score": 0.04995842631774774,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.0,
+    "cpu_s": 6.61,
+    "t": "11:09:13",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-030913-2099e8",
+    "run_dir": null,
+    "train_elapsed_s": 97.5,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-3252224.onnx",
+    "steps": 3252224,
+    "stage": 4,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.050070082405463484,
+    "mean_score": 0.05057444419326175,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.4,
+    "cpu_s": 6.78,
+    "t": "11:09:43",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-030943-422ff4",
+    "run_dir": null,
+    "train_elapsed_s": 127.5,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-4005888.onnx",
+    "steps": 4005888,
+    "stage": 5,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.052624040912293744,
+    "mean_score": 0.052985162250623115,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 8.1,
+    "cpu_s": 7.51,
+    "t": "11:10:14",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-031014-5596ff",
+    "run_dir": null,
+    "train_elapsed_s": 156.0,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-4751360.onnx",
+    "steps": 4751360,
+    "stage": 6,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.055389790576625686,
+    "mean_score": 0.05559151669911079,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.4,
+    "cpu_s": 7.04,
+    "t": "11:10:44",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-031044-855fa9",
+    "run_dir": null,
+    "train_elapsed_s": 183.9,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-5505024.onnx",
+    "steps": 5505024,
+    "stage": 7,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.05450112634846713,
+    "mean_score": 0.05548130257121994,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.4,
+    "cpu_s": 6.99,
+    "t": "11:11:14",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-031114-1cf747",
+    "run_dir": null,
+    "train_elapsed_s": 212.4,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-6504448.onnx",
+    "steps": 6504448,
+    "stage": 8,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.058141132820581254,
+    "mean_score": 0.058582198857130174,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 8.2,
+    "cpu_s": 7.7,
+    "t": "11:11:45",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-031145-abe55f",
+    "run_dir": null,
+    "train_elapsed_s": 249.9,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/ckpt-7258112.onnx",
+    "steps": 7258112,
+    "stage": 9,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.059638913867371884,
+    "mean_score": 0.06017147147073009,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.6,
+    "cpu_s": 6.97,
+    "t": "11:12:14",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-031214-cc938b",
+    "run_dir": null,
+    "train_elapsed_s": 278.8,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   },
+   {
+    "onnx": "<local>/e4_a4_s109/policy.onnx",
+    "steps": 7790592,
+    "stage": 10,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.06403280622937532,
+    "mean_score": 0.06510428274499558,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 7.3,
+    "cpu_s": 7.37,
+    "t": "11:12:33",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-031233-d832de",
+    "run_dir": null,
+    "train_elapsed_s": 300.8,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": false,
+    "run_kept": false
+   }
+  ],
+  "wall_s": 313.1,
+  "lineage": {
+   "parent": "mv_e22047bac89c",
+   "parent_alias": "base-sidestep-left@1",
+   "root": "stock:alpha_walking",
+   "this_step": {
+    "steps": 253952,
+    "train_s": 300.8,
+    "run_steps": 7790592,
+    "wall_s": 313.1
+   },
+   "cumulative": null,
+   "cumulative_note": "the parent's cumulative steps and train_s unknown (notes)",
+   "recipe": "sha256:df3b892f2afba05d1ea5a87be650adadfea1d4d595ff1cfb5c693954ffa008ad",
+   "kit": "1.31.2",
+   "notes": [
+    "the parent's card lineage lacks cumulative steps, train_s"
+   ]
+  },
+  "host": "raw",
+  "raw_command": {
+   "run": {
+    "vy": 0.2
+   }
+  },
+  "curve": {
+   "scope": "run",
+   "sessions": 1,
+   "direction": "lower",
+   "unit": "s",
+   "points": [
+    [
+     253952,
+     10.2,
+     30
+    ],
+    [
+     1007616,
+     38.6,
+     30
+    ],
+    [
+     1753088,
+     66.7,
+     30
+    ],
+    [
+     2506752,
+     97.5,
+     30
+    ],
+    [
+     3252224,
+     127.5,
+     30
+    ],
+    [
+     4005888,
+     156.0,
+     30
+    ],
+    [
+     4751360,
+     183.9,
+     30
+    ],
+    [
+     5505024,
+     212.4,
+     30
+    ],
+    [
+     6504448,
+     249.9,
+     30
+    ],
+    [
+     7258112,
+     278.8,
+     30
+    ],
+    [
+     7790592,
+     300.8,
+     30
+    ]
+   ],
+   "offset": {
+    "steps": 0,
+    "train_s": 0.0
+   },
+   "train_s": 300.8,
+   "first": 30,
+   "best": 30,
+   "best_steps": 253952,
+   "best_train_s": 10.2,
+   "best_frac": 0.0339,
+   "start": 30,
+   "beat_start": false,
+   "last_third": {
+    "from": 30,
+    "to": 30,
+    "change": 0,
+    "pct": 0.0
+   },
+   "line": "Curve: start 30.00 s (before training) \u2192 first checkpoint 30.00 s \u2192 best 30.00 s at 0:10 (3 % of the run); last third of the run: the best so far did not change (the training had stopped improving). Training did not beat the start."
+  },
+  "run_best": {
+   "rec": {
+    "onnx": "<local>/e4_a4_s109/ckpt-0253952.onnx",
+    "steps": 253952,
+    "stage": 0,
+    "kind": "race",
+    "unit": "s",
+    "result": 30,
+    "result_n": 8,
+    "mean": 30,
+    "worst": 30,
+    "finished": 0,
+    "n": 16,
+    "median_score": 0.03369622396717091,
+    "mean_score": 0.03417982110983467,
+    "rank_key": [
+     -30
+    ],
+    "out_before_limit": null,
+    "eval_s": 6.4,
+    "cpu_s": 5.94,
+    "t": "11:07:42",
+    "variants": null,
+    "world": "sha256:7b6d847dede41b41966f7037c73f578e4a19a60725a5df4ebba457f94a6634e9",
+    "run_id": "20261127-030742-2e8d6b",
+    "run_dir": "<local>/runs/20261127-030742-2e8d6b",
+    "train_elapsed_s": 10.2,
+    "per_seed": [
+     [
+      100,
+      30
+     ],
+     [
+      101,
+      30
+     ],
+     [
+      102,
+      30
+     ],
+     [
+      103,
+      30
+     ],
+     [
+      104,
+      30
+     ],
+     [
+      105,
+      30
+     ],
+     [
+      106,
+      30
+     ],
+     [
+      107,
+      30
+     ],
+     [
+      108,
+      30
+     ],
+     [
+      109,
+      30
+     ],
+     [
+      110,
+      30
+     ],
+     [
+      111,
+      30
+     ],
+     [
+      112,
+      30
+     ],
+     [
+      113,
+      30
+     ],
+     [
+      114,
+      30
+     ],
+     [
+      115,
+      30
+     ]
+    ],
+    "run_mb": 2.429,
+    "improved": true,
+    "run_kept": true
+   },
+   "session": 1,
+   "ckpt": "ckpt-0253952",
+   "run_steps": 253952,
+   "lineage": {
+    "parent": "mv_e22047bac89c",
+    "parent_alias": "base-sidestep-left@1",
+    "root": "stock:alpha_walking",
+    "this_step": {
+     "steps": 253952,
+     "train_s": 300.8,
+     "run_steps": 7790592,
+     "wall_s": 313.1
+    },
+    "cumulative": null,
+    "cumulative_note": "the parent's cumulative steps and train_s unknown (notes)",
+    "recipe": "sha256:df3b892f2afba05d1ea5a87be650adadfea1d4d595ff1cfb5c693954ffa008ad",
+    "kit": "1.31.2",
+    "notes": [
+     "the parent's card lineage lacks cumulative steps, train_s"
+    ]
+   },
+   "files": [
+    "ckpt-0253952.onnx",
+    "ckpt-0253952.pt"
+   ]
+  },
+  "ckpt_sha256": "1f1cae339bc9436bf0dfd7afe68b8450c90ee1b78433da9d7afc8c59a8c597de",
+  "ckpt_from": "ckpt-0253952.pt",
+  "last_from": "ckpt-7790592.pt",
+  "last_opt": true
+ }
+}

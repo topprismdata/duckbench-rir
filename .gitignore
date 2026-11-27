@@ -1,0 +1,13 @@
+# local simulator state, credentials, caches
+.duckbench-home/
+sources/
+duck-rl/.venv/
+duck-rl/home/
+duck-rl/submissions/
+__pycache__/
+*.pyc
+# large binaries (kept in local archives; hashes in PACKAGE-SHA256.txt)
+*.zip
+*.pt
+*.bin
+*.onnx

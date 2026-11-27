@@ -1,0 +1,32 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "move": "wheel-uphill-runner-opus@1",
+   "params": {
+    "vx": 0.19
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "run"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "Hamster wheel start: wheel-uphill-runner-opus@1",
+  "idea": "The RL kit's programs/wheel-run.json with wheel-uphill-runner-opus@1 on node run."
+ }
+}

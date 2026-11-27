@@ -1,0 +1,93 @@
+{
+ "config_diff_lines": [
+  "-WARM_MLP = None                          # E4 a3: the program node carries its own move (host/command/normalizer from its card)",
+  "+WARM_MLP = None                          # E4 a4 (Sidestep Scratch: same program/config as a3; DUCK_SCRATCH=1 at run time): the program node carries its own move (host/command/normalizer from its card)"
+ ],
+ "bytes_a3_sha256": "2f9563f5ad572be0e8f1e15365f8ab6ab61112c006a28eb54cb59375639d7533",
+ "bytes_a4_sha256": "df3b892f2afba05d1ea5a87be650adadfea1d4d595ff1cfb5c693954ffa008ad",
+ "normalized_sha256": "b3562f0ae716ab13e956aae6fa3d8174b73eb1f2cc4c34a228112ba0dd9e88b2 == b3562f0ae716ab13e956aae6fa3d8174b73eb1f2cc4c34a228112ba0dd9e88b2",
+ "normalized_equal": true,
+ "runtime_field_diffs_vs_a3_s107": {
+  "a3_s107": {},
+  "a4_s107": {
+   "released_at_it": [
+    4,
+    20
+   ],
+   "value_bias_shift": [
+    -3.61011,
+    -0.09275
+   ],
+   "setup_s": [
+    2.5,
+    2.9
+   ]
+  },
+  "a3_s108": {
+   "released_at_it": [
+    15,
+    20
+   ],
+   "value_bias_shift": [
+    -0.19468,
+    -0.09275
+   ],
+   "setup_s": [
+    2.6,
+    2.9
+   ]
+  },
+  "a4_s108": {
+   "released_at_it": [
+    4,
+    20
+   ],
+   "value_bias_shift": [
+    -3.55287,
+    -0.09275
+   ],
+   "setup_s": [
+    2.5,
+    2.9
+   ]
+  },
+  "a3_s109": {
+   "released_at_it": [
+    5,
+    20
+   ],
+   "value_bias_shift": [
+    -0.20544,
+    -0.09275
+   ],
+   "setup_s": [
+    2.5,
+    2.9
+   ]
+  },
+  "a4_s109": {
+   "released_at_it": [
+    4,
+    20
+   ],
+   "value_bias_shift": [
+    -3.99479,
+    -0.09275
+   ],
+   "setup_s": [
+    2.5,
+    2.9
+   ]
+  }
+ },
+ "normalizer_check": {
+  "a3_move_sub_sha256": "a2a7d0aacbf570c68e1dea6047d1b12ab37a9d3f09627022021de6324015ca9c",
+  "a3_move_div_sha256": "88356def3479d3f32dc65f71d6b571613ea6a1c4662ee5f4f99c78e5d1febb5c",
+  "a4_s107_sub_equal": true,
+  "a4_s107_div_equal": true,
+  "a4_s108_sub_equal": true,
+  "a4_s108_div_equal": true,
+  "a4_s109_sub_equal": true,
+  "a4_s109_div_equal": true
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "total": 1280,
+ "none": 186,
+ "pre_or_at": 230,
+ "post": 766,
+ "unfinished_fall": 98,
+ "note": "mutually exclusive; event-level pre/post split is not derivable from first_fall_t alone"
+}

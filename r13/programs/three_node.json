@@ -1,0 +1,60 @@
+{
+ "format": "duck-program/2",
+ "start": "launch",
+ "nodes": {
+  "launch": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.72
+   },
+   "max_time": {
+    "s": 0.3,
+    "go": "drive"
+   }
+  },
+  "drive": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.72
+   },
+   "until": [
+    {
+     "if": "t >= 1.8",
+     "go": "finish"
+    },
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "finish": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.8
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "launch"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "3-node launch/drive/finish (r13)",
+  "idea": "mirror of #1 structure, our moves"
+ }
+}

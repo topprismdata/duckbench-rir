@@ -1,0 +1,3 @@
+submissions/e3_b102/last.pt [checkpoint 'actor' (rsl_rl MLPModel); normaliser obs_normalizer (_std + 0.0)] -> last_eval/b102/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+  numpy(blob) vs torch(source) on 256 obs: max |diff| 8.34e-07 (max |out| 2.42)
+  OK (tolerance 2.4e-04)
