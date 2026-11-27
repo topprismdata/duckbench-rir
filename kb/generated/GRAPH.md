@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 88 · relations: 32 · types: 24
+Entities: 90 · relations: 34 · types: 25
 
 ## Claims and their evidence
 
@@ -26,6 +26,8 @@ Entities: 88 · relations: 32 · types: 24
 - **CLM:K24:01** — Accel penalty no gain *(FALSIFIED)*
   - ← EV:sprintf80:local (EvaluationRun: sprintf80 on 8-71)
   - ← RES:sprintf80 (MetricResult: sprint 2.41)
+- **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
+  - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 
 ## Hypotheses
 
@@ -33,7 +35,7 @@ Entities: 88 · relations: 32 · types: 24
 - HYP:H1 [SUPPORTED] 奖励的参考节奏约束是 Hurdles 瓶颈
 - HYP:S1 [FALSIFIED] 前 2 s 加速不足是 Sprint 差距主因
 - HYP:S4 [FALSIFIED] finish 节点在前序状态分布上训练可提升组合
-- HYP:T1 [OPEN] roll 入口状态代表性限制 turntable
+- HYP:T1 [REFUTED] roll 入口状态代表性限制 turntable
 - HYP:W1 [OPEN] 轮缘切向加速度奖励可提升 wheel
 
 ## Exclusions (do not repeat without reopening condition)
@@ -45,7 +47,7 @@ Entities: 88 · relations: 32 · types: 24
 ## Types
 
 - BudgetAllocation: 2
-- Claim: 9
+- Claim: 10
 - Competition: 1
 - CompetitionAttempt: 3
 - Counterexample: 1
@@ -62,6 +64,7 @@ Entities: 88 · relations: 32 · types: 24
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 3
+- Observation: 1
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 3

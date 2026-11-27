@@ -30,3 +30,5 @@
 {"from": "ART:sprintf50:json", "relation": "SUPPORTS", "to": "CLM:K19:02"}
 {"from": "ART:t2p:cross", "relation": "SUPPORTS", "to": "CLM:K13:01"}
 {"from": "RES:sprintf80", "relation": "SUPPORTS", "to": "CLM:K24:01"}
+{"from": "CLM:T1:01", "relation": "REFUTES", "to": "HYP:T1"}
+{"from": "OBS:T1:bank", "relation": "SUPPORTS", "to": "CLM:T1:01"}
