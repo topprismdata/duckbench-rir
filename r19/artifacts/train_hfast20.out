@@ -73,3 +73,100 @@ it  400 steps   3284992 t    264s sps  11408 eps  61 len 139 fall 0.10 lost 0.00
 it  410 steps   3366912 t    271s sps  12480 eps  54 len 135 fall 0.17 lost 0.00 metric@end 2.08 success 0.83 ret 50.18 std 0.101 lr 1.0e-04
 it  420 steps   3448832 t    278s sps  17681 eps  55 len 135 fall 0.13 lost 0.00 metric@end 2.09 success 0.87 ret 52.18 std 0.101 lr 1.0e-04
 it  428 steps   3514368 t    281s sps  22131 eps  53 len 133 fall 0.19 lost 0.00 metric@end 2.03 success 0.81 ret 48.85 std 0.101 lr 1.0e-04 ckpt 3506176
+it  430 steps   3530752 t    281s sps  22212 eps  56 len 138 fall 0.12 lost 0.00 metric@end 2.15 success 0.88 ret 52.66 std 0.101 lr 1.0e-04
+[duck-rl] TS eval ckpt-3252224.onnx: best 8 of 16 2.75 s (mean 2.78 s, finished 16/16, worst 2.89 s) (17.2 s) <- best run 20261127-163240-fc29e8
+it  440 steps   3612672 t    285s sps  25810 eps  63 len 138 fall 0.10 lost 0.00 metric@end 2.15 success 0.90 ret 54.09 std 0.101 lr 1.0e-04
+it  450 steps   3694592 t    288s sps  24323 eps  49 len 140 fall 0.10 lost 0.00 metric@end 2.14 success 0.90 ret 53.67 std 0.101 lr 1.0e-04
+it  458 steps   3760128 t    291s sps  22888 eps  71 len 136 fall 0.14 lost 0.00 metric@end 2.12 success 0.86 ret 51.73 std 0.101 lr 1.0e-04 ckpt 3751936
+it  460 steps   3776512 t    292s sps  24618 eps  73 len 137 fall 0.12 lost 0.00 metric@end 2.13 success 0.88 ret 52.63 std 0.101 lr 1.0e-04
+it  470 steps   3858432 t    295s sps  25977 eps  59 len 137 fall 0.14 lost 0.00 metric@end 2.12 success 0.86 ret 51.91 std 0.101 lr 1.0e-04
+it  480 steps   3940352 t    298s sps  25917 eps  59 len 138 fall 0.10 lost 0.00 metric@end 2.13 success 0.90 ret 53.57 std 0.101 lr 1.0e-04
+it  489 steps   4014080 t    301s sps  25210 eps  65 len 134 fall 0.15 lost 0.00 metric@end 2.08 success 0.85 ret 50.67 std 0.101 lr 1.0e-04 ckpt 4005888
+it  490 steps   4022272 t    301s sps  25355 eps  52 len 137 fall 0.12 lost 0.00 metric@end 2.11 success 0.88 ret 52.68 std 0.101 lr 1.0e-04
+it  500 steps   4104192 t    305s sps  24935 eps  60 len 137 fall 0.13 lost 0.00 metric@end 2.12 success 0.87 ret 51.85 std 0.101 lr 1.0e-04
+it  510 steps   4186112 t    308s sps  25077 eps  63 len 142 fall 0.06 lost 0.00 metric@end 2.16 success 0.94 ret 55.45 std 0.101 lr 1.0e-04
+it  519 steps   4259840 t    311s sps  23653 eps  61 len 137 fall 0.10 lost 0.00 metric@end 2.14 success 0.90 ret 53.74 std 0.101 lr 1.0e-04 ckpt 4251648
+it  520 steps   4268032 t    311s sps  24279 eps  54 len 137 fall 0.13 lost 0.00 metric@end 2.13 success 0.87 ret 52.09 std 0.101 lr 1.0e-04
+it  530 steps   4349952 t    315s sps  24911 eps  71 len 136 fall 0.08 lost 0.00 metric@end 2.13 success 0.92 ret 54.34 std 0.101 lr 1.0e-04
+it  540 steps   4431872 t    318s sps  22214 eps  49 len 134 fall 0.16 lost 0.00 metric@end 2.10 success 0.84 ret 50.30 std 0.101 lr 1.0e-04
+it  550 steps   4513792 t    322s sps  22742 eps  60 len 140 fall 0.05 lost 0.00 metric@end 2.18 success 0.95 ret 56.38 std 0.101 lr 1.0e-04 ckpt 4505600
+it  560 steps   4595712 t    326s sps  21801 eps  60 len 136 fall 0.20 lost 0.00 metric@end 2.06 success 0.80 ret 48.19 std 0.101 lr 1.0e-04
+[duck-rl] TS eval ckpt-4251648.onnx: best 8 of 16 2.73 s (mean 2.76 s, finished 16/16, worst 2.88 s) (12.7 s) <- best run 20261127-163326-15c7af
+it  570 steps   4677632 t    330s sps  24156 eps  56 len 136 fall 0.18 lost 0.00 metric@end 2.07 success 0.82 ret 49.32 std 0.101 lr 1.0e-04
+it  580 steps   4759552 t    333s sps  24994 eps  57 len 136 fall 0.11 lost 0.00 metric@end 2.11 success 0.89 ret 53.19 std 0.101 lr 1.0e-04 ckpt 4751360
+it  590 steps   4841472 t    336s sps  23833 eps  63 len 138 fall 0.17 lost 0.00 metric@end 2.08 success 0.83 ret 49.69 std 0.101 lr 1.0e-04
+it  600 steps   4923392 t    340s sps  24259 eps  42 len 139 fall 0.12 lost 0.00 metric@end 2.10 success 0.88 ret 52.30 std 0.101 lr 1.0e-04
+it  610 steps   5005312 t    343s sps  25016 eps  66 len 138 fall 0.14 lost 0.00 metric@end 2.09 success 0.86 ret 51.54 std 0.101 lr 1.0e-04
+it  611 steps   5013504 t    343s sps  24317 eps  52 len 141 fall 0.13 lost 0.00 metric@end 2.14 success 0.87 ret 51.90 std 0.101 lr 1.0e-04 ckpt 5005312
+it  620 steps   5087232 t    346s sps  25576 eps  54 len 138 fall 0.19 lost 0.00 metric@end 2.07 success 0.81 ret 49.00 std 0.101 lr 1.0e-04
+it  630 steps   5169152 t    350s sps  24668 eps  69 len 139 fall 0.14 lost 0.00 metric@end 2.11 success 0.86 ret 51.01 std 0.101 lr 1.0e-04
+it  640 steps   5251072 t    353s sps  24634 eps  56 len 138 fall 0.16 lost 0.00 metric@end 2.09 success 0.84 ret 50.27 std 0.101 lr 1.0e-04
+it  641 steps   5259264 t    354s sps  23953 eps  59 len 142 fall 0.10 lost 0.00 metric@end 2.16 success 0.90 ret 53.54 std 0.101 lr 1.0e-04 ckpt 5251072
+it  650 steps   5332992 t    357s sps  24724 eps  64 len 138 fall 0.09 lost 0.00 metric@end 2.13 success 0.91 ret 53.87 std 0.101 lr 1.0e-04
+it  660 steps   5414912 t    360s sps  24800 eps  51 len 138 fall 0.16 lost 0.00 metric@end 2.11 success 0.84 ret 50.59 std 0.101 lr 1.0e-04
+it  670 steps   5496832 t    363s sps  25536 eps  56 len 141 fall 0.05 lost 0.00 metric@end 2.16 success 0.95 ret 55.83 std 0.101 lr 1.0e-04
+it  672 steps   5513216 t    364s sps  25319 eps  63 len 141 fall 0.08 lost 0.00 metric@end 2.16 success 0.92 ret 54.64 std 0.101 lr 1.0e-04 ckpt 5505024
+it  680 steps   5578752 t    366s sps  22243 eps  61 len 137 fall 0.18 lost 0.00 metric@end 2.07 success 0.82 ret 49.17 std 0.101 lr 1.0e-04
+it  690 steps   5660672 t    370s sps  23381 eps  60 len 144 fall 0.05 lost 0.00 metric@end 2.17 success 0.95 ret 56.04 std 0.101 lr 1.0e-04
+it  700 steps   5742592 t    374s sps  22539 eps  62 len 140 fall 0.16 lost 0.00 metric@end 2.09 success 0.84 ret 50.12 std 0.101 lr 1.0e-04
+it  702 steps   5758976 t    374s sps  23206 eps  54 len 139 fall 0.11 lost 0.00 metric@end 2.12 success 0.89 ret 52.90 std 0.101 lr 1.0e-04 ckpt 5750784
+it  710 steps   5824512 t    377s sps  22598 eps  56 len 139 fall 0.16 lost 0.00 metric@end 2.12 success 0.84 ret 50.37 std 0.101 lr 1.0e-04
+[duck-rl] TS eval ckpt-5505024.onnx: best 8 of 16 2.77 s (mean 2.79 s, finished 16/16, worst 2.89 s) (12.3 s) (run not kept: no improvement)
+it  720 steps   5906432 t    381s sps  25720 eps  60 len 141 fall 0.10 lost 0.00 metric@end 2.17 success 0.90 ret 53.66 std 0.101 lr 1.0e-04
+it  730 steps   5988352 t    384s sps  24844 eps  58 len 141 fall 0.07 lost 0.00 metric@end 2.15 success 0.93 ret 55.07 std 0.101 lr 1.0e-04
+it  733 steps   6012928 t    385s sps  25315 eps  61 len 135 fall 0.18 lost 0.00 metric@end 2.06 success 0.82 ret 49.16 std 0.101 lr 1.0e-04 ckpt 6004736
+it  740 steps   6070272 t    387s sps  24640 eps  57 len 139 fall 0.11 lost 0.00 metric@end 2.14 success 0.89 ret 53.32 std 0.101 lr 1.0e-04
+it  750 steps   6152192 t    390s sps  25827 eps  60 len 136 fall 0.18 lost 0.00 metric@end 2.08 success 0.82 ret 49.04 std 0.101 lr 1.0e-04
+it  760 steps   6234112 t    394s sps  25382 eps  57 len 130 fall 0.30 lost 0.00 metric@end 1.95 success 0.70 ret 42.74 std 0.101 lr 1.0e-04
+it  763 steps   6258688 t    395s sps  25435 eps  59 len 133 fall 0.29 lost 0.00 metric@end 1.98 success 0.71 ret 43.33 std 0.101 lr 1.0e-04 ckpt 6250496
+it  770 steps   6316032 t    397s sps  23396 eps  68 len 137 fall 0.16 lost 0.00 metric@end 2.07 success 0.84 ret 50.12 std 0.101 lr 1.0e-04
+it  780 steps   6397952 t    400s sps  26010 eps  67 len 136 fall 0.13 lost 0.00 metric@end 2.09 success 0.87 ret 51.62 std 0.101 lr 1.0e-04
+it  790 steps   6479872 t    403s sps  25711 eps  65 len 135 fall 0.18 lost 0.00 metric@end 2.05 success 0.82 ret 48.86 std 0.101 lr 1.0e-04
+it  794 steps   6512640 t    405s sps  25174 eps  54 len 137 fall 0.19 lost 0.00 metric@end 2.07 success 0.81 ret 48.98 std 0.101 lr 1.0e-04 ckpt 6504448
+it  800 steps   6561792 t    407s sps  26171 eps  52 len 140 fall 0.10 lost 0.00 metric@end 2.14 success 0.90 ret 53.69 std 0.101 lr 1.0e-04
+it  810 steps   6643712 t    410s sps  26126 eps  62 len 136 fall 0.18 lost 0.00 metric@end 2.08 success 0.82 ret 49.53 std 0.101 lr 1.0e-04
+it  820 steps   6725632 t    413s sps  25803 eps  54 len 138 fall 0.09 lost 0.00 metric@end 2.13 success 0.91 ret 53.96 std 0.101 lr 1.0e-04
+it  824 steps   6758400 t    414s sps  26372 eps  58 len 136 fall 0.09 lost 0.00 metric@end 2.12 success 0.91 ret 54.24 std 0.101 lr 1.0e-04 ckpt 6750208
+it  830 steps   6807552 t    416s sps  26692 eps  66 len 138 fall 0.08 lost 0.00 metric@end 2.16 success 0.92 ret 54.96 std 0.101 lr 1.0e-04
+it  840 steps   6889472 t    420s sps  22387 eps  53 len 136 fall 0.15 lost 0.00 metric@end 2.10 success 0.85 ret 50.95 std 0.101 lr 1.0e-04
+it  850 steps   6971392 t    424s sps  23319 eps  73 len 138 fall 0.10 lost 0.00 metric@end 2.12 success 0.90 ret 53.75 std 0.101 lr 1.0e-04
+it  855 steps   7012352 t    425s sps  23225 eps  60 len 133 fall 0.18 lost 0.00 metric@end 2.03 success 0.82 ret 49.07 std 0.101 lr 1.0e-04 ckpt 7004160
+it  860 steps   7053312 t    427s sps  22464 eps  56 len 133 fall 0.18 lost 0.00 metric@end 2.09 success 0.84 ret 50.46 std 0.101 lr 1.0e-04
+[duck-rl] TS eval ckpt-6750208.onnx: best 8 of 16 2.73 s (mean 2.75 s, finished 16/16, worst 2.87 s) (11.9 s) <- best run 20261127-163505-30d815
+it  870 steps   7135232 t    430s sps  26198 eps  61 len 134 fall 0.10 lost 0.00 metric@end 2.13 success 0.90 ret 53.84 std 0.101 lr 1.0e-04
+it  880 steps   7217152 t    434s sps  26575 eps  57 len 138 fall 0.09 lost 0.00 metric@end 2.16 success 0.91 ret 54.40 std 0.101 lr 1.0e-04
+it  886 steps   7266304 t    436s sps  25669 eps  68 len 138 fall 0.12 lost 0.00 metric@end 2.13 success 0.88 ret 52.66 std 0.101 lr 1.0e-04 ckpt 7258112
+it  890 steps   7299072 t    437s sps  25372 eps  59 len 134 fall 0.17 lost 0.00 metric@end 2.07 success 0.83 ret 49.87 std 0.101 lr 1.0e-04
+it  900 steps   7380992 t    440s sps  25193 eps  55 len 138 fall 0.07 lost 0.00 metric@end 2.17 success 0.93 ret 55.22 std 0.101 lr 1.0e-04
+it  910 steps   7462912 t    443s sps  19616 eps  60 len 137 fall 0.15 lost 0.00 metric@end 2.10 success 0.85 ret 50.87 std 0.101 lr 1.0e-04
+it  916 steps   7512064 t    446s sps  24784 eps  61 len 138 fall 0.03 lost 0.00 metric@end 2.20 success 0.97 ret 57.37 std 0.101 lr 1.0e-04 ckpt 7503872
+it  920 steps   7544832 t    447s sps  26078 eps  65 len 138 fall 0.08 lost 0.00 metric@end 2.16 success 0.92 ret 54.88 std 0.101 lr 1.0e-04
+it  930 steps   7626752 t    450s sps  25467 eps  62 len 135 fall 0.08 lost 0.00 metric@end 2.14 success 0.92 ret 54.59 std 0.101 lr 1.0e-04
+it  940 steps   7708672 t    453s sps  25002 eps  74 len 136 fall 0.12 lost 0.00 metric@end 2.14 success 0.88 ret 52.56 std 0.101 lr 1.0e-04
+it  947 steps   7766016 t    456s sps  24594 eps  60 len 140 fall 0.05 lost 0.00 metric@end 2.18 success 0.95 ret 56.21 std 0.101 lr 1.0e-04 ckpt 7757824
+it  950 steps   7790592 t    457s sps  26580 eps  47 len 137 fall 0.06 lost 0.00 metric@end 2.16 success 0.94 ret 55.56 std 0.101 lr 1.0e-04
+it  960 steps   7872512 t    460s sps  26082 eps  60 len 136 fall 0.05 lost 0.00 metric@end 2.17 success 0.95 ret 56.31 std 0.101 lr 1.0e-04
+it  970 steps   7954432 t    463s sps  25870 eps  71 len 133 fall 0.10 lost 0.00 metric@end 2.12 success 0.90 ret 53.56 std 0.101 lr 1.0e-04
+it  977 steps   8011776 t    465s sps  25625 eps  57 len 137 fall 0.11 lost 0.00 metric@end 2.16 success 0.91 ret 54.28 std 0.101 lr 1.0e-04 ckpt 8003584
+it  980 steps   8036352 t    466s sps  26738 eps  61 len 130 fall 0.16 lost 0.00 metric@end 2.10 success 0.84 ret 50.26 std 0.101 lr 1.0e-04
+it  990 steps   8118272 t    470s sps  23040 eps  53 len 133 fall 0.17 lost 0.00 metric@end 2.10 success 0.83 ret 49.83 std 0.101 lr 1.0e-04
+it 1000 steps   8200192 t    473s sps  21950 eps  68 len 133 fall 0.13 lost 0.00 metric@end 2.13 success 0.87 ret 51.89 std 0.101 lr 1.0e-04
+it 1008 steps   8265728 t    476s sps  23222 eps  63 len 135 fall 0.06 lost 0.00 metric@end 2.17 success 0.94 ret 55.53 std 0.101 lr 1.0e-04 ckpt 8257536
+it 1010 steps   8282112 t    477s sps  23087 eps  64 len 132 fall 0.19 lost 0.00 metric@end 2.11 success 0.81 ret 49.11 std 0.101 lr 1.0e-04
+[duck-rl] TS eval ckpt-8003584.onnx: best 8 of 16 2.65 s (mean 4.38 s, finished 15/16, worst 30.00 s) (12.2 s) <- best run 20261127-163556-033c77
+it 1020 steps   8364032 t    480s sps  25437 eps  50 len 133 fall 0.12 lost 0.00 metric@end 2.12 success 0.88 ret 52.44 std 0.101 lr 1.0e-04
+it 1030 steps   8445952 t    484s sps  26442 eps  60 len 133 fall 0.15 lost 0.00 metric@end 2.15 success 0.85 ret 51.09 std 0.101 lr 1.0e-04
+it 1038 steps   8511488 t    486s sps  26855 eps  54 len 135 fall 0.09 lost 0.00 metric@end 2.17 success 0.91 ret 54.11 std 0.101 lr 1.0e-04 ckpt 8503296
+it 1040 steps   8527872 t    487s sps  25757 eps  59 len 136 fall 0.03 lost 0.00 metric@end 2.18 success 0.97 ret 57.12 std 0.101 lr 1.0e-04
+it 1050 steps   8609792 t    490s sps  26149 eps  65 len 134 fall 0.11 lost 0.00 metric@end 2.12 success 0.89 ret 53.00 std 0.101 lr 1.0e-04
+it 1060 steps   8691712 t    493s sps  25642 eps  60 len 130 fall 0.30 lost 0.00 metric@end 2.04 success 0.70 ret 43.00 std 0.101 lr 1.0e-04
+it 1069 steps   8765440 t    496s sps  25412 eps  64 len 133 fall 0.11 lost 0.00 metric@end 2.14 success 0.89 ret 53.12 std 0.101 lr 1.0e-04 ckpt 8757248
+it 1070 steps   8773632 t    496s sps  25918 eps  61 len 133 fall 0.20 lost 0.00 metric@end 2.10 success 0.80 ret 48.51 std 0.101 lr 1.0e-04
+it 1080 steps   8855552 t    500s sps  25079 eps  56 len 132 fall 0.16 lost 0.00 metric@end 2.14 success 0.84 ret 50.52 std 0.101 lr 1.0e-04
+it 1090 steps   8937472 t    503s sps  26155 eps  65 len 132 fall 0.11 lost 0.00 metric@end 2.15 success 0.89 ret 53.31 std 0.101 lr 1.0e-04
+it 1099 steps   9011200 t    506s sps  25723 eps  70 len 134 fall 0.07 lost 0.00 metric@end 2.16 success 0.93 ret 55.10 std 0.101 lr 1.0e-04 ckpt 9003008
+it 1100 steps   9019392 t    506s sps  26029 eps  57 len 132 fall 0.11 lost 0.00 metric@end 2.13 success 0.89 ret 53.31 std 0.101 lr 1.0e-04
+it 1110 steps   9101312 t    509s sps  25616 eps  56 len 135 fall 0.11 lost 0.00 metric@end 2.16 success 0.89 ret 53.24 std 0.101 lr 1.0e-04
+it 1120 steps   9183232 t    513s sps  24881 eps  59 len 138 fall 0.10 lost 0.00 metric@end 2.15 success 0.90 ret 53.42 std 0.101 lr 1.0e-04
+it 1130 steps   9265152 t    516s sps  25807 eps  54 len 134 fall 0.11 lost 0.00 metric@end 2.13 success 0.89 ret 52.90 std 0.101 lr 1.0e-04 ckpt 9256960
+it 1140 steps   9347072 t    519s sps  22641 eps  61 len 136 fall 0.08 lost 0.00 metric@end 2.17 success 0.92 ret 54.52 std 0.101 lr 1.0e-04
