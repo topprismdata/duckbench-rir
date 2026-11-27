@@ -1,0 +1,42 @@
+{
+ "format": "duck-program/2",
+ "start": "run",
+ "nodes": {
+  "run": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  },
+  "recover": {
+   "skill": "get_up",
+   "until": [
+    {
+     "if": "done",
+     "go": "cruise"
+    }
+   ]
+  },
+  "cruise": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19
+   },
+   "until": [
+    {
+     "if": "fallen",
+     "go": "recover"
+    }
+   ]
+  }
+ },
+ "meta": {
+  "title": "wheel champion-shaped (run/recover/cruise)"
+ }
+}

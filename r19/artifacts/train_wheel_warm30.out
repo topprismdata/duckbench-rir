@@ -1,0 +1,12 @@
+duck-rl kit 1.31.2 · standalone · budget 559.2/1100.0 min
+[duck-rl] WARNING: this machine is busy (load 24.4 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] WARM_MLP submissions/r17_w741/policy.mlp.json -> mv_4dbd502349ee (no alias): /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r17_w741/policy.mlp.json
+[duck-rl] lineage: parent mv_4dbd502349ee, root stock:alpha_walking, parent cumulative {'steps': 86237184, 'train_s': 7757.3}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 wheel v2 r19_wheel_warm30: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': 0, 'wz': 0, 'head_pitch': 0, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights submissions/r17_w741/policy.mlp.json (mv_4dbd502349ee), init stock, terms ['angle', 'fall', 'finish', 'lateral', 'metric', 'rim', 'smooth', 'time'], episode 15.0 s, 30.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 801, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r19_wheel_warm30
+[duck-rl] learner: INIT_STD 0.05, WARMUP_ITERS 30; recipe sha256:df2bea1b98322285
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 50.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (mv_4dbd502349ee) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r17_w741/policy.mlp.json
+it    0 steps      8192 t      2s sps   5488 eps   0 len - fall - lost - metric@end - success - ret - std 0.050 lr 1.0e-03 (warm-up: critic only)
