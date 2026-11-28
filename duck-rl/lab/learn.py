@@ -35,6 +35,8 @@ from .probestop import ProbeStop
 from .spec import Move
 
 HIDDEN = [512, 256, 128]
+if os.environ.get("DUCK_HIDDEN"):  # H-S3 capacity arm (kit patch, disclosed in kit_diff.patch)
+    HIDDEN[:] = [int(x) for x in os.environ["DUCK_HIDDEN"].split(",")]
 
 
 class PoolVecEnv(VecEnv):
@@ -185,7 +187,10 @@ def build(env: PoolVecEnv, move: Move, device: str, init_std: float, desired_kl:
     cfg = train_cfg(init_std, desired_kl, **cfg_kw)
     with contextlib.redirect_stdout(io.StringIO()):  # rsl_rl prints the model summaries
         alg = PPO.construct_algorithm(env.get_observations(), env, cfg, device)
-    warm_start(alg.actor, move.warm_start)
+    try:
+        warm_start(alg.actor, move.warm_start)
+    except (AssertionError, RuntimeError, ValueError) as exc:
+        print(f"[duck-rl] warm start skipped (shape mismatch): {exc}", flush=True)
     if os.environ.get("DUCK_DUMP_INIT"):
         torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
                    os.environ["DUCK_DUMP_INIT"])

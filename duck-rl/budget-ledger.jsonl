@@ -108,3 +108,4 @@
 {"kind": "train", "label": "r21_sprintlr2", "start": "2026-11-28T07:09:01", "seconds": 510.8, "run": "37159-1795820941070", "end": "exit"}
 {"kind": "train", "label": "r21_turnscore", "start": "2026-11-28T07:17:37", "seconds": 99.3, "run": "37520-1795821457412", "end": "exit"}
 {"kind": "train", "label": "r21_sprintacc", "start": "2026-11-28T07:19:44", "seconds": 616.6, "run": "37757-1795821584313", "end": "exit"}
+{"kind": "train", "label": "r23_big_probe", "start": "2026-11-28T09:47:41", "seconds": 317.5, "run": "43370-1795830461565", "end": "exit"}
