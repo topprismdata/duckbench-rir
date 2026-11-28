@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 135 · relations: 107 · types: 33
+Entities: 138 · relations: 109 · types: 33
 
 ## Claims and their evidence
 
@@ -28,6 +28,9 @@ Entities: 135 · relations: 107 · types: 33
 - **CLM:K24:01** — Accel penalty no gain *(FALSIFIED)*
   - ← EV:sprintf80:local (EvaluationRun: sprintf80 on 8-71)
   - ← RES:sprintf80 (MetricResult: sprint 2.41)
+- **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
+  - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
+  - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -52,7 +55,7 @@ Entities: 135 · relations: 107 · types: 33
 
 - AssessmentSpec: 1
 - BudgetAllocation: 2
-- Claim: 12
+- Claim: 13
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -62,7 +65,7 @@ Entities: 135 · relations: 107 · types: 33
 - Environment: 2
 - EvaluationProtocol: 2
 - EvaluationRun: 11
-- EvidenceArtifact: 7
+- EvidenceArtifact: 9
 - Exclusion: 3
 - Experiment: 10
 - HostContract: 2
