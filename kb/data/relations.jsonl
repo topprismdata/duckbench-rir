@@ -134,3 +134,4 @@
 {"from": "OBS:update-scaling", "relation": "SUPPORTS", "to": "CLM:PLATEAU:02"}
 {"from": "OBS:scratch-2.50-final", "relation": "SUPPORTS", "to": "CLM:SCRATCH:01"}
 {"from": "CLM:SCRATCH:01", "relation": "REFUTES", "to": "HYP:S3"}
+{"from": "EXP:A2", "relation": "TESTED_BY", "to": "HYP:A2b"}

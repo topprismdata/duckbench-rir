@@ -1,6 +1,6 @@
 {
  "format": "duck-mlp/1",
- "source_onnx_sha256": "7ee56119bf0ad41df6338064725940dba57d919306d72074595acedbc5d6524d",
+ "source_onnx_sha256": "1eeb0d44551413667d8d0ffb947436424e93cf88c822381786d1222ac81b1b13",
  "input_dim": 61,
  "output_dim": 14,
  "norm": {
@@ -48,10 +48,10 @@
  ],
  "meta": {
   "converter": "spikes/duck-rl/kit/tools/to_mlp.py",
-  "source": "ckpt-9502720.onnx",
+  "source": "ckpt-2260992.onnx",
   "source_kind": "ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']",
   "onnx_metadata": {
-   "run_path": "move-lab sprint-r25_batch32k ckpt-9502720",
+   "run_path": "move-lab sprint-r26_base ckpt-2260992",
    "joint_names": "left_hip_yaw,left_hip_roll,left_hip_pitch,left_knee,left_ankle,neck_pitch,head_pitch,head_yaw,head_roll,right_hip_yaw,right_hip_roll,right_hip_pitch,right_knee,right_ankle",
    "joint_stiffness": "1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000",
    "joint_damping": "0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000",
