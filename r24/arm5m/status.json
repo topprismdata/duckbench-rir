@@ -6,7 +6,7 @@
   "num_envs": 4096,
   "seed": 42,
   "requested_iterations": 51,
-  "completed_iterations": 15,
+  "completed_iterations": 27,
   "task": "Mjlab-Velocity-Flat-MicroDuck",
   "device": "mps",
   "physics_backend": "cpu",
@@ -14,25 +14,25 @@
   "stage": "rollout",
   "actor_width": 61,
   "critic_width": 76,
-  "control_steps_completed": 368,
-  "last_step_seconds": 1.9915107499982696,
-  "updated_at": 1795857473.2623081,
+  "control_steps_completed": 655,
+  "last_step_seconds": 2.004731458000606,
+  "updated_at": 1795858077.612143,
   "latest": {
-    "iteration": 15,
-    "time": 1795857457.2051651,
-    "collection_seconds": 48.63149094581604,
-    "learning_seconds": 0.6463310718536377,
-    "transitions_per_second": 1994.8933612518604,
+    "iteration": 27,
+    "time": 1795858063.563321,
+    "collection_seconds": 48.19052219390869,
+    "learning_seconds": 0.6736609935760498,
+    "transitions_per_second": 2011.7802772395048,
     "loss": {
-      "value": 0.17735319957137108,
-      "surrogate": -0.0038500883645610886,
-      "entropy": -18.28000326156616
+      "value": 0.1357075974345207,
+      "surrogate": -0.004779743272229098,
+      "entropy": -17.759439182281493
     },
-    "learning_rate": 1e-05,
-    "mean_reward": 0.9258865035325289,
-    "mean_episode_length": 44.72,
-    "transfer_bytes_total": 97563624592,
-    "transfer_seconds_total": 51.59132282380597,
+    "learning_rate": 3.375000000000001e-05,
+    "mean_reward": 1.005091543197632,
+    "mean_episode_length": 42.65,
+    "transfer_bytes_total": 175505544824,
+    "transfer_seconds_total": 92.78882046304352,
     "reset_transfer_bytes_total": 0,
     "reset_transfer_seconds_total": 0.0,
     "collision_qpos_staging_bytes_total": 0,
@@ -44,7 +44,7 @@
     "collision_evaluations_count": 0,
     "constants_recomputed_envs_total": 0,
     "constants_cache_skips_total": 0,
-    "max_rss_bytes": 10073866240
+    "max_rss_bytes": 10556784640
   },
-  "checkpoint": "/Users/guohongbin/1-Projects/duckbench-rir/r24/arm5m/model_10.pt"
+  "checkpoint": "/Users/guohongbin/1-Projects/duckbench-rir/r24/arm5m/model_20.pt"
 }
