@@ -1,0 +1,12 @@
+duck-rl kit 1.31.2 · standalone · budget 541.8/1300.0 min
+[duck-rl] WARNING: this machine is busy (load 20.9 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] lineage: parent stock:alpha_walking, root stock:alpha_walking, parent cumulative {'steps': 0, 'train_s': 0}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 r23_capB2: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': 0, 'wz': 0, 'head_pitch': 0.6, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking, init stock, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 10.00 min, 8x16 envs (one per performance core (8)), nice 10, seed 913, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r23_capB2
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:d8a6b61f566e703b
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (stock skills) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start skipped (shape mismatch): (torch.Size([1024, 61]), torch.Size([512, 61]))
+[duck-rl] net2wider warm start from /Users/guohongbin/1-Projects/duckbench-rir/r23/wide/base1024_n1e-5.mlp.json
+it    0 steps      8192 t      1s sps   6424 eps   1 len 56 fall 1.00 lost 0.00 metric@end 1.47 success 0.00 ret -12.58 std 0.100 lr 1.0e-03 (warm-up: critic only)

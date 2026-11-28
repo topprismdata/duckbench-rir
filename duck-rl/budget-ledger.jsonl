@@ -117,3 +117,5 @@
 {"kind": "train", "label": "r23_wide_smoke5", "start": "2026-11-28T10:44:10", "seconds": 48.8, "run": "45900-1795833850258", "end": "exit"}
 {"kind": "train", "label": "r23_wide_smoke6", "start": "2026-11-28T10:45:40", "seconds": 47.9, "run": "46138-1795833940867", "end": "exit"}
 {"kind": "train", "label": "r23_armA", "start": "2026-11-28T11:19:02", "seconds": 81.1, "run": "47086-1795835942743", "end": "exit"}
+{"kind": "train", "label": "r23_capA", "start": "2026-11-28T11:20:25", "seconds": 623.2, "run": "47313-1795836025193", "end": "exit"}
+{"kind": "train", "label": "r23_capB", "start": "2026-11-28T11:30:48", "seconds": 290.8, "run": "47771-1795836648500", "end": "exit"}

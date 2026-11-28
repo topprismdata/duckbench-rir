@@ -29,11 +29,17 @@ def load(path):
     return meta, sub, div, layers
 
 
-def widen(layers, factor=2):
+def widen(layers, factor=2, noise=0.0, seed=0):
+    rng = np.random.default_rng(seed)
     w1, b1, act1, a1 = layers[0]
     w2, b2, act2, a2 = layers[1]
     w1n = np.tile(w1, (factor, 1))
     b1n = np.tile(b1, factor)
+    if noise:  # break replica symmetry (Chen et al. break ties with a perturbation)
+        n = w1.shape[0]
+        for r in range(1, factor):
+            w1n[r * n:(r + 1) * n] += rng.normal(scale=noise, size=w1.shape)
+            b1n[r * n:(r + 1) * n] += rng.normal(scale=noise, size=w1.shape[0])
     w2n = np.hstack([w2 / factor] * factor)
     out = [(w1n, b1n, act1, a1), (w2n, b2, act2, a2)] + layers[2:]
     return out
@@ -81,15 +87,19 @@ def main():
     ap.add_argument("src")
     ap.add_argument("dst")
     ap.add_argument("--factor", type=int, default=2)
+    ap.add_argument("--noise", type=float, default=0.0)
     a = ap.parse_args()
     meta, sub, div, layers = load(a.src)
-    wide = widen(layers, a.factor)
+    wide = widen(layers, a.factor, a.noise)
     rng = np.random.default_rng(0)
     X = rng.normal(size=(64, sub.size)).astype(np.float32) * 0.5
     y0 = np.stack([forward(x, sub, div, layers) for x in X])
     y1 = np.stack([forward(x, sub, div, wide) for x in X])
     err = float(np.abs(y0 - y1).max())
-    assert err < 1e-4, f"function not preserved: {err}"
+    if a.noise == 0.0:
+        assert err < 1e-4, f"function not preserved: {err}"
+    else:
+        print(f"[noise={a.noise}] forward delta {err:.3e} (expected ~1e-3, symmetry broken)")
     save(meta, sub, div, wide, a.dst)
     print(f"widened {a.src} -> {a.dst}: max|Δoutput|={err:.3e} on 64 random obs")
 
