@@ -121,3 +121,4 @@
 {"kind": "train", "label": "r23_capB", "start": "2026-11-28T11:30:48", "seconds": 290.8, "run": "47771-1795836648500", "end": "exit"}
 {"kind": "train", "label": "r23_capB2", "start": "2026-11-28T11:35:54", "seconds": 626.0, "run": "48095-1795836954624", "end": "exit"}
 {"kind": "train", "label": "r24_kit5m", "start": "2026-11-28T17:00:42", "seconds": 225.2, "run": "54343-1795856442106", "end": "exit"}
+{"kind": "train", "label": "r25_batch32k", "start": "2026-11-28T17:52:47", "seconds": 621.6, "run": "55431-1795859567503", "end": "exit"}
