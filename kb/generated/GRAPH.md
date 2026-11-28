@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 173 · relations: 133 · types: 33
+Entities: 174 · relations: 134 · types: 33
 
 ## Claims and their evidence
 
@@ -38,6 +38,7 @@ Entities: 173 · relations: 133 · types: 33
   - ← OBS:ctl128-2.41 (Observation: 128-env equal-budget control: 2.41, flat)
 - **CLM:PLATEAU:02** — Fine-tune plateau at 2.38 for sprintf80 family *(EXPLORATORY)*
   - ← OBS:b64k-2.38 (Observation: 512 envs same 2.38: batch saturates at 16k)
+  - ← OBS:update-scaling (Observation: Scratch progress scales with update count, not samples)
 - **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
   - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
@@ -108,7 +109,7 @@ Entities: 173 · relations: 133 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 19
+- Observation: 20
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
