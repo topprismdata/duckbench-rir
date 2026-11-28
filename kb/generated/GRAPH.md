@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 168 · relations: 132 · types: 33
+Entities: 169 · relations: 132 · types: 33
 
 ## Claims and their evidence
 
@@ -106,7 +106,7 @@ Entities: 168 · relations: 132 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 15
+- Observation: 16
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
