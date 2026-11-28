@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 169 · relations: 132 · types: 33
+Entities: 171 · relations: 133 · types: 33
 
 ## Claims and their evidence
 
@@ -36,6 +36,8 @@ Entities: 169 · relations: 132 · types: 33
 - **CLM:PLATEAU:01** — Flat-start arms read null by construction *(EXPLORATORY)*
   - ← OBS:nofall-2.38 (Observation: no-fall-termination arm also 2.38)
   - ← OBS:ctl128-2.41 (Observation: 128-env equal-budget control: 2.41, flat)
+- **CLM:PLATEAU:02** — Fine-tune plateau at 2.38 for sprintf80 family *(EXPLORATORY)*
+  - ← OBS:b64k-2.38 (Observation: 512 envs same 2.38: batch saturates at 16k)
 - **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
   - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
@@ -83,7 +85,7 @@ Entities: 169 · relations: 132 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 25
+- Claim: 26
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -106,7 +108,7 @@ Entities: 169 · relations: 132 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 16
+- Observation: 17
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6

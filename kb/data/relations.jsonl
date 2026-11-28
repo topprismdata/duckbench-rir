@@ -130,3 +130,4 @@
 {"from": "OBS:nofall-2.38", "relation": "SUPPORTS", "to": "CLM:PLATEAU:01"}
 {"from": "OBS:ctl128-2.41", "relation": "SUPPORTS", "to": "CLM:BATCH:01"}
 {"from": "OBS:ctl128-2.41", "relation": "REFUTES", "to": "CLM:PLATEAU:01"}
+{"from": "OBS:b64k-2.38", "relation": "SUPPORTS", "to": "CLM:PLATEAU:02"}
