@@ -196,3 +196,196 @@ Warp 1.12.0 initialized:
   dets = torch.linalg.det(V)  # (*batch,)
 /Users/guohongbin/1-Projects/duckbench-rir/sources/microduck_rl_mac/.venv/lib/python3.12/site-packages/mjlab/envs/mdp/dr/body.py:226: UserWarning: An output with one or more elements was resized since it had shape [4096, 3, 3], which does not match the required output shape [4096, 1, 3, 3]. This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/Resize.cpp:38.)
   dets = torch.linalg.det(V)  # (*batch,)
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ('actor',)
+	 critic :  ('critic',)
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): GaussianDistribution()
+  (mlp): MLP(
+    (0): Linear(in_features=61, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=14, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=76, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+[init] normalizer frozen (update disabled)
+[init] log_std from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/ckpt.pt
+[init] actor grafted from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+Storing git diff for 'microduck_rl_mac' in: /Users/guohongbin/1-Projects/duckbench-rir/r24/arm5m/git/microduck_rl_mac.diff
+################################################################################
+[1m                            Learning iteration 0/51                             [0m 
+
+                               Run name: velocity
+                            Total steps: 98304 
+                       Steps per second: 1955 
+                        Collection time: 49.171s 
+                          Learning time: 1.096s 
+                        Mean value loss: 0.2565
+                    Mean surrogate loss: -0.0004
+                      Mean entropy loss: -18.8772
+                            Mean reward: 0.82
+                    Mean episode length: 23.83
+                        Mean action std: 0.06
+   Episode_Reward/track_linear_velocity: 0.0077
+  Episode_Reward/track_angular_velocity: 0.0011
+                 Episode_Reward/upright: 0.0110
+                    Episode_Reward/pose: 0.0036
+            Episode_Reward/body_ang_vel: -0.0100
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0004
+          Episode_Reward/action_rate_l2: -0.0034
+                Episode_Reward/air_time: 0.0040
+          Episode_Reward/foot_clearance: -0.0002
+       Episode_Reward/foot_swing_height: -0.0003
+               Episode_Reward/foot_slip: -0.0000
+         Episode_Reward/self_collisions: -0.0004
+      Episode_Reward/head_pose_tracking: 0.0173
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Metrics/mean_action_acc: 0.3814
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0098
+            Metrics/twist/error_vel_yaw: 0.0618
+           Episode_Termination/time_out: 3.7083
+          Episode_Termination/fell_over: 16.5000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0103
+                  Metrics/air_time_mean: 0.0749
+               Metrics/peak_height_mean: 0.0175
+             Metrics/slip_velocity_mean: 0.1174
+--------------------------------------------------------------------------------
+                         Iteration time: 50.27s
+                           Time elapsed: 00:00:50
+                                    ETA: 00:41:53
+
+################################################################################
+[1m                            Learning iteration 1/51                             [0m 
+
+                               Run name: velocity
+                            Total steps: 196608 
+                       Steps per second: 1947 
+                        Collection time: 49.848s 
+                          Learning time: 0.630s 
+                        Mean value loss: 0.3359
+                    Mean surrogate loss: -0.0038
+                      Mean entropy loss: -18.8350
+                            Mean reward: 0.99
+                    Mean episode length: 41.26
+                        Mean action std: 0.06
+   Episode_Reward/track_linear_velocity: 0.0172
+  Episode_Reward/track_angular_velocity: 0.0012
+                 Episode_Reward/upright: 0.0182
+                    Episode_Reward/pose: 0.0043
+            Episode_Reward/body_ang_vel: -0.0454
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0034
+          Episode_Reward/action_rate_l2: -0.0158
+                Episode_Reward/air_time: 0.0246
+          Episode_Reward/foot_clearance: -0.0016
+       Episode_Reward/foot_swing_height: -0.0029
+               Episode_Reward/foot_slip: -0.0003
+         Episode_Reward/self_collisions: -0.0012
+      Episode_Reward/head_pose_tracking: 0.0419
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Metrics/mean_action_acc: 0.3531
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0373
+            Metrics/twist/error_vel_yaw: 0.2131
+           Episode_Termination/time_out: 2.3750
+          Episode_Termination/fell_over: 109.4583
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0150
+                  Metrics/air_time_mean: 0.0917
+               Metrics/peak_height_mean: 0.0328
+             Metrics/slip_velocity_mean: 0.1724
+--------------------------------------------------------------------------------
+                         Iteration time: 50.48s
+                           Time elapsed: 00:01:40
+                                    ETA: 00:41:08
+
+################################################################################
+[1m                            Learning iteration 2/51                             [0m 
+
+                               Run name: velocity
+                            Total steps: 294912 
+                       Steps per second: 1966 
+                        Collection time: 49.343s 
+                          Learning time: 0.657s 
+                        Mean value loss: 0.4776
+                    Mean surrogate loss: -0.0052
+                      Mean entropy loss: -18.7986
+                            Mean reward: 0.90
+                    Mean episode length: 42.36
+                        Mean action std: 0.06
+   Episode_Reward/track_linear_velocity: 0.0182
+  Episode_Reward/track_angular_velocity: 0.0013
+                 Episode_Reward/upright: 0.0226
+                    Episode_Reward/pose: 0.0043
+            Episode_Reward/body_ang_vel: -0.0521
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0041
+          Episode_Reward/action_rate_l2: -0.0201
+                Episode_Reward/air_time: 0.0331
+          Episode_Reward/foot_clearance: -0.0023
+       Episode_Reward/foot_swing_height: -0.0049
+               Episode_Reward/foot_slip: -0.0003
+         Episode_Reward/self_collisions: -0.0016
+      Episode_Reward/head_pose_tracking: 0.0488
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Metrics/mean_action_acc: 0.3547
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0506
+            Metrics/twist/error_vel_yaw: 0.2689
+           Episode_Termination/time_out: 0.6667
+          Episode_Termination/fell_over: 92.5417
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0144
+                  Metrics/air_time_mean: 0.0945
+               Metrics/peak_height_mean: 0.0321
+             Metrics/slip_velocity_mean: 0.1677
+--------------------------------------------------------------------------------
+                         Iteration time: 50.00s
+                           Time elapsed: 00:02:30
+                                    ETA: 00:40:11
+
