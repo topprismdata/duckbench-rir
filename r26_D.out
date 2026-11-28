@@ -95,3 +95,137 @@ it  360 steps   5914624 t    198s sps  24758 eps 130 len 124 fall 0.02 lost 0.00
 it  367 steps   6029312 t    202s sps  28640 eps 137 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.74 std 0.094 lr 1.0e-04 ckpt 6012928
 [duck-rl] TS eval ckpt-5505024.onnx: best 8 of 16 2.43 s (mean 2.45 s, finished 16/16, worst 2.50 s) (11.2 s) (run not kept: no improvement)
 it  370 steps   6078464 t    204s sps  28088 eps 127 len 126 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.58 std 0.094 lr 1.0e-04
+it  380 steps   6242304 t    210s sps  25445 eps 122 len 125 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.15 std 0.094 lr 1.0e-04
+it  382 steps   6275072 t    211s sps  26570 eps 127 len 126 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.56 std 0.094 lr 1.0e-04 ckpt 6258688
+it  390 steps   6406144 t    216s sps  26875 eps 125 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.77 std 0.094 lr 1.0e-04
+it  397 steps   6520832 t    220s sps  26771 eps 135 len 125 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.57 std 0.094 lr 1.0e-04 ckpt 6504448
+it  400 steps   6569984 t    222s sps  26391 eps 132 len 124 fall 0.02 lost 0.00 metric@end 4.51 success 0.99 ret 19.39 std 0.094 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  410 steps   6733824 t    228s sps  25090 eps 137 len 125 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.56 std 0.093 lr 1.0e-04
+it  412 steps   6766592 t    229s sps  28924 eps 140 len 124 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.18 std 0.093 lr 1.0e-04 ckpt 6750208
+[duck-rl] TS eval ckpt-6504448.onnx: best 8 of 16 2.43 s (mean 2.44 s, finished 16/16, worst 2.47 s) (10.9 s) (run not kept: no improvement)
+it  420 steps   6897664 t    234s sps  27874 eps 140 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.73 std 0.093 lr 1.0e-04
+it  428 steps   7028736 t    238s sps  28521 eps 135 len 124 fall 0.01 lost 0.00 metric@end 4.49 success 0.99 ret 19.48 std 0.093 lr 1.0e-04 ckpt 7012352
+it  430 steps   7061504 t    240s sps  26963 eps 132 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.74 std 0.093 lr 1.0e-04
+it  440 steps   7225344 t    246s sps  25413 eps 134 len 124 fall 0.01 lost 0.00 metric@end 4.47 success 0.99 ret 19.28 std 0.093 lr 1.0e-04
+it  443 steps   7274496 t    248s sps  26450 eps 130 len 125 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.36 std 0.093 lr 1.0e-04 ckpt 7258112
+it  450 steps   7389184 t    252s sps  23813 eps 135 len 125 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.56 std 0.093 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  458 steps   7520256 t    258s sps  21758 eps 124 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.74 std 0.093 lr 1.0e-04 ckpt 7503872
+it  460 steps   7553024 t    260s sps  23705 eps 125 len 124 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.54 std 0.093 lr 1.0e-04
+[duck-rl] TS eval ckpt-7258112.onnx: best 8 of 16 2.46 s (mean 2.48 s, finished 16/16, worst 2.53 s) (11.3 s) (run not kept: no improvement)
+it  470 steps   7716864 t    267s sps  29608 eps 134 len 124 fall 0.01 lost 0.00 metric@end 4.49 success 0.99 ret 19.29 std 0.093 lr 1.0e-04
+it  474 steps   7782400 t    269s sps  30642 eps 129 len 125 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.54 std 0.093 lr 1.0e-04 ckpt 7766016
+it  480 steps   7880704 t    272s sps  28721 eps 133 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.72 std 0.093 lr 1.0e-04
+it  489 steps   8028160 t    278s sps  26177 eps 135 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.73 std 0.093 lr 1.0e-04 ckpt 8011776
+it  490 steps   8044544 t    278s sps  25153 eps 131 len 124 fall 0.02 lost 0.00 metric@end 4.51 success 0.99 ret 19.38 std 0.093 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  500 steps   8208384 t    286s sps  22020 eps 133 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.51 std 0.092 lr 1.0e-04
+it  504 steps   8273920 t    288s sps  24596 eps 130 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.75 std 0.092 lr 1.0e-04 ckpt 8257536
+it  510 steps   8372224 t    292s sps  24917 eps 128 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.73 std 0.092 lr 1.0e-04
+[duck-rl] TS eval ckpt-8011776.onnx: best 8 of 16 2.43 s (mean 2.45 s, finished 16/16, worst 2.52 s) (11.3 s) (run not kept: no improvement)
+it  519 steps   8519680 t    298s sps  26474 eps 133 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.78 std 0.092 lr 1.0e-04 ckpt 8503296
+it  520 steps   8536064 t    299s sps  27838 eps 135 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.39 std 0.092 lr 1.0e-04
+it  530 steps   8699904 t    308s sps  25608 eps 137 len 123 fall 0.01 lost 0.00 metric@end 4.48 success 0.99 ret 19.31 std 0.092 lr 1.0e-04
+it  535 steps   8781824 t    310s sps  29891 eps 127 len 124 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.32 std 0.092 lr 1.0e-04 ckpt 8765440
+it  540 steps   8863744 t    313s sps  33175 eps 139 len 124 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.13 std 0.092 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  550 steps   9027584 t    319s sps  28593 eps 140 len 124 fall 0.03 lost 0.00 metric@end 4.49 success 0.97 ret 19.03 std 0.092 lr 1.0e-04 ckpt 9011200
+[duck-rl] TS eval ckpt-8765440.onnx: best 8 of 16 2.42 s (mean 2.43 s, finished 16/16, worst 2.48 s) (10.6 s) (run not kept: no improvement)
+it  560 steps   9191424 t    326s sps  17838 eps 122 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.79 std 0.092 lr 1.0e-04
+it  565 steps   9273344 t    331s sps  15834 eps 143 len 125 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.43 std 0.091 lr 1.0e-04 ckpt 9256960
+it  570 steps   9355264 t    334s sps  28050 eps 128 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.81 std 0.091 lr 1.0e-04
+it  580 steps   9519104 t    341s sps  27423 eps 127 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.78 std 0.091 lr 1.0e-04 ckpt 9502720
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  590 steps   9682944 t    348s sps  17294 eps 134 len 124 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.59 std 0.091 lr 1.0e-04
+[duck-rl] TS eval ckpt-9502720.onnx: best 8 of 16 2.42 s (mean 2.43 s, finished 16/16, worst 2.46 s) (10.6 s) (run not kept: no improvement)
+it  596 steps   9781248 t    354s sps  15426 eps 137 len 123 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.54 std 0.091 lr 1.0e-04 ckpt 9764864
+it  600 steps   9846784 t    358s sps  18713 eps 136 len 124 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.39 std 0.091 lr 1.0e-04
+it  610 steps  10010624 t    366s sps  19859 eps 131 len 124 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.58 std 0.091 lr 1.0e-04
+it  611 steps  10027008 t    367s sps  18996 eps 135 len 123 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.50 std 0.091 lr 1.0e-04 ckpt 10010624
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  620 steps  10174464 t    375s sps  20210 eps 130 len 123 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.56 std 0.091 lr 1.0e-04
+it  626 steps  10272768 t    380s sps  18820 eps 126 len 123 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.54 std 0.091 lr 1.0e-04 ckpt 10256384
+it  630 steps  10338304 t    383s sps  21738 eps 130 len 122 fall 0.02 lost 0.00 metric@end 4.48 success 0.98 ret 19.11 std 0.090 lr 1.0e-04
+[duck-rl] TS eval ckpt-10010624.onnx: best 8 of 16 2.41 s (mean 2.42 s, finished 16/16, worst 2.45 s) (15.3 s) (run not kept: no improvement)
+it  640 steps  10502144 t    392s sps  17887 eps 136 len 124 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.46 std 0.090 lr 1.0e-04
+it  641 steps  10518528 t    393s sps  18619 eps 134 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.21 std 0.090 lr 1.0e-04 ckpt 10502144
+it  650 steps  10665984 t    401s sps  13988 eps 140 len 124 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.21 std 0.090 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  657 steps  10780672 t    408s sps  17413 eps 120 len 123 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.58 std 0.090 lr 1.0e-04 ckpt 10764288
+it  660 steps  10829824 t    411s sps  16585 eps 148 len 123 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.24 std 0.090 lr 1.0e-04
+it  670 steps  10993664 t    421s sps  16990 eps 140 len 124 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.66 std 0.090 lr 1.0e-04
+[duck-rl] TS eval ckpt-10502144.onnx: best 8 of 16 2.41 s (mean 2.43 s, finished 16/16, worst 2.45 s) (18.0 s) (run not kept: no improvement)
+it  672 steps  11026432 t    423s sps  21648 eps 140 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.82 std 0.090 lr 1.0e-04 ckpt 11010048
+it  680 steps  11157504 t    431s sps  23745 eps 132 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.79 std 0.090 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  687 steps  11272192 t    436s sps  16971 eps 139 len 123 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.39 std 0.090 lr 1.0e-04 ckpt 11255808
+it  690 steps  11321344 t    440s sps  15023 eps 128 len 123 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.18 std 0.090 lr 1.0e-04
+[duck-rl] TS eval ckpt-11010048.onnx: best 8 of 16 2.42 s (mean 2.44 s, finished 16/16, worst 2.48 s) (15.4 s) (run not kept: no improvement)
+it  700 steps  11485184 t    450s sps  14714 eps 119 len 124 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.31 std 0.090 lr 1.0e-04
+it  702 steps  11517952 t    451s sps  24224 eps 119 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.80 std 0.090 lr 1.0e-04 ckpt 11501568
+it  710 steps  11649024 t    460s sps  15236 eps 130 len 125 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.65 std 0.089 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  718 steps  11780096 t    467s sps  19375 eps 126 len 126 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.87 std 0.089 lr 1.0e-04 ckpt 11763712
+it  720 steps  11812864 t    469s sps  19158 eps 128 len 125 fall 0.02 lost 0.00 metric@end 4.47 success 0.98 ret 19.19 std 0.089 lr 1.0e-04
+[duck-rl] TS eval ckpt-11501568.onnx: best 8 of 16 2.43 s (mean 2.44 s, finished 16/16, worst 2.49 s) (14.3 s) (run not kept: no improvement)
+it  730 steps  11976704 t    480s sps  16511 eps 139 len 124 fall 0.01 lost 0.00 metric@end 4.47 success 0.99 ret 19.35 std 0.089 lr 1.0e-04
+it  733 steps  12025856 t    483s sps  14660 eps 126 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.85 std 0.089 lr 1.0e-04 ckpt 12009472
+it  740 steps  12140544 t    489s sps  18850 eps 139 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.83 std 0.089 lr 1.0e-04
+it  748 steps  12271616 t    494s sps  25659 eps 142 len 125 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.51 std 0.089 lr 1.0e-04 ckpt 12255232
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  750 steps  12304384 t    497s sps  11803 eps 142 len 125 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.44 std 0.089 lr 1.0e-04
+it  760 steps  12468224 t    507s sps  19065 eps 138 len 125 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.47 std 0.088 lr 1.0e-04
+[duck-rl] TS eval ckpt-12255232.onnx: best 8 of 16 2.45 s (mean 2.48 s, finished 16/16, worst 2.56 s) (14.4 s) (run not kept: no improvement)
+it  763 steps  12517376 t    510s sps  16353 eps 130 len 124 fall 0.05 lost 0.00 metric@end 4.46 success 0.95 ret 18.60 std 0.088 lr 1.0e-04 ckpt 12500992
+it  770 steps  12632064 t    517s sps  17411 eps 129 len 125 fall 0.03 lost 0.00 metric@end 4.51 success 0.97 ret 19.07 std 0.088 lr 1.0e-04
+it  779 steps  12779520 t    526s sps  27479 eps 124 len 125 fall 0.02 lost 0.00 metric@end 4.51 success 0.98 ret 19.43 std 0.088 lr 1.0e-04 ckpt 12763136
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  780 steps  12795904 t    527s sps  15536 eps 139 len 125 fall 0.01 lost 0.00 metric@end 4.49 success 0.99 ret 19.56 std 0.088 lr 1.0e-04
+it  790 steps  12959744 t    537s sps  20670 eps 142 len 124 fall 0.01 lost 0.00 metric@end 4.48 success 0.99 ret 19.35 std 0.088 lr 1.0e-04
+it  794 steps  13025280 t    542s sps  13639 eps 128 len 125 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.64 std 0.088 lr 1.0e-04 ckpt 13008896
+[duck-rl] TS eval ckpt-12763136.onnx: best 8 of 16 2.46 s (mean 2.49 s, finished 16/16, worst 2.57 s) (17.0 s) (run not kept: no improvement)
+it  800 steps  13123584 t    548s sps  16147 eps 134 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.57 std 0.088 lr 1.0e-04
+it  809 steps  13271040 t    555s sps  23829 eps 133 len 124 fall 0.02 lost 0.00 metric@end 4.52 success 0.99 ret 19.49 std 0.088 lr 1.0e-04 ckpt 13254656
+it  810 steps  13287424 t    556s sps  22442 eps 134 len 123 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.56 std 0.088 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  820 steps  13451264 t    564s sps  23154 eps 116 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.84 std 0.088 lr 1.0e-04
+it  824 steps  13516800 t    566s sps  22852 eps 126 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.26 std 0.087 lr 1.0e-04 ckpt 13500416
+[duck-rl] TS eval ckpt-13254656.onnx: best 8 of 16 2.45 s (mean 2.46 s, finished 16/16, worst 2.51 s) (11.9 s) (run not kept: no improvement)
+it  830 steps  13615104 t    571s sps  26295 eps 133 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.58 std 0.087 lr 1.0e-04
+it  840 steps  13778944 t    578s sps  18801 eps 136 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.85 std 0.087 lr 1.0e-04 ckpt 13762560
+it  850 steps  13942784 t    587s sps  17491 eps 138 len 124 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.66 std 0.087 lr 1.0e-04
+it  855 steps  14024704 t    592s sps  18046 eps 114 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.32 std 0.087 lr 1.0e-04 ckpt 14008320
+it  860 steps  14106624 t    596s sps  16966 eps 149 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.46 std 0.087 lr 1.0e-04
+[duck-rl] {'ckpt': 14188544, 'ckpt_pass': None, 'final': True}
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+[duck-rl] TS eval policy.onnx: best 8 of 16 2.45 s (mean 2.46 s, finished 16/16, worst 2.50 s) (9.8 s) (run not kept: no improvement)
+[duck-rl] rollout ran: fast: fused 256/256 envs, pipelined halves, 4 MB buffers ok
+[duck-rl] submitting ckpt-3751936.onnx: best by TS (best 8 of 16 2.40 s (mean 2.43 s, finished 16/16, worst 2.47 s), rank key [-2.4015]), run 20261128-142831-e75a3a
+[duck-rl] run card: best 2.426 s @ 3.75M/125s, last 2.461; 50% of the gain (2.405) @ 3.75M/125s; 90% of the gain (2.402) @ 3.75M/125s; median 27089 sps (last/first min 0.62)
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r26_D/ckpt-3751936.onnx [ONNX ops ['Sub', 'Div', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm', 'Elu', 'Gemm']] -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r26_D/policy.mlp.json (+.bin): 61 -> 512+elu -> 256+elu -> 128+elu -> 14
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+  numpy(blob) vs onnxruntime(source) on 256 obs: max |diff| 2.29e-05 (max |out| 79.4)
+  OK (tolerance 7.9e-03)
+[duck-rl] warm_start.json: the duckscript with its stock skills and the duckscript's fixed moves, where the run started
+[duck-rl] exported duck-strategy/1 /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r26_D: move mv_f19227976d3a, ckpt.pt = ckpt-3751936.pt, last.pt = ckpt-14188544.pt + opt.pt
+[duck-rl] checkpoint runs: kept 2 of 20 (4.9 MB) in /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; all would have been ~49 MB
+[duck-rl] done: 14,188,544 env steps, median 27089 steps/s -> submission /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r26_D
+[duck-rl] Start -> trained (same seeds 100-115): 2.41 s (finished 16/16) -> 2.40 s (finished 16/16). No need to re-simulate.
+Curve: start 2.41 s (before training) → first checkpoint 2.41 s → best 2.40 s at 2:05 (21 % of the run); last third of the run: the best so far did not change (the training had stopped improving). The best checkpoint beats the start.
+[duck-rl] site: Note: the post to your human's page failed (the server did not answer within 5 s); the command itself is done.
+[budget] train charged 626 s
