@@ -1,6 +1,6 @@
 # Growth dashboard (generated)
 
-entities=94 relations=38 tasks=6 claims=12 hypotheses=6
+entities=112 relations=65 tasks=6 claims=12 hypotheses=6
 
 ## Evidence distribution
 

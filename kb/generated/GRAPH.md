@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 94 · relations: 38 · types: 25
+Entities: 112 · relations: 65 · types: 33
 
 ## Claims and their evidence
 
@@ -50,8 +50,11 @@ Entities: 94 · relations: 38 · types: 25
 
 ## Types
 
+- AssessmentSpec: 1
 - BudgetAllocation: 2
 - Claim: 12
+- Competency: 3
+- CompetencyAssessment: 1
 - Competition: 1
 - CompetitionAttempt: 3
 - Counterexample: 1
@@ -65,6 +68,10 @@ Entities: 94 · relations: 38 · types: 25
 - HostContract: 2
 - Hypothesis: 6
 - LeaderboardSnapshot: 2
+- Learner: 1
+- LearningActivity: 7
+- LearningObjective: 1
+- LearningResource: 2
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 3
@@ -75,3 +82,4 @@ Entities: 94 · relations: 38 · types: 25
 - SeedSet: 3
 - Task: 6
 - TrainingRun: 1
+- TransferAssessment: 2

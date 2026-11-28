@@ -11,7 +11,7 @@ GEN.mkdir(exist_ok=True)
 
 def load():
     ents = []
-    for name in ("domain", "assets", "experiments", "evaluations", "knowledge"):
+    for name in ("domain", "assets", "experiments", "evaluations", "knowledge", "learning"):
         for line in (KB / "data" / f"{name}.jsonl").read_text().splitlines():
             if line.strip():
                 ents.append(json.loads(line))

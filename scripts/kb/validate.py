@@ -27,7 +27,7 @@ def load(name):
 
 def main():
     ents, rels = [], []
-    for name in ("domain", "assets", "experiments", "evaluations", "knowledge"):
+    for name in ("domain", "assets", "experiments", "evaluations", "knowledge", "learning"):
         ents += load(name)
     rels = [json.loads(l) for l in (KB / "data/relations.jsonl").read_text().splitlines() if l.strip()]
 
@@ -81,6 +81,18 @@ def main():
         if e["type"] == "MetricResult":
             if not any(r["from"] == e["id"] and r["relation"] == "EVALUATED_ON" for r in rels):
                 errors.append(f"{e['id']}: MetricResult without EVALUATED_ON")
+        if e["type"] == "CompetencyAssessment":
+            for need in ("DEMONSTRATED_BY", "FOLLOWS_ASSESSMENT_SPEC", "ASSESSES_LEARNER"):
+                if not any(r["from"] == e["id"] and r["relation"] == need for r in rels):
+                    errors.append(f"{e['id']}: CompetencyAssessment missing {need}")
+        if e["type"] == "LearningActivity":
+            if not any(r["from"] == e["id"] and r["relation"] == "PERFORMED_BY" for r in rels):
+                errors.append(f"{e['id']}: LearningActivity missing PERFORMED_BY")
+            if e["data"].get("outcome") not in ("SUCCESS", "PARTIAL", "FAILED", "ABANDONED"):
+                errors.append(f"{e['id']}: invalid outcome")
+        if e["type"] == "TransferAssessment":
+            if not any(r["from"] == e["id"] and r["relation"] == "TRANSFERS_ASSET" for r in rels):
+                warnings.append(f"{e['id']}: TransferAssessment without TRANSFERS_ASSET")
         if e["type"] == "CompetitionAttempt":
             if e["data"].get("rank") == 1 and not any(
                     r["from"] == e["id"] and r["relation"] == "SUPPORTS" for r in rels):

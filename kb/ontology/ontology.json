@@ -1,5 +1,5 @@
 {
- "version": "0.1.0",
+ "version": "0.2.0",
  "types": {
   "Competition": {
    "prefix": "COMP",
@@ -254,6 +254,76 @@
     "granted_minutes",
     "status"
    ]
+  },
+  "Learner": {
+   "prefix": "LRN",
+   "required": [
+    "learner_kind",
+    "identity_ref",
+    "active_from"
+   ]
+  },
+  "Competency": {
+   "prefix": "SKL",
+   "required": [
+    "statement",
+    "domain",
+    "scope_ref",
+    "performance_criteria"
+   ]
+  },
+  "LearningActivity": {
+   "prefix": "LA",
+   "required": [
+    "activity_kind",
+    "learner_ref",
+    "started_at",
+    "outcome"
+   ]
+  },
+  "AssessmentSpec": {
+   "prefix": "ASP",
+   "required": [
+    "competency_ref",
+    "assessment_kind",
+    "rubric",
+    "required_independence"
+   ]
+  },
+  "CompetencyAssessment": {
+   "prefix": "CAS",
+   "required": [
+    "learner_ref",
+    "competency_ref",
+    "spec_ref",
+    "assessed_at",
+    "outcome"
+   ]
+  },
+  "LearningObjective": {
+   "prefix": "OBJ",
+   "required": [
+    "statement",
+    "target_competencies",
+    "constraints"
+   ]
+  },
+  "LearningResource": {
+   "prefix": "LR",
+   "required": [
+    "resource_kind",
+    "artifact_ref",
+    "version"
+   ]
+  },
+  "TransferAssessment": {
+   "prefix": "TRA",
+   "required": [
+    "source_scope_ref",
+    "target_scope_ref",
+    "transferred_kind",
+    "outcome"
+   ]
   }
  },
  "relations": [
@@ -267,7 +337,26 @@
   "DEPENDS_ON",
   "EVALUATED_ON",
   "USED_IN",
-  "BOUND_TO"
+  "BOUND_TO",
+  "PERFORMED_BY",
+  "CONSUMES_KNOWLEDGE",
+  "USES_RESOURCE",
+  "YIELDS_KNOWLEDGE",
+  "EXECUTED_VIA",
+  "ADDRESSES_OBJECTIVE",
+  "REQUIRES_COMPETENCY",
+  "DEVELOPS_COMPETENCY",
+  "ASSESSES_COMPETENCY",
+  "ASSESSES_LEARNER",
+  "FOLLOWS_ASSESSMENT_SPEC",
+  "DEMONSTRATED_BY",
+  "REQUIRES_FOR_GOAL",
+  "TEACHES_COMPETENCY",
+  "TRANSFERS_FROM",
+  "TRANSFERS_TO",
+  "TRANSFERS_ASSET",
+  "VALIDATED_BY",
+  "REVISES"
  ],
  "enums": {
   "evidence_level": [
@@ -286,6 +375,52 @@
    "VERIFIED",
    "UNVERIFIED",
    "NOT_DERIVABLE"
+  ],
+  "knowledge_origin": [
+   "FOUNDATIONAL",
+   "EXTERNAL",
+   "SELF_GENERATED"
+  ],
+  "knowledge_form": [
+   "DECLARATIVE",
+   "PROCEDURAL",
+   "CONDITIONAL",
+   "METACOGNITIVE"
+  ],
+  "knowledge_acquisition": [
+   "STUDY",
+   "TESTIMONY",
+   "IMITATION",
+   "EXPERIENCE",
+   "INFERENCE"
+  ],
+  "epistemic_status": [
+   "PROPOSED",
+   "SUPPORTED",
+   "CONTESTED",
+   "REFUTED",
+   "SUPERSEDED",
+   "RETRACTED"
+  ],
+  "activity_kind": [
+   "READ",
+   "EXPLAIN",
+   "IMITATE",
+   "REPRODUCE",
+   "PROBE",
+   "EXPERIMENT",
+   "REFLECT",
+   "GENERALIZE",
+   "TEACH",
+   "ASSESS",
+   "REASSESS"
+  ],
+  "competency_level": [
+   "NOVICE",
+   "APPRENTICE",
+   "PRACTITIONER",
+   "EXPERT",
+   "MASTER"
   ]
  }
 }

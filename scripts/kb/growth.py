@@ -14,7 +14,7 @@ KB = ROOT / "kb"
 
 def load():
     ents = []
-    for name in ("domain", "assets", "experiments", "evaluations", "knowledge"):
+    for name in ("domain", "assets", "experiments", "evaluations", "knowledge", "learning"):
         p = KB / "data" / f"{name}.jsonl"
         if p.exists():
             ents += [json.loads(l) for l in p.read_text().splitlines() if l.strip()]
