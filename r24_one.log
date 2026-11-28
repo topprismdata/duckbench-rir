@@ -229,3 +229,57 @@ Critic Model: MLPModel(
 [init] log_std from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/ckpt.pt
 [init] actor grafted from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
 Storing git diff for 'microduck_rl_mac' in: /Users/guohongbin/1-Projects/duckbench-rir/r24/one/git/microduck_rl_mac.diff
+################################################################################
+[1m                             Learning iteration 0/1                             [0m 
+
+                               Run name: velocity
+                            Total steps: 98304 
+                       Steps per second: 1917 
+                        Collection time: 50.182s 
+                          Learning time: 1.088s 
+                        Mean value loss: 0.2230
+                    Mean surrogate loss: 0.1727
+                      Mean entropy loss: -18.5233
+                            Mean reward: 0.82
+                    Mean episode length: 23.83
+                        Mean action std: 0.07
+   Episode_Reward/track_linear_velocity: 0.0077
+  Episode_Reward/track_angular_velocity: 0.0011
+                 Episode_Reward/upright: 0.0110
+                    Episode_Reward/pose: 0.0036
+            Episode_Reward/body_ang_vel: -0.0100
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0004
+          Episode_Reward/action_rate_l2: -0.0034
+                Episode_Reward/air_time: 0.0040
+          Episode_Reward/foot_clearance: -0.0002
+       Episode_Reward/foot_swing_height: -0.0003
+               Episode_Reward/foot_slip: -0.0000
+         Episode_Reward/self_collisions: -0.0004
+      Episode_Reward/head_pose_tracking: 0.0173
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Metrics/mean_action_acc: 0.3814
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0098
+            Metrics/twist/error_vel_yaw: 0.0618
+           Episode_Termination/time_out: 3.7083
+          Episode_Termination/fell_over: 16.5000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0103
+                  Metrics/air_time_mean: 0.0749
+               Metrics/peak_height_mean: 0.0175
+             Metrics/slip_velocity_mean: 0.1174
+--------------------------------------------------------------------------------
+                         Iteration time: 51.27s
+                           Time elapsed: 00:00:51
+                                    ETA: 00:00:00
+
+Written /Users/guohongbin/1-Projects/duckbench-rir/r24/one/policy.onnx

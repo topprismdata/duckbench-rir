@@ -1,0 +1,15 @@
+{
+  "status": "initializing",
+  "pid": 54129,
+  "started_at": 1795855836.3923168,
+  "platform": "macOS-27.2.1-arm64-arm-64bit",
+  "num_envs": 64,
+  "seed": 42,
+  "requested_iterations": 1,
+  "completed_iterations": 0,
+  "task": "Mjlab-Velocity-Flat-MicroDuck",
+  "device": "mps",
+  "physics_backend": "cpu",
+  "transfer_mode": "CPU physics / MPS managers, BAM and PPO",
+  "stage": "constructing_runner"
+}
