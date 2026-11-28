@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 166 · relations: 129 · types: 33
+Entities: 167 · relations: 130 · types: 33
 
 ## Claims and their evidence
 
@@ -33,6 +33,7 @@ Entities: 166 · relations: 129 · types: 33
   - ← EV:sprintf80:local (EvaluationRun: sprintf80 on 8-71)
   - ← RES:sprintf80 (MetricResult: sprint 2.41)
 - **CLM:PLATEAU:01** — Flat-start arms read null by construction *(EXPLORATORY)*
+  - ← OBS:nofall-2.38 (Observation: no-fall-termination arm also 2.38)
 - **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
   - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
@@ -103,7 +104,7 @@ Entities: 166 · relations: 129 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 13
+- Observation: 14
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6

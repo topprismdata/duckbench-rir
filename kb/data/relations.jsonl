@@ -127,3 +127,4 @@
 {"from": "OBS:batch16k", "relation": "SUPPORTS", "to": "CLM:BATCH:01"}
 {"from": "LIT:rudin2022", "relation": "SUPPORTS", "to": "CLM:BATCH:01"}
 {"from": "CLM:PLATEAU:01", "relation": "REFUTES", "to": "CLM:BATCH:01"}
+{"from": "OBS:nofall-2.38", "relation": "SUPPORTS", "to": "CLM:PLATEAU:01"}
