@@ -97,3 +97,6 @@
 {"from": "RES:fin18:local", "relation": "EVALUATED_ON", "to": "EPR:local-8-71"}
 {"from": "RES:turn20:local", "relation": "EVALUATED_ON", "to": "EPR:local-8-71"}
 {"from": "RES:turnscore:local", "relation": "EVALUATED_ON", "to": "EPR:local-8-71"}
+{"from": "EXP:hurdles:hfast50", "relation": "EXECUTED_VIA", "to": "EV:hfast50:local"}
+{"from": "DEC:CT07", "relation": "DEPENDS_ON", "to": "LB:hurdles"}
+{"from": "DEC:CT07", "relation": "DEPENDS_ON", "to": "LB:steps"}

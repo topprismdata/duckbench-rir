@@ -1,6 +1,6 @@
 # Growth dashboard (generated)
 
-entities=133 relations=99 tasks=6 claims=12 hypotheses=6
+entities=133 relations=102 tasks=6 claims=12 hypotheses=6
 
 ## Evidence distribution
 
@@ -34,7 +34,7 @@ entities=133 relations=99 tasks=6 claims=12 hypotheses=6
 
 ## Decision evidence use
 
-- DEPENDS_ON: 2 edges
+- DEPENDS_ON: 4 edges
 
 ## Orphan claims (no SUPPORTS/REFUTES)
 
@@ -48,6 +48,6 @@ entities=133 relations=99 tasks=6 claims=12 hypotheses=6
 - M03_evidence_distribution: {'REPLICATED': 4, 'STRONG': 3, 'FALSIFIED': 2, 'ANECDOTAL': 1, 'EXPLORATORY': 2}
 - M04_hypothesis_cycle: 40 min (median closed hypotheses)
 - M05_hypothesis_throughput: 4 closed / session
-- M06_experiment_efficiency: 9/10 experiments with an execution record
+- M06_experiment_efficiency: 10/10 experiments with an execution record
 - M07_transfer_success: 1/2 transfer assessments positive
-- M08_knowledge_driven_decisions: 1/2 decisions cite evidence
+- M08_knowledge_driven_decisions: 2/2 decisions cite evidence

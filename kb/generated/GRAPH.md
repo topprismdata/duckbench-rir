@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 133 · relations: 99 · types: 33
+Entities: 133 · relations: 102 · types: 33
 
 ## Claims and their evidence
 
