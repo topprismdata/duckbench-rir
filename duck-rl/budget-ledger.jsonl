@@ -140,3 +140,4 @@
 {"kind": "train", "label": "r26_F", "start": "2026-11-28T22:36:36", "seconds": 627.2, "run": "65105-1795876596756", "end": "exit"}
 {"kind": "train", "label": "r26_base", "start": "2026-11-28T22:47:42", "seconds": 624.7, "run": "65953-1795877262678", "end": "exit"}
 {"kind": "train", "label": "r27_dr", "start": "2026-11-28T23:03:22", "seconds": 626.2, "run": "67490-1795878202305", "end": "exit"}
+{"kind": "train", "label": "r27_run2", "start": "2026-11-28T23:14:30", "seconds": 622.3, "run": "68145-1795878870570", "end": "exit"}
