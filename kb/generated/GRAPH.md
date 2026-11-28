@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 148 · relations: 116 · types: 33
+Entities: 149 · relations: 117 · types: 33
 
 ## Claims and their evidence
 
@@ -35,6 +35,7 @@ Entities: 148 · relations: 116 · types: 33
   - ← OBS:S3:scratch-wide (Observation: Wide net from scratch cannot walk)
 - **CLM:S3:02** — Net2Wider is function-preserving here *(REPLICATED)*
   - ← OBS:net2wider (Observation: Net2Wider preserves the policy function)
+  - ← OBS:wide:seed-flips (Observation: Widened policy fall flips)
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -85,7 +86,7 @@ Entities: 148 · relations: 116 · types: 33
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 6
+- Observation: 7
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6

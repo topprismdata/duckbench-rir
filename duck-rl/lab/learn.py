@@ -184,6 +184,11 @@ def export_onnx(pa: PlainActor, skill: str, out: Path, label: str) -> float:
 
 
 def build(env: PoolVecEnv, move: Move, device: str, init_std: float, desired_kl: float = 0.01, **cfg_kw) -> PPO:
+    _wide = os.environ.get("DUCK_WIDE_MLP")
+    if _wide:  # the actor must have the widened policy's shapes: take them from the file, not from DUCK_HIDDEN
+        from duckref.mlp import DuckMlp
+        _h = [int(L[0].shape[0]) for L in DuckMlp(Path(_wide)).layers[:-1]]
+        HIDDEN[:] = _h
     cfg = train_cfg(init_std, desired_kl, **cfg_kw)
     with contextlib.redirect_stdout(io.StringIO()):  # rsl_rl prints the model summaries
         alg = PPO.construct_algorithm(env.get_observations(), env, cfg, device)
@@ -191,10 +196,12 @@ def build(env: PoolVecEnv, move: Move, device: str, init_std: float, desired_kl:
         warm_start(alg.actor, move.warm_start)
     except (AssertionError, RuntimeError, ValueError) as exc:
         print(f"[duck-rl] warm start skipped (shape mismatch): {exc}", flush=True)
-    if os.environ.get("DUCK_WIDE_MLP"):
+    _wide = os.environ.get("DUCK_WIDE_MLP")
+    if _wide:
         from duckref.mlp import DuckMlp
-        load_mlp_into(alg.actor, DuckMlp(Path(os.environ["DUCK_WIDE_MLP"])))
-        print(f"[duck-rl] net2wider warm start from {os.environ['DUCK_WIDE_MLP']}", flush=True)
+        _m = DuckMlp(Path(_wide))
+        load_mlp_into(alg.actor, _m)
+        print(f"[duck-rl] net2wider warm start from {_wide}", flush=True)
     if os.environ.get("DUCK_DUMP_INIT"):
         torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
                    os.environ["DUCK_DUMP_INIT"])
