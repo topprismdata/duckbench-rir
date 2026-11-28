@@ -1,0 +1,28 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6
+ },
+ "program": "program3.json",
+ "moves": [
+  {
+   "nodes": [
+    "launch"
+   ],
+   "move": "move_launch.mlp.json"
+  },
+  {
+   "nodes": [
+    "drive"
+   ],
+   "move": "move_drive.mlp.json"
+  },
+  {
+   "nodes": [
+    "finish"
+   ],
+   "move": "move_finish.mlp.json"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "format": "duck-program/2",
+ "start": "launch",
+ "nodes": {
+  "launch": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.72
+   },
+   "max_time": {
+    "s": 0.3,
+    "go": "drive"
+   }
+  },
+  "drive": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.72
+   },
+   "until": [
+    {
+     "if": "t >= 1.80",
+     "go": "finish"
+    }
+   ]
+  },
+  "finish": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.8
+   }
+  }
+ }
+}

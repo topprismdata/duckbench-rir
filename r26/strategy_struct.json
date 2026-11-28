@@ -1,0 +1,24 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6
+ },
+ "program": "program_struct.json",
+ "moves": [
+  {
+   "nodes": [
+    "launch",
+    "drive",
+    "finish"
+   ],
+   "move": "policy.mlp.json"
+  }
+ ],
+ "notes": "structure clone of champion 4evrui8rkyk4, our 2.38 policy everywhere",
+ "train": {
+  "model": "glm-5.3-flash",
+  "minutes": 10,
+  "device": "M1 Max MacBook Pro"
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "format": "duck-program/2",
+ "start": "launch",
+ "nodes": {
+  "launch": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "max_time": {
+    "s": 0.3,
+    "go": "drive"
+   },
+   "move": "move_launch.mlp.json"
+  },
+  "drive": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "until": [
+    {
+     "if": "t >= 1.80",
+     "go": "finish"
+    }
+   ],
+   "move": "move_drive.mlp.json"
+  },
+  "finish": {
+   "skill": "walk",
+   "params": {
+    "vx": 0.19,
+    "head_pitch": 0.6
+   },
+   "move": "move_finish.mlp.json"
+  }
+ }
+}

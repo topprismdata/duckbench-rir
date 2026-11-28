@@ -131,3 +131,7 @@
 {"kind": "train", "label": "r25_scratch45", "start": "2026-11-28T19:10:20", "seconds": 1819.6, "run": "58430-1795864220280", "end": "exit"}
 {"kind": "train", "label": "r25_scratch105", "start": "2026-11-28T19:41:11", "seconds": 3621.1, "run": "59197-1795866071822", "end": "exit"}
 {"kind": "train", "label": "r25_scratch165", "start": "2026-11-28T20:42:13", "seconds": 3624.1, "run": "60582-1795869733706", "end": "exit"}
+{"kind": "train", "label": "r26_L", "start": "2026-11-28T22:12:28", "seconds": 4.9, "run": "62933-1795875148557", "end": "exit"}
+{"kind": "train", "label": "r26_L", "start": "2026-11-28T22:12:47", "seconds": 31.1, "run": "63147-1795875167872", "end": "exit"}
+{"kind": "train", "label": "r26_L", "start": "2026-11-28T22:14:00", "seconds": 2.6, "run": "63397-1795875240497", "end": "exit"}
+{"kind": "train", "label": "r26_L", "start": "2026-11-28T22:14:35", "seconds": 27.3, "run": "63611-1795875275655", "end": "exit"}
