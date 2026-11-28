@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 149 · relations: 117 · types: 33
+Entities: 150 · relations: 117 · types: 33
 
 ## Claims and their evidence
 
@@ -36,6 +36,7 @@ Entities: 149 · relations: 117 · types: 33
 - **CLM:S3:02** — Net2Wider is function-preserving here *(REPLICATED)*
   - ← OBS:net2wider (Observation: Net2Wider preserves the policy function)
   - ← OBS:wide:seed-flips (Observation: Widened policy fall flips)
+- **CLM:S3:03** — Capacity arm requires identical reward and start function *(ANECDOTAL)*
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -63,7 +64,7 @@ Entities: 149 · relations: 117 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 16
+- Claim: 17
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
