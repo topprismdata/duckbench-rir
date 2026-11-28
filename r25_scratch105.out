@@ -1,0 +1,23 @@
+duck-rl kit 1.31.2 · standalone · budget 430.1/1300.0 min
+[duck-rl] WARNING: this machine is busy (load 10.8 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] whole-run best: the files of ckpt-107610112 are not in /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r25_scratch45: the export picks from this session
+[duck-rl] --resume home/runs/r25_scratch45/ckpt-107610112.pt -> weights mv_184f4f2fd9fa at 107610112 steps
+[duck-rl] steps: this session's checkpoints continue the run's count from 107,610,112 (ckpt-<run steps>; session 3)
+[duck-rl] curve: continues the run's curve (91 checkpoint scores, session 3, from 107,610,112 steps)
+[duck-rl] lineage: parent mv_184f4f2fd9fa, root stock:alpha_walking, parent cumulative {'steps': 107610112, 'train_s': 2702.3}
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 r25_scratch105: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': 0, 'wz': 0, 'head_pitch': 0.6, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking, init home/runs/r25_scratch45/ckpt-107610112.pt, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 60.00 min, 8x64 envs (given), nice 10, seed 921, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r25_scratch105
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:fe8bc94366b60562
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[resume] home/runs/r25_scratch45/ckpt-107610112.pt: the MLX Adam states (actor + critic) from opt-107610112.pt; the critic (no warm-up)
+it    0 steps     32768 t      2s sps  19306 eps   0 len - fall - lost - metric@end - success - ret - std 0.062 lr 1.0e-04
+it    8 steps    294912 t      8s sps  44387 eps   5 len 150 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.55 std 0.062 lr 1.0e-04 ckpt 262144
+it   10 steps    360448 t     10s sps  39674 eps   3 len 149 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.44 std 0.062 lr 1.0e-04
+it   16 steps    557056 t     15s sps  37227 eps 507 len 150 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.40 std 0.062 lr 1.0e-04 ckpt 524288
+[duck-rl] TS eval ckpt-107872256.onnx: best 8 of 16 2.92 s (mean 2.94 s, finished 16/16, worst 2.99 s) (9.4 s) <- best run 20261128-114132-ed591e
+[duck-rl] one checkpoint run = 2.5 MB (16 seeds); --save-runs all would use ~4.9 MB/min of training (~294 MB/hour) at one eval every 30 s, ~294 MB over this 60-min run; improved-only usually keeps a handful
+it   20 steps    688128 t     18s sps  43710 eps 237 len 148 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.11 std 0.062 lr 1.0e-04
+it   23 steps    786432 t     20s sps  42346 eps 502 len 149 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.31 std 0.062 lr 1.0e-04 ckpt 753664
+it   30 steps   1015808 t     26s sps  41743 eps 494 len 149 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.34 std 0.062 lr 1.0e-04
+it   31 steps   1048576 t     26s sps  43984 eps  12 len 139 fall 0.17 lost 0.00 metric@end 4.11 success 0.83 ret 14.36 std 0.062 lr 1.0e-04 ckpt 1015808
