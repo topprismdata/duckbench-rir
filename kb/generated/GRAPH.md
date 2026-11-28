@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 176 · relations: 134 · types: 33
+Entities: 178 · relations: 136 · types: 33
 
 ## Claims and their evidence
 
@@ -51,6 +51,8 @@ Entities: 176 · relations: 134 · types: 33
 - **CLM:S3:03** — Capacity arm requires identical reward and start function *(ANECDOTAL)*
   - ← OBS:S3:null-test (Observation: Identical-replica net2wider is a null test)
 - **CLM:S3:04** — Capacity arm: wider net gives no gain at 10 min *(EXPLORATORY)*
+- **CLM:SCRATCH:01** — Scratch asymptote ~2.50 at 11.6k updates *(EXPLORATORY)*
+  - ← OBS:scratch-2.50-final (Observation: scratch 165min final: 2.50, flattening; campaign closed)
 - **CLM:STACK:01** — Mac arena stack is convertible but ~15x slower *(EXPLORATORY)*
   - ← OBS:arena-mac (Observation: Arena Mac port runs here and converts to duck-mlp)
 - **CLM:STACK:02** — Arena PPO hyperparams break warm-started policies *(EXPLORATORY)*
@@ -86,7 +88,7 @@ Entities: 176 · relations: 134 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 26
+- Claim: 27
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -109,7 +111,7 @@ Entities: 176 · relations: 134 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 22
+- Observation: 23
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6

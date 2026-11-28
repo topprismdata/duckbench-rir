@@ -130,3 +130,4 @@
 {"kind": "train", "label": "r25_scratch45", "start": "2026-11-28T19:10:01", "seconds": 1.7, "run": "58237-1795864201810", "end": "exit"}
 {"kind": "train", "label": "r25_scratch45", "start": "2026-11-28T19:10:20", "seconds": 1819.6, "run": "58430-1795864220280", "end": "exit"}
 {"kind": "train", "label": "r25_scratch105", "start": "2026-11-28T19:41:11", "seconds": 3621.1, "run": "59197-1795866071822", "end": "exit"}
+{"kind": "train", "label": "r25_scratch165", "start": "2026-11-28T20:42:13", "seconds": 3624.1, "run": "60582-1795869733706", "end": "exit"}
