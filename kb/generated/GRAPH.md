@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 158 · relations: 123 · types: 33
+Entities: 160 · relations: 124 · types: 33
 
 ## Claims and their evidence
 
@@ -44,6 +44,8 @@ Entities: 158 · relations: 123 · types: 33
   - ← OBS:arena-mac (Observation: Arena Mac port runs here and converts to duck-mlp)
 - **CLM:STACK:02** — Arena PPO hyperparams break warm-started policies *(EXPLORATORY)*
   - ← OBS:arena-graft (Observation: Arena graft faithful pre-training, broken by first update)
+- **CLM:STACK:03** — Arena stack matches kit score with fewer transitions *(EXPLORATORY)*
+  - ← OBS:arena-vs-kit-5m (Observation: Arena 10 updates matches kit 5.6M transitions)
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -71,7 +73,7 @@ Entities: 158 · relations: 123 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 20
+- Claim: 21
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -94,7 +96,7 @@ Entities: 158 · relations: 123 · types: 33
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 11
+- Observation: 12
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6

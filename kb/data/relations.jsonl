@@ -121,3 +121,4 @@
 {"from": "EXP:sprint:cap", "relation": "TESTED_BY", "to": "HYP:S3"}
 {"from": "OBS:arena-mac", "relation": "SUPPORTS", "to": "CLM:STACK:01"}
 {"from": "OBS:arena-graft", "relation": "SUPPORTS", "to": "CLM:STACK:02"}
+{"from": "OBS:arena-vs-kit-5m", "relation": "SUPPORTS", "to": "CLM:STACK:03"}
