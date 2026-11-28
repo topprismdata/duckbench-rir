@@ -82,7 +82,7 @@ def main():
         "M01_knowledge_coverage": f"{len(covered)}/{len(tasks)} tasks with ≥1 claim",
         "M02_competency_attainment": f"{len(passed)}/{len(skills)} competencies passed by a CAS",
         "M03_evidence_distribution": dict(ev),
-        "M04_hypothesis_cycle": "UNKNOWN (closure timestamps not recorded)",
+        "M04_hypothesis_cycle": (f"{sorted((__import__('datetime').datetime.fromisoformat(h['data']['closed_at'].replace('Z','+00:00')) - __import__('datetime').datetime.fromisoformat(h['data']['opened_at'].replace('Z','+00:00'))).total_seconds()/60 for h in ents if h['type']=='Hypothesis' and h['data'].get('opened_at') and h['data'].get('closed_at'))[len([h for h in ents if h['type']=='Hypothesis' and h['data'].get('closed_at')])//2]:.0f} min (median closed hypotheses)"),
         "M05_hypothesis_throughput": f"{hstat.get('SUPPORTED',0)+hstat.get('FALSIFIED',0)+hstat.get('REFUTED',0)} closed / session",
         "M06_experiment_efficiency": f"{len(exp_done)}/{len(exps)} experiments with an execution record",
         "M07_transfer_success": f"{tras}/{len(tra)} transfer assessments positive",

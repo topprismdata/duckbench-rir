@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 117 · relations: 75 · types: 33
+Entities: 133 · relations: 99 · types: 33
 
 ## Claims and their evidence
 
@@ -61,7 +61,7 @@ Entities: 117 · relations: 75 · types: 33
 - Decision: 2
 - Environment: 2
 - EvaluationProtocol: 2
-- EvaluationRun: 3
+- EvaluationRun: 11
 - EvidenceArtifact: 6
 - Exclusion: 3
 - Experiment: 10
@@ -74,7 +74,7 @@ Entities: 117 · relations: 75 · types: 33
 - LearningResource: 3
 - LiteratureSource: 4
 - MetricDefinition: 6
-- MetricResult: 3
+- MetricResult: 11
 - Observation: 3
 - ResearchSession: 1
 - RewardVersion: 7
