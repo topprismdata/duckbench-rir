@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 133 · relations: 102 · types: 33
+Entities: 135 · relations: 107 · types: 33
 
 ## Claims and their evidence
 
@@ -54,7 +54,7 @@ Entities: 133 · relations: 102 · types: 33
 - BudgetAllocation: 2
 - Claim: 12
 - Competency: 3
-- CompetencyAssessment: 2
+- CompetencyAssessment: 3
 - Competition: 1
 - CompetitionAttempt: 3
 - Counterexample: 1
@@ -62,7 +62,7 @@ Entities: 133 · relations: 102 · types: 33
 - Environment: 2
 - EvaluationProtocol: 2
 - EvaluationRun: 11
-- EvidenceArtifact: 6
+- EvidenceArtifact: 7
 - Exclusion: 3
 - Experiment: 10
 - HostContract: 2

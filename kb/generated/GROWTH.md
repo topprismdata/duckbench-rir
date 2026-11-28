@@ -1,6 +1,6 @@
 # Growth dashboard (generated)
 
-entities=133 relations=102 tasks=6 claims=12 hypotheses=6
+entities=135 relations=107 tasks=6 claims=12 hypotheses=6
 
 ## Evidence distribution
 
@@ -44,7 +44,7 @@ entities=133 relations=102 tasks=6 claims=12 hypotheses=6
 ## Growth metrics (v0.2)
 
 - M01_knowledge_coverage: 6/6 tasks with ≥1 claim
-- M02_competency_attainment: 2/3 competencies passed by a CAS
+- M02_competency_attainment: 3/3 competencies passed by a CAS
 - M03_evidence_distribution: {'REPLICATED': 4, 'STRONG': 3, 'FALSIFIED': 2, 'ANECDOTAL': 1, 'EXPLORATORY': 2}
 - M04_hypothesis_cycle: 40 min (median closed hypotheses)
 - M05_hypothesis_throughput: 4 closed / session

@@ -100,3 +100,8 @@
 {"from": "EXP:hurdles:hfast50", "relation": "EXECUTED_VIA", "to": "EV:hfast50:local"}
 {"from": "DEC:CT07", "relation": "DEPENDS_ON", "to": "LB:hurdles"}
 {"from": "DEC:CT07", "relation": "DEPENDS_ON", "to": "LB:steps"}
+{"from": "CAS:champion-imitation", "relation": "ASSESSES_COMPETENCY", "to": "SKL:champion-imitation"}
+{"from": "CAS:champion-imitation", "relation": "ASSESSES_LEARNER", "to": "LRN:duckbench-team"}
+{"from": "CAS:champion-imitation", "relation": "FOLLOWS_ASSESSMENT_SPEC", "to": "ASP:reward-audit:v1"}
+{"from": "CAS:champion-imitation", "relation": "DEMONSTRATED_BY", "to": "ART:K08:champions"}
+{"from": "LA:imitate-champions", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:champion-imitation"}
