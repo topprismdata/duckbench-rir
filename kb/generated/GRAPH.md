@@ -38,7 +38,7 @@ Entities: 174 · relations: 134 · types: 33
   - ← OBS:ctl128-2.41 (Observation: 128-env equal-budget control: 2.41, flat)
 - **CLM:PLATEAU:02** — Fine-tune plateau at 2.38 for sprintf80 family *(EXPLORATORY)*
   - ← OBS:b64k-2.38 (Observation: 512 envs same 2.38: batch saturates at 16k)
-  - ← OBS:update-scaling (Observation: Scratch progress scales with update count, not samples)
+  - ← OBS:update-scaling (Observation: Scratch-phase update-count hypothesis (scoped))
 - **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
   - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
