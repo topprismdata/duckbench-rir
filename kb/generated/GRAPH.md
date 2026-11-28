@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 160 · relations: 124 · types: 33
+Entities: 161 · relations: 125 · types: 33
 
 ## Claims and their evidence
 
@@ -46,6 +46,7 @@ Entities: 160 · relations: 124 · types: 33
   - ← OBS:arena-graft (Observation: Arena graft faithful pre-training, broken by first update)
 - **CLM:STACK:03** — Arena stack matches kit score with fewer transitions *(EXPLORATORY)*
   - ← OBS:arena-vs-kit-5m (Observation: Arena 10 updates matches kit 5.6M transitions)
+- **CLM:STACK:04** — Arena 5M transitions does not beat kit 5.65M *(EXPLORATORY)*
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -73,7 +74,7 @@ Entities: 160 · relations: 124 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 21
+- Claim: 22
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
