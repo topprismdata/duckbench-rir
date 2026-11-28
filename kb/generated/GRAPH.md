@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 140 · relations: 109 · types: 33
+Entities: 143 · relations: 111 · types: 33
 
 ## Claims and their evidence
 
@@ -35,12 +35,15 @@ Entities: 140 · relations: 109 · types: 33
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
   - ← OBS:wheel:rim-saturation (Observation: Wheel rim speed saturates at 0.66 m/s)
+- **CLM:W1:02** — Wheel bottleneck is deceleration events *(EXPLORATORY)*
+  - ← OBS:wheel:accel-balance (Observation: Wheel rim accel/decel balance)
 
 ## Hypotheses
 
 - HYP:A2 [PARTIAL] 接触半径/力矩臂可提升 saucer rpm
 - HYP:H1 [SUPPORTED] 奖励的参考节奏约束是 Hurdles 瓶颈
 - HYP:S1 [FALSIFIED] 前 2 s 加速不足是 Sprint 差距主因
+- HYP:S3 [OPEN] Sprint 2.40→2.17 的差距来自策略容量或训练栈，而不是奖励塑形（H-S1 已证伪）
 - HYP:S4 [FALSIFIED] finish 节点在前序状态分布上训练可提升组合
 - HYP:T1 [REFUTED] roll 入口状态代表性限制 turntable
 - HYP:W1 [PARTIAL] 轮缘切向加速度奖励可提升 wheel
@@ -55,7 +58,7 @@ Entities: 140 · relations: 109 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 13
+- Claim: 14
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -69,7 +72,7 @@ Entities: 140 · relations: 109 · types: 33
 - Exclusion: 3
 - Experiment: 10
 - HostContract: 2
-- Hypothesis: 6
+- Hypothesis: 7
 - LeaderboardSnapshot: 2
 - Learner: 1
 - LearningActivity: 7
@@ -78,7 +81,7 @@ Entities: 140 · relations: 109 · types: 33
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 3
+- Observation: 4
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
