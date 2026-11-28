@@ -124,3 +124,6 @@
 {"from": "OBS:arena-vs-kit-5m", "relation": "SUPPORTS", "to": "CLM:STACK:03"}
 {"from": "CLM:STACK:04", "relation": "REFUTES", "to": "HYP:S3"}
 {"from": "CLM:STACK:05", "relation": "DERIVES_FROM", "to": "CLM:STACK:04"}
+{"from": "OBS:batch16k", "relation": "SUPPORTS", "to": "CLM:BATCH:01"}
+{"from": "LIT:rudin2022", "relation": "SUPPORTS", "to": "CLM:BATCH:01"}
+{"from": "CLM:PLATEAU:01", "relation": "REFUTES", "to": "CLM:BATCH:01"}

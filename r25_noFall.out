@@ -1,0 +1,50 @@
+duck-rl kit 1.31.2 · standalone · budget 517.3/1300.0 min
+[duck-rl] WARNING: this machine is busy (load 8.3 on 10 cores) before training starts: expect fewer steps/s than usual and a later best checkpoint; close other heavy work, or train longer
+[duck-rl] WARM_MLP submissions/r20_sprintf80/policy.mlp.json -> mv_a2a4fcdaa5dd (no alias): /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+[duck-rl] lineage: parent mv_a2a4fcdaa5dd, root stock:alpha_walking, parent cumulative {'steps': None, 'train_s': None}; the parent's submission lineage lacks cumulative steps, train_s
+[duck-rl] rollout: fast (requested): fused substeps, pipelined halves, 4 MB pipe buffers
+[duck-rl] kit 1.31.2 sprint v6 r25_noFall: nodes ['run'] ({'skill': 'walk', 'params': {'vx': 0.19, 'vy': 0, 'wz': 0, 'head_pitch': 0.6, 'head_yaw': 0, 'head_roll': 0}}), warm start alpha_walking graph, weights submissions/r20_sprintf80/policy.mlp.json (mv_a2a4fcdaa5dd), init stock, terms ['fall', 'finish', 'heading', 'metric', 'progress', 'smooth', 'time'], episode 30.0 s, 10.00 min, 8x32 envs (given), nice 10, seed 921, device M1 Max MacBook Pro -> /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/home/runs/r25_noFall
+[duck-rl] learner: LR_FIXED 0.0001; recipe sha256:e1732007868f6146
+[duck-rl] in-loop TS eval: {'enabled': True, 'seeds': '100-115', 'every_s': 30.0, 'nice': 10, 'select': 'best', 'final': True, 'variants': None, 'select_key': None, 'save_runs': 'improved'}
+[duck-rl] checkpoint runs: saving only checkpoints that improve (+ the final one) to /Users/guohongbin/1-Projects/duckbench-rir/.duckbench-home/runs; --save-runs all saves every checkpoint for the viewer (more disk), --save-runs off none
+[duck-rl] scoring the start (mv_a2a4fcdaa5dd) on the eval seeds first, for the end's start -> trained comparison
+[duck-rl] warm start from /Users/guohongbin/1-Projects/duckbench-rir/duck-rl/submissions/r20_sprintf80/policy.mlp.json
+it    0 steps     16384 t      2s sps   9787 eps   0 len - fall - lost - metric@end - success - ret - std 0.100 lr 1.0e-03 (warm-up: critic only)
+it   10 steps    180224 t      7s sps  31049 eps   7 len 130 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.45 std 0.100 lr 1.0e-04
+[duck-rl] TS eval of the start (mv_a2a4fcdaa5dd): best 8 of 16 2.40 s (mean 2.42 s, finished 16/16, worst 2.45 s) (11.6 s), the same seeds and opponents as every checkpoint's
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it   16 steps    278528 t     10s sps  31608 eps   4 len 135 fall 0.00 lost 0.00 metric@end 4.50 success 1.00 ret 18.86 std 0.100 lr 1.0e-04 ckpt 262144
+it   20 steps    344064 t     13s sps  26825 eps   1 len 129 fall 0.00 lost 0.00 metric@end 4.50 success 1.00 ret 19.45 std 0.099 lr 1.0e-04
+it   30 steps    507904 t     19s sps  28037 eps   1 len 129 fall 0.00 lost 0.00 metric@end 4.54 success 1.00 ret 19.47 std 0.099 lr 1.0e-04
+it   31 steps    524288 t     20s sps  25152 eps 124 len 238 fall 0.00 lost 0.00 metric@end 4.39 success 0.92 ret 16.76 std 0.099 lr 1.0e-04 ckpt 507904
+[duck-rl] TS eval ckpt-0262144.onnx: best 8 of 16 2.40 s (mean 2.42 s, finished 16/16, worst 2.47 s) (13.7 s) <- best run 20261128-101117-8e19b5
+[duck-rl] one checkpoint run = 2.4 MB (16 seeds); --save-runs all would use ~4.9 MB/min of training (~292 MB/hour) at one eval every 30 s, ~49 MB over this 10-min run; improved-only usually keeps a handful
+it   40 steps    671744 t     25s sps  32206 eps  12 len 928 fall 0.00 lost 0.00 metric@end 3.60 success 0.42 ret -6.88 std 0.099 lr 1.0e-04
+it   46 steps    770048 t     28s sps  32127 eps  21 len 781 fall 0.00 lost 0.00 metric@end 3.75 success 0.52 ret 0.89 std 0.099 lr 1.0e-04 ckpt 753664
+it   50 steps    835584 t     30s sps  30687 eps  22 len 442 fall 0.00 lost 0.00 metric@end 4.08 success 0.77 ret 9.85 std 0.099 lr 1.0e-04
+it   60 steps    999424 t     36s sps  31786 eps  35 len 286 fall 0.00 lost 0.00 metric@end 4.35 success 0.89 ret 15.54 std 0.099 lr 1.0e-04
+it   62 steps   1032192 t     37s sps  32665 eps  42 len 651 fall 0.00 lost 0.00 metric@end 3.90 success 0.62 ret 6.29 std 0.099 lr 1.0e-04 ckpt 1015808
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it   70 steps   1163264 t     42s sps  27815 eps  67 len 395 fall 0.00 lost 0.00 metric@end 4.24 success 0.81 ret 11.53 std 0.099 lr 1.0e-04
+it   77 steps   1277952 t     46s sps  27059 eps  57 len 154 fall 0.00 lost 0.00 metric@end 4.48 success 0.98 ret 18.68 std 0.099 lr 1.0e-04 ckpt 1261568
+it   80 steps   1327104 t     47s sps  27256 eps  71 len 341 fall 0.00 lost 0.00 metric@end 4.23 success 0.85 ret 13.36 std 0.099 lr 1.0e-04
+[duck-rl] TS eval ckpt-1015808.onnx: best 8 of 16 2.46 s (mean 2.48 s, finished 16/16, worst 2.54 s) (11.1 s) (run not kept: no improvement)
+it   90 steps   1490944 t     53s sps  32700 eps  64 len 279 fall 0.00 lost 0.00 metric@end 4.44 success 0.89 ret 15.10 std 0.099 lr 1.0e-04
+it   92 steps   1523712 t     54s sps  32099 eps  71 len 360 fall 0.00 lost 0.00 metric@end 4.39 success 0.83 ret 13.60 std 0.099 lr 1.0e-04 ckpt 1507328
+it  100 steps   1654784 t     59s sps  31648 eps  83 len 310 fall 0.00 lost 0.00 metric@end 4.35 success 0.87 ret 13.90 std 0.099 lr 1.0e-04
+it  107 steps   1769472 t     62s sps  30752 eps  52 len 259 fall 0.00 lost 0.00 metric@end 4.41 success 0.90 ret 15.64 std 0.099 lr 1.0e-04 ckpt 1753088
+it  110 steps   1818624 t     64s sps  30284 eps  93 len 291 fall 0.00 lost 0.00 metric@end 4.27 success 0.88 ret 14.56 std 0.099 lr 1.0e-04
+it  120 steps   1982464 t     69s sps  30127 eps  80 len 214 fall 0.00 lost 0.00 metric@end 4.42 success 0.94 ret 16.88 std 0.098 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  123 steps   2031616 t     71s sps  32572 eps  75 len 220 fall 0.00 lost 0.00 metric@end 4.44 success 0.93 ret 16.95 std 0.098 lr 1.0e-04 ckpt 2015232
+it  130 steps   2146304 t     75s sps  27481 eps  93 len 186 fall 0.00 lost 0.00 metric@end 4.50 success 0.96 ret 17.88 std 0.098 lr 1.0e-04
+it  138 steps   2277376 t     79s sps  30769 eps  97 len 198 fall 0.00 lost 0.00 metric@end 4.45 success 0.95 ret 17.57 std 0.098 lr 1.0e-04 ckpt 2260992
+it  140 steps   2310144 t     80s sps  31291 eps  97 len 185 fall 0.00 lost 0.00 metric@end 4.45 success 0.96 ret 18.04 std 0.098 lr 1.0e-04
+[duck-rl] TS eval ckpt-2015232.onnx: best 8 of 16 2.46 s (mean 2.47 s, finished 16/16, worst 2.51 s) (12.6 s) (run not kept: no improvement)
+it  150 steps   2473984 t     86s sps  36046 eps 100 len 141 fall 0.00 lost 0.00 metric@end 4.50 success 0.99 ret 19.28 std 0.098 lr 1.0e-04
+it  153 steps   2523136 t     87s sps  34794 eps  96 len 200 fall 0.00 lost 0.00 metric@end 4.43 success 0.95 ret 17.13 std 0.098 lr 1.0e-04 ckpt 2506752
+it  160 steps   2637824 t     90s sps  37008 eps 104 len 154 fall 0.00 lost 0.00 metric@end 4.51 success 0.98 ret 18.85 std 0.098 lr 1.0e-04
+it  168 steps   2768896 t     94s sps  36047 eps 104 len 127 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.63 std 0.098 lr 1.0e-04 ckpt 2752512

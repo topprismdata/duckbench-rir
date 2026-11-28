@@ -1,11 +1,15 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 161 · relations: 125 · types: 33
+Entities: 166 · relations: 129 · types: 33
 
 ## Claims and their evidence
 
 - **CLM:A2:01** — Saucer radius effect is weak *(EXPLORATORY)*
   - ← OBS:saucer:radius-drdt (Observation: Saucer radius vs rpm growth)
+- **CLM:BATCH:01** — Larger PPO batch improves sprint score *(EXPLORATORY)*
+  - ← OBS:batch16k (Observation: 256 envs × 64 steps beats 128 envs)
+  - ← LIT:rudin2022 (LiteratureSource: Rudin et al. 2022 Learning to Walk in Minutes)
+  - ← CLM:PLATEAU:01 (Claim: Flat-start arms read null by construction)
 - **CLM:K03:01** — Steps recipe *(STRONG)*
   - ← EV:s2b:server (EvaluationRun: steps champion hidden)
   - ← ATT:steps (CompetitionAttempt: Steps champion attempt)
@@ -28,6 +32,7 @@ Entities: 161 · relations: 125 · types: 33
 - **CLM:K24:01** — Accel penalty no gain *(FALSIFIED)*
   - ← EV:sprintf80:local (EvaluationRun: sprintf80 on 8-71)
   - ← RES:sprintf80 (MetricResult: sprint 2.41)
+- **CLM:PLATEAU:01** — Flat-start arms read null by construction *(EXPLORATORY)*
 - **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
   - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
@@ -47,6 +52,7 @@ Entities: 161 · relations: 125 · types: 33
 - **CLM:STACK:03** — Arena stack matches kit score with fewer transitions *(EXPLORATORY)*
   - ← OBS:arena-vs-kit-5m (Observation: Arena 10 updates matches kit 5.6M transitions)
 - **CLM:STACK:04** — Arena 5M transitions does not beat kit 5.65M *(EXPLORATORY)*
+- **CLM:STACK:05** — Arena objective does not transfer to DuckBench TS *(EXPLORATORY)*
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -74,7 +80,7 @@ Entities: 161 · relations: 125 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 22
+- Claim: 25
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -94,10 +100,10 @@ Entities: 161 · relations: 125 · types: 33
 - LearningActivity: 7
 - LearningObjective: 1
 - LearningResource: 4
-- LiteratureSource: 4
+- LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 12
+- Observation: 13
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
