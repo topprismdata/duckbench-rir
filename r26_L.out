@@ -53,3 +53,29 @@ it  130 steps   2146304 t    136s sps  13292 eps 157 len 124 fall 0.00 lost 0.00
 it  138 steps   2277376 t    144s sps  19920 eps 138 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.20 std 0.097 lr 1.0e-04 ckpt 2260992
 it  140 steps   2310144 t    145s sps  21187 eps 130 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.33 std 0.097 lr 1.0e-04
 it  150 steps   2473984 t    156s sps  13835 eps 109 len 125 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.79 std 0.097 lr 1.0e-04
+[duck-rl] TS eval ckpt-2015232.onnx: best 8 of 16 2.42 s (mean 2.44 s, finished 16/16, worst 2.47 s) (16.7 s) <- best run 20261128-141821-35e662
+it  153 steps   2523136 t    159s sps  16213 eps 159 len 124 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.60 std 0.097 lr 1.0e-04 ckpt 2506752
+it  160 steps   2637824 t    164s sps  22571 eps 109 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.47 std 0.097 lr 1.0e-04
+it  168 steps   2768896 t    169s sps  26766 eps 116 len 124 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.26 std 0.097 lr 1.0e-04 ckpt 2752512
+it  170 steps   2801664 t    170s sps  28781 eps 124 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.14 std 0.097 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  180 steps   2965504 t    176s sps  26694 eps 146 len 123 fall 0.01 lost 0.00 metric@end 4.51 success 0.99 ret 19.47 std 0.097 lr 1.0e-04
+it  184 steps   3031040 t    178s sps  26210 eps 160 len 123 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.16 std 0.097 lr 1.0e-04 ckpt 3014656
+it  190 steps   3129344 t    182s sps  23979 eps 166 len 124 fall 0.04 lost 0.00 metric@end 4.48 success 0.96 ret 18.78 std 0.097 lr 1.0e-04
+[duck-rl] TS eval ckpt-2752512.onnx: best 8 of 16 2.43 s (mean 2.44 s, finished 16/16, worst 2.48 s) (11.6 s) (run not kept: no improvement)
+it  199 steps   3276800 t    188s sps  29050 eps 107 len 123 fall 0.02 lost 0.00 metric@end 4.49 success 0.98 ret 19.23 std 0.096 lr 1.0e-04 ckpt 3260416
+it  200 steps   3293184 t    188s sps  30057 eps 155 len 124 fall 0.02 lost 0.00 metric@end 4.51 success 0.98 ret 19.25 std 0.096 lr 1.0e-04
+it  210 steps   3457024 t    194s sps  29269 eps 123 len 125 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.52 std 0.096 lr 1.0e-04
+it  214 steps   3522560 t    196s sps  29440 eps 111 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.70 std 0.096 lr 1.0e-04 ckpt 3506176
+it  220 steps   3620864 t    200s sps  27967 eps 110 len 124 fall 0.01 lost 0.00 metric@end 4.50 success 0.99 ret 19.40 std 0.096 lr 1.0e-04
+/Users/guohongbin/1-Projects/duckbench-rir/duck-rl/tools/to_mlp.py:213: RuntimeWarning: overflow encountered in expm1
+  h = np.where(h > 0, h, a * np.expm1(h)).astype(np.float32)
+it  229 steps   3768320 t    205s sps  26105 eps 150 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.70 std 0.096 lr 1.0e-04 ckpt 3751936
+it  230 steps   3784704 t    206s sps  26712 eps 116 len 124 fall 0.00 lost 0.00 metric@end 4.52 success 1.00 ret 19.73 std 0.096 lr 1.0e-04
+it  240 steps   3948544 t    212s sps  24982 eps 128 len 124 fall 0.01 lost 0.00 metric@end 4.52 success 1.00 ret 19.59 std 0.096 lr 1.0e-04
+[duck-rl] TS eval ckpt-3506176.onnx: best 8 of 16 2.43 s (mean 2.44 s, finished 16/16, worst 2.46 s) (10.1 s) (run not kept: no improvement)
+it  245 steps   4030464 t    215s sps  29582 eps 118 len 124 fall 0.02 lost 0.00 metric@end 4.50 success 0.98 ret 19.27 std 0.096 lr 1.0e-04 ckpt 4014080
+it  250 steps   4112384 t    218s sps  28594 eps 154 len 124 fall 0.03 lost 0.00 metric@end 4.51 success 0.97 ret 19.14 std 0.096 lr 1.0e-04
+it  260 steps   4276224 t    224s sps  26593 eps 155 len 123 fall 0.02 lost 0.00 metric@end 4.46 success 0.98 ret 19.11 std 0.096 lr 1.0e-04 ckpt 4259840
+it  270 steps   4440064 t    229s sps  30843 eps 139 len 125 fall 0.01 lost 0.00 metric@end 4.52 success 0.99 ret 19.59 std 0.095 lr 1.0e-04
