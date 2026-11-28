@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 181 · relations: 137 · types: 33
+Entities: 188 · relations: 137 · types: 33
 
 ## Claims and their evidence
 
@@ -73,6 +73,9 @@ Entities: 181 · relations: 137 · types: 33
 - HYP:A2 [PARTIAL] 接触半径/力矩臂可提升 saucer rpm
 - HYP:A2b [FALSIFIED] 冠军的 'exact clones' 来自在三节点结构内训练的 base：单策略绑全部三节点（TRAINED_NODE 列表）训练 10 min，若 ≤2.38 则结构成本可被适应抵消，之后专门化才有 fair base；若 >2.38 则冠军 base 来自结构外配方
 - HYP:H1 [SUPPORTED] 奖励的参考节奏约束是 Hurdles 瓶颈
+- HYP:PPO:ADAPTIVE [TESTABLE] 固定 lr 1e-4 + clip_frac 0.325 的持续搅动构成伪平台;DKL=0.01 自适应可释放精修空间(H-P1')
+- HYP:PPO:EXPLORATION [TESTABLE] 当前 std 0.0895 探索过保守;温和恢复至 0.12(保持维度比例)改善局部搜索
+- HYP:RUN2:CEILING [TESTABLE] base-run-forward@2 的优化上限低于 hfw@1 平台(2.376)
 - HYP:S1 [FALSIFIED] 前 2 s 加速不足是 Sprint 差距主因
 - HYP:S3 [FALSIFIED] Sprint 2.40→2.17 的差距来自策略容量或训练栈，而不是奖励塑形（H-S1 已证伪）
 - HYP:S4 [FALSIFIED] finish 节点在前序状态分布上训练可提升组合
@@ -95,7 +98,7 @@ Entities: 181 · relations: 137 · types: 33
 - Competition: 1
 - CompetitionAttempt: 3
 - Counterexample: 1
-- Decision: 2
+- Decision: 3
 - Environment: 2
 - EvaluationProtocol: 2
 - EvaluationRun: 11
@@ -103,7 +106,7 @@ Entities: 181 · relations: 137 · types: 33
 - Exclusion: 3
 - Experiment: 12
 - HostContract: 2
-- Hypothesis: 8
+- Hypothesis: 11
 - LeaderboardSnapshot: 2
 - Learner: 1
 - LearningActivity: 7
@@ -112,7 +115,7 @@ Entities: 181 · relations: 137 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 24
+- Observation: 27
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
