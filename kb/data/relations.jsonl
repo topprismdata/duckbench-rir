@@ -63,3 +63,13 @@
 {"from": "LA:teach-checklist", "relation": "PERFORMED_BY", "to": "LRN:duckbench-team"}
 {"from": "TRA:reward-method-sprint", "relation": "TRANSFERS_ASSET", "to": "CLM:K19:01"}
 {"from": "TRA:policy-steps-hurdles", "relation": "TRANSFERS_ASSET", "to": "CLM:K13:01"}
+{"from": "LA:exp-hurdles", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:reward-audit"}
+{"from": "LA:reflect-k17", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:reward-audit"}
+{"from": "LA:read-literature", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:reward-audit"}
+{"from": "LA:teach-checklist", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:reward-audit"}
+{"from": "LA:generalize-sprint", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:evidence-discipline"}
+{"from": "LR:gate-protocol", "relation": "TEACHES_COMPETENCY", "to": "SKL:evidence-discipline"}
+{"from": "CAS:evidence-discipline:sprint", "relation": "ASSESSES_COMPETENCY", "to": "SKL:evidence-discipline"}
+{"from": "CAS:evidence-discipline:sprint", "relation": "ASSESSES_LEARNER", "to": "LRN:duckbench-team"}
+{"from": "CAS:evidence-discipline:sprint", "relation": "FOLLOWS_ASSESSMENT_SPEC", "to": "ASP:reward-audit:v1"}
+{"from": "CAS:evidence-discipline:sprint", "relation": "DEMONSTRATED_BY", "to": "ART:sprintf80:json"}

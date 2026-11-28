@@ -66,6 +66,32 @@ def main():
     L += ["", "## Orphan claims (no SUPPORTS/REFUTES)", ""]
     L += [f"- {x}" for x in orphan_claims] or ["- none"]
 
+    # M01–M08 (v0.2)
+    tasks = [e["id"] for e in ents if e["type"] == "Task"]
+    covered = {t for t in tasks if cov[t]["claims"] > 0}
+    skills = {e["id"] for e in ents if e["type"] == "Competency"}
+    cas = [e for e in ents if e["type"] == "CompetencyAssessment"]
+    passed = {e["data"]["competency_ref"] for e in cas if e["data"].get("outcome") == "PASS"}
+    tra = [e for e in ents if e["type"] == "TransferAssessment"]
+    tras = sum(1 for t in tra if t["data"].get("outcome") == "POSITIVE")
+    decs = [e for e in ents if e["type"] == "Decision"]
+    dec_with_ev = {r["from"] for r in rels if r["relation"] in ("DEPENDS_ON", "CONSUMES_KNOWLEDGE")}
+    exps = [e for e in ents if e["type"] == "Experiment"]
+    exp_done = {r["from"] for r in rels if r["relation"] == "EXECUTED_VIA"}
+    m = {
+        "M01_knowledge_coverage": f"{len(covered)}/{len(tasks)} tasks with ≥1 claim",
+        "M02_competency_attainment": f"{len(passed)}/{len(skills)} competencies passed by a CAS",
+        "M03_evidence_distribution": dict(ev),
+        "M04_hypothesis_cycle": "UNKNOWN (closure timestamps not recorded)",
+        "M05_hypothesis_throughput": f"{hstat.get('SUPPORTED',0)+hstat.get('FALSIFIED',0)+hstat.get('REFUTED',0)} closed / session",
+        "M06_experiment_efficiency": f"{len(exp_done)}/{len(exps)} experiments with an execution record",
+        "M07_transfer_success": f"{tras}/{len(tra)} transfer assessments positive",
+        "M08_knowledge_driven_decisions": f"{len(dec_with_ev & {d['id'] for d in decs})}/{len(decs)} decisions cite evidence",
+    }
+    L += ["", "## Growth metrics (v0.2)", ""]
+    for k, v in m.items():
+        L.append(f"- {k}: {v}")
+
     out = KB / "generated" / "GROWTH.md"
     out.parent.mkdir(exist_ok=True)
     out.write_text("\n".join(L) + "\n")
