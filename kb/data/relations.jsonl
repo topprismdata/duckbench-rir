@@ -109,3 +109,4 @@
 {"from": "ART:hfast50:rep2", "relation": "SUPPORTS", "to": "CLM:REP:01"}
 {"from": "OBS:wheel:accel-balance", "relation": "SUPPORTS", "to": "CLM:W1:02"}
 {"from": "CLM:W1:02", "relation": "DERIVES_FROM", "to": "HYP:W1"}
+{"from": "LR:H-S3-spec", "relation": "TEACHES_COMPETENCY", "to": "SKL:evidence-discipline"}

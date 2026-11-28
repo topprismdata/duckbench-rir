@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 143 · relations: 111 · types: 33
+Entities: 144 · relations: 112 · types: 33
 
 ## Claims and their evidence
 
@@ -77,7 +77,7 @@ Entities: 143 · relations: 111 · types: 33
 - Learner: 1
 - LearningActivity: 7
 - LearningObjective: 1
-- LearningResource: 3
+- LearningResource: 4
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 11
