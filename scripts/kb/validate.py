@@ -82,6 +82,12 @@ def main():
             if not any(r["from"] == e["id"] and r["relation"] == "EVALUATED_ON" for r in rels):
                 errors.append(f"{e['id']}: MetricResult without EVALUATED_ON")
         if e["type"] == "CompetencyAssessment":
+            fr = [r["to"] for r in rels if r["from"] == e["id"] and r["relation"] == "FOLLOWS_ASSESSMENT_SPEC"]
+            if fr and fr[0] != e["data"].get("spec_ref"):
+                errors.append(f"{e['id']}: data.spec_ref {e['data'].get('spec_ref')} != FOLLOWS edge {fr[0]}")
+            sp = ids.get(e["data"].get("spec_ref"), {})
+            if sp.get("data", {}).get("competency_ref") != e["data"].get("competency_ref"):
+                errors.append(f"{e['id']}: spec {e['data'].get('spec_ref')} is for a different competency")
             for need in ("DEMONSTRATED_BY", "FOLLOWS_ASSESSMENT_SPEC", "ASSESSES_LEARNER"):
                 if not any(r["from"] == e["id"] and r["relation"] == need for r in rels):
                     errors.append(f"{e['id']}: CompetencyAssessment missing {need}")

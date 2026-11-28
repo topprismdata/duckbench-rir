@@ -71,7 +71,7 @@
 {"from": "LR:gate-protocol", "relation": "TEACHES_COMPETENCY", "to": "SKL:evidence-discipline"}
 {"from": "CAS:evidence-discipline:sprint", "relation": "ASSESSES_COMPETENCY", "to": "SKL:evidence-discipline"}
 {"from": "CAS:evidence-discipline:sprint", "relation": "ASSESSES_LEARNER", "to": "LRN:duckbench-team"}
-{"from": "CAS:evidence-discipline:sprint", "relation": "FOLLOWS_ASSESSMENT_SPEC", "to": "ASP:reward-audit:v1"}
+{"from": "CAS:evidence-discipline:sprint", "relation": "FOLLOWS_ASSESSMENT_SPEC", "to": "ASP:evidence-discipline:v1"}
 {"from": "CAS:evidence-discipline:sprint", "relation": "DEMONSTRATED_BY", "to": "ART:sprintf80:json"}
 {"from": "EXP:sprint:sprintf20", "relation": "EXECUTED_VIA", "to": "EV:sprintf20:local"}
 {"from": "EV:sprintf20:local", "relation": "PRODUCES", "to": "RES:sprintf20:local"}
@@ -102,7 +102,7 @@
 {"from": "DEC:CT07", "relation": "DEPENDS_ON", "to": "LB:steps"}
 {"from": "CAS:champion-imitation", "relation": "ASSESSES_COMPETENCY", "to": "SKL:champion-imitation"}
 {"from": "CAS:champion-imitation", "relation": "ASSESSES_LEARNER", "to": "LRN:duckbench-team"}
-{"from": "CAS:champion-imitation", "relation": "FOLLOWS_ASSESSMENT_SPEC", "to": "ASP:reward-audit:v1"}
+{"from": "CAS:champion-imitation", "relation": "FOLLOWS_ASSESSMENT_SPEC", "to": "ASP:champion-imitation:v1"}
 {"from": "CAS:champion-imitation", "relation": "DEMONSTRATED_BY", "to": "ART:K08:champions"}
 {"from": "LA:imitate-champions", "relation": "DEVELOPS_COMPETENCY", "to": "SKL:champion-imitation"}
 {"from": "ART:hfast50:rep1", "relation": "SUPPORTS", "to": "CLM:REP:01"}

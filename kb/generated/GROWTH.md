@@ -1,10 +1,10 @@
 # Growth dashboard (generated)
 
-entities=135 relations=107 tasks=6 claims=12 hypotheses=6
+entities=140 relations=109 tasks=6 claims=13 hypotheses=6
 
 ## Evidence distribution
 
-- REPLICATED: 4
+- REPLICATED: 5
 - STRONG: 3
 - FALSIFIED: 2
 - EXPLORATORY: 2
@@ -19,7 +19,7 @@ entities=135 relations=107 tasks=6 claims=12 hypotheses=6
 
 ## Coverage per task
 
-- TASK:duckbench:hurdles:v4: claims 3, hypotheses 0
+- TASK:duckbench:hurdles:v4: claims 4, hypotheses 0
 - TASK:duckbench:saucer:v1: claims 1, hypotheses 1
 - TASK:duckbench:sprint:v6: claims 5, hypotheses 0
 - TASK:duckbench:steps:v4: claims 1, hypotheses 0
@@ -41,13 +41,14 @@ entities=135 relations=107 tasks=6 claims=12 hypotheses=6
 - CLM:K17:01
 - CLM:K21:01
 
-## Growth metrics (v0.2)
+## Growth metrics (v0.2, DB-KG-04 honest denominators)
 
-- M01_knowledge_coverage: 6/6 tasks with ≥1 claim
-- M02_competency_attainment: 3/3 competencies passed by a CAS
-- M03_evidence_distribution: {'REPLICATED': 4, 'STRONG': 3, 'FALSIFIED': 2, 'ANECDOTAL': 1, 'EXPLORATORY': 2}
-- M04_hypothesis_cycle: 40 min (median closed hypotheses)
-- M05_hypothesis_throughput: 4 closed / session
-- M06_experiment_efficiency: 10/10 experiments with an execution record
-- M07_transfer_success: 1/2 transfer assessments positive
-- M08_knowledge_driven_decisions: 2/2 decisions cite evidence
+- M01a_task_registration: 6/6 tasks have ≥1 claim or hypothesis (registration, not knowledge coverage)
+- M01b_target_knowledge_coverage: NO_TARGET_LIST — 未定义每任务目标知识点，无法计算真正覆盖率
+- M02_competency_attainment: 3/3 competencies passed by a CAS whose spec matches
+- M03_evidence_distribution: {'REPLICATED': 5, 'STRONG': 3, 'FALSIFIED': 2, 'ANECDOTAL': 1, 'EXPLORATORY': 2}
+- M04_hypothesis_cycle: 29 min (n=4)
+- M05_hypothesis_throughput: 4 closed in session SES:2026-11-28 (window 20:00Z→06:00Z)
+- M06_experiment: registered 10/10; protocol-valid 9/10; repeated 1/11
+- M07_transfer: METHOD: 1/1 positive; POLICY: 0/1 positive
+- M08_decision_evidence: 1/2 decisions cite in-scope, non-retracted, pre-decision evidence

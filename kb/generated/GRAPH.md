@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 138 · relations: 109 · types: 33
+Entities: 140 · relations: 109 · types: 33
 
 ## Claims and their evidence
 
@@ -53,7 +53,7 @@ Entities: 138 · relations: 109 · types: 33
 
 ## Types
 
-- AssessmentSpec: 1
+- AssessmentSpec: 3
 - BudgetAllocation: 2
 - Claim: 13
 - Competency: 3
