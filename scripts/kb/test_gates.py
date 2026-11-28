@@ -37,5 +37,10 @@ cases.append(("unknown relation target", lambda kb: edit(kb / "data/relations.js
 cases.append(("missing required field", lambda kb: edit(kb / "data/assets.jsonl",
     lambda ls: ls[0]["data"].pop("implementation_ref", None))))
 
+cases.append(("assessment without evidence", lambda kb: edit(kb / "data/relations.jsonl",
+    lambda ls: ls.__setitem__(slice(None), [r for r in ls if not (r["from"] == "CAS:reward-audit:hurdles" and r["relation"] == "DEMONSTRATED_BY")]))))
+cases.append(("learning activity without performer", lambda kb: edit(kb / "data/relations.jsonl",
+    lambda ls: ls.__setitem__(slice(None), [r for r in ls if not (r["from"] == "LA:read-literature" and r["relation"] == "PERFORMED_BY")]))))
+
 ok = all(run_case(n, m) for n, m in cases)
 sys.exit(0 if ok else 1)

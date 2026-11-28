@@ -1,4 +1,4 @@
-# 知识库的认识论（草案 v0.1，待 GPT 定稿）
+# 知识库的认识论（v0.2，GPT 定稿框架）
 
 主张：这个项目表面是机器人竞赛，实质是一个**新手如何成为专家**的可观测过程；比赛是测量仪器，知识库是成长档案。企业知识库/新人培养可以用同一套结构描述。
 
@@ -41,8 +41,17 @@ Read → Imitate → Probe → Experiment → Reflect（写 K） → Generalize�
 - 外部知识（K2）与自证知识（K3）冲突时，保留双方（SUPPORTS/REFUTES），不静默覆盖。
 - 被推翻的结论保留为 CEX/REFUTES，历史不可改写。
 
-## 6. 待 GPT 定稿
+## 6. v0.2 落地点（已实现）
 
-- 29 类本体如何增补 `KnowledgeSource`、`CompetenceStage`、`LearningEvent`、`TransferEdge`、`Mentor/Authority`、`Curriculum`；
-- 成长指标的自动门禁；
-- "新人模拟"查询的形式定义（给定目标赛事 → 最短学习路径）。
+- **四维分类**取代"三层等级"：`origin`（FOUNDATIONAL/EXTERNAL/SELF_GENERATED）、`form`（DECLARATIVE/PROCEDURAL/CONDITIONAL/METACOGNITIVE）、`acquisition`（STUDY/TESTIMONY/IMITATION/EXPERIENCE/INFERENCE）、`epistemic_status`（PROPOSED/SUPPORTED/CONTESTED/REFUTED/SUPERSEDED/RETRACTED）。来源与可信度分离。
+- **11 类学习实体**：Learner、Competency、LearningActivity（READ/EXPLAIN/IMITATE/REPRODUCE/PROBE/EXPERIMENT/REFLECT/GENERALIZE/TEACH/ASSESS/REASSESS）、AssessmentSpec、CompetencyAssessment、LearningObjective、LearningResource、TransferAssessment 等。
+- **能力只能由 CAS 派生**：没有 `DEMONSTRATED_BY` 证据的能力声明不成立（门禁强制）。
+- **迁移分型**：权重（负）/方法（正）/知识/技能，避免"迁移失败"混为一谈。
+- **成长指标**：M01–M08（覆盖率、达标率、证据分布、假设周期/吞吐、实验有效率、迁移成功率、知识驱动决策率、传承）。
+- 自动门禁：`scripts/kb/validate.py` + 6 项变异测试；成长面板 `scripts/kb/growth.py`。
+
+## 7. 实施的边界（防口号）
+
+- 理论（Ryle 知道-如何、Dreyfus 阶段、双环学习、Crossan 组织学习、PROV-O）只作设计依据，不作为"我们已经具备该能力"的证据；
+- 团队是学习主体（LRN:duckbench-team），冠军不归给单个 Agent；
+- 未通过 CAS 的层级标记为未获得。
