@@ -1,0 +1,9 @@
+{
+ "format": "duck-strategy/1",
+ "challenge": {
+  "id": "sprint",
+  "version": 6
+ },
+ "program": "program_specialists.json",
+ "moves": []
+}
