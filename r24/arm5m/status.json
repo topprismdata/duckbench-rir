@@ -6,7 +6,7 @@
   "num_envs": 4096,
   "seed": 42,
   "requested_iterations": 51,
-  "completed_iterations": 3,
+  "completed_iterations": 15,
   "task": "Mjlab-Velocity-Flat-MicroDuck",
   "device": "mps",
   "physics_backend": "cpu",
@@ -14,25 +14,25 @@
   "stage": "rollout",
   "actor_width": 61,
   "critic_width": 76,
-  "control_steps_completed": 83,
-  "last_step_seconds": 2.0977771670004586,
-  "updated_at": 1795856871.5755641,
+  "control_steps_completed": 368,
+  "last_step_seconds": 1.9915107499982696,
+  "updated_at": 1795857473.2623081,
   "latest": {
-    "iteration": 3,
-    "time": 1795856849.321898,
-    "collection_seconds": 49.34253215789795,
-    "learning_seconds": 0.6567437648773193,
-    "transitions_per_second": 1966.1084722873227,
+    "iteration": 15,
+    "time": 1795857457.2051651,
+    "collection_seconds": 48.63149094581604,
+    "learning_seconds": 0.6463310718536377,
+    "transitions_per_second": 1994.8933612518604,
     "loss": {
-      "value": 0.4776266023516655,
-      "surrogate": -0.005221659889502917,
-      "entropy": -18.798638820648193
+      "value": 0.17735319957137108,
+      "surrogate": -0.0038500883645610886,
+      "entropy": -18.28000326156616
     },
     "learning_rate": 1e-05,
-    "mean_reward": 0.8987115725502371,
-    "mean_episode_length": 42.36,
-    "transfer_bytes_total": 19621701864,
-    "transfer_seconds_total": 10.401314642338548,
+    "mean_reward": 0.9258865035325289,
+    "mean_episode_length": 44.72,
+    "transfer_bytes_total": 97563624592,
+    "transfer_seconds_total": 51.59132282380597,
     "reset_transfer_bytes_total": 0,
     "reset_transfer_seconds_total": 0.0,
     "collision_qpos_staging_bytes_total": 0,
@@ -44,7 +44,7 @@
     "collision_evaluations_count": 0,
     "constants_recomputed_envs_total": 0,
     "constants_cache_skips_total": 0,
-    "max_rss_bytes": 9203466240
+    "max_rss_bytes": 10073866240
   },
-  "checkpoint": "/Users/guohongbin/1-Projects/duckbench-rir/r24/arm5m/model_0.pt"
+  "checkpoint": "/Users/guohongbin/1-Projects/duckbench-rir/r24/arm5m/model_10.pt"
 }
