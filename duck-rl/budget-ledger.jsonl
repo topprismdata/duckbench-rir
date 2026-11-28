@@ -109,3 +109,9 @@
 {"kind": "train", "label": "r21_turnscore", "start": "2026-11-28T07:17:37", "seconds": 99.3, "run": "37520-1795821457412", "end": "exit"}
 {"kind": "train", "label": "r21_sprintacc", "start": "2026-11-28T07:19:44", "seconds": 616.6, "run": "37757-1795821584313", "end": "exit"}
 {"kind": "train", "label": "r23_big_probe", "start": "2026-11-28T09:47:41", "seconds": 317.5, "run": "43370-1795830461565", "end": "exit"}
+{"kind": "train", "label": "r23_wide_smoke", "start": "2026-11-28T10:42:49", "seconds": 1.9, "run": "44967-1795833769618", "end": "exit"}
+{"kind": "train", "label": "r23_wide_smoke", "start": "2026-11-28T10:42:55", "seconds": 6.3, "run": "45130-1795833775473", "end": "exit"}
+{"kind": "train", "label": "r23_wide_smoke2", "start": "2026-11-28T10:43:13", "seconds": 6.6, "run": "45314-1795833793942", "end": "exit"}
+{"kind": "train", "label": "r23_wide_smoke3", "start": "2026-11-28T10:43:38", "seconds": 6.5, "run": "45501-1795833818306", "end": "exit"}
+{"kind": "train", "label": "r23_wide_smoke4", "start": "2026-11-28T10:43:59", "seconds": 6.0, "run": "45719-1795833839999", "end": "exit"}
+{"kind": "train", "label": "r23_wide_smoke5", "start": "2026-11-28T10:44:10", "seconds": 48.8, "run": "45900-1795833850258", "end": "exit"}

@@ -191,6 +191,10 @@ def build(env: PoolVecEnv, move: Move, device: str, init_std: float, desired_kl:
         warm_start(alg.actor, move.warm_start)
     except (AssertionError, RuntimeError, ValueError) as exc:
         print(f"[duck-rl] warm start skipped (shape mismatch): {exc}", flush=True)
+    if os.environ.get("DUCK_WIDE_MLP"):
+        from duckref.mlp import DuckMlp
+        load_mlp_into(alg.actor, DuckMlp(Path(os.environ["DUCK_WIDE_MLP"])))
+        print(f"[duck-rl] net2wider warm start from {os.environ['DUCK_WIDE_MLP']}", flush=True)
     if os.environ.get("DUCK_DUMP_INIT"):
         torch.save({k: v.detach().cpu().clone() for k, v in alg.actor.state_dict().items()},
                    os.environ["DUCK_DUMP_INIT"])

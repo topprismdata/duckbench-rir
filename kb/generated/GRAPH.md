@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 146 · relations: 114 · types: 33
+Entities: 148 · relations: 116 · types: 33
 
 ## Claims and their evidence
 
@@ -33,6 +33,8 @@ Entities: 146 · relations: 114 · types: 33
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
 - **CLM:S3:01** — Capacity arm needs weight grafting *(EXPLORATORY)*
   - ← OBS:S3:scratch-wide (Observation: Wide net from scratch cannot walk)
+- **CLM:S3:02** — Net2Wider is function-preserving here *(REPLICATED)*
+  - ← OBS:net2wider (Observation: Net2Wider preserves the policy function)
 - **CLM:T1:01** — Turntable bank is representative by construction *(ANECDOTAL)*
   - ← OBS:T1:bank (Observation: Turntable bank recorded from stock pre-roll)
 - **CLM:W1:01** — Wheel gap is sustained rim speed *(EXPLORATORY)*
@@ -45,7 +47,7 @@ Entities: 146 · relations: 114 · types: 33
 - HYP:A2 [PARTIAL] 接触半径/力矩臂可提升 saucer rpm
 - HYP:H1 [SUPPORTED] 奖励的参考节奏约束是 Hurdles 瓶颈
 - HYP:S1 [FALSIFIED] 前 2 s 加速不足是 Sprint 差距主因
-- HYP:S3 [BLOCKED] Sprint 2.40→2.17 的差距来自策略容量或训练栈，而不是奖励塑形（H-S1 已证伪）
+- HYP:S3 [READY_FOR_TRAINING] Sprint 2.40→2.17 的差距来自策略容量或训练栈，而不是奖励塑形（H-S1 已证伪）
 - HYP:S4 [FALSIFIED] finish 节点在前序状态分布上训练可提升组合
 - HYP:T1 [REFUTED] roll 入口状态代表性限制 turntable
 - HYP:W1 [PARTIAL] 轮缘切向加速度奖励可提升 wheel
@@ -60,7 +62,7 @@ Entities: 146 · relations: 114 · types: 33
 
 - AssessmentSpec: 3
 - BudgetAllocation: 2
-- Claim: 15
+- Claim: 16
 - Competency: 3
 - CompetencyAssessment: 3
 - Competition: 1
@@ -83,7 +85,7 @@ Entities: 146 · relations: 114 · types: 33
 - LiteratureSource: 4
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 5
+- Observation: 6
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
