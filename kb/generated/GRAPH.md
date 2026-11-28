@@ -1,6 +1,6 @@
 # Knowledge graph (generated — do not edit)
 
-Entities: 167 · relations: 130 · types: 33
+Entities: 168 · relations: 132 · types: 33
 
 ## Claims and their evidence
 
@@ -10,6 +10,7 @@ Entities: 167 · relations: 130 · types: 33
   - ← OBS:batch16k (Observation: 256 envs × 64 steps beats 128 envs)
   - ← LIT:rudin2022 (LiteratureSource: Rudin et al. 2022 Learning to Walk in Minutes)
   - ← CLM:PLATEAU:01 (Claim: Flat-start arms read null by construction)
+  - ← OBS:ctl128-2.41 (Observation: 128-env equal-budget control: 2.41, flat)
 - **CLM:K03:01** — Steps recipe *(STRONG)*
   - ← EV:s2b:server (EvaluationRun: steps champion hidden)
   - ← ATT:steps (CompetitionAttempt: Steps champion attempt)
@@ -34,6 +35,7 @@ Entities: 167 · relations: 130 · types: 33
   - ← RES:sprintf80 (MetricResult: sprint 2.41)
 - **CLM:PLATEAU:01** — Flat-start arms read null by construction *(EXPLORATORY)*
   - ← OBS:nofall-2.38 (Observation: no-fall-termination arm also 2.38)
+  - ← OBS:ctl128-2.41 (Observation: 128-env equal-budget control: 2.41, flat)
 - **CLM:REP:01** — Local evaluation is deterministic per seed *(REPLICATED)*
   - ← ART:hfast50:rep1 (EvidenceArtifact: hfast50 repeat eval #1)
   - ← ART:hfast50:rep2 (EvidenceArtifact: hfast50 repeat eval #2)
@@ -104,7 +106,7 @@ Entities: 167 · relations: 130 · types: 33
 - LiteratureSource: 5
 - MetricDefinition: 6
 - MetricResult: 11
-- Observation: 14
+- Observation: 15
 - ResearchSession: 1
 - RewardVersion: 7
 - Scope: 6
