@@ -1,0 +1,74 @@
+--- git commit ---
+60f0b26a55e3236d2112126386b25ac922228083
+
+
+--- git status ---
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/mjlab_microduck/native_gpu/train.py
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+
+--- git diff ---
+diff --git a/src/mjlab_microduck/native_gpu/train.py b/src/mjlab_microduck/native_gpu/train.py
+index 22c7a6b..2826b9b 100644
+--- a/src/mjlab_microduck/native_gpu/train.py
++++ b/src/mjlab_microduck/native_gpu/train.py
+@@ -180,6 +180,52 @@ def main():
+             else:
+                 status["resume_kind"] = "learner_and_progress_with_fresh_episodes"
+ 
++        init_mlp = os.environ.get("DUCK_INIT_MLP")
++        if init_mlp:  # local graft: start the arena actor from a duck-mlp policy
++            import numpy as _np
++            _meta = json.load(open(init_mlp))
++            _blob = _np.fromfile(init_mlp.replace(".json", ".bin"), dtype="<f4")
++            _lins = [m for m in runner.alg.actor.mlp if isinstance(m, torch.nn.Linear)]
++            assert len(_lins) == len(_meta["layers"]), (len(_lins), len(_meta["layers"]))
++            with torch.no_grad():
++                for L, lin in zip(_meta["layers"], _lins):
++                    W = torch.tensor(_blob[L["weight_offset"]:L["weight_offset"] + L["in"] * L["out"]].reshape(L["out"], L["in"]))
++                    b = torch.tensor(_blob[L["bias_offset"]:L["bias_offset"] + L["out"]])
++                    assert lin.weight.shape == W.shape, (lin.weight.shape, W.shape)
++                    lin.weight.copy_(W)
++                    lin.bias.copy_(b)
++                _sub = torch.tensor(_blob[0:61]).reshape(1, -1)
++                _div = torch.tensor(_blob[61:122]).reshape(1, -1)
++                _nz = runner.alg.actor.obs_normalizer
++                _nz._mean.copy_(_sub)
++                _nz._std.copy_(_div)
++                _nz._var.copy_(_div ** 2)
++                _nz.eps = 0.0
++                _nz.until = 0
++            if os.environ.get("DUCK_GRAFT_DEBUG"):
++                with torch.no_grad():
++                    for i, (L, lin) in enumerate(zip(_meta["layers"], _lins)):
++                        W = torch.tensor(_blob[L["weight_offset"]:L["weight_offset"] + L["in"] * L["out"]].reshape(L["out"], L["in"]))
++                        print(f"[graft] layer {i} max|W-W_mlp|={float((lin.weight.cpu()-W).abs().max()):.3e}", flush=True)
++                    _x = torch.tensor(_np.random.default_rng(0).normal(size=(1,61)).astype(_np.float32)*0.3)
++                    _nz = runner.alg.actor.obs_normalizer
++                    _z1 = _nz(_x)
++                    _z2 = (_x - torch.tensor(_sub)) / torch.tensor(_div)
++                    print(f"[graft] normalizer max|nz(x)-(x-sub)/div|={float((_z1-_z2).abs().max()):.3e}", flush=True)
++                    _a = runner.alg.actor(_x)
++                    print(f"[graft] actor action sample {_a.cpu().numpy().round(3).tolist()[0][:5]}", flush=True)
++            _ls = os.environ.get("DUCK_INIT_LOGSTD")
++            if _ls:  # exploration std from the source checkpoint (the grafted weights keep their trained std)
++                _ck = torch.load(_ls, map_location="cpu")
++                _std_src = _ck["actor"]["distribution.log_std_param"]
++                with torch.no_grad():  # this rsl_rl stores the STD itself (std_type=scalar), not log-std
++                    import math as _math
++                    _floor = float(os.environ.get("DUCK_STD_FLOOR", "0.05"))
++                    _stdv = _std_src.exp().clamp(min=_floor)
++                    runner.alg.actor.distribution.std_param.copy_(_stdv.to(runner.alg.actor.distribution.std_param.device))
++                print(f"[init] log_std from {_ls}", flush=True)
++            print(f"[init] actor grafted from {init_mlp}", flush=True)
++
+         obs = wrapper.get_observations()
+         assert obs["actor"].shape == (args.num_envs, 61)
+         assert wrapper.num_actions == 14

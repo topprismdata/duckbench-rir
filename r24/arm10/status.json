@@ -1,0 +1,20 @@
+{
+  "status": "training",
+  "pid": 54012,
+  "started_at": 1795855613.663148,
+  "platform": "macOS-27.2.1-arm64-arm-64bit",
+  "num_envs": 4096,
+  "seed": 42,
+  "requested_iterations": 10,
+  "completed_iterations": 0,
+  "task": "Mjlab-Velocity-Flat-MicroDuck",
+  "device": "mps",
+  "physics_backend": "cpu",
+  "transfer_mode": "CPU physics / MPS managers, BAM and PPO",
+  "stage": "rollout",
+  "actor_width": 61,
+  "critic_width": 76,
+  "control_steps_completed": 2,
+  "last_step_seconds": 1.9005606249993434,
+  "updated_at": 1795855635.615131
+}
